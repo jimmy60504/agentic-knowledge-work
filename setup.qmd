@@ -1,0 +1,172 @@
+---
+title: "環境建立"
+subtitle: "Agent 還幫不上忙的那一段：帳號、終端機、git、agent CLI"
+description: "這是唯一一份需要你自己動手照做的文件。做完最後的最小測試之後，其他安裝與設定都可以叫 agent 幫你。"
+---
+
+## 為什麼這份文件要自己做
+
+Agent 能幫你做事的前提是它已經能在你的電腦上跑起來。在那之前的幾步——
+申請帳號、裝終端機工具、裝 agent 本體——它幫不上忙，這是整門課唯一要你照著操作的地方。
+
+做完本頁最後的「最小測試」，之後遇到任何安裝問題（Python、套件、字型、PowerPoint 相關工具），
+都直接問 agent 就好。
+
+各家工具的指令與方案變動很快；若本頁指令失效，以各工具官方文件為準，並回報講師更新。
+
+## 第一步：帳號
+
+依你打算用的 agent 準備帳號，**不用全部都辦**，一個有免費額度的就夠上課：
+
+| 帳號 | 用途 | 費用 |
+|---|---|---|
+| [GitHub](https://github.com/signup) | 存放你的知識工作 repo、看課程教材原始檔 | 免費 |
+| [Google 帳號](https://accounts.google.com/) | 登入 Gemini CLI，免費額度每日重置 | 免費 |
+| [OpenAI／ChatGPT](https://chatgpt.com/) | 登入 Codex，免費額度每月重置 | 免費（額度少） |
+| [Anthropic／Claude](https://claude.ai/) | 登入 Claude Code | 需 Pro 訂閱，講師示範用 |
+
+建議：**先辦 GitHub 與 Google 帳號**，這兩個免費且額度最穩。
+
+## 第二步：終端機
+
+Agent CLI 都在終端機裡跑。
+
+- **macOS**：內建「終端機」（Terminal），在 Spotlight 搜尋 Terminal 開啟。
+- **Windows**：用「Windows 終端機」或 PowerShell（開始功能表搜尋 PowerShell）。
+  若後面步驟在 Windows 上一直出錯，可改用 [WSL](https://learn.microsoft.com/zh-tw/windows/wsl/install) 得到 Linux 環境，多數 agent 在 WSL 上最穩。
+
+不需要會終端機指令。你只要能開啟它、貼上指令、按 Enter。
+
+## 第三步：git
+
+git 是所有 agent 工作流的底層：改壞了可以退回、每一步都留紀錄。
+
+**macOS**（會跳出安裝提示，按安裝）：
+
+```bash
+xcode-select --install
+```
+
+**Windows**：下載安裝 [Git for Windows](https://git-scm.com/download/win)，一路預設即可。
+
+裝完之後設定你的名字與 email（commit 紀錄會用到，email 用 GitHub 帳號那個）：
+
+```bash
+git config --global user.name "你的名字"
+```
+
+```bash
+git config --global user.email "you@example.com"
+```
+
+確認：
+
+```bash
+git --version
+```
+
+## 第四步：Node.js
+
+三家 agent CLI 都用 Node.js 安裝。到 [nodejs.org](https://nodejs.org/) 下載 **LTS 版**（22 以上），一路預設安裝。
+
+確認：
+
+```bash
+node --version
+```
+
+## 第五步：裝一個 agent
+
+挑一個裝就好。上課時哪個還有額度就用哪個。
+
+### Gemini CLI（建議首選：免費、每日重置）
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+啟動並用 Google 帳號登入（會開瀏覽器）：
+
+```bash
+gemini
+```
+
+官方文件：<https://github.com/google-gemini/gemini-cli>
+
+### Codex（備援：免費額度每月重置）
+
+```bash
+npm install -g @openai/codex
+```
+
+```bash
+codex
+```
+
+選「Sign in with ChatGPT」登入。官方文件：<https://github.com/openai/codex>
+
+### Claude Code（需 Pro 訂閱）
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+```bash
+claude
+```
+
+官方文件：<https://code.claude.com/docs>
+
+### GitHub Copilot（彩蛋）
+
+VS Code 安裝 GitHub Copilot 擴充套件，免費版有少量 agent 額度。適合已經在用 VS Code 的人。
+
+## 第六步：最小測試
+
+這是「agent 開始能幫你」的分界線。開終端機，照做：
+
+1. 建一個資料夾並進去：
+
+```bash
+mkdir my-knowledge-work && cd my-knowledge-work
+```
+
+2. 初始化 git：
+
+```bash
+git init
+```
+
+3. 啟動你裝的 agent（`gemini`、`codex` 或 `claude`），貼這句給它：
+
+> 幫我在這個資料夾建立一個 README.md，寫一句這個專案是我的知識工作專案，然後 git commit。
+
+4. 它做完後，確認有紀錄：
+
+```bash
+git log --oneline
+```
+
+看到一筆 commit，就通過了。**從這一刻起，之後的所有安裝與設定都可以叫 agent 幫忙。**
+
+## 第七步（可選）：把 repo 放上 GitHub
+
+上課不強制。想備份或跟講師共享 repo 的人，裝 [GitHub CLI](https://cli.github.com/) 之後：
+
+```bash
+gh auth login
+```
+
+```bash
+gh repo create my-knowledge-work --private --source=. --push
+```
+
+或直接問 agent：「幫我把這個 repo 推上 GitHub，設成 private。」——這一步 agent 已經能代勞了。
+
+## 常見卡點
+
+- **指令找不到（command not found）**：安裝後沒重開終端機。關掉重開再試。
+- **npm 權限錯誤（EACCES）**：macOS 上不要用 `sudo`，改問 agent「幫我修 npm 全域安裝的權限問題」；或先用 Node 官方安裝程式重裝。
+- **Windows 執行原則錯誤**：PowerShell 擋住腳本。以系統管理員開 PowerShell 執行 `Set-ExecutionPolicy RemoteSigned`，或改用 WSL。
+- **公司網路擋住登入或安裝**：先用手機熱點完成安裝與登入，之後回公司網路一般都能正常使用。
+- **登入後說沒有額度**：免費額度已用完。Gemini 隔天回復、Codex 下個月回復；換另一個裝好的 agent。

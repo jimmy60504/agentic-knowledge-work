@@ -42,6 +42,7 @@ quarto render
 
 - `_quarto.yml`：網站、輸出格式與公開內容範圍。
 - `index.qmd`：課程網站首頁。
+- `setup.qmd`：環境建立——agent 還幫不上忙的起點文件（帳號、終端機、git、agent CLI）。
 - `tools.qmd`：工具索引。
 - `notes/`：各週文章版教材。
 - `docs/`：教案與課程地圖，不公開。

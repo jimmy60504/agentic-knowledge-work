@@ -3,6 +3,7 @@ project:
   output-dir: _site
   render:
     - index.qmd
+    - setup.qmd
     - tools.qmd
     - notes/*.qmd
   resources:
@@ -33,6 +34,8 @@ website:
     left:
       - text: 教材首頁
         href: index.qmd
+      - text: 環境建立
+        href: setup.qmd
       - text: 工具索引
         href: tools.qmd
     right:
