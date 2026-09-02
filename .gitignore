@@ -29,6 +29,9 @@ media/
 !assets/
 !assets/site/
 !assets/site/*.png
+!assets/setup/
+!assets/setup/*.png
+!assets/setup/*.jpg
 
 node_modules/
 dist/
