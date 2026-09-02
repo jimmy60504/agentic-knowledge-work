@@ -1,0 +1,38 @@
+.DS_Store
+
+# Manual course artifacts kept outside this repo (OneDrive-synced)
+*.pptx
+*.potx
+*.docx
+*.pdf
+~$*
+
+# Source exports stay outside Git
+*.zip
+source-exports/
+raw-exports/
+
+# Avoid pushing heavy media by accident
+assets/
+images/
+media/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.heic
+*.mp4
+*.mov
+
+# Curated assets with documented sources
+!assets/
+!assets/site/
+!assets/site/*.png
+
+node_modules/
+dist/
+/_site/
+/.quarto/
+**/*.quarto_ipynb
+/.claude/

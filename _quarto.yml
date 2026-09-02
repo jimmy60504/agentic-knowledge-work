@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - tools.qmd
+    - notes/*.qmd
+  resources:
+    - assets/**
+
+lang: zh-Hant
+
+language:
+  title-block-author-single: "作者"
+  title-block-author-plural: "作者"
+  title-block-affiliation-single: "單位"
+  title-block-affiliation-plural: "單位"
+  title-block-published: "發布日期"
+  title-block-modified: "更新日期"
+  section-title-footnotes: "註腳"
+  section-title-references: "參考資料"
+  toc-title-document: "本頁內容"
+  related-formats-title: "其他格式"
+  back-to-top: "回到頁首"
+
+website:
+  title: "Agent 時代的知識工作"
+  favicon: assets/site/favicon.png
+  site-url: "https://jimmy60504.github.io/agentic-knowledge-work/"
+  navbar:
+    background: white
+    foreground: dark
+    left:
+      - text: 教材首頁
+        href: index.qmd
+      - text: 工具索引
+        href: tools.qmd
+    right:
+      - icon: github
+        href: "https://github.com/jimmy60504/agentic-knowledge-work"
+        aria-label: GitHub
+  page-footer:
+    left: "Agent 時代的知識工作"
+    right: "以 Quarto 產生課程教材"
+  search: false
+
+format:
+  html:
+    include-in-header:
+      text: |
+        <link rel="apple-touch-icon" sizes="180x180" href="/agentic-knowledge-work/assets/site/apple-touch-icon.png">
+    theme:
+      - cosmo
+      - styles/article.scss
+    toc: true
+    toc-title: 本頁內容
+    anchor-sections: true
+    smooth-scroll: true
