@@ -61,7 +61,7 @@ Agent 讓收集、蒸餾、表達都變快，唯獨判斷沒有變快，所以�
 | 1 | [Agent 是什麼，它為什麼能幫你做事？](notes/00-agent-introduction.html)（教材整理中） | [環境建立](setup.html) | — |
 | 2 | [簡報：從亂聊到投影片，知識工作的循環長什麼樣？](notes/01-presentation-and-the-knowledge-work-loop.html) | [知識工作專案](tools.html#project)、[Agent 產 pptx](tools.html#pptx) | — |
 | 3 | 放假 | — | — |
-| [4]{.wip} | [整理想法：想法怎麼從素材裡長出來，什麼時候得自己讀？](notes/02-organizing-ideas.html)（兩倍時數） | [蒸餾與收斂](tools.html#distill) | — |
+| [4]{.wip} | [整理想法：想法怎麼從素材裡長出來，什麼時候得自己讀？](notes/02-organizing-ideas.html)（兩倍時數） | [思考框架](tools.html#thinking)、[蒸餾與收斂](tools.html#distill) | — |
 :::
 
 ### 第五週之後：需求驅動滾動排課
