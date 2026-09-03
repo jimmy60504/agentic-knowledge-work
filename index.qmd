@@ -21,11 +21,11 @@ toc: false
 ::: {.course-module}
 ### 每週固定的節奏
 
-1. 這件工作本來怎麼做：要素、判準、常見失敗
+1. 這件工作本來怎麼做：要素、判斷標準、常見失敗
 2. 拆解流程：哪些環節交給 agent、哪些要人檢查、哪些只能人做
-3. 讓 agent 做，依判準檢視
+3. 讓 agent 做，依判斷標準檢視
 4. 找出通順卻沒有判斷的段落，說明原因
-5. 把判準寫入自己的 AGENTS.md 或 skill
+5. 把判斷標準寫入自己的 AGENTS.md 或 skill
 
 **課程目標：**養成拆解工作、分辨環節、守住判斷的習慣。
 :::
@@ -46,7 +46,7 @@ toc: false
 - 收集實際工作需求
 - 釐清產出、素材、受眾與規範
 - 選出需要深入練習的技巧
-- 把判準整理成 skill，供之後沿用
+- 把判斷標準整理成 skill，供之後沿用
 
 **課程目標：**面對新的工作需求時，能從既有技巧組成合適的工作流程。
 :::
@@ -67,7 +67,7 @@ toc: false
 | 週次 | 問題 | 工具 | 投影片 |
 |---|---|---|---|
 | 1 | [Agent 是什麼，它為什麼能幫你做事？](notes/00-agent-introduction.html)（教材整理中） | [環境建立](setup.html) | — |
-| 2 | [簡報：從亂聊到投影片，知識工作的循環長什麼樣？](notes/01-presentation-and-the-knowledge-work-loop.html)<br>上午：agent 與課程架構、簡報的邏輯；下午：兩小時實作 | [知識工作專案](tools.html#project)、[Agent 產 pptx](tools.html#pptx) | — |
+| 2 | [簡報：從隨意討論到投影片，知識工作的循環長什麼樣？](notes/01-presentation-and-the-knowledge-work-loop.html)<br>上午：agent 與課程架構、簡報的邏輯；下午：兩小時實作 | [知識工作專案](tools.html#project)、[Agent 產 pptx](tools.html#pptx) | — |
 | 3 | 放假 | — | — |
 | [4]{.wip} | [整理想法：想法怎麼從素材裡長出來，什麼時候得自己讀？](notes/02-organizing-ideas.html)（兩倍時數） | [思考框架](tools.html#thinking)、[蒸餾與收斂](tools.html#distill) | — |
 :::
