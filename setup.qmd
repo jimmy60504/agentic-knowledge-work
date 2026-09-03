@@ -1,27 +1,27 @@
 ---
 title: "環境建立"
-subtitle: "Agent 還幫不上忙的那一段：帳號、GitHub Desktop、agent 桌面程式"
-description: "這是唯一一份需要你自己動手照做的文件。做完最後的最小測試之後，其他安裝與設定都可以叫 agent 幫你。"
+subtitle: "Agent 尚無法協助的一段：帳號、GitHub Desktop、agent 桌面程式"
+description: "這是唯一一份需要親自照做的文件。完成最後的最小測試之後，其餘安裝與設定都可以交給 agent 處理。"
 ---
 
 ## 為什麼這份文件要自己做
 
-Agent 能幫你做事的前提是它已經能在你的電腦上跑起來。在那之前的幾步——
-申請帳號、裝 agent 程式——它幫不上忙，這是整門課唯一要你照著操作的地方。
+Agent 能協助工作的前提，是它已經能在你的電腦上執行。在那之前的幾個步驟，
+申請帳號、安裝 agent 程式，它無法代勞，這是整門課唯一需要照著操作的部分。
 
-全程用桌面程式，不用打指令。做完本頁最後的「最小測試」，之後遇到任何安裝問題都直接問 agent。
+全程使用桌面程式，不必輸入指令。完成本頁最後的「最小測試」之後，往後遇到任何安裝問題都可以直接詢問 agent。
 
-各家工具變動很快；若本頁步驟與你看到的畫面不同，回報講師更新。
+各家工具變動很快；若本頁步驟與你看到的畫面不同，請回報講師更新。
 
 ## 第一步：帳號
 
-依你打算用的 agent 準備帳號，**不用全部都辦**，一個有免費額度的就夠上課。建議先辦 GitHub 與 Google。
+依你打算使用的 agent 準備帳號，**不必全部申請**，有一個免費額度即可上課。建議先申請 GitHub 與 Google。
 
 | 帳號 | 用途 | 費用 |
 |---|---|---|
-| [GitHub](https://github.com/signup) | 存放你的知識工作 repo、看課程教材 | 免費 |
+| [GitHub](https://github.com/signup) | 存放你的知識工作 repo、閱讀課程教材 | 免費 |
 | [Google](https://accounts.google.com/) | 登入 Antigravity | 免費 |
-| [OpenAI／ChatGPT](https://chatgpt.com/) | 登入 Codex | 免費（額度少） |
+| [OpenAI／ChatGPT](https://chatgpt.com/) | 登入 Codex | 免費（額度較少） |
 | [Anthropic／Claude](https://claude.ai/) | 登入 Claude | 需 Pro 訂閱，講師示範用 |
 
 ::: {.screenshot-todo}
@@ -30,24 +30,24 @@ Agent 能幫你做事的前提是它已經能在你的電腦上跑起來。在�
 
 ## 第二步：GitHub Desktop
 
-一個程式解決兩件事：裝好 git、登入 GitHub。之後建 repo、看紀錄、退回版本都在這裡按按鈕。
+一個程式解決兩件事：安裝 git、登入 GitHub。之後建立 repo、查看紀錄、退回版本，都在這裡以按鈕操作。
 
-1. 下載安裝 [GitHub Desktop](https://desktop.github.com/)。
-2. 開啟後用 GitHub 帳號登入。
-3. 設定名字與 email（用 GitHub 帳號的）。
+1. 下載並安裝 [GitHub Desktop](https://desktop.github.com/)。
+2. 開啟後以 GitHub 帳號登入。
+3. 設定姓名與 email（使用 GitHub 帳號的資料）。
 
 ::: {.screenshot-todo}
-截圖待補：下載頁、登入畫面、設定名字 email 的畫面
+截圖待補：下載頁、登入畫面、設定姓名與 email 的畫面
 :::
 
-## 第三步：裝一個 agent 桌面程式
+## 第三步：安裝一個 agent 桌面程式
 
-挑一個裝就好。上課時哪個還有額度就用哪個。
+擇一安裝即可。上課時哪一個尚有額度就使用哪一個。
 
 ### Antigravity（Google，建議首選：免費）
 
-1. 下載安裝 [Antigravity](https://antigravity.google/)。
-2. 用 Google 帳號登入。
+1. 下載並安裝 [Antigravity](https://antigravity.google/)。
+2. 以 Google 帳號登入。
 
 ::: {.screenshot-todo}
 截圖待補：下載頁、登入、首次開啟畫面
@@ -55,8 +55,8 @@ Agent 能幫你做事的前提是它已經能在你的電腦上跑起來。在�
 
 ### Codex 桌面版（OpenAI，備援）
 
-1. 下載安裝 [Codex](https://openai.com/codex)。
-2. 用 ChatGPT 帳號登入。
+1. 下載並安裝 [Codex](https://openai.com/codex)。
+2. 以 ChatGPT 帳號登入。
 
 ::: {.screenshot-todo}
 截圖待補：下載頁、登入、首次開啟畫面
@@ -64,17 +64,17 @@ Agent 能幫你做事的前提是它已經能在你的電腦上跑起來。在�
 
 ### Claude（需 Pro 訂閱）
 
-1. 下載安裝 [Claude 桌面版](https://claude.ai/download)。
-2. 登入後切到 Code 分頁。
+1. 下載並安裝 [Claude 桌面版](https://claude.ai/download)。
+2. 登入後切換到 Code 分頁。
 
 ::: {.screenshot-todo}
 截圖待補：下載頁、Code 分頁位置
 :::
 
-### VS Code + GitHub Copilot（免費額度少，彩蛋）
+### VS Code + GitHub Copilot（免費額度較少，額外選項）
 
-1. 下載安裝 [VS Code](https://code.visualstudio.com/)。
-2. 安裝 GitHub Copilot 擴充套件，用 GitHub 帳號登入。
+1. 下載並安裝 [VS Code](https://code.visualstudio.com/)。
+2. 安裝 GitHub Copilot 擴充套件，以 GitHub 帳號登入。
 
 ::: {.screenshot-todo}
 截圖待補：擴充套件安裝、登入
@@ -82,22 +82,22 @@ Agent 能幫你做事的前提是它已經能在你的電腦上跑起來。在�
 
 ## 第四步：最小測試
 
-這是「agent 開始能幫你」的分界線。
+這是「agent 開始能協助你」的分界線。
 
-1. 在 GitHub Desktop 建一個新 repo，取名 `my-knowledge-work`，建在你找得到的資料夾。
-2. 用 agent 桌面程式開啟那個資料夾。
-3. 把這句貼給 agent：
+1. 在 GitHub Desktop 建立一個新 repo，命名為 `my-knowledge-work`，放在容易找到的資料夾。
+2. 用 agent 桌面程式開啟該資料夾。
+3. 把這句話交給 agent：
 
-> 幫我在這個資料夾建立一個 README.md，寫一句這個專案是我的知識工作專案，然後 commit。
+> 請在這個資料夾建立一個 README.md，寫一句說明這個專案是我的知識工作專案，然後 commit。
 
-4. 回到 GitHub Desktop 的 History，看到一筆 commit 就通過了。
+4. 回到 GitHub Desktop 的 History，看到一筆 commit 即告完成。
 
 ::: {.screenshot-todo}
 截圖待補：GitHub Desktop 建 repo、agent 開啟資料夾、貼指令、History 出現 commit
 :::
 
-**從這一刻起，之後的所有安裝與設定都可以叫 agent 幫忙。**
+**從這一刻起，之後所有的安裝與設定都可以請 agent 協助。**
 
-## 常見卡點
+## 常見問題
 
 待補：依第一次上課實際遇到的問題整理。
