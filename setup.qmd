@@ -1,50 +1,81 @@
 ---
 title: "環境建立"
-subtitle: "Agent 尚無法協助的一段：帳號、GitHub Desktop、agent 桌面程式"
+subtitle: "Agent 尚無法協助的一段：帳號、Git、VS Code，以及選一個 agent"
 description: "這是唯一一份需要親自照做的文件。完成最後的最小測試之後，其餘安裝與設定都可以交給 agent 處理。"
 ---
 
 ## 為什麼這份文件要自己做
 
 Agent 能協助工作的前提，是它已經能在你的電腦上執行。在那之前的幾個步驟，
-申請帳號、安裝 agent 程式，它無法代勞，這是整門課唯一需要照著操作的部分。
+申請帳號、安裝 Git 與 VS Code、裝好 agent，它無法代勞，這是整門課唯一需要照著操作的部分。
 
-全程使用桌面程式，不必輸入指令。完成本頁最後的「最小測試」之後，往後遇到任何安裝問題都可以直接詢問 agent。
+完成本頁最後的「最小測試」之後，往後遇到任何安裝或設定問題，都可以直接詢問 agent。
 
 各家工具變動很快；若本頁步驟與你看到的畫面不同，請回報講師更新。
 
 ## 第一步：帳號
 
-依你打算使用的 agent 準備帳號，**不必全部申請**，有一個免費額度即可上課。建議先申請 GitHub 與 Google。
+GitHub 帳號一定要有；agent 的帳號依你選擇的那一家申請一個即可。
 
 | 帳號 | 用途 | 費用 |
 |---|---|---|
 | [GitHub](https://github.com/signup) | 存放你的知識工作 repo、閱讀課程教材 | 免費 |
-| [Google](https://accounts.google.com/) | 登入 Antigravity | 免費 |
-| [OpenAI／ChatGPT](https://chatgpt.com/) | 登入 Codex | 免費（額度較少） |
-| [Anthropic／Claude](https://claude.ai/) | 登入 Claude | 需 Pro 訂閱，講師示範用 |
+| [Anthropic／Claude](https://claude.ai/) | 使用 Claude | 需 Pro 訂閱（每月 20 美元） |
+| [OpenAI／ChatGPT](https://chatgpt.com/) | 使用 Codex | Plus 訂閱（每月 20 美元）；免費額度較少 |
+| [Google](https://accounts.google.com/) | 使用 Antigravity | 免費 |
 
 ::: {.screenshot-todo}
 截圖待補：GitHub 註冊頁、註冊完成畫面
 :::
 
-## 第二步：GitHub Desktop
+## 第二步：Git
 
-一個程式解決兩件事：安裝 git、登入 GitHub。之後建立 repo、查看紀錄、退回版本，都在這裡以按鈕操作。
+Git 負責版本紀錄，agent 每完成一個階段就會替你 commit 一次。
 
-1. 下載並安裝 [GitHub Desktop](https://desktop.github.com/)。
-2. 開啟後以 GitHub 帳號登入。
-3. 設定姓名與 email（使用 GitHub 帳號的資料）。
+1. 到 [git-scm.com](https://git-scm.com/downloads) 下載安裝程式。Windows 依預設選項安裝即可；macOS 也可以直接開啟「終端機」輸入 `git --version`，依提示安裝命令列工具。
+2. 姓名與 email 的設定不必自己做，最小測試時請 agent 代為設定。
 
 ::: {.screenshot-todo}
-截圖待補：下載頁、登入畫面、設定姓名與 email 的畫面
+截圖待補：下載頁、Windows 安裝畫面、macOS 終端機提示
 :::
 
-## 第三步：安裝一個 agent 桌面程式
+## 第三步：VS Code
 
-擇一安裝即可。上課時哪一個尚有額度就使用哪一個。
+VS Code 是編輯器，也是 agent 的工作畫面：檔案、對話、版本紀錄都在同一個視窗。
 
-### Antigravity（Google，建議首選：免費）
+1. 下載並安裝 [VS Code](https://code.visualstudio.com/)。
+2. 開啟後點左下角的帳號圖示，以 GitHub 帳號登入；之後把 repo 發布到 GitHub 只需按一個按鈕。
+3. 需要中文介面的話，在擴充套件搜尋「Chinese (Traditional)」安裝語言套件。
+
+::: {.screenshot-todo}
+截圖待補：下載頁、GitHub 登入、擴充套件搜尋畫面
+:::
+
+## 第四步：選一個 agent
+
+擇一安裝即可。同事使用哪一家就跟著用，方便互相支援。
+
+### Claude（Anthropic）
+
+1. 在 VS Code 的擴充套件搜尋「Claude Code」安裝。
+2. 以 Claude 帳號登入（需 Pro 訂閱）。安裝細節見[官方說明](https://code.claude.com/docs/en/vs-code)。
+
+::: {.screenshot-todo}
+截圖待補：擴充套件安裝、登入、側欄對話畫面
+:::
+
+### Codex（OpenAI）
+
+1. 在 VS Code 的擴充套件搜尋「Codex」安裝，或依[官方頁面](https://openai.com/codex)指示。
+2. 以 ChatGPT 帳號登入。
+
+::: {.screenshot-todo}
+截圖待補：擴充套件安裝、登入、側欄對話畫面
+:::
+
+### Antigravity（Google）
+
+Antigravity 是以 VS Code 為基礎的獨立程式，安裝後不必另外開啟 VS Code，操作方式相同。
 
 1. 下載並安裝 [Antigravity](https://antigravity.google/)。
 2. 以 Google 帳號登入。
@@ -53,47 +84,21 @@ Agent 能協助工作的前提，是它已經能在你的電腦上執行。在�
 截圖待補：下載頁、登入、首次開啟畫面
 :::
 
-### Codex 桌面版（OpenAI，備援）
-
-1. 下載並安裝 [Codex](https://openai.com/codex)。
-2. 以 ChatGPT 帳號登入。
-
-::: {.screenshot-todo}
-截圖待補：下載頁、登入、首次開啟畫面
-:::
-
-### Claude（需 Pro 訂閱）
-
-1. 下載並安裝 [Claude 桌面版](https://claude.ai/download)。
-2. 登入後切換到 Code 分頁。
-
-::: {.screenshot-todo}
-截圖待補：下載頁、Code 分頁位置
-:::
-
-### VS Code + GitHub Copilot（免費額度較少，額外選項）
-
-1. 下載並安裝 [VS Code](https://code.visualstudio.com/)。
-2. 安裝 GitHub Copilot 擴充套件，以 GitHub 帳號登入。
-
-::: {.screenshot-todo}
-截圖待補：擴充套件安裝、登入
-:::
-
-## 第四步：最小測試
+## 第五步：最小測試
 
 這是「agent 開始能協助你」的分界線。
 
-1. 在 GitHub Desktop 建立一個新 repo，命名為 `my-knowledge-work`，放在容易找到的資料夾。
-2. 用 agent 桌面程式開啟該資料夾。
-3. 把這句話交給 agent：
+1. 在容易找到的位置建立一個資料夾，命名為 `my-knowledge-work`。
+2. 用 VS Code（或 Antigravity）開啟該資料夾，打開 agent 的對話側欄。
+3. 把這段話交給 agent：
 
-> 請在這個資料夾建立一個 README.md，寫一句說明這個專案是我的知識工作專案，然後 commit。
+> 請在這個資料夾初始化 git；若尚未設定 git 的姓名與 email，請用我 GitHub 帳號的資料設定。接著建立一個 README.md，寫一句說明這個專案是我的知識工作專案，然後 commit。
 
-4. 回到 GitHub Desktop 的 History，看到一筆 commit 即告完成。
+4. 打開左側「原始檔控制」面板，看到一筆 commit 即告完成。
+5. 按「發布到 GitHub」把 repo 推上去，之後每次上課都從這裡接續。
 
 ::: {.screenshot-todo}
-截圖待補：GitHub Desktop 建 repo、agent 開啟資料夾、貼指令、History 出現 commit
+截圖待補：開啟資料夾、貼指令、原始檔控制面板出現 commit、發布到 GitHub 按鈕
 :::
 
 **從這一刻起，之後所有的安裝與設定都可以請 agent 協助。**
