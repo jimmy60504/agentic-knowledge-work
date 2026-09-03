@@ -51,7 +51,7 @@ format:
   html:
     include-in-header:
       text: |
-        <link rel="apple-touch-icon" sizes="180x180" href="/agentic-knowledge-work/assets/site/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/site/apple-touch-icon.png">
     theme:
       - cosmo
       - styles/article.scss
