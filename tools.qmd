@@ -5,18 +5,20 @@ description: "每週工具的最小回憶卡：這個東西在解決什麼、上
 
 這裡不教操作，操作問 agent 就好。每張卡只放三樣東西：這個工具在解決什麼、上課講過的幾個名詞、卡住的時候怎麼問。
 
-## Agent 環境與免費額度 {#agent-env}
+## Agent 環境與訂閱方案 {#agent-env}
 
-課程不綁工具，全程用桌面程式。學員哪個還有免費額度就用哪個；講師示範用訂閱版，讓大家看差在哪。安裝步驟見[環境建立](setup.html)。
+課程不綁工具，全程用桌面程式，安裝步驟見[環境建立](setup.html)。建議訂閱一家的最低方案（每月 20 美元），選擇的依據是同事用哪一家就跟著用；免費額度也能跟課，但通常兩小時內就會用完，額度用完時可先取得論點 md，再換免費工具接續後面幾步。
 
-- **Antigravity（Google）**：免費，額度較寬，建議首選。
-- **Codex 桌面版（OpenAI）**：免費額度月重置，燒完要等一個月，當備援。
+- **Claude（Anthropic）**：需 Pro 訂閱，無免費層；講師示範用。
+- **Codex 桌面版（OpenAI）**：隨 ChatGPT Plus 訂閱；免費額度月重置，用完要等一個月。
+- **Antigravity（Google）**：免費、額度較寬，沒有訂閱時的首選。
 - **VS Code + GitHub Copilot**：免費版少量 agent 額度，當彩蛋。
-- **Claude**：無免費層，需 Pro 訂閱；講師示範用。
 - **GitHub Desktop**：裝 git 與登入 GitHub 一次搞定，版本紀錄都在這裡看。
-- 各家額度變動極快，開課前一週再確認一次。
+- 各家方案與額度變動極快，開課前一週再確認一次。
 
-**關鍵字**：桌面程式、免費額度、GitHub Desktop、commit
+**模型怎麼選**：兩個旋鈕，模型等級與推理強度，都是拿深度換速度與額度。強模型一句話就接近可用、但容易多做；弱模型要說得清楚、但按部就班好控制。常見做法是強模型規劃、弱模型執行。詳細比較看 [Artificial Analysis](https://artificialanalysis.ai/models) 與[數位時代的方案整理](https://www.bnext.com.tw/article/90197/ethan-mollick-which-ai-to-use)。
+
+**關鍵字**：桌面程式、訂閱方案、模型等級、推理強度、GitHub Desktop、commit
 
 **卡住就問**：「帶我跑一次最小的測試：在這個資料夾建一個 md 檔，然後 commit。」
 
