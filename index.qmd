@@ -14,45 +14,43 @@ toc: false
 因此這門課每週先說明一件工作的正確做法，再拆解流程，分辨哪些環節可以交給 agent，哪些環節必須自行把關。
 接著親手做一份，依照這些標準檢視 agent 的產出，最後把標準寫入自己的專案，供下週沿用。
 
-課程單元由「工作情境」與「技巧模組」組成。簡報、公文、報告、會議紀錄等情境，各自需要不同的文案、結構、視覺、資料處理與格式規範。
-每個單元先練習共用的知識工作循環，再深入該情境的主要技巧。
+## 知識如何變成交付成果
 
-:::: {.course-outline}
-::: {.course-module}
-### 每週固定的節奏
+零散想法、研究素材、技能與人的洞見都保存在專案資料夾；需要交付時，agent 從中組成初稿，再由人修改與審查。
 
-1. 這件工作本來怎麼做：要素、判斷標準、常見失敗
-2. 拆解流程：哪些環節交給 agent、哪些要人檢查、哪些只能人做
-3. 讓 agent 做，依判斷標準檢視
-4. 找出通順卻沒有判斷的段落，說明原因
-5. 把判斷標準寫入自己的 AGENTS.md 或 skill
+<div class="folder-map" aria-label="專案資料夾的輸入、思考與交付流程">
+<div class="folder-inputs">
+<div class="folder-node"><strong>範例與規範</strong><span>抽成 skills/</span></div>
+</div>
+<b class="folder-input-arrow" aria-hidden="true">→</b>
+<div class="folder-source folder-node"><strong>零散想法與研究素材</strong></div>
+<b class="folder-source-arrow" aria-hidden="true">↓</b>
+<div class="folder-thinking">
+<div class="folder-node folder-human"><strong>人的思考與洞見</strong></div>
+<div class="folder-node"><strong>實驗規劃與結果</strong></div>
+</div>
+<div class="folder-thinking-arrow" aria-hidden="true"><b>↔</b><b>↔</b></div>
+<div class="folder-core">
+<strong>專案資料夾</strong>
+<div class="folder-tree">
+<div>AGENTS.md</div>
+<div>kb/<small>來源 · 實驗 · 洞見</small></div>
+<div>skills/</div>
+<div>工作紀錄.md</div>
+</div>
+</div>
+<b class="folder-output-arrow" aria-hidden="true">↓</b>
+<div class="folder-outputs">
+<div class="folder-node"><strong>指定交付形式，Agent 組成初稿</strong></div>
+<b aria-hidden="true">↓</b>
+<div class="folder-node folder-human"><strong>人修改與審查</strong></div>
+<b aria-hidden="true">↓</b>
+<div class="folder-node"><strong>正式交付</strong></div>
+</div>
+<div class="folder-feedback">↺　回饋與修正存回專案資料夾</div>
+</div>
 
-**課程目標：**養成拆解工作、分辨環節、守住判斷的習慣。
-:::
-
-::: {.course-module}
-### 工作情境決定技巧組合
-
-- 共用循環：收集、整理、蒸餾、表達
-- 技巧模組：文案、結構、視覺、資料與程式、格式與合規
-- 工作情境：簡報、公文、報告、會議紀錄、數據報表、研究寫作
-
-**課程目標：**認識哪些技巧可以共用，哪些必須依工作內容調整。
-:::
-
-::: {.course-module}
-### 依需求組成後續單元
-
-- 收集實際工作需求
-- 釐清產出、素材、受眾與規範
-- 選出需要深入練習的技巧
-- 把判斷標準整理成 skill，供之後沿用
-
-**課程目標：**面對新的工作需求時，能從既有技巧組成合適的工作流程。
-:::
-::::
-
-### 上課準備
+## 上課準備
 
 - 請自備筆電，並先依[環境建立](setup.html)安裝 Git 與 VS Code，再從 Claude、Codex 或 Antigravity 選擇一個 agent；這是課程中唯一需要親自操作的部分。
 - 建議訂閱一家 agent 的最低方案（每月 20 美元）。免費額度也能跟課，但通常兩小時內就會用完；付費省下的是每次向 AI 反覆說明的功夫。選擇方式見[工具索引](tools.html#agent-env)。
@@ -61,7 +59,7 @@ toc: false
 
 ## 課程教材
 
-### 已定進度
+### 近期進度
 
 ::: {.weekly-table}
 | 週次 | 問題 | 工具 | 投影片 |
@@ -74,6 +72,5 @@ toc: false
 
 ### 第五週之後：需求驅動滾動排課
 
-之後的週次不預先排定。第二週會請大家想想平常最花時間的文書工作，
-課堂上詢問，課後另開表單收集；收到的需求整理成課程題目，排入下一次課程。
-未收到需求時依原定方向繼續，候選題目見[工具索引](tools.html#ideas)。
+第五週後依署內的實際需求滾動安排。收集到的需求會整理成課程題目，
+再沿用前述工作系統拆解；可延伸的方向見[工具索引](tools.html#ideas)。

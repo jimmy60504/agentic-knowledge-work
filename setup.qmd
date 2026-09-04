@@ -24,20 +24,12 @@ GitHub 帳號一定要有；agent 的帳號依你選擇的那一家申請一個�
 | [OpenAI／ChatGPT](https://chatgpt.com/) | 使用 Codex | Plus 訂閱（每月 20 美元）；免費額度較少 |
 | [Google](https://accounts.google.com/) | 使用 Antigravity | 免費 |
 
-::: {.screenshot-todo}
-截圖待補：GitHub 註冊頁、註冊完成畫面
-:::
-
 ## 第二步：Git
 
 Git 負責版本紀錄，agent 每完成一個階段就會替你 commit 一次。
 
 1. 到 [git-scm.com](https://git-scm.com/downloads) 下載安裝程式。Windows 依預設選項安裝即可；macOS 也可以直接開啟「終端機」輸入 `git --version`，依提示安裝命令列工具。
 2. 姓名與 email 的設定不必自己做，最小測試時請 agent 代為設定。
-
-::: {.screenshot-todo}
-截圖待補：下載頁、Windows 安裝畫面、macOS 終端機提示
-:::
 
 ## 第三步：VS Code
 
@@ -46,10 +38,6 @@ VS Code 是編輯器，也是 agent 的工作畫面：檔案、對話、版本�
 1. 下載並安裝 [VS Code](https://code.visualstudio.com/)。
 2. 開啟後點左下角的帳號圖示，以 GitHub 帳號登入；之後把 repo 發布到 GitHub 只需按一個按鈕。
 3. 需要中文介面的話，在擴充套件搜尋「Chinese (Traditional)」安裝語言套件。
-
-::: {.screenshot-todo}
-截圖待補：下載頁、GitHub 登入、擴充套件搜尋畫面
-:::
 
 ## 第四步：選一個 agent
 
@@ -60,18 +48,10 @@ VS Code 是編輯器，也是 agent 的工作畫面：檔案、對話、版本�
 1. 在 VS Code 的擴充套件搜尋「Claude Code」安裝。
 2. 以 Claude 帳號登入（需 Pro 訂閱）。安裝細節見[官方說明](https://code.claude.com/docs/en/vs-code)。
 
-::: {.screenshot-todo}
-截圖待補：擴充套件安裝、登入、側欄對話畫面
-:::
-
 ### Codex（OpenAI）
 
 1. 在 VS Code 的擴充套件搜尋「Codex」安裝，或依[官方頁面](https://openai.com/codex)指示。
 2. 以 ChatGPT 帳號登入。
-
-::: {.screenshot-todo}
-截圖待補：擴充套件安裝、登入、側欄對話畫面
-:::
 
 ### Antigravity（Google）
 
@@ -79,10 +59,6 @@ Antigravity 是以 VS Code 為基礎的獨立程式，安裝後不必另外開�
 
 1. 下載並安裝 [Antigravity](https://antigravity.google/)。
 2. 以 Google 帳號登入。
-
-::: {.screenshot-todo}
-截圖待補：下載頁、登入、首次開啟畫面
-:::
 
 ## 第五步：最小測試
 
@@ -97,12 +73,4 @@ Antigravity 是以 VS Code 為基礎的獨立程式，安裝後不必另外開�
 4. 打開左側「原始檔控制」面板，看到一筆 commit 即告完成。
 5. 按「發布到 GitHub」把 repo 推上去，之後每次上課都從這裡接續。
 
-::: {.screenshot-todo}
-截圖待補：開啟資料夾、貼指令、原始檔控制面板出現 commit、發布到 GitHub 按鈕
-:::
-
 **從這一刻起，之後所有的安裝與設定都可以請 agent 協助。**
-
-## 常見問題
-
-待補：依第一次上課實際遇到的問題整理。

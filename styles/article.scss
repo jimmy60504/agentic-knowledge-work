@@ -65,39 +65,166 @@ main.content blockquote {
   font-size: 1.2rem;
 }
 
-.course-outline {
+
+.folder-map {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 2rem 0 3rem;
-  border-top: 2px solid #111;
-  border-bottom: 2px solid #111;
+  grid-template-areas:
+    ". . source . ."
+    ". . source-arrow . ."
+    "inputs input-arrow core thinking-arrow thinking"
+    ". . output-arrow . ."
+    ". . outputs . ."
+    ". . feedback . .";
+  grid-template-columns: minmax(0, 0.9fr) 2rem minmax(13rem, 1.25fr) 2rem minmax(0, 0.9fr);
+  align-items: center;
+  max-width: 46rem;
+  margin: 2rem auto 4.5rem;
+  padding: 1.25rem 0;
+  border-top: 2px solid #0b2454;
+  border-bottom: 2px solid #0b2454;
 }
 
-.course-module {
+.folder-inputs {
+  grid-area: inputs;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.folder-input-arrow,
+.folder-output-arrow,
+.folder-source-arrow,
+.folder-thinking-arrow,
+.folder-outputs > b {
+  color: #b77800;
+  font-weight: 720;
+  text-align: center;
+}
+
+.folder-input-arrow {
+  grid-area: input-arrow;
+}
+
+.folder-thinking {
+  grid-area: thinking;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  justify-self: center;
+  width: min(100%, 16rem);
+}
+
+.folder-thinking-arrow {
+  grid-area: thinking-arrow;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  justify-content: center;
+}
+
+.folder-thinking-arrow > b {
+  display: grid;
+  place-items: center;
+  min-height: 3rem;
+}
+
+.folder-source {
+  grid-area: source;
+  justify-self: center;
+  width: min(100%, 16rem);
+}
+
+.folder-source-arrow {
+  grid-area: source-arrow;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.folder-core {
+  grid-area: core;
+  padding: 1rem 1.15rem;
+  border-radius: 0.55rem;
+  background: #0b2454;
+  color: #fff;
+}
+
+.folder-core > strong {
+  font-size: 1.08rem;
+}
+
+.folder-tree {
+  margin-top: 0.65rem;
+  border-top: 1px solid #52678f;
+}
+
+.folder-tree > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid #52678f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+.folder-tree small {
+  color: #c9d4e9;
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+}
+
+.folder-output-arrow {
+  grid-area: output-arrow;
+}
+
+.folder-outputs {
+  grid-area: outputs;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.folder-outputs > b {
+  line-height: 1;
+}
+
+.folder-node {
   min-width: 0;
-  padding: 1.5rem;
-  border-right: 1px solid #ccc;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #d8dde5;
+  border-radius: 0.5rem;
+  background: #fff;
+  text-align: center;
 }
 
-.course-module:first-child {
-  padding-left: 0;
+.folder-node strong,
+.folder-node span {
+  display: block;
 }
 
-.course-module:last-child {
-  padding-right: 0;
-  border-right: 0;
+.folder-node strong {
+  color: #0b2454;
+  font-size: 0.9rem;
 }
 
-.course-module h3 {
-  margin-top: 0;
+.folder-node span {
+  margin-top: 0.08rem;
+  color: #687386;
+  font-size: 0.76rem;
+  line-height: 1.4;
 }
 
-.course-module p:last-child {
-  margin-bottom: 0;
+.folder-human {
+  border-color: #d9aa4c;
+  background: #fffaf0;
 }
 
-.course-module ul {
-  padding-left: 1.25rem;
+.folder-feedback {
+  grid-area: feedback;
+  margin-top: 0.85rem;
+  color: #5d6878;
+  font-size: 0.78rem;
+  text-align: center;
 }
 
 .weekly-table table {
@@ -145,18 +272,75 @@ main.content blockquote {
 }
 
 @media (max-width: 760px) {
-  .course-outline {
-    display: block;
+  .folder-map {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.25rem;
   }
 
-  .course-module {
-    padding: 1.5rem 0;
-    border-right: 0;
-    border-bottom: 1px solid #ccc;
+  .folder-inputs,
+  .folder-source,
+  .folder-thinking,
+  .folder-core,
+  .folder-outputs {
+    width: 100%;
   }
 
-  .course-module:last-child {
-    border-bottom: 0;
+  .folder-source {
+    order: 1;
+  }
+
+  .folder-source-arrow {
+    display: none;
+  }
+
+  .folder-inputs {
+    order: 2;
+  }
+
+  .folder-input-arrow {
+    order: 3;
+  }
+
+  .folder-core {
+    order: 4;
+  }
+
+  .folder-thinking-arrow {
+    order: 5;
+    transform: rotate(90deg);
+  }
+
+  .folder-thinking-arrow > b:not(:first-child) {
+    display: none;
+  }
+
+  .folder-thinking {
+    order: 6;
+  }
+
+  .folder-output-arrow {
+    order: 7;
+  }
+
+  .folder-outputs {
+    order: 8;
+  }
+
+  .folder-feedback {
+    order: 9;
+  }
+
+  .folder-input-arrow,
+  .folder-output-arrow,
+  .folder-thinking-arrow {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+  }
+
+  .folder-input-arrow {
+    transform: rotate(90deg);
   }
 
   .official-figure {
@@ -168,12 +352,4 @@ main.content blockquote {
     max-width: min(100%, calc(100vw - 2rem));
     max-height: 60vh;
   }
-}
-
-.screenshot-todo {
-  margin: 1.25rem 0 2rem;
-  padding: 0.75rem 1rem;
-  border: 1px dashed #999;
-  color: #555;
-  font-size: 0.9rem;
 }
