@@ -3,10 +3,10 @@
 這個 repo 同時保存課程整理筆記與正式授課教材，也是課程自己的示範專案：
 它就是用課程教的流程（AGENTS.md ＋ 知識庫 ＋ 工作紀錄）長出來的。
 
-- `docs/`：備課筆記（教案、課程地圖），不發布到課程網站。
+- `drafts/`：備課筆記（教案、課程地圖），不發布到課程網站。
 - `kb/`：課程的知識庫。討論中撈到的素材與洞見，附來源，先進這裡再決定要不要進教材。
 - `工作紀錄.md`：討論脈絡與決策紀錄，含「待消化」區。
-- `notes/`：正式教材文章。每週一份 Quarto Markdown（`.qmd`）。
+- `lessons/`：正式教材文章。每週一份 Quarto Markdown（`.qmd`）。
 - `slides/`：授課投影片（PPTX），靠 OneDrive 同步、不進 git；網站連結指向 OneDrive 共用連結。
 
 課程網站：<https://jimmy60504.github.io/agentic-knowledge-work/>
@@ -44,8 +44,8 @@ quarto render
 - `index.qmd`：課程網站首頁。
 - `setup.qmd`：環境建立——agent 還幫不上忙的起點文件（帳號、終端機、git、agent CLI）。
 - `tools.qmd`：工具索引。
-- `notes/`：各週文章版教材。
-- `docs/`：教案與課程地圖，不公開。
+- `lessons/`：各週文章版教材。
+- `drafts/`：教案與課程地圖，不公開。
 - `kb/`：知識庫。
 - `工作紀錄.md`：討論脈絡。
 - `AGENTS.md`：給 agent 與後續協作者的維護規則。

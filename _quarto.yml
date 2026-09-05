@@ -5,7 +5,7 @@ project:
     - index.qmd
     - setup.qmd
     - tools.qmd
-    - notes/*.qmd
+    - lessons/*.qmd
   resources:
     - assets/**
 
