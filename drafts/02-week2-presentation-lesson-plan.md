@@ -1,7 +1,9 @@
 # Agent 時代的知識工作 — 第二週教案：先體驗 agent
 
-> 第二週唯一主 draft，保存講稿、實作步驟與講師備註；尚未發布。2026-09-07 依使用者確認的收斂方向重整。
+> 第二週主教案，保存完整講稿、實作步驟與講師備註；尚未發布。2026-09-07 依使用者確認的收斂方向重整。
 > 來源：使用者六頁投影片手稿與後續討論、舊教材 `lessons/01-presentation-and-the-knowledge-work-loop.qmd`、`kb/presentation-process-before-and-after.md`、`kb/purposeful-reading-and-agent-assisted-practice.md` 與 `工作紀錄.md`。舊內容去向見 [第二週移出主題與後續用途](06-week2-deferred-topics.md)。
+
+> 逐頁投影片內容另見 [第二週分頁草稿](07-week2-slide-by-slide-draft.md)，將本教案拆成畫面文字、口述與演示切換。
 
 ## 本週目的與安排
 
