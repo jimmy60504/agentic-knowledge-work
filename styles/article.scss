@@ -34,6 +34,18 @@ main.content {
   line-height: 1.8;
 }
 
+// Quarto derives cluster fills from the foreground color. Keep diagrams light
+// when the article's primary/foreground colors are near black.
+main.content .mermaid-js {
+  --mermaid-fg-color--lightest: #f5f5f5;
+  --mermaid-fg-color--lighter: #b8b8b8;
+  --mermaid-node-bg-color: #fff;
+  --mermaid-node-fg-color: #555;
+  --mermaid-label-fg-color: #111;
+  --mermaid-label-bg-color: #fff;
+  --mermaid-edge-color: #555;
+}
+
 main.content hr {
   display: none;
 }
