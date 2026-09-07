@@ -5,12 +5,12 @@
 | 檔案 | 作者／來源與位置 | 授權或分享依據 | 本次處理 |
 |---|---|---|---|
 | `ai-at-work-figure3-page46.png` | Brynjolfsson、Li、Raymond，[Generative AI at Work v2 PDF](https://arxiv.org/pdf/2304.11771v2)，PDF 第 46 頁，印刷頁碼 45，Figure 3 | [arXiv v2 授權](https://arxiv.org/abs/2304.11771v2)連至 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) | 整頁轉圖，保留座標、圖說與頁碼；未裁切、翻譯或修改；非商業使用條件仍適用 |
-| `sun-human-judgment-page61.png` | 孫以瀚，2026-05-11，[教育部臺灣學術倫理教育資源中心提供的講座 PDF](https://ethics.moe.edu.tw/files/resource/lecture/20260511/20260511_lecture_20260508.pdf)，第 61 頁 | 原稿第 1 頁寫明「PPT 可提供（細節慢慢看），歡迎分享出去」；未指定 CC 授權，不擴張成任意改作授權 | 整頁轉圖、未修改；保留講者及講座出處；屬講者個人意見 |
-| `moda-problem-definition-page25.png` | 數位發展部，[公部門人工智慧應用參考手冊](https://www-api.moda.gov.tw/File/Get/moda/zh-tw/WwHCroVhwWy52dw)，V1.0，修訂頁日期 115.01.28，第 25 頁 | [數發部政府網站資料開放宣告 CC0](https://moda.gov.tw/announcement/publicdeclare/951) | 僅擷取下半部「提出問題」與對照文字，未改字；排除上方 Freepik 插畫。座標見下方指令 |
+| `sun-human-judgment-page61.png` | 孫以瀚，2026-05-11，[教育部臺灣學術倫理教育資源中心提供的講座 PDF](https://ethics.moe.edu.tw/files/resource/lecture/20260511/20260511_lecture_20260508.pdf)，第 61 頁 | 原稿第 1 頁寫明「PPT 可提供（細節慢慢看），歡迎分享出去」；未指定 CC 授權，不擴張成任意改作授權 | 整頁轉圖、未修改；目前 draft 改採可讀引文／整理自摘要，原檔保留作查核；屬講者個人意見 |
+| `moda-problem-definition-page25.png` | 數位發展部，[公部門人工智慧應用參考手冊](https://www-api.moda.gov.tw/File/Get/moda/zh-tw/WwHCroVhwWy52dw)，V1.0，修訂頁日期 115.01.28，第 25 頁 | [數發部政府網站資料開放宣告 CC0](https://moda.gov.tw/announcement/publicdeclare/951) | 僅擷取下半部「提出問題」與對照文字，未改字；目前 draft 改採可讀整理，原檔保留作查核；排除上方 Freepik 插畫。座標見下方指令 |
 | `design-council-double-diamond.png` | [Design Council，The Double Diamond](https://www.designcouncil.org.uk/resources/the-double-diamond/) | 原頁明示 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 原始 PNG、未修改；保留英文標籤；為備講材料 |
 | `zotero-pdf-reader.jpg` | [Zotero 官方 PDF Reader and Note Editor 文件](https://www.zotero.org/support/pdf_reader)，文件使用的 6.0 時期示範圖 | [Zotero 文件授權](https://www.zotero.org/support/licensing)：2015-04-26 之後文件內容 CC BY-SA 4.0 | 原圖未修改；保留整個工具示範，內嵌研究內容不另行取用；非本機操作截圖 |
-| `three-artifacts.svg` | 本課原創示意，範例借用客服研究的題材；三種產出物為本課安排 | 原創課程圖，未另授予 CC 授權 | 使用 `build_diagrams.py` 生成，可編輯；非引用作者原圖或真實軟體畫面 |
-| `paragraph-before-after.svg` | 本課原創改寫例子；右側事實來源為 [客服研究 v2 摘要](https://arxiv.org/abs/2304.11771v2) | 原創課程圖，未另授予 CC 授權 | 使用 `build_diagrams.py` 生成；左側為自擬過度概括，右側為資料摘要，沒有改作原論文圖 |
+| `three-artifacts.svg` | 本課原創示意，範例借用客服研究的題材；三種產出物為本課安排 | 原創課程圖，未另授予 CC 授權 | 使用 `build_diagrams.py` 生成；目前 draft 改採可編輯 Markdown 對照，圖檔保留作查核歷史；非引用作者原圖或真實軟體畫面 |
+| `paragraph-before-after.svg` | 本課原創改寫例子；右側事實來源為 [客服研究 v2 摘要](https://arxiv.org/abs/2304.11771v2) | 原創課程圖，未另授予 CC 授權 | 使用 `build_diagrams.py` 生成；目前 draft 改採可編輯 Markdown 對照，圖檔保留作查核歷史；左側為自擬過度概括，右側為資料摘要，沒有改作原論文圖 |
 
 外部 PNG／JPG 的直接下載位置：
 
@@ -41,4 +41,4 @@ python3 build_diagrams.py
 
 ## 草案檢查
 
-已確認八個嵌入圖片路徑有效、兩張 SVG 可解析並轉圖目視檢查，Quarto 可輸出含八張內嵌圖片的 HTML。五個 Mermaid 區塊保留為可編輯原始碼；本次未完成瀏覽器中的流程圖視覺檢查，正式排版時仍需確認其換行與尺寸。
+原有八個圖片檔均保留，且外部圖與兩張 SVG 已完成可解析及目視檢查；目前 draft 改為 4 張圖片（放大鏡、研究 Figure 3、Design Council 備講圖、Zotero）與 5 個 Mermaid 區塊。孫以瀚、數發部兩張頁面截圖及兩張 SVG 改由可讀引文、整理自摘要或 Markdown 對照承擔內容。本次不新增研究論文首頁圖片；日後若首次介紹來源，可選用真實首頁／封面辨識作者、機構、期刊／版本，客服來源仍記為 arXiv v2。正式排版時仍需確認 Mermaid 換行與尺寸。
