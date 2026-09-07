@@ -289,6 +289,6 @@ Agent 起草時常出現這樣的結尾：「這種方式比較好，適合所�
 
 ### 來源與草稿狀態
 
-- 本稿依使用者手稿與討論、既有教案及[圖文與中英文來源選用紀錄](../kb/week2-paragraph-evidence-and-visuals.md)整理。2026-09-07 依總時數 60 分鐘加練習 120 分鐘整體收斂：對照組移為前半段轉折點，示範與練習分開，練習題目自選、成品改為 10 到 12 頁；收斂前的版本存於 `tmp/week2-lesson-plan-before-convergence-2026-09-07.md`。尚未同步正式教材或 PPTX。
+- 本稿依使用者手稿與討論、既有教案及[圖文與中英文來源選用紀錄](../kb/week2-paragraph-evidence-and-visuals.md)整理。2026-09-07 依總時數 60 分鐘加練習 120 分鐘整體收斂：對照組移為前半段轉折點，示範與練習分開，練習題目自選、成品改為 10 到 12 頁；收斂前的版本存於 `tmp/week2-lesson-plan-before-convergence-2026-09-07.md`。正式教材已同步；講師版投影片由 `slides/build-week2.py` 產出，成品在 `slides/`，共用連結待建立。
 - 開場沿用[課程首頁「知識如何變成交付成果」](../index.qmd)的專案概念。放大鏡圖用於引入比喻；對照組為課程試做，由 agent 直接生成，來龍去脈見[對照組筆記](../kb/baseline-deck-looks-good-but-cannot-present.md)；[視覺設計規則](07-visual-design-rules.md)整理自該 agent 所讀的簡報製作 skill，非逐字。
 - 授權細節與未採用素材查[素材來源表](../assets/week2-enrichment/README.md)與[NESA 範例來源表](../assets/week2-nesa-examples/README.md)。本次移出正文的內容與理由見[移出主題與後續用途](06-week2-deferred-topics.md)的 2026-09-07 收斂一節。
