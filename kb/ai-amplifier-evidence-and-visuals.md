@@ -2,10 +2,10 @@
 
 ## 來源
 
-2026-09-07，使用者詢問是否應在建立論點時先蒐集文獻與圖片，並要求實際測試。Agent 以第二週主 draft 的「AI 是放大器」作為測試主題；以下為候選材料，尚未整合教案或投影片。查閱日：2026-09-07。
+2026-09-07，使用者詢問是否應在建立論點時先蒐集文獻與圖片，並要求實際測試。Agent 以第二週主 draft 的「AI 是放大器」作為測試主題；以下記錄初次候選材料；後續已試整合第二週 draft，正式教材與投影片未同步。查閱日：2026-09-07。
 
 1. HBS AI Institute，〈Navigating the Jagged Technological Frontier〉，2023-09-21，[研究機構摘要](https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/)。已讀摘要的 Key Findings 與 Shifting the Debate；[論文入口](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) 回傳 403，本次未讀全文，不宣稱完成方法審查。
-2. Erik Brynjolfsson、Danielle Li、Lindsey Raymond，*Generative AI at Work*，[arXiv v2](https://arxiv.org/abs/2304.11771v2)，2024-11-06 修訂；[HTML 全文](https://arxiv.org/html/2304.11771v2)。已核對摘要及 Figure 3、4 圖說，未完整審查所有模型。固定採 v2 的樣本與數字，不混用其他版本。arXiv 頁的授權連到 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)。
+2. Erik Brynjolfsson、Danielle Li、Lindsey Raymond，*Generative AI at Work*，[arXiv v2](https://arxiv.org/abs/2304.11771v2)，2024-11-06 修訂；[HTML 全文](https://arxiv.org/html/2304.11771v2)。已核對摘要、Figure 3 原圖及 Figure 3、4 圖說，未完整審查所有模型。固定採 v2 的樣本與數字，不混用其他版本。arXiv 頁的授權連到 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)。
 3. Joel Becker 等，METR，〈We are Changing our Developer Productivity Experiment Design〉，2026-02-24，[研究團隊更新](https://metr.org/blog/2026-02-24-uplift-update/)。已讀結果、選樣問題及設計更新說明。
 4. Julo，*Lupa.na.encyklopedii.jpg*，2007-08-10，[Commons 圖片頁](https://commons.wikimedia.org/wiki/File:Lupa.na.encyklopedii.jpg)，作者釋出至公有領域。
 5. Iainf，*LeverPrincleple.svg*，2006，[Commons 圖片頁](https://commons.wikimedia.org/wiki/File:LeverPrincleple.svg)，本次依頁面提供的 CC BY-SA 3.0 保存。
@@ -28,7 +28,7 @@
 |---|---|---|
 | 放大鏡與書本照片 | 用於「放大器」或查閱材料的概念引入；是比喻，不能佐證 AI 效果 | 已下載原圖並目視檢查。橫式 1971×1074；畫面偏暗、文字密集，適合獨立圖片區，避免再疊長文字 |
 | 槓桿原理 SVG | 用於「工具如何擴展能力」的抽象類比，並可討論支點與操作方式 | 已下載原 SVG、核對雜湊與原頁一致。原圖為物理示意，若引入過多公式可能分散主題；保留作備選，不直接認定適合主頁 |
-| 客服研究 Figure 3：Heterogeneity of AI Impact, by Skill and Tenure | 真正對應論點的研究圖，呈現原始技能、年資不同時的效果差異 | 已核對圖說與位置，未下載圖像；HTML 缺少相應可直接下載的圖像，下一次製作時從 PDF 檢查。原文授權含 NC／ND，不直接翻譯改圖後發布 |
+| 客服研究 Figure 3：Heterogeneity of AI Impact, by Skill and Tenure | 真正對應論點的研究圖，呈現原始技能、年資不同時的效果差異 | 已從 v2 PDF 第 46 頁取得整頁圖並目視核對，保存於 `assets/week2-enrichment/ai-at-work-figure3-page46.png`。保留座標與圖說；縱軸不是百分比。原文授權含 NC／ND，不直接翻譯改圖後發布 |
 | 客服研究 Figure 4：Experience Curves by Deployment Cohort | 可用於解釋 AI 與經驗累積的關係 | 已定位圖說，尚未擷取與視覺檢查；保留為候選，避免把相關曲線簡化成保證學習效果 |
 
 目前沒有生成抽象圖片。若採用放大器比喻後仍缺合適畫面，可再生成；先確認要表達的關係，再投入製作。
@@ -48,6 +48,8 @@
 
 每個素材保留五件事即可：支持或挑戰哪個想法、原始來源與位置、候選用途、限制、採用狀態。圖片另附作者與授權。初期收少量候選，避免先累積大量無法解釋用途的圖片。
 
-第二週測試用法：先展示「AI 是放大器」的起始想法，再看客服研究如何促使我們改寫；同時展示放大鏡照片與研究 Figure 3 的角色差別，讓學員看到資料、畫面、論點一起形成。Figure 3 仍需取得與檢查，不列為已完成投影片。
+第二週測試用法：先展示「AI 是放大器」的起始想法，再看客服研究如何促使我們改寫；同時展示放大鏡照片與研究 Figure 3 的角色差別，讓學員看到資料、畫面、論點一起形成。Figure 3 已取得並嵌入 draft；原圖字較密，正式投影仍需試讀。
 
 初次蒐集時只完成測試；2026-09-07 後續依使用者要求試整合回第二週主 draft，加入放大鏡照片、客服研究摘要示意、Figure 3 待取得註記與版面草圖，並將蒐集文獻、案例與圖片明列於論點圈。槓桿圖與 METR 更新保留為備選。這份圖文整合仍為可修改的草案，正式 lesson 與 PPTX 未同步。
+
+逐段擴充更新（2026-09-07）：Figure 3 待取得項已完成，另加入台灣講座與教學案例、數發部需求對照及外部工具畫面。逐段取捨見 [[week2-paragraph-evidence-and-visuals]]；Figure 4 仍為候選。

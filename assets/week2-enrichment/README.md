@@ -1,0 +1,44 @@
+# 第二週逐段圖文素材：來源、授權與處理
+
+取得日期：2026-09-07。用途：第二週 draft 的選材與備課，尚未同步正式教材或 PPTX。SVG 為課程自繪；其他檔案保留外部來源。每項圖片旁的來源在正式排版時也要保留。
+
+| 檔案 | 作者／來源與位置 | 授權或分享依據 | 本次處理 |
+|---|---|---|---|
+| `ai-at-work-figure3-page46.png` | Brynjolfsson、Li、Raymond，[Generative AI at Work v2 PDF](https://arxiv.org/pdf/2304.11771v2)，PDF 第 46 頁，印刷頁碼 45，Figure 3 | [arXiv v2 授權](https://arxiv.org/abs/2304.11771v2)連至 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) | 整頁轉圖，保留座標、圖說與頁碼；未裁切、翻譯或修改；非商業使用條件仍適用 |
+| `sun-human-judgment-page61.png` | 孫以瀚，2026-05-11，[教育部臺灣學術倫理教育資源中心提供的講座 PDF](https://ethics.moe.edu.tw/files/resource/lecture/20260511/20260511_lecture_20260508.pdf)，第 61 頁 | 原稿第 1 頁寫明「PPT 可提供（細節慢慢看），歡迎分享出去」；未指定 CC 授權，不擴張成任意改作授權 | 整頁轉圖、未修改；保留講者及講座出處；屬講者個人意見 |
+| `moda-problem-definition-page25.png` | 數位發展部，[公部門人工智慧應用參考手冊](https://www-api.moda.gov.tw/File/Get/moda/zh-tw/WwHCroVhwWy52dw)，V1.0，修訂頁日期 115.01.28，第 25 頁 | [數發部政府網站資料開放宣告 CC0](https://moda.gov.tw/announcement/publicdeclare/951) | 僅擷取下半部「提出問題」與對照文字，未改字；排除上方 Freepik 插畫。座標見下方指令 |
+| `design-council-double-diamond.png` | [Design Council，The Double Diamond](https://www.designcouncil.org.uk/resources/the-double-diamond/) | 原頁明示 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | 原始 PNG、未修改；保留英文標籤；為備講材料 |
+| `zotero-pdf-reader.jpg` | [Zotero 官方 PDF Reader and Note Editor 文件](https://www.zotero.org/support/pdf_reader)，文件使用的 6.0 時期示範圖 | [Zotero 文件授權](https://www.zotero.org/support/licensing)：2015-04-26 之後文件內容 CC BY-SA 4.0 | 原圖未修改；保留整個工具示範，內嵌研究內容不另行取用；非本機操作截圖 |
+| `three-artifacts.svg` | 本課原創示意，範例借用客服研究的題材；三種產出物為本課安排 | 原創課程圖，未另授予 CC 授權 | 使用 `build_diagrams.py` 生成，可編輯；非引用作者原圖或真實軟體畫面 |
+| `paragraph-before-after.svg` | 本課原創改寫例子；右側事實來源為 [客服研究 v2 摘要](https://arxiv.org/abs/2304.11771v2) | 原創課程圖，未另授予 CC 授權 | 使用 `build_diagrams.py` 生成；左側為自擬過度概括，右側為資料摘要，沒有改作原論文圖 |
+
+外部 PNG／JPG 的直接下載位置：
+
+- Design Council：https://www.designcouncil.org.uk/fileadmin/uploads/dc/Photos/banners/Double_Diamond.png
+- Zotero：https://www.zotero.org/static/images/blog/6.0/pdf-reader.jpg
+
+PDF 來源檔只放本地 `.quarto/week2-enrichment/` 檢查快取，不提交 PDF。可從上方原始連結重新下載。
+
+## 重現擷取
+
+使用 Poppler，尺寸參數以本次下載 PDF 為準：
+
+```sh
+pdftoppm -f 46 -l 46 -scale-to 1800 -singlefile -png ai-at-work-v2.pdf ai-at-work-figure3-page46
+pdftoppm -f 61 -l 61 -scale-to 1800 -singlefile -png sun-ai-research.pdf sun-human-judgment-page61
+pdftoppm -f 25 -l 25 -scale-to 1800 -x 120 -y 1060 -W 1070 -H 620 -singlefile -png moda.pdf moda-problem-definition-page25
+python3 build_diagrams.py
+```
+
+本次已目視確認外部圖的文字與邊界；客服圖的縱軸不是百分比，圖中的 agent 是客服人員。原始研究頁字較密，保留作 draft 閱讀與選材；正式投影時仍需試讀，必要時使用已標明性質的摘要示意。
+
+## 不納入這批圖片的材料
+
+- Reynolds 的故事板照片、臺大教學札記圖 3：原站可閱讀，未確認公開再利用授權；主 draft 只放出處與候選用途。
+- Assertion-Evidence 教學版面：已找到原作者教材入口，尚未逐頁審查，不宣稱完成圖片蒐集。
+- 粗略故事板、實際 PPTX 前後版：留待課堂示範取得，不製造假操作截圖。
+- 本次沒有 AI 生成的抽象照片；若後續確有概念圖需求，再依內容製作。
+
+## 草案檢查
+
+已確認八個嵌入圖片路徑有效、兩張 SVG 可解析並轉圖目視檢查，Quarto 可輸出含八張內嵌圖片的 HTML。五個 Mermaid 區塊保留為可編輯原始碼；本次未完成瀏覽器中的流程圖視覺檢查，正式排版時仍需確認其換行與尺寸。
