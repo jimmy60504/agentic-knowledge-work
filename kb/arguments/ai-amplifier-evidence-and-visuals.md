@@ -4,7 +4,7 @@
 
 ## 來源
 
-2026-09-07，使用者詢問是否應在建立論點時先蒐集文獻與圖片，並要求實際測試。Agent 以第二週主 draft 的「AI 是放大器」作為測試主題；以下記錄初次候選材料；後續已試整合第二週 draft，正式教材與投影片未同步。查閱日：2026-09-07。
+2026-09-07，使用者詢問是否應在確認方向時先蒐集文獻與圖片，並要求實際測試。Agent 以第二週主 draft 的「AI 是放大器」作為測試主題；以下記錄初次候選材料；後續已試整合第二週 draft，正式教材與投影片未同步。查閱日：2026-09-07。
 
 1. HBS AI Institute，〈Navigating the Jagged Technological Frontier〉，2023-09-21，[研究機構摘要](https://aiinstitute.hbs.edu/navigating-the-jagged-technological-frontier/)。已讀摘要的 Key Findings 與 Shifting the Debate；[論文入口](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4573321) 回傳 403，本次未讀全文，不宣稱完成方法審查。
 2. Erik Brynjolfsson、Danielle Li、Lindsey Raymond，*Generative AI at Work*，[arXiv v2](https://arxiv.org/abs/2304.11771v2)，2024-11-06 修訂；[HTML 全文](https://arxiv.org/html/2304.11771v2)。已核對摘要、Figure 3 原圖及 Figure 3、4 圖說，未完整審查所有模型。固定採 v2 的樣本與數字，不混用其他版本。arXiv 頁的授權連到 [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)。
