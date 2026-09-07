@@ -39,3 +39,6 @@ dist/
 /.quarto/
 **/*.quarto_ipynb
 /.claude/
+
+# Local trial runs and scratch outputs
+/tmp/
