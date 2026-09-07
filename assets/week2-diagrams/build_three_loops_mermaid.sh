@@ -1,16 +1,36 @@
 #!/bin/zsh
-# 用 mermaid-cli 出 SVG，再以系統 WebKit（qlmanage）轉 PNG，字型才會是 PingFang。
-# 用法：zsh assets/week2-diagrams/build_three_loops_mermaid.sh
+# mermaid-cli 出 SVG → 改字型 → 系統 WebKit（qlmanage）轉 PNG → 裁白邊。
+# dagre 的左右走向由圖的結構決定，調不動時可設 MIRROR=1 左右鏡射（文字會翻回）。
 set -e
 cd "$(dirname "$0")"
+MIRROR="${MIRROR:-0}"   # 1 = 左右鏡射（dagre 排成往左時用）
 for name in three-loops three-loops-h1 three-loops-h2 three-loops-h3; do
   out="${name/three-loops/three-loops-mermaid}"
   npx -y @mermaid-js/mermaid-cli -i "$name.mmd" -o "$out.svg" -b white -p puppeteer.json >/dev/null
-  python3 - "$out" <<'PY'
+  python3 - "$out" "$MIRROR" <<'PY'
 import re, sys
-out=sys.argv[1]
+out=sys.argv[1]; mirror=sys.argv[2]=="1"
 s=open(out+'.svg',encoding='utf-8').read()
-m=re.search(r'viewBox="([\d\.\-\s]+)"', s); vb=m.group(1).split(); w=float(vb[2]); h=float(vb[3]); scale=3
+m=re.search(r'viewBox="([\d\.\-\s]+)"', s); vb=m.group(1).split(); x0=float(vb[0]); w=float(vb[2]); h=float(vb[3]); scale=3
+# 文字翻回：每個 <text> 加 translate(2x,0) scale(-1,1)
+def fix_text(m):
+    tag=m.group(0)
+    xm=re.search(r'\sx="([\d\.\-]+)"', tag); x=float(xm.group(1)) if xm else 0.0
+    tm=re.search(r'\stransform="([^"]*)"', tag)
+    extra=f'translate({2*x},0) scale(-1,1)'
+    if tm:
+        return tag.replace(tm.group(0), f' transform="{tm.group(1)} {extra}"')
+    return tag[:-1]+f' transform="{extra}">'
+if mirror:
+    s=re.sub(r'<text\b[^>]*>', fix_text, s)
+# foreignObject 的節點標籤：把 <g class="label" transform="translate(tx,ty)"> 改成 translate(tx+W,ty) scale(-1,1)
+def fix_fo(m):
+    st=m.group(1); tx=float(m.group(2)); ty=float(m.group(3)); W=float(m.group(4))
+    return f'<g class="label" style="{st}" transform="translate({tx+W}, {ty}) scale(-1,1)"><rect/><foreignObject width="{m.group(4)}"'
+if mirror:
+    s=re.sub(r'<g class="label" style="([^"]*)" transform="translate\(([\d\.\-]+), ([\d\.\-]+)\)"><rect/><foreignObject width="([\d\.]+)"', fix_fo, s)
+    s=re.sub(r'(<svg[^>]*>)', r'\1<g transform="translate(%f,0) scale(-1,1)">'%(2*x0+w), s, count=1)
+    s=s.replace('</svg>','</g></svg>')
 s=re.sub(r'<svg([^>]*?)\swidth="[^"]*"', r'<svg\1 width="%d"'%int(w*scale), s, count=1)
 s=re.sub(r'<svg([^>]*?)\sheight="[^"]*"', r'<svg\1 height="%d"'%int(h*scale), s, count=1)
 s=re.sub(r'font-family:[^;"}]*', 'font-family:"PingFang TC","Heiti TC",sans-serif', s)

@@ -1,27 +1,27 @@
-%%{init: {"theme": "base", "themeVariables": {"fontFamily": "PingFang TC, sans-serif", "fontSize": "15px", "primaryColor": "#FFFFFF", "primaryTextColor": "#2A2623", "primaryBorderColor": "#D9D4CE", "lineColor": "#6B6560", "clusterBkg": "#EEF2EF", "clusterBorder": "#EEF2EF", "edgeLabelBackground": "#FFFFFF", "tertiaryColor": "#EEF2EF"}, "flowchart": {"curve": "basis", "nodeSpacing": 30, "rankSpacing": 40, "padding": 12}}}%%
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "PingFang TC, sans-serif", "fontSize": "16px", "primaryColor": "#FFFFFF", "primaryTextColor": "#2A2623", "primaryBorderColor": "#D9D4CE", "lineColor": "#6B6560", "clusterBkg": "#EEF2EF", "clusterBorder": "#EEF2EF", "edgeLabelBackground": "#FFFFFF", "tertiaryColor": "#EEF2EF"}, "flowchart": {"htmlLabels": false, "curve": "basis", "nodeSpacing": 30, "rankSpacing": 40, "padding": 12}}}%%
 flowchart TD
     subgraph L1["確認方向"]
-        A["帶著問題探索<br/>蒐集文獻、案例與圖片"] --> B["人先寫大綱<br/>比較依據，加入洞見與取捨"]
-        B --> C["agent 整理故事線<br/>人確認重點與順序"]
-        C -. 補探索、調整想法 .-> A
+        A["帶著問題探索材料"] --> B["人決定主軸，擬定大綱"]
+        B --> C["agent 整理故事線，人確認"]
+        C -. 補充探索 .-> A
     end
-    C -->|依目前方向展開| D
-    subgraph L2["確認內容"]
-        D["agent 起草文章<br/>沿論點完整說明"] --> E["人改成自己的話<br/>查核與補缺口"]
-        E --> F["整體通讀與收斂<br/>agent 建議刪併，人決定取捨"]
-        F -. 依取捨修改草稿 .-> D
+    C -->|依方向展開| D
+    subgraph L2["建立架構"]
+        D["agent 起草文章"] --> E["人補入洞見，理順邏輯"]
+        E --> F["agent 協助收斂，人取捨"]
+        F -. 修改草稿 .-> D
     end
-    E -. 新資料或洞見，重看方向 .-> B
-    F -->|內容已適合本次交付| I
-    subgraph L3["確認表達"]
-        I["拿出或先找這種成品的原則<br/>寫成標準"] --> J["agent 依標準整份產出"]
-        J --> K["人看整份<br/>改標準，或退回內容"]
-        K -. 改標準，再產出 .-> I
+    E -. 新資料出現，重看方向 .-> B
+    F -->|內容確定| K
+    subgraph L3["調整風格"]
+        K["agent 尋找規則，寫成標準"] --> I["agent 依標準產出一版"]
+        I --> J["人依自身品味檢視整份"]
+        J -. 改標準，重新產出 .-> K
     end
-    K -. 內容問題 .-> E
-    K -->|試講過得去| L["交付"]
+    J -. 內容問題，退回 .-> E
+    J -->|確認可交付| L["交付"]
     style L fill:#2A2623,color:#FFFFFF,stroke:#2A2623
     style B stroke:#B85042,stroke-width:2px
     style E stroke:#B85042,stroke-width:2px
-    style K stroke:#B85042,stroke-width:2px
+    style J stroke:#B85042,stroke-width:2px
     linkStyle 7,12 stroke:#B85042,stroke-width:2px
