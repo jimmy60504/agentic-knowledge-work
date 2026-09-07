@@ -23,4 +23,4 @@ SHA-1 已與來源頁核對：
 
 - 放大鏡照片：作為放大、查閱或聚焦的類比。畫面偏暗、文字較密，建議放在獨立圖區，不直接疊長文。
 - 槓桿圖：作為工具放大能力的類比備選，與 AI 的關係由講者說明，不是 AI 效果的實證。
-- 文獻與圖表候選見 `kb/ai-amplifier-evidence-and-visuals.md`。研究 Figure 3 後續已從 PDF 取得並核對，見 `../week2-enrichment/README.md`；Figure 4 仍只保存位置與圖說摘要。
+- 文獻與圖表候選見 `kb/arguments/ai-amplifier-evidence-and-visuals.md`。研究 Figure 3 後續已從 PDF 取得並核對，見 `../week2-enrichment/README.md`；Figure 4 仍只保存位置與圖說摘要。

@@ -1,6 +1,6 @@
 # 第二週開場對照組：直接貼題目做出的簡報
 
-取得日期：2026-09-07。課程試做，由 agent 只憑一句題目直接生成，未查資料、無來源；成品、逐頁預覽與 agent 自述在 `tmp/week2-baseline/`，整理見 `kb/baseline-deck-looks-good-but-cannot-present.md`。
+取得日期：2026-09-07。課程試做，由 agent 只憑一句題目直接生成，未查資料、無來源；成品、逐頁預覽與 agent 自述在 `tmp/week2-baseline/`，整理見 `kb/arguments/baseline-deck-looks-good-but-cannot-present.md`。
 
 | 檔案 | 內容 | 用途 |
 |---|---|---|

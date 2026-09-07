@@ -13,4 +13,4 @@
 | 禁止 | 標題下的裝飾線、整寬色條、純文字頁、置中內文、溢出框外的文字 |
 | 產出後 | 匯出圖片逐頁看溢出、重疊、對齊、對比，修完再出；每頁備註保留口述與完整來源 |
 
-出處：整理自 2026-09-07 對照組試做時 agent 所讀的簡報製作 skill，非逐字；來龍去脈見 [對照組筆記](../kb/baseline-deck-looks-good-but-cannot-present.md)。
+出處：整理自 2026-09-07 對照組試做時 agent 所讀的簡報製作 skill，非逐字；來龍去脈見 [對照組筆記](../kb/arguments/baseline-deck-looks-good-but-cannot-present.md)。

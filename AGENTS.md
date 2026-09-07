@@ -10,7 +10,7 @@
 | 階段 | 位置 | 放什麼 | 誰動手 | 發布 |
 |---|---|---|---|---|
 | 發散 | 對話，以及 `工作紀錄.md` 的「待消化」區 | 亂聊出來、還沒決定收不收的想法。落檔時標明誰提出、日期、候選用法 | agent 寫，人決定 | 否 |
-| 整理 | `kb/` | 找到的資料的摘要：一個來源或一個主題一檔，固定四段：來源、重點、洞見、課程用途（候選）。用 `[[檔名]]` 互連 | agent 寫 | 否，但在 git 裡 |
+| 整理 | `kb/` | 找到的資料的摘要：一個來源或一個主題一檔，固定四段：來源、重點、洞見、課程用途（候選）。用 `[[檔名]]` 互連。分 `arguments/`（論點類：證據、案例、觀點演變）與 `tools/`（工具類：方法與判準），見 `kb/README.md` | agent 寫 | 否，但在 git 裡 |
 | 收斂成初稿 | `drafts/` | 依主題從 kb 與待消化區抽出來排成結構的東西：課程地圖、教案、矩陣、大綱。可以大改 | agent 起草，人挑選 | 否，`_quarto.yml` 排除 |
 | 最終交付 | `lessons/`、`index.qmd`、`setup.qmd`、`tools.qmd`、`slides/` | 學員看得到的成品：文章版教材、首頁、環境建立、工具索引、投影片 | agent 寫，人審過才發布 | 是：網站走 GitHub Pages，投影片走 OneDrive 共用連結 |
 
@@ -51,7 +51,7 @@
 
 使用者丟連結、引文、觀察時：
 
-1. 存成 `kb/` 一則筆記：來源、重點、洞見、課程用途（候選，未定）。
+1. 存成 `kb/` 一則筆記：來源、重點、洞見、課程用途（候選，未定）。回答「為什麼這樣主張」放 `arguments/`，回答「怎麼做、照什麼規則」放 `tools/`。
 2. 跟既有 kb 筆記有關就用 `[[檔名]]` 連起來。
 3. 不要為每個小想法開新檔；相近主題補進既有筆記。
 
@@ -68,7 +68,7 @@
 - 文案語氣照 `skills/chinese-copy-style.md`：平實、簡短，不用金句口號，動詞用工整的書面詞。使用者修正語句時，把修改前後補進該檔的「修改對照」。
 - 教材與 draft 的圖片、引文與來源呈現依 `skills/teaching-visuals-and-citations.md`。
 - 投影片以 agent 產 `.pptx` 為主。材料存 `kb/`；採用的論點與故事線整理進主 draft 文章，棄案及理由另存 draft，不必另維護獨立論點檔。
-- 排投影片前先出 ghost deck，且以使用者原話當底，做法照 `skills/ghost-deck-from-own-words.md`；投影片原則見 `kb/slide-design-principles-argument-to-slides.md`。
+- 排投影片前先出 ghost deck，且以使用者原話當底，做法照 `skills/ghost-deck-from-own-words.md`；投影片原則見 `kb/tools/slide-design-principles-argument-to-slides.md`。
 
 ## 課程核心
 

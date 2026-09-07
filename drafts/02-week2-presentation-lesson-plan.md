@@ -91,7 +91,7 @@ flowchart TD
 - **接近交付時逐步收斂。** 先處理正確性與理解問題，延伸想法留下一版；內容盡量在 Markdown 修定後再排版。
 - **第三圈每個面向的入口都是判準。** 自己沒有判斷力的面向，先請 agent 整理別人的做法，自己挑出要用的，寫成判準再產出；有判斷力的面向直接拿出自己的規則檔。判準用過確定有效就補進 `AGENTS.md`，下次這一格就變短。看整份成品時發現的多半是內容問題，退回第二圈改，不在成品上修。
 
-這門課三個面向各找過一次判準，都留在 repo 裡：分頁與順序，是 Alley 的主張句標題、Duarte 的一頁一重點、顧問業的 ghost deck，幾種分法各有一套，本課選了綜合的一種，見[原則筆記](../kb/slide-design-principles-argument-to-slides.md)；文字與語氣，是盡量用自己說過的原話，加上[文案語氣規則](../skills/chinese-copy-style.md)，很多人詬病的 AI 語氣就是這個面向沒有判準，維基百科的 [AI 寫作特徵清單](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)與兩家廠商自己的寫作指引可以當對照，見[廠商語氣指引筆記](../kb/vendor-writing-style-guidance.md)；版面與圖文，是[視覺設計規則](07-visual-design-rules.md)。
+這門課三個面向各找過一次判準，都留在 repo 裡：分頁與順序，是 Alley 的主張句標題、Duarte 的一頁一重點、顧問業的 ghost deck，幾種分法各有一套，本課選了綜合的一種，見[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)；文字與語氣，是盡量用自己說過的原話，加上[文案語氣規則](../skills/chinese-copy-style.md)，很多人詬病的 AI 語氣就是這個面向沒有判準，維基百科的 [AI 寫作特徵清單](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)與兩家廠商自己的寫作指引可以當對照，見[廠商語氣指引筆記](../kb/tools/vendor-writing-style-guidance.md)；版面與圖文，是[視覺設計規則](07-visual-design-rules.md)。
 
 第三圈管的是成品像不像自己的。三個迴圈和軟體開發的需求探索、建立架構、寫程式是同一個結構，做過第一門課的人可以對照。
 
@@ -194,7 +194,7 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ### 五、分頁與順序：先找分頁的原則，排 ghost deck，再逐頁配證據與口述
 
-第三圈的第一個面向。先拿判準：請 agent 整理「投影片該怎麼分頁」的原則，附來源，自己挑出這次要用的幾條。這門課挑到的是：標題是一句主張、畫面是證據、解釋交給口述、先排只有標題的 ghost deck。課程的[原則筆記](../kb/slide-design-principles-argument-to-slides.md)可以對照，但先讓 agent 自己找一輪再比對，比直接抄更知道哪幾條是自己要的。
+第三圈的第一個面向。先拿判準：請 agent 整理「投影片該怎麼分頁」的原則，附來源，自己挑出這次要用的幾條。這門課挑到的是：標題是一句主張、畫面是證據、解釋交給口述、先排只有標題的 ghost deck。課程的[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)可以對照，但先讓 agent 自己找一輪再比對，比直接抄更知道哪幾條是自己要的。
 
 然後從文章整理 10 到 12 頁，分兩步。先排 ghost deck：每頁只寫一句標題，標題是完整的主張句，不是主題短語；把標題依序連讀一遍，能講完整個故事、沒有跳接，才往下。再逐頁配內容：每頁寫這句主張要用什麼證據支撐，真實畫面、對照表、流程圖或步驟卡，以及口述兩三句重點與過渡。全部用 Markdown 存成分頁文案，之後的修改都在這份檔案上做。
 
@@ -213,7 +213,7 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ### 六、修改語氣：把每一頁改成自己會說的話
 
-第三圈的第二個面向，還在 Markdown 上做，便宜。判準兩條：能用自己說過的原話就用原話，討論紀錄與 kb 筆記裡都找得到；其餘依一份寫下來的文案語氣規則改，例如不用金句口號、動詞用工整的書面詞、一句一件事。沒有自己的規則，可以請 agent 先整理「AI 寫作有哪些特徵」的清單當對照，再挑幾條寫成自己的規則。現成的來源有三份：維基百科的 AI 寫作特徵清單、OpenAI 給 GPT-6 Astra 的寫作規則與禁用詞清單、Anthropic 給 Claude 的「mannered prose」反模式定義，整理見[廠商語氣指引筆記](../kb/vendor-writing-style-guidance.md)。兩家廠商自己都承認模型有固定腔調，並教使用者怎麼壓掉，這件事可以講給學員聽。
+第三圈的第二個面向，還在 Markdown 上做，便宜。判準兩條：能用自己說過的原話就用原話，討論紀錄與 kb 筆記裡都找得到；其餘依一份寫下來的文案語氣規則改，例如不用金句口號、動詞用工整的書面詞、一句一件事。沒有自己的規則，可以請 agent 先整理「AI 寫作有哪些特徵」的清單當對照，再挑幾條寫成自己的規則。現成的來源有三份：維基百科的 AI 寫作特徵清單、OpenAI 給 GPT-6 Astra 的寫作規則與禁用詞清單、Anthropic 給 Claude 的「mannered prose」反模式定義，整理見[廠商語氣指引筆記](../kb/tools/vendor-writing-style-guidance.md)。兩家廠商自己都承認模型有固定腔調，並教使用者怎麼壓掉，這件事可以講給學員聽。
 
 做法：把分頁文案整份交給 agent，請它依規則逐頁改寫，並標出哪些句子它沒有原話依據；人讀一遍，讀起來不像自己講話的句子指出來，再改。看畫面時最常見的問題，標題像口號，在這一步就解決，不會帶進排版。
 
@@ -271,7 +271,7 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ## 課後參考
 
-- 投影片設計原則的來源與整理：[從結構化論點到一頁一重點](../kb/slide-design-principles-argument-to-slides.md)。
+- 投影片設計原則的來源與整理：[從結構化論點到一頁一重點](../kb/tools/slide-design-principles-argument-to-slides.md)。
 - 組織證據、處理反對意見與排練：[TEDx 講者指南，第 4–7 頁](https://storage.ted.com/tedx/manuals/tedx_speaker_guide.pdf#page=4)。
 - 早期故事板就預想圖表與照片：[Reynolds, Preparation Tips](https://www.garrreynolds.com/preparation-tips)。
 - 文字對比與閱讀順序檢查：[Microsoft 支援文件，讓 PowerPoint 簡報無障礙](https://support.microsoft.com/zh-tw/accessibility/powerpoint/make-your-powerpoint-presentations-accessible-to-people-with-disabilities)。
@@ -306,6 +306,6 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ### 來源與草稿狀態
 
-- 本稿依使用者手稿與討論、既有教案及[圖文與中英文來源選用紀錄](../kb/week2-paragraph-evidence-and-visuals.md)整理。2026-09-07 晚間依使用者決定改寫前半段第五節與示範段：前半段改用這份投影片本身的製作過程說明三個迴圈與「先找原則再套用」，示範題改為「向新進同仁介紹 GDMS」，一句話對照組移到示範與練習的開頭。收斂前的版本存於 `tmp/week2-lesson-plan-before-convergence-2026-09-07.md`。正式教材與投影片尚未依本版同步。
-- 開場沿用[課程首頁「知識如何變成交付成果」](../index.qmd)的專案概念。放大鏡圖用於引入比喻。第五節的歷程取自[工作紀錄](../工作紀錄.md)各次定案；投影片原則見[原則筆記](../kb/slide-design-principles-argument-to-slides.md)，逐頁文案見[投影片文案稿](08-week2-slide-copy.md)；[視覺設計規則](07-visual-design-rules.md)整理自對照組試做時 agent 所讀的簡報製作 skill，非逐字。
+- 本稿依使用者手稿與討論、既有教案及[圖文與中英文來源選用紀錄](../kb/arguments/week2-paragraph-evidence-and-visuals.md)整理。2026-09-07 晚間依使用者決定改寫前半段第五節與示範段：前半段改用這份投影片本身的製作過程說明三個迴圈與「先找原則再套用」，示範題改為「向新進同仁介紹 GDMS」，一句話對照組移到示範與練習的開頭。收斂前的版本存於 `tmp/week2-lesson-plan-before-convergence-2026-09-07.md`。正式教材與投影片尚未依本版同步。
+- 開場沿用[課程首頁「知識如何變成交付成果」](../index.qmd)的專案概念。放大鏡圖用於引入比喻。第五節的歷程取自[工作紀錄](../工作紀錄.md)各次定案；投影片原則見[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)，逐頁文案見[投影片文案稿](08-week2-slide-copy.md)；[視覺設計規則](07-visual-design-rules.md)整理自對照組試做時 agent 所讀的簡報製作 skill，非逐字。
 - 業務簡報四種方式的對照組、簡報三種形式與 NESA 素材已移出主線，來源與去向見[移出主題與後續用途](06-week2-deferred-topics.md)的 2026-09-07 晚間一節；授權細節查[素材來源表](../assets/week2-enrichment/README.md)與[NESA 範例來源表](../assets/week2-nesa-examples/README.md)。
