@@ -94,7 +94,7 @@
 - theme、母片、版面配置與 design token；從範例抽取設計規則、用 skill 保存風格判斷。
 - 視覺、生圖與混合素材流程；排版與資訊正確性如何分開檢查。
 
-來源：`kb/nesa-slide-presentation-forms.md`、`kb/pptx-theme-design-token.md`、`kb/design-system-as-skill.md`、原教案。
+來源：`kb/pptx-theme-design-token.md`、`kb/design-system-as-skill.md`、原教案。
 第二週只用範例說明步驟，讓學員快速排版並比較改善；不把這些理論當成實作先修。
 
 ## 七、只留講師備課的方法
