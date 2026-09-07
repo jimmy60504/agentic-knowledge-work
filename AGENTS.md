@@ -67,7 +67,7 @@
 - 教材寫成工具無關：只給任務與素材，不綁特定 agent 的指令。
 - 文案語氣照 `skills/chinese-copy-style.md`：平實、簡短，不用金句口號，動詞用工整的書面詞。使用者修正語句時，把修改前後補進該檔的「修改對照」。
 - 教材與 draft 的圖片、引文與來源呈現依 `skills/teaching-visuals-and-citations.md`。
-- 投影片以 agent 產 `.pptx` 為主，中間產物（論點、故事線）留在 `drafts/`。
+- 投影片以 agent 產 `.pptx` 為主。材料存 `kb/`；採用的論點與故事線整理進主 draft 文章，棄案及理由另存 draft，不必另維護獨立論點檔。
 
 ## 課程核心
 
