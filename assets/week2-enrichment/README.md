@@ -44,3 +44,5 @@ python3 build_diagrams.py
 原有八個圖片檔均保留，且外部圖與兩張 SVG 已完成可解析及目視檢查；文字引用調整後，draft 曾採用 4 張圖片（放大鏡、研究 Figure 3、Design Council 備講圖、Zotero）與 5 個 Mermaid 區塊。孫以瀚、數發部兩張頁面截圖及兩張 SVG 改由可讀引文、整理自摘要或 Markdown 對照承擔內容。本次不新增研究論文首頁圖片；日後若首次介紹來源，可選用真實首頁／封面辨識作者、機構、期刊／版本，客服來源仍記為 arXiv v2。正式排版時仍需確認 Mermaid 換行與尺寸。
 
 2026-09-07 整體精簡後：主 draft 保留放大鏡、Figure 3、Zotero 三張圖片與三個 Mermaid。Double Diamond 圖移至 `kb/week2-paragraph-evidence-and-visuals.md` 備講；原圖及授權不變。研究摘要與試講改用正文，其他已移出的文字圖片仍留查核。
+
+2026-09-07 後續取捨：客服 Figure 3 因案例不好講而移出主 draft，原檔保留查核。主 draft 現有放大鏡、Zotero 兩張圖片及三個 Mermaid；此前採用狀態為歷史紀錄。

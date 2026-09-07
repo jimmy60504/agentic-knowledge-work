@@ -101,3 +101,9 @@
 
 JTBD、SPIN、AIDA 用來設計開場與收集需求；數發部手冊的檢查面向供講師補盲點，不變成學員作業或必背內容。
 來源：`kb/sales-frameworks-for-course-engagement.md`、`kb/moda-public-sector-ai-playbook.md`、工作紀錄的三條課程設計原則。
+
+## 2026-09-07：客服 AI 研究移出第二週
+
+使用者認為客服案例不好講，已移出主 draft，包括研究數字、Figure 3 及後半沿用的改寫、分頁例子。主線改用研究專案的材料、方法比較與實際成果說明，不增加另一份新研究。
+
+來源與圖表仍保留於 [文獻筆記](../kb/ai-amplifier-evidence-and-visuals.md)及 `assets/week2-enrichment/`，供日後需要時查閱；不再列為本週必講或必用畫面。
