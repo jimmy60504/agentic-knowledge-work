@@ -68,6 +68,7 @@
 - 文案語氣照 `skills/chinese-copy-style.md`：平實、簡短，不用金句口號，動詞用工整的書面詞。使用者修正語句時，把修改前後補進該檔的「修改對照」。
 - 教材與 draft 的圖片、引文與來源呈現依 `skills/teaching-visuals-and-citations.md`。
 - 投影片以 agent 產 `.pptx` 為主。材料存 `kb/`；採用的論點與故事線整理進主 draft 文章，棄案及理由另存 draft，不必另維護獨立論點檔。
+- 排投影片前先出 ghost deck，且以使用者原話當底，做法照 `skills/ghost-deck-from-own-words.md`；投影片原則見 `kb/slide-design-principles-argument-to-slides.md`。
 
 ## 課程核心
 
