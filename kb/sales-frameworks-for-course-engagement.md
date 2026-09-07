@@ -7,7 +7,7 @@
 - [Huthwaite：SPIN Selling questions](https://www.huthwaiteinternational.com/blog/spin-selling-questions)：現況、問題、影響、解決後的價值。
 - [Christensen Institute：Jobs to Be Done](https://www.christenseninstitute.org/theory/jobs-to-be-done/)：人在特定情境下想取得的進展，包含功能、情緒與社會面向。
 - [HubSpot：AIDA](https://blog.hubspot.com/marketing/aida-model)：注意、興趣、渴望、行動。
-- 專案脈絡：`index.qmd`、`drafts/02-week2-presentation-lesson-plan.md`、`drafts/04-week2-part1-script-draft.md`、`工作紀錄.md`，以及 [[what-makes-civil-servants-want-to-learn-ai]]。
+- 專案脈絡：`index.qmd`、`drafts/02-week2-presentation-lesson-plan.md`、`工作紀錄.md`，以及 [[what-makes-civil-servants-want-to-learn-ai]]。
 
 ## 重點
 
