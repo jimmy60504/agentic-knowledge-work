@@ -65,7 +65,7 @@ toc: false
 | 週次 | 問題 | 工具 | 投影片 |
 |---|---|---|---|
 | 1 | [Agent 是什麼，它為什麼能幫你做事？](lessons/00-agent-introduction.html)（教材整理中） | [環境建立](setup.html) | — |
-| 2 | [簡報：讓 agent 把你的想法做成成果](lessons/01-presentation-and-the-knowledge-work-loop.html)<br>先看直接生成的簡報缺什麼，再自選題目走一遍材料、論點、文章到可編輯簡報 | [知識工作專案](tools.html#project)、[Agent 產 pptx](tools.html#pptx) | — |
+| 2 | [簡報：讓 agent 把你的想法做成成果](lessons/01-presentation-and-the-knowledge-work-loop.html)<br>先看直接生成的簡報缺什麼，再自選題目走一遍材料、論點、文章到可編輯簡報 | [知識工作專案](tools.html#project)、[Agent 產 pptx](tools.html#pptx) | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQAM3J8zls1MR5anu0ITdGDAAZw2_fOCFa9wbXtOuutHiVA) |
 | 3 | 放假 | — | — |
 | [4]{.wip} | [整理想法：想法怎麼從素材裡長出來，什麼時候得自己讀？](lessons/02-organizing-ideas.html)（兩倍時數） | [思考框架](tools.html#thinking)、[蒸餾與收斂](tools.html#distill) | — |
 :::
