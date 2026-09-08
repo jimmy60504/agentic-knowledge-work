@@ -1,0 +1,54 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import sharp from 'sharp';
+process.env.RUNTIME_NODE_MODULES='/Users/jimmy/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules';
+import {Presentation,PresentationFile} from '@oai/artifact-tool';
+import {finalizePresentation} from '/Users/jimmy/.codex/plugins/cache/openai-primary-runtime/presentations/26.905.11957/skills/presentations/container_tools/artifact_tool_utils.mjs';
+const root=process.cwd(), tmp=path.join(root,'tmp/week2-v9-build'), out=path.join(root,'drafts/week2-v9');
+const SK='/Users/jimmy/.codex/plugins/cache/openai-primary-runtime/presentations/26.905.11957/skills/presentations';
+const P=Presentation.create({slideSize:{width:1280,height:720}});
+const C={dark:'#2A2623',accent:'#B85042',sage:'#A7BEAE',muted:'#6B6560',tint:'#EEF2EF',white:'#FFFFFF'};
+const font='PingFang TC';
+const raw=await fs.readFile(path.join(root,'drafts/08-week2-slide-copy.md'),'utf8');
+const parts=[...raw.matchAll(/^### (\d+)｜(.+)\n([\s\S]*?)(?=^### |^## |$(?![\s\S]))/gm)];
+function text(s,t,x,y,w,h,size=27,color=C.dark,bold=false){let b=s.shapes.add({geometry:'textbox',position:{left:x,top:y,width:w,height:h},fill:'none',line:{fill:'none',width:0}});b.text=t;b.text.style={typeface:font,fontSize:size,color,bold,autoFit:'none'};return b;}
+async function pic(s,file,x,y,w,h,crop){let f=path.isAbsolute(file)?file:path.join(root,'assets',file); let bytes=await fs.readFile(f); if(crop){let m=await sharp(bytes).metadata();bytes=await sharp(bytes).extract({left:Math.round(m.width*crop.left),top:Math.round(m.height*crop.top),width:Math.round(m.width*(1-crop.left-crop.right)),height:Math.round(m.height*(1-crop.top-crop.bottom))}).png().toBuffer();crop=null;} s.images.add({blob:new Uint8Array(bytes),contentType:f.endsWith('.jpg')?'image/jpeg':f.endsWith('.svg')?'image/svg+xml':'image/png',fit:'contain',position:{left:x,top:y,width:w,height:h},...(crop?{crop}:{})});}
+async function icon(s,name,x,y,d=52){await pic(s,`week2-icons/${name}-accent.png`,x,y,d,d);}
+function slide(n,title,dark=false){let s=P.slides.add();s.background.fill=dark?C.dark:C.white;let block=parts.find(p=>+p[1]===n);let note=block?.[3].match(/^- 備註：(.*)$/m)?.[1]||'';note=note.replace('只有輸出成品之後才是調風格','逐頁稿確認後進入調整風格');s.speakerNotes.textFrame.setText(note+'\n\n內容來源：drafts/08-week2-slide-copy.md（第十五版），第'+n+'頁；原話來源：drafts/09-week2-ghost-deck-own-words.md。\n素材來源與授權見 assets 各子目錄 README.md。');text(s,String(n).padStart(2,'0'),1172,670,50,28,18,dark?C.sage:C.muted);if(title) text(s,title,64,46,1148,104,title.length>25?39:44,dark?C.white:C.dark,true);return s;}
+function cols(s,items,y=202){let w=1120/items.length;items.forEach(([h,b],i)=>{text(s,h,64+i*w,y,w-40,56,29,C.accent,true);text(s,b,64+i*w,y+74,w-44,310,27);});}
+async function section(n,title,sub){let s=slide(n,'',true);text(s,title,72,257,1120,150,title.length>18?52:64,C.white,true);if(sub)text(s,sub,76,435,1060,54,27,C.sage);return s;}
+await section(1,'先玩玩看 agent 吧','Agent 時代的知識工作　第二週');
+let s=slide(2,'AI 是放大器：領域知識 × agent 能力');await pic(s,'week2-evidence-pilot/magnifying-glass-book.jpg',64,196,512,368);text(s,'領域知識',636,202,560,48,32,C.accent,true);text(s,'知道方法的因果關係，\n知道現在缺什麼。',636,267,540,94,29);text(s,'×',633,364,70,55,42,C.muted);text(s,'駕馭 agent 的能力',636,438,560,48,32,C.accent,true);text(s,'熟悉模型擅長什麼，\n也知道工具能做到什麼程度。',636,500,560,108,29);text(s,'Julo / Wikimedia Commons / Public domain',64,593,530,32,16,C.muted);
+s=slide(3,'把 AI 當同事');cols(s,[['請教','像請教不同領域的同事，\n先以自己的想法為主。'],['交辦','說清楚方向與重要限制，\n具體做法留給 agent。']]);text(s,'「新同仁第一次接觸 GDMS，\n介紹時可以從哪裡開始？」',64,386,520,112,27);text(s,'「用公開材料做 10 分鐘的介紹，\n對象是新進同仁。」',624,386,554,112,27);text(s,'只給一句話、不給材料，也是一種交辦；結果還要自己看得懂。',64,590,1120,65,23,C.muted);await icon(s,'message-circle',1090,140);
+s=slide(4,'從自己需要補足的地方開始');const entries=[['book','缺知識與方向','從一本書或一輪討論拓展主題。'],['tool','有想法但不熟工具','例如用 vibe coding 做互動網頁。'],['refresh','簡單重複的雜工','先試排版、格式整理與語句潤飾。'],['eye','需要人抓盲點','讓 agent 審查，再自己判斷。']];for(let i=0;i<4;i++){let x=64+(i%2)*580,y=204+Math.floor(i/2)*205;await icon(s,entries[i][0],x,y);text(s,entries[i][1],x+75,y,480,55,29,C.accent,true);text(s,entries[i][2],x+75,y+69,480,120,27);}
+s=slide(5,'交付物代表自己');text(s,'幾句話就能完成，\n看起來很厲害。\n\n拿去報告時，\n自己能不能說明？',64,210,500,340,33);await pic(s,'week2-baseline/baseline-method-card.png',606,205,610,360);text(s,'一句話生成的對照組',606,578,590,45,22,C.muted);
+s=slide(6,'東西都要外部化存起來');let rows=[['AGENTS.md','共用要求與保存方式'],['工作紀錄.md','討論脈絡與決策'],['kb/arguments、tools','材料、觀點與做法'],['drafts/','文稿、逐頁稿與棄案'],['skills/','可重複使用的標準'],['assets/','圖片及來源紀錄'],['slides/、lessons/','投影片與文章教材'],['tmp/','試跑與暫存檔']];for(let i=0;i<rows.length;i++){let y=180+i*55;await icon(s,'folder',72,y+3,29);text(s,rows[i][0],118,y,470,46,25,C.dark,true);text(s,rows[i][1],650,y,530,46,25);} 
+await section(7,'三個迴圈');
+s=slide(8,'內容要走三個迴圈');await pic(s,'week2-diagrams/three-loops-mermaid.png',50,151,430,497);[['確認方向','文稿撐得住方向'],['建立架構','逐頁稿連讀通過'],['調整風格','整份看像自己，試講過得去']].forEach(([h,b],i)=>{text(s,h,548,190+i*148,650,50,35,C.accent,true);text(s,b,548,248+i*148,650,55,28);});
+async function loop(n,name,k,desc,product,check){let s=slide(n,name);const crops=[{left:0,top:0,right:0.44,bottom:.727},{left:.08,top:.31,right:.10,bottom:.418},{left:.19,top:.62,right:0,bottom:.107}];await pic(s,`week2-diagrams/three-loops-mermaid-h${k}.png`,60,188,700,392,crops[k-1]);text(s,desc,809,185,399,190,27);text(s,'產出物',809,397,399,38,23,C.muted);text(s,product,809,440,399,51,34,C.accent,true);text(s,'通過標準',809,516,399,38,23,C.muted);text(s,check,809,558,399,100,27);return s;}
+await loop(9,'確認方向',1,'探索材料，補入洞見，\n順著討論寫成文稿。','文稿','讀過文稿，方向撐得住');
+s=slide(10,'確認方向：方向改了三次才定下來');cols(s,[['方向逐漸收斂','9/2　文件專案化\n　　 與模型能力\n\n9/4　公部門的阻礙\n　　 與規範\n\n9/6　先體驗 agent'],['補入的洞見','迭代回圈小一點，\n內容先留在 md。\n\n反覆修改時先找原則。\n\n第三圈對齊自己的標準。'],['文稿讓問題浮現','客服例子不好講，拿掉。\n\nNESA 與形式比較移出。\n\n試跑看不懂的句子改寫。']],180);
+await loop(11,'建立架構',2,'文稿排成逐頁稿，\n人連讀後調整順序，\n再決定哪些刪、哪些留。','逐頁稿','只讀標題能講完故事');
+s=slide(12,'建立架構：文稿排成逐頁稿');cols(s,[['生成的標題','還沒有方法時請教\n\n\n開空專案，建 kb 與 AGENTS.md'],['原話當底的標題','聊天像請教導師\n\n\n開空專案']],198);text(s,'歷程中的兩組改寫。現行標題已再調整為「把 AI 當同事」。',64,548,1130,75,23,C.muted);text(s,'標題附原話出處與日期，agent 補的地方標明。',64,613,1130,45,24,C.accent);await icon(s,'arrows-left-right',1130,143);
+s=slide(13,'建立架構：連讀後調整順序與刪併');cols(s,[['調整順序','先講迴圈，再講實例。\n\n把 AI 當同事前移。\n\n外部化接在交付物之後。\n\n每個實例接在對應的迴圈後。'],['刪併取捨','刪研究專案情境頁。\n\n刪練習時間表頁。\n\n段落頁加了又減。\n\n歷程從五頁併成三頁。']],178);await icon(s,'list-check',1130,139);
+await loop(14,'調整風格',3,'找風格規則寫成標準，\n依標準產出一版，\n人檢視後再修改標準。','成品','整份看像自己，試講過得去');
+s=slide(15,'調整風格：這份投影片從第一版排到現在');text(s,'早期版本',64,169,525,42,26,C.muted);await pic(s,'week2-deck-history/v3-page02.png',64,219,540,304);text(s,'套用原則後的版本',650,169,560,42,26,C.accent,true);await pic(s,'week2-deck-history/v4-page02.png',650,219,540,304);text(s,'找標準：視覺規則與文案語氣　　產出：依標準整份重建',64,555,1130,43,25);text(s,'人再調整標準：圖示統一、文字書面化、流程圖改直式。',64,608,1130,43,25);s.speakerNotes.textFrame.setText('這是 v3 與 v4 的實際版本歷程，內容與架構也有調整，不能把差異全部歸因於版面。\n原話：每次都是整份重建，不在 PPTX 上手改。看畫面發現的內容問題退回前兩圈。\n來源：assets/week2-deck-history/README.md、drafts/08-week2-slide-copy.md 第15頁、工作紀錄.md。');
+await section(16,'示範：向新進同仁介紹 GDMS','示範 30 分鐘');
+s=slide(17,'開始前先確認資料去哪裡');cols(s,[['資料與專案','確認資料使用設定。\n\n確認 repo 公開或私有。\n\n關閉訓練、使用私有 repo，\n都不代表資料不上雲。'],['製作與預覽','確認可編輯 PPTX 的製作路徑。\n\n先做一頁，確認可以開啟。\n\n沒有簡報軟體時，\n請 agent 另匯出 PDF。']],182);text(s,'同時交辦一句話版本：「幫我做一份向新進同仁介紹 GDMS 的簡報。」',64,599,1136,66,24,C.accent);await icon(s,'shield',1133,137);
+const steps=[
+['開空專案','準備','說明題目，建立保存方式。','建立 kb 保存材料與討論，\n把保存方式寫進 AGENTS.md。','打開檔案，確認它確實存下來。','練習專案/\n\nAGENTS.md\n保存方式與共用要求\n\nkb/第一次討論.md\n題目、受眾、想法與未定事項','folder'],
+['講背景與限制','確認方向','說明受眾、用途與時間。','向新進同仁介紹 GDMS，\n請先讀公開材料，再一起討論。','每份材料有來源，未查到的標明。','預設題的材料\n\n只使用 GDMS 公開頁面。\n\n需登入才能取得的資料，\n不提供給工具。','search'],
+['先找出想講的方向','確認方向','讀過材料，說明自己的優先順序。','先沿著我的想法拓展，\n看看有沒有缺少的重要條件。','採用與棄用的理由都能說明。','方向修正例（課程自擬）\n\n介紹所有功能\n\n改成：\n先回答新同仁最常遇到的問題\n\n待材料確認後再決定範圍。','compass'],
+['起草文稿','確認方向','把討論與洞見寫成文稿。','先寫一段，保留我的意思，\n沒有依據的斷言請標出。','自己讀過，再挑一句查證。','查證示例（課程自擬）\n\n原句：適合所有使用者\n\n查核：來源支持哪些條件？\n\n修改：說明適用對象與限制\n\n沒有依據，就先移除斷言。','file-check'],
+['分成逐頁稿','建立架構','先排標題，再補畫面與口述。','先用我的原話排只有標題的\nghost deck，每頁一句。','連讀標題，調好順序與取捨。','這份投影片的開頭\n\n先玩玩看 agent 吧\nAI 是放大器\n把 AI 當同事\n從自己需要補足的地方開始\n交付物代表自己','list-check'],
+['修改語氣','調整風格','先選語氣標準，再逐頁改寫。','盡量用我的原話與書面語，\n不要精簡成奇怪的金句。','讀一遍，改掉不像自己的句子。','語氣標準的來源\n\n自己的原話與修改紀錄\n\nskills/chinese-copy-style.md\n\n外部 AI 寫作特徵與語氣指引','message-circle'],
+['找排版原則','調整風格','找到原則後，先做一頁驗路徑。','照逐頁稿與排版規則，\n做成可編輯的 PPTX。','版面問題改規則，內容問題退回。','產出與修改\n\n先確認一頁能開啟與編輯。\n\n整份產出後檢視版面。\n\n把重複的問題寫成標準，\n再請 agent 重新產出。','ruler-2'],
+['整個過一遍','確認','自己講一遍，確認時間與內容。','檢查最初的需求是否都在成品裡，\n列出需要我確認的地方。','親自點選文字，自己試講與計時。','最後由自己確認\n\n文字是否可編輯？\n\n每頁能不能用自己的話說明？\n\n時間是否符合原先限制？','microphone']];
+for(let i=0;i<steps.length;i++){let [title,phase,doing,say,check,ev,ic]=steps[i];s=slide(18+i,`第${'一二三四五六七八'[i]}步：${title}`);text(s,phase,66,149,670,42,23,C.accent,true);for(let [j,label,body] of [[0,'做什麼',doing],[1,'對 agent 說',say],[2,'確認什麼',check]]){let y=211+j*137;text(s,label,64,y,150,38,22,C.muted);text(s,body,64,y+44,661,95,27,C.dark,j===1);}await icon(s,ic,1129,163);text(s,ev,790,234,423,410,25);}
+await section(26,'練習','120 分鐘　自由發揮，不收成品');
+s=slide(27,'練習：題目自選');cols(s,[['題目三條件','有明確的受眾與用途。\n\n材料公開或可虛構。\n\n兩小時內找得到依據。'],['開始時兩件事','寫下受眾與用途。\n\n確認資料使用設定\n與專案的公開範圍。'],['成品','一份自己能說明的簡報。\n\n保存材料、修改與理由，\n方便下一次繼續。']],208);text(s,'還沒想到題目，可以先做「向新進同仁介紹 GDMS」。',64,598,1100,65,26,C.accent);await icon(s,'player-play',1130,148);
+s=slide(28,'回看：第一版和自己做的並排',true);text(s,'一句話生成的第一版',66,208,530,55,32,C.sage,true);text(s,'自己逐步完成的版本',657,208,555,55,32,C.sage,true);await pic(s,'week2-icons/stack-2-accent.png',66,297,86,86);await pic(s,'week2-icons/stack-2-accent.png',657,297,86,86);text(s,'方向與洞見是自己的嗎？\n\n順序是自己調的嗎？\n\n風格照了哪份標準？',210,416,1010,236,31,C.white);
+await fs.mkdir(out,{recursive:true});
+await (await PresentationFile.exportPptx(P)).save(path.join(tmp,'candidate.pptx'));
+for(let i=0;i<P.slides.items.length;i++){let slide=P.slides.items[i];let blob=await P.export({slide,format:'png',scale:1});await fs.writeFile(path.join(tmp,`slide-${String(i+1).padStart(2,'0')}.png`),new Uint8Array(await blob.arrayBuffer()));console.log('rendered',i+1);}
+const result=await finalizePresentation({workspaceDir:root,candidatePath:path.join(tmp,'candidate.pptx'),finalPath:path.join(out,'week2-agent-knowledge-work-v9.pptx'),pythonExecutable:'/Users/jimmy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',integrityValidatorPath:path.join(SK,'container_tools/inspect_presentation_package_integrity.py'),layoutValidatorPath:path.join(SK,'container_tools/inspect_presentation_layout_geometry.py'),layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-heading-fit'],explicitTotalSlideCount:28,fontPolicy:{basis:'design',families:[font]},verifyArtifactToolImport:true,receiptPath:path.join(tmp,'validation.json')});console.log(JSON.stringify(result));
