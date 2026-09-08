@@ -1,25 +1,25 @@
-%%{init: {"theme": "base", "themeVariables": {"fontFamily": "PingFang TC, sans-serif", "fontSize": "16px", "primaryColor": "#FFFFFF", "primaryTextColor": "#2A2623", "primaryBorderColor": "#D9D4CE", "lineColor": "#6B6560", "clusterBkg": "#EEF2EF", "clusterBorder": "#EEF2EF", "edgeLabelBackground": "#FFFFFF", "tertiaryColor": "#EEF2EF"}, "flowchart": {"htmlLabels": false, "curve": "basis", "nodeSpacing": 30, "rankSpacing": 40, "padding": 12}}}%%
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "PingFang TC, sans-serif", "fontSize": "16px", "primaryColor": "#FFFFFF", "primaryTextColor": "#2A2623", "primaryBorderColor": "#D9D4CE", "lineColor": "#6B6560", "clusterBkg": "#EEF2EF", "clusterBorder": "#EEF2EF", "edgeLabelBackground": "#FFFFFF", "tertiaryColor": "#EEF2EF"}, "flowchart": {"htmlLabels": false, "curve": "basis", "nodeSpacing": 30, "rankSpacing": 40, "padding": 12, "wrappingWidth": 280, "subGraphTitleMargin": {"top": 6, "bottom": 10}}}}%%
 flowchart TD
     subgraph L1["確認方向"]
-        A["帶著問題探索材料"] --> B["人決定主軸，擬定大綱"]
-        B --> C["agent 整理故事線，人確認"]
-        C -. 補充探索 .-> A
+        A["帶著問題探索材料"] --> B["人補入洞見"]
+        B --> C["agent 寫成文稿，人讀過確認方向"]
+        C -. 回頭補充探索 .-> A
     end
-    C -->|依方向展開| D
+    C -->|文稿撐得住方向| D
     subgraph L2["建立架構"]
-        D["agent 起草文章"] --> E["人補入洞見，理順邏輯"]
-        E --> F["agent 協助收斂，人取捨"]
-        F -. 修改草稿 .-> D
+        D["agent 把文稿排成逐頁稿"] --> E["人連讀後調整邏輯順序"]
+        E --> F["agent 提議刪併，人決定取捨"]
+        F -. 依取捨重排逐頁稿 .-> D
     end
-    E -. 新資料出現，重看方向 .-> B
-    F -->|內容確定| K
+    E -. 出現新資料時重看方向 .-> B
+    F -->|逐頁稿連讀通過| K
     subgraph L3["調整風格"]
-        K["agent 尋找規則，寫成標準"] --> I["agent 依標準產出一版"]
+        K["agent 尋找風格規則並寫成標準"] --> I["agent 依標準產出一版"]
         I --> J["人依自身品味檢視整份"]
-        J -. 改標準，重新產出 .-> K
+        J -. 修改標準後重新產出 .-> K
     end
-    J -. 內容問題，退回 .-> E
-    J -->|確認可交付| L["交付"]
+    J -. 內容有問題則退回 .-> E
+    J -->|試講過得去| L["交付"]
     style D fill:#FFFFFF,stroke:#ECE9E5,color:#C4BFB9
     style E fill:#FFFFFF,stroke:#ECE9E5,color:#C4BFB9
     style F fill:#FFFFFF,stroke:#ECE9E5,color:#C4BFB9

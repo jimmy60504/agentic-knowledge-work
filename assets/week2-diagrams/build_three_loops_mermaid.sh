@@ -21,6 +21,13 @@ def fix_text(m):
     if tm:
         return tag.replace(tm.group(0), f' transform="{tm.group(1)} {extra}"')
     return tag[:-1]+f' transform="{extra}">'
+# 節點標籤的 foreignObject 寬度是用量測字型算的，換成 PingFang 後英文較寬會被切字：加寬並保持置中
+def widen_fo(m):
+    st=m.group(1); tx=float(m.group(2)); ty=float(m.group(3)); W=float(m.group(4)); H=m.group(5)
+    W2=W*1.12+8
+    return f'<g class="label" style="{st}" transform="translate({tx-(W2-W)/2}, {ty})"><rect/><foreignObject width="{W2}" height="{H}" style="overflow:visible">'
+s=re.sub(r'<g class="label" style="([^"]*)" transform="translate\(([\d\.\-]+), ([\d\.\-]+)\)"><rect/><foreignObject width="([\d\.]+)" height="([\d\.]+)">', widen_fo, s)
+s=s.replace('display: table-cell;', 'display: block; width: 100%;')  # 加寬後仍置中
 if mirror:
     s=re.sub(r'<text\b[^>]*>', fix_text, s)
 # foreignObject 的節點標籤：把 <g class="label" transform="translate(tx,ty)"> 改成 translate(tx+W,ty) scale(-1,1)
@@ -28,7 +35,7 @@ def fix_fo(m):
     st=m.group(1); tx=float(m.group(2)); ty=float(m.group(3)); W=float(m.group(4))
     return f'<g class="label" style="{st}" transform="translate({tx+W}, {ty}) scale(-1,1)"><rect/><foreignObject width="{m.group(4)}"'
 if mirror:
-    s=re.sub(r'<g class="label" style="([^"]*)" transform="translate\(([\d\.\-]+), ([\d\.\-]+)\)"><rect/><foreignObject width="([\d\.]+)"', fix_fo, s)
+    s=re.sub(r'<g class="label" style="([^"]*)" transform="translate\(([\d\.\-]+), ([\d\.\-]+)\)"><rect/><foreignObject width="([\d\.]+)"', fix_fo, s)  # 加寬後仍匹配
     s=re.sub(r'(<svg[^>]*>)', r'\1<g transform="translate(%f,0) scale(-1,1)">'%(2*x0+w), s, count=1)
     s=s.replace('</svg>','</g></svg>')
 s=re.sub(r'<svg([^>]*?)\swidth="[^"]*"', r'<svg\1 width="%d"'%int(w*scale), s, count=1)
