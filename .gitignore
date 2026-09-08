@@ -32,6 +32,10 @@ media/
 !assets/setup/
 !assets/setup/*.png
 !assets/setup/*.jpg
+!assets/week2-baseline/
+!assets/week2-baseline/baseline-method-card.png
+!assets/week2-deck-history/
+!assets/week2-deck-history/v3-page02.png
 
 node_modules/
 dist/
