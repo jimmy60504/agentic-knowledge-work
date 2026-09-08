@@ -36,3 +36,4 @@
 
 - `index.qmd`：第二週「投影片」欄加入 OneDrive 連結。
 - `lessons/01-presentation-and-the-knowledge-work-loop.qmd`：加入投影片入口、補充不必整套替換原流程、前移保存段落、補一般六步與三圈的關係，並調整軟體開發類比的語氣。
+- 2026-09-08 再次核對時發現文章仍使用舊版內嵌 Mermaid；已改為直接引用投影片逐頁稿指定的 `assets/week2-diagrams/three-loops-mermaid.svg`，讓文章與投影片共用同一流程圖來源。
