@@ -2,7 +2,7 @@
 
 來源：
 - 觸發文章：[AI Presentation Generator: 10 Skills for Professional Decks in 2026](https://youmind.com/zh-TW/blog/ai-presentation-generator-10-skills-for-professional-decks-in-2026)（YouMind blog）
-- 文章提出專業 AI 簡報生成器的四個判準：設計意圖、視覺一致性、內容與設計整合、輸出保真度。
+- 文章提出專業 AI 簡報生成器的四個標準：設計意圖、視覺一致性、內容與設計整合、輸出保真度。
 
 ## 重點
 
