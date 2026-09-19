@@ -12,6 +12,15 @@
 
 ### 現行六科：以地震工作為主的職掌
 
+各科的具體工作、可見產物與待確認問題，另見：
+
+- [[cwa-earthquake-center-planning]]：綜合規劃科
+- [[cwa-earthquake-center-monitoring]]：地震監測科
+- [[cwa-earthquake-center-data]]：地震資料科
+- [[cwa-earthquake-center-systems]]：地震系統科
+- [[cwa-earthquake-center-technology]]：測報技術科
+- [[cwa-earthquake-center-geophysics]]：地球物理科
+
 | 科別 | 地震相關工作 | 在工作鏈中的位置 |
 | --- | --- | --- |
 | 綜合規劃科 | 施政與科技計畫、預算、委辦合作、防救災聯繫、為民服務、地震防災宣導、文書檔案 | 跨單位協調與對外服務 |
