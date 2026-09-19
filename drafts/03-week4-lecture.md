@@ -13,8 +13,8 @@
 
 | 材料 | 本稿收納處 |
 |---|---|
-| [09-18 協作方法完整討論](../docs/archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md)及[工作紀錄](../工作紀錄.md) 09-18 各次補充 | 文件櫃與工作台、思考外部化、轉換與對齊、A→C→B、閱讀洞見、角色、管理與溝通、程式分工、源頭修改 |
-| [原第四週三圈底稿](../docs/archive/week4-2026-09-19/11-week4-workflow-outline.md)及工作紀錄 09-09 | 三圈來歷、各自產物、累積與回存、命名與步驟待釐清事項 |
+| [09-18 協作方法完整討論](../archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md)及[工作紀錄](../工作紀錄.md) 09-18 各次補充 | 文件櫃與工作台、思考外部化、轉換與對齊、A→C→B、閱讀洞見、角色、管理與溝通、程式分工、源頭修改 |
+| [原第四週三圈底稿](../archive/week4-2026-09-19/11-week4-workflow-outline.md)及工作紀錄 09-09 | 三圈來歷、各自產物、累積與回存、命名與步驟待釐清事項 |
 | [三圈正本](../ssot/three-loops.md)、[專案結構正本](../ssot/project-structure.md) | 已定概念只引用；本稿的教學延伸不取代正本 |
 | [跨週課程素材](../kb/index.md)、[場景與技巧矩陣](05-scenario-skill-matrix.md) | 蒸餾、框架、長期知識管理、跨場景使用，以及跨週素材索引 |
 | [帶目的閱讀與實作](../kb/arguments/purposeful-reading-and-agent-assisted-practice.md)、[孫以瀚講座筆記](../kb/arguments/sun-ai-assisted-research-writing-lecture.md) | 閱讀與摘要差異、請教與交辦、形成判斷力、自己的長文摘要練習 |

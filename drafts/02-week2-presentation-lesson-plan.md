@@ -1,13 +1,13 @@
 # 第二週主 draft：讓 agent 把你的想法做成成果
 
 > 2026-09-19 合稿。這是第二週唯一持續編修的教學 draft，包含講課、示範、實作與講師備註。正式文章與投影片本輪不改。
-> 沒採用、暫緩與被取代的內容見[課程素材索引](../kb/index.md)；舊版本見[歷史索引](../docs/archive/week2-2026-09-19/README.md)。
+> 沒採用、暫緩與被取代的內容見[課程素材索引](../kb/index.md)；舊版本見[歷史索引](../archive/week2-2026-09-19/README.md)。
 
 ## 版本與來源
 
 以[已同步正式投影片的文章](../lessons/01-presentation-and-the-knowledge-work-loop.qmd)為正文底稿，合併原第二週教案的安排與講師備註。原話稿、逐頁稿與視覺試作作為歷史依據，採用內容已收進本稿，不再各自維護。
 
-正式授課版是 34 頁的 `slides/week2-agent-knowledge-work-v10.pptx`；`drafts/week2-v10/` 是另一份 28 頁藍色試作。兩者名稱相近，不能混用頁次。依據為[當時的回抽紀錄](../docs/archive/week2-2026-09-19/10-week2-published-deck-article-sync.md)，本輪未重新抽取原始 PPTX。
+正式授課版是 34 頁的 `slides/week2-agent-knowledge-work-v10.pptx`；`drafts/week2-v10/` 是另一份 28 頁藍色試作。兩者名稱相近，不能混用頁次。依據為[當時的回抽紀錄](../archive/week2-2026-09-19/10-week2-published-deck-article-sync.md)，本輪未重新抽取原始 PPTX。
 
 第二週沿用當時的「確認方向、建立架構、調整風格」與既有流程圖；第四週使用後續修訂的「形成論述」，不回改已授課版本。其餘來源包括下文各項 kb、skills，以及[工作紀錄](../工作紀錄.md)中 9 月 7–8 日的取捨與試跑紀錄。
 

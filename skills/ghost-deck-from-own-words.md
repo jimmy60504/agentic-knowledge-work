@@ -23,4 +23,4 @@ agent 生成的標題句讀起來通順，但不是使用者的話，使用者�
 ## 產出位置
 
 - 抽出的完整訊息放 `tmp/`，不進 git。
-- 依大綱整理的原話與 ghost deck 可放入該課主 draft，避免重複維護。第二週歷史範例見 `docs/archive/week2-2026-09-19/09-week2-ghost-deck-own-words.md`。
+- 依大綱整理的原話與 ghost deck 可放入該課主 draft，避免重複維護。第二週歷史範例見 `archive/week2-2026-09-19/09-week2-ghost-deck-own-words.md`。
