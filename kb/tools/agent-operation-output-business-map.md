@@ -4,13 +4,31 @@
 
 ## 來源
 
-- 使用者 2026-09-19 的連續提問：先盤點地震業務的工作動詞、Agent 產出方式與 OpenClaw 用法，接著要求由下往上連接具體操作、產出與業務動詞。
+- 使用者 2026-09-19 的連續提問：先盤點地震業務的工作動詞、Agent 產出方式與 OpenClaw 用法，接著要求由下往上連接具體操作、產出與業務動詞；並指出說明應先從「以文字控制 harness 提供的程式、終端機或滑鼠」開始。
 - [Anthropic〈Building effective agents〉](https://www.anthropic.com/engineering/building-effective-agents)：Agent 以工具和環境回饋迭代，必要時向人尋求判斷；操作循環的通用參考。
 - [OpenClaw〈Agent loop〉](https://docs.openclaw.ai/concepts/agent-loop)、[工具總覽](https://docs.openclaw.ai/tools)、[自動化總覽](https://docs.openclaw.ai/automation)：訊息進入、模型與工具執行、結果回傳、排程和權限的具體實作參考。OpenClaw 是一個例子，以下分類不綁它。
 - [中央氣象署地震測報中心〈業務職掌〉](https://scweb.cwa.gov.tw/zh-tw/page/intro/6)、[[cwa-earthquake-center-work-types]]：地震工作動詞的公開資料依據；實際 SOP 和責任交接仍待同仁確認。
 - [[agent-output-modes]] 與 [[openclaw-how-people-use-it]]：前一輪的產出分類及中間產物案例。本筆記把兩者與業務工作接成一條可逐步檢查的鏈。
 
 ## 重點
+
+### 先講底層：Agent 如何讓事情發生
+
+**模型主要產生文字形式的內容與動作描述。** 動作描述可能是一段指令、程式碼，也可能是符合工具規格的結構化呼叫（例如工具名稱加 JSON 參數）。它本身沒有手去按滑鼠，也不會只因為寫出「寄信」兩字就真的寄出。Agent 所在的 **harness（執行框架）** 預先接好可用工具與執行規則：收到模型的工具呼叫後，檢查可用性與權限，交給對應的程式執行，再把結果送回模型。模型可依結果提出下一步。[OpenClaw 的 Agent loop](https://docs.openclaw.ai/agent-loop)把這段過程列為訊息進入、組裝上下文、模型推論、工具執行與回覆。
+
+```text
+人的目標／事件
+    ↓
+模型讀取文字脈絡，產生回答或工具呼叫（名稱＋參數／指令）
+    ↓
+harness 呼叫預先接好的工具：終端機、程式、API、瀏覽器、滑鼠等
+    ↓
+工具真的讀取、計算、點擊、寫入或傳送，回報結果／錯誤
+    ↓
+模型依回饋繼續操作、請人確認，或交付成果
+```
+
+例如「做投影片」：模型可以先寫逐頁稿與 Python 程式，harness 透過終端機執行 Python，由程式庫產生 PPTX，再開檔或渲染檢查。「操作網站」則可能是模型提出要點的元素或座標，瀏覽器／電腦操作工具執行點擊並回傳畫面。**模型提出動作、工具執行動作、結果得到驗證，是三件不同的事。** 有些工具直接提供「建立簡報」「建立工單」等較高層功能，模型不一定需要先寫程式；能做到哪一步取決於當時接好的工具和授權。
 
 ### 先區分四層
 

@@ -30,7 +30,7 @@
 | 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；完整組織診斷未排。[工作坊照片筆記](reference/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
 | 外部 Agent 業務用途與缺口 | 客服、知識檢索、文件抽取、事件分流、跨工具交接、初稿與銷售；用「缺口 → Agent 位置 → 人的驗收」找可訪談問題 | 講師參考、工作坊案例候選；[外部案例盤點](reference/external-agent-business-use-cases.md)。廠商案例為選題線索，不代表署內現況或平均效益 |
 | Agent 的產出與作用方式 | 除圖文、程式碼、控制程式外，還可產生結構化資料、分析依據、系統狀態改變、通知交接、持續監看、互動答覆及可重用知識；區分草稿與實際執行 | 候選分類工具；[產出方式](tools/agent-output-modes.md)。尚未定為課程正式框架 |
-| Agent 操作到業務動詞的連接 | 從拆解、讀取、擷取、比較、生成、執行、協作、驗證和追蹤等操作，經中間產物與可交付成果，接到地震業務十種工作動詞與人的責任 | 候選分析工具；[四層對照與完整案例](tools/agent-operation-output-business-map.md)。實際流程仍待同仁確認 |
+| Agent 操作到業務動詞的連接 | 先說明模型以文字或結構化呼叫指揮 harness 提供的工具，再把拆解、讀取、比較、生成、執行、驗證等操作，經中間產物與成果接到地震業務動詞 | 候選分析工具；[底層機制、四層對照與案例](tools/agent-operation-output-business-map.md)。實際流程仍待同仁確認 |
 | OpenClaw／「龍蝦」實際用途 | 官方日常用途及社群展示：每日摘要、跨 App 代辦、研究回存、遠端程式工作、排程監看與多 Agent 協調；觀察入口、工具、產出與驗收如何串接 | 講師參考、案例候選；[OpenClaw 使用案例](reference/openclaw-how-people-use-it.md)。展示個案不能推算普遍使用率 |
 | 地震測報中心業務盤點 | 現行六科、地震工作鏈與產物；另以守視、發布、解釋、資料服務、維運、管理等工作動詞對照外部流程，提出待訪談問題 | 講師參考、課程案例候選；[地震業務參考資料](reference/cwa-earthquake-center/README.md)、[工作類型](reference/cwa-earthquake-center/cwa-earthquake-center-work-types.md)。2019 專刊的七課架構僅供沿革，未經中心同仁確認實務缺口 |
 | 人的判斷與組織風險 | 認知債、窄化、附和、假文獻、倫理與揭露；主管加量、決策疲勞、審核負擔 | 候選；第四週只選必要例子。[研究寫作](reference/sun-ai-assisted-research-writing-lecture.md)、[Agent 時代研究](arguments/agent-era-2026-what-changed.md)、[工作紀錄](../工作紀錄.md) |
