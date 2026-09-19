@@ -1,6 +1,6 @@
 # 地震測報中心地震業務 KB
 
-先讀[業務總覽](cwa-earthquake-center-business-map.md)，再按科別查具體職掌、公開工作案例與待訪談問題：
+先讀[業務總覽](cwa-earthquake-center-business-map.md)。若要與其他組織的流程或 Agent 用途對照，接著讀[地震業務的十種工作類型](cwa-earthquake-center-work-types.md)；再按科別查具體職掌、公開工作案例與待訪談問題：
 
 | 科別 | 筆記 |
 | --- | --- |
