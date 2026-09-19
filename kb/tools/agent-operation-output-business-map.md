@@ -5,8 +5,9 @@
 ## 來源
 
 - 使用者 2026-09-19 的連續提問：先盤點地震業務的工作動詞、Agent 產出方式與 OpenClaw 用法，接著要求由下往上連接具體操作、產出與業務動詞；並指出說明應先從「以文字控制 harness 提供的程式、終端機或滑鼠」開始，以建立 Markdown 檔案作最小例子。
-- [Anthropic〈Building effective agents〉](https://www.anthropic.com/engineering/building-effective-agents)：Agent 以工具和環境回饋迭代，必要時向人尋求判斷；操作循環的通用參考。
+- [Anthropic〈Building effective agents〉](https://www.anthropic.com/engineering/building-effective-agents)：Agent 以工具和環境回饋迭代，必要時向人尋求判斷；並區分預先安排的工作流與模型動態選擇步驟的 Agent。
 - [OpenClaw〈Agent loop〉](https://docs.openclaw.ai/concepts/agent-loop)、[工具總覽](https://docs.openclaw.ai/tools)、[自動化總覽](https://docs.openclaw.ai/automation)：訊息進入、模型與工具執行、結果回傳、排程和權限的具體實作參考。OpenClaw 是一個例子，以下分類不綁它。
+- [LangGraph〈Thinking in LangGraph〉](https://docs.langchain.com/oss/javascript/langgraph/thinking-in-langgraph)示範 Agent 在流程節點處理資料，以及暫停交給人決定。下文的三種「參與位置」是依使用者提出的用法所做歸納，並非來源文件的原分類。
 - [中央氣象署地震測報中心〈業務職掌〉](https://scweb.cwa.gov.tw/zh-tw/page/intro/6)、[[cwa-earthquake-center-work-types]]：地震工作動詞的公開資料依據；實際 SOP 和責任交接仍待同仁確認。
 - [[agent-output-modes]] 與 [[openclaw-how-people-use-it]]：前一輪的產出分類及中間產物案例。本筆記把兩者與業務工作接成一條可逐步檢查的鏈。
 
@@ -110,6 +111,20 @@ harness 呼叫預先接好的工具：終端機、程式、API、瀏覽器、滑
 | **規劃、協調、管考** | 比計畫與成果、整理會議、追待辦、提醒與回存 | 進度表、決議紀錄、對照報告 | 資源分配、對外承諾及績效判定 |
 
 這是**用途對照與訪談假說**，不表示中心現行採用 Agent 或有同名缺口。以[官網職掌](https://scweb.cwa.gov.tw/zh-tw/page/intro/6)為業務範圍依據，實際流程與人機分工必須從同仁的具體事件重建。
+
+### 另一個維度：Agent 何時參與工作流程
+
+前面九種是**產出形態**，這裡三種是**參與位置與持續時間**。它們回答「工作進行時，Agent 是否仍在場、是否接得到下一步的輸入」，因此不與「產生程式碼」「給建議」「建立工單」等產出名稱合併成同一串分類。
+
+| 用法 | Agent 在哪裡、何時退出 | 之後誰讓工作繼續 | 同一個「測站異常」例子 |
+|---|---|---|---|
+| **人向 Agent 請教** | 人在正式系統流程之外發問，Agent 查資料、列判斷依據與選項，回覆後結束 | 人自行查證、決定、操作原有系統 | 維運同仁問「這段斷訊可能有哪些原因」，拿到待查清單後自己處理 |
+| **Agent 製作可重用工具** | 建置時寫程式、規則或設定；經測試與交接後，當次 Agent 任務結束 | 人部署；後續由一般程式依固定邏輯執行、回報結果 | Agent 寫一支定期比對測站資料缺漏的腳本；上線後腳本自行跑 |
+| **Agent 接入流程節點** | 流程運行時，由事件、排程或系統呼叫 Agent；Agent 讀本次資料、處理並交出結果或執行獲准動作 | 下個程式節點、人員或 Agent；必要時同一 Agent 繼續追蹤 | 新異常進來時 Agent 查日誌與維修史，產出附證據的待查卡並交值班者 |
+
+第三種若讓 Agent 自行選擇下一個節點、跨工具追蹤整件工作，就從**單點處理**延伸為**流程協調**；仍屬執行期間有 Agent 參與。接在固定節點上的也可能只是一次模型呼叫，是否稱為「Agent」要看它能否自主選步驟及使用工具，不因接入流程就自動成立。[Anthropic 的說明](https://www.anthropic.com/engineering/building-effective-agents)提供了工作流與 Agent 的架構區別。
+
+這三種用法**可以先後相接**：同一套系統可能先請 Agent 寫腳本，再讓腳本在遇到例外時呼叫 Agent；也可能由節點 Agent 只提出建議，等人核准才寫入系統。因此分類要針對**當下這件工作**，分別標明「Agent 何時被呼叫、拿到哪些資料、交出什麼、是否在後續再次被呼叫、誰有操作權」。尤其「Agent 寫了程式後就退出」只適用於後續程式沒有再呼叫模型的情況；若程式在執行時又呼叫模型，便有模型參與流程，但是否構成 Agent 還要看它能否選擇步驟與工具。
 
 ### 走完一個例子：測站異常待查
 
