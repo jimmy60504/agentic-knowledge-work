@@ -28,6 +28,7 @@
 | 論述、受眾與敘事結構 | 目的、核心訊息、金字塔、SCQA、故事線；按受眾選擇結構 | 部分採用：目的與順序已入第二、四週，完整方法候選。[流程前後對照](arguments/presentation-process-before-and-after.md)、[簡報原則](tools/slide-design-principles-argument-to-slides.md) |
 | Agent 價值與新用途 | 省時、強化判斷、讓原本維護不起的工作可行；比較總成本、風險與知識累積 | 部分採用：第四週後半；企業案例與其他任務可延伸。[價值與知識資產](arguments/agent-value-workflow-and-knowledge-assets.md)、[工作坊 draft](../drafts/04-week4-agent-value-workshop.md) |
 | 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；完整組織診斷未排。[工作坊照片筆記](reference/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
+| 外部 Agent 業務用途與缺口 | 客服、知識檢索、文件抽取、事件分流、跨工具交接、初稿與銷售；用「缺口 → Agent 位置 → 人的驗收」找可訪談問題 | 講師參考、工作坊案例候選；[外部案例盤點](reference/external-agent-business-use-cases.md)。廠商案例為選題線索，不代表署內現況或平均效益 |
 | 地震測報中心業務盤點 | 現行六科、地震工作鏈與產物；用公開資料提出跨科交接、資訊版本及回饋的待訪談問題 | 講師參考、課程案例候選；[地震業務參考資料](reference/cwa-earthquake-center/README.md)。2019 專刊的七課架構僅供沿革，未經中心同仁確認實務缺口 |
 | 人的判斷與組織風險 | 認知債、窄化、附和、假文獻、倫理與揭露；主管加量、決策疲勞、審核負擔 | 候選；第四週只選必要例子。[研究寫作](reference/sun-ai-assisted-research-writing-lecture.md)、[Agent 時代研究](arguments/agent-era-2026-what-changed.md)、[工作紀錄](../工作紀錄.md) |
 | 協作模式與生產力研究 | Author／Editor／Director／Orchestrator；主觀省時和實際效果的差異 | 講師參考；[Agent 時代研究](arguments/agent-era-2026-what-changed.md)。研究結論不能直接外推全部任務 |
