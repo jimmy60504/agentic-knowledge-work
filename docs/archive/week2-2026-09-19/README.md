@@ -1,6 +1,6 @@
 # 第二週歷史資料
 
-2026-09-19 合稿後停止個別維護。現行入口為[第二週主 draft](../../../drafts/02-week2-presentation-lesson-plan.md)，移出內容見[素材與取捨](../../week2-deferred-materials.md)。
+2026-09-19 合稿後停止個別維護。現行入口為[第二週主 draft](../../../drafts/02-week2-presentation-lesson-plan.md)，移出內容見[素材與取捨](../../../kb/index.md)。
 
 - 02：合稿前教案，保存原安排與示範備註。
 - 06：當時的移出主題與取捨紀錄。
