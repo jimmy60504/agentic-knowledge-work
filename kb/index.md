@@ -34,7 +34,7 @@
 | 模型配置與比較 | 模型能力、說明品質、推理強度與額度；保留同任務對照的實驗想法 | 候選；[模型配置](tools/model-tier-and-effort-comparison.md)。不預設免費／付費固定高下 |
 | App 與跨裝置能力 | 遠端接手、背景任務、排程、通知、連接器、手機收素材、操作畫面 | 候選；[工作紀錄](../工作紀錄.md)、[Agent 時代材料](arguments/agent-era-2026-what-changed.md)。展示前依實際版本確認 |
 | 簡報形式與視覺深入 | 圖片／HTML／PPTX、可編輯性、theme、母片、design token、混合素材、語氣與圖文分工 | 候選；[形式比較](reference/nesa-slide-presentation-forms.md)、[PPTX 設計](reference/pptx-theme-design-token.md)、[設計標準](tools/design-system-as-skill.md)、[語氣來源](reference/vendor-writing-style-guidance.md) |
-| 引用、選圖與可讀性 | 原圖、引文、示意與實證；對比、閱讀順序、圖片替代文字、試講 | 部分採用：基本引用在第二週；完整視覺練習候選。[圖文標準](../skills/teaching-visuals-and-citations.md)、[逐段素材](arguments/week2-paragraph-evidence-and-visuals.md) |
+| 引用、選圖與可讀性 | 原圖、引文、示意與實證；對比、閱讀順序、圖片替代文字、試講 | 部分採用：基本引用在第二週；完整視覺練習候選。[圖文標準](../skills/teaching-visuals-and-citations.md)、[逐段素材](reference/week2-paragraph-evidence-and-visuals.md) |
 | 跨場景選材 | 公文、報告、研究、資料圖表等如何組合文案、結構、視覺、資料與格式技巧 | 講師參考；[場景與技巧矩陣](../drafts/05-scenario-skill-matrix.md)。格式仍須驗收 |
 | 課程需求與參與設計 | JTBD、SPIN、AIDA、手冊檢查面向；改善開場與現場提問 | 講師參考；[課程參與設計](arguments/sales-frameworks-for-course-engagement.md)、[學員需求](arguments/what-makes-civil-servants-want-to-learn-ai.md) |
 

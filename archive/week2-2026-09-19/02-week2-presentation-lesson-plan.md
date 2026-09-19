@@ -315,6 +315,6 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ### 來源與草稿狀態
 
-- 本稿依使用者手稿與討論、既有教案及[圖文與中英文來源選用紀錄](../kb/arguments/week2-paragraph-evidence-and-visuals.md)整理。2026-09-07 晚間依使用者決定改寫前半段第五節與示範段：前半段改用這份投影片本身的製作過程說明三個迴圈與「先找原則再套用」，示範題改為「向新進同仁介紹 GDMS」，一句話對照組移到示範與練習的開頭。收斂前的版本存於 `tmp/week2-lesson-plan-before-convergence-2026-09-07.md`。正式教材與投影片尚未依本版同步。
+- 本稿依使用者手稿與討論、既有教案及[圖文與中英文來源選用紀錄](../../kb/reference/week2-paragraph-evidence-and-visuals.md)整理。2026-09-07 晚間依使用者決定改寫前半段第五節與示範段：前半段改用這份投影片本身的製作過程說明三個迴圈與「先找原則再套用」，示範題改為「向新進同仁介紹 GDMS」，一句話對照組移到示範與練習的開頭。收斂前的版本存於 `tmp/week2-lesson-plan-before-convergence-2026-09-07.md`。正式教材與投影片尚未依本版同步。
 - 開場沿用[課程首頁「知識如何變成交付成果」](../index.qmd)的專案概念。放大鏡圖用於引入比喻。第五節的歷程取自[工作紀錄](../工作紀錄.md)各次定案；投影片原則見[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)，逐頁文案見[投影片文案稿](08-week2-slide-copy.md)；[視覺設計規則](07-visual-design-rules.md)整理自對照組試做時 agent 所讀的簡報製作 skill，非逐字。
-- 業務簡報四種方式的對照組、簡報三種形式與 NESA 素材已移出主線，來源與去向見[移出主題與後續用途](06-week2-deferred-topics.md)的 2026-09-07 晚間一節；授權細節查[素材來源表](../assets/week2-enrichment/README.md)與[NESA 範例來源表](../assets/week2-nesa-examples/README.md)。
+- 業務簡報四種方式的對照組、簡報三種形式與 NESA 素材已移出主線，來源與去向見[移出主題與後續用途](06-week2-deferred-topics.md)的 2026-09-07 晚間一節；授權細節查[素材來源表](../../assets/week2-enrichment/README.md)與[NESA 範例來源表](../assets/week2-nesa-examples/README.md)。

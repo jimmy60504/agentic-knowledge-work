@@ -39,7 +39,7 @@
 
 HBS／BCG、Double Diamond、Forte 與 S05 的額外佐證留本筆記備講；來源首頁、故事板照片及外部版面入口仍為候選，沒有因移出主稿而宣稱完成或撤除來源。
 
-![Design Council 雙鑽石備講圖](../assets/week2-enrichment/design-council-double-diamond.png)
+![Design Council 雙鑽石備講圖](../../assets/week2-enrichment/design-council-double-diamond.png)
 
 來源：[Design Council](https://www.designcouncil.org.uk/resources/the-double-diamond/)，[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，原圖未修改。可用於發散收斂的延伸討論，與本課兩個迴圈不逐項對應。
 
