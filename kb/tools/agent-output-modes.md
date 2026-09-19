@@ -42,7 +42,7 @@
 
 若要從具體操作一路連到地震業務的工作動詞，見 [[agent-operation-output-business-map]] 的四層對照與完整案例。
 
-另一個獨立問題是「Agent 何時參與流程」：人向 Agent 請教、Agent 製作可重用工具後退出，或 Agent 在流程運行時接入節點。這三種參與位置與本表的九種產出可以交叉搭配；對照見 [[agent-operation-output-business-map]]。
+另一個獨立問題是「Agent 接手業務到什麼程度」：從人向 Agent 請教、一次性交付、製作工具後退出，到固定節點呼叫模型、節點 Agent、跨節點協調。這些接手方式與本表的九種產出可以交叉搭配；對照見 [[agent-operation-output-business-map]]。
 
 ### 選題時加一個欄位
 
