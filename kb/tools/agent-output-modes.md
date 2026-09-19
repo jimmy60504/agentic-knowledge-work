@@ -8,6 +8,7 @@
 - [Anthropic〈Building effective agents〉](https://www.anthropic.com/engineering/building-effective-agents)：Agent 在環境中使用工具、接收回饋、迭代；可在檢查點向人尋求判斷。文章的客服與寫程式案例說明「產出答案」與「執行動作」可在同一工作中相接。
 - [Microsoft〈Agent use case blueprints〉](https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/agent-business-value-use-case-blueprints)：列客服、IT、財務、知識、專案、現場服務等用例和衡量方式；用來檢查分類是否能跨業務，非本表分類的原始出處。
 - [[external-agent-business-use-cases]]：外部已公開案例；[[cwa-earthquake-center-work-types]]：地震業務的工作動詞。跨領域對照是本筆記的歸納，不能直接推出中心已有缺口。
+- [[openclaw-how-people-use-it]]：OpenClaw 的官方日常用途與社群工作流，用於區分「產出類型」和「聊天入口、排程、工具連接等工作方式」。
 
 ## 重點
 
@@ -32,6 +33,12 @@
 - **「寫出指令」不等於「執行成功」。** 產生 SQL、API 參數或操作計畫屬 3 或 4；真正呼叫工具並確認系統狀態改變才是 5。
 - **「給建議」不等於「做決定」。** Agent 可列出依據、選項與疑點；發布判定、科學結論或高影響處置仍需有權責的人或既定系統決定。
 - **「發出通知」不等於「對方收到並接手」。** 需要把送出、送達、確認與後續狀態分開記錄。
+
+### 再拆一層：成品前面的中間產物
+
+使用者舉「產出投影片」的例子：中間可能先有大綱、逐頁稿與 Python 腳本，由 Python 函式庫寫出 PPTX；最後還要開啟或渲染檢查。這是**一條具體實作路徑**，不是所有 Agent 都必須用 Python。其他成果也有自己的中間產物：寄信先形成收件人、主旨、內文與附件參數；填表先形成欄位資料與瀏覽器動作；定期監看先有排程、查詢條件與差異判定。詳見 [[openclaw-how-people-use-it]] 的「為什麼它能做」。
+
+盤點時可加兩欄：**Agent 先寫下什麼？哪個工具或人真正讓事情發生？** 這能分辨模型產生的內容、工具執行的動作和人作出的核准。
 
 ### 選題時加一個欄位
 
