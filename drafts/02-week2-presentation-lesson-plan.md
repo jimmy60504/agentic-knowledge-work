@@ -217,7 +217,7 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ### 六、修改語氣
 
-進調整風格，第一個面向，還在 Markdown 上做，便宜。標準兩條：能用自己說過的原話就用原話，討論紀錄與 kb 筆記裡都找得到；其餘依一份寫下來的文案語氣規則改，例如不用金句口號、動詞用工整的書面詞、一句一件事。沒有自己的規則，可以請 agent 先整理「AI 寫作有哪些特徵」的清單當對照，再挑幾條寫成自己的規則。現成的來源有三份：維基百科的 [AI 寫作特徵清單](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)、OpenAI 給自家模型的寫作規則與禁用詞清單、Anthropic 給 Claude 的「mannered prose」反模式定義，整理見[廠商語氣指引筆記](../kb/tools/vendor-writing-style-guidance.md)。兩家廠商自己都承認模型有固定腔調，並教使用者怎麼壓掉。
+進調整風格，第一個面向，還在 Markdown 上做，便宜。標準兩條：能用自己說過的原話就用原話，討論紀錄與 kb 筆記裡都找得到；其餘依一份寫下來的文案語氣規則改，例如不用金句口號、動詞用工整的書面詞、一句一件事。沒有自己的規則，可以請 agent 先整理「AI 寫作有哪些特徵」的清單當對照，再挑幾條寫成自己的規則。現成的來源有三份：維基百科的 [AI 寫作特徵清單](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)、OpenAI 給自家模型的寫作規則與禁用詞清單、Anthropic 給 Claude 的「mannered prose」反模式定義，整理見[廠商語氣指引筆記](../kb/reference/vendor-writing-style-guidance.md)。兩家廠商自己都承認模型有固定腔調，並教使用者怎麼壓掉。
 
 做法：把逐頁稿整份交給 agent，請它依規則逐頁改寫，並標出哪些句子它沒有原話依據；人讀一遍，讀起來不像自己講話的句子指出來，再改。看畫面時最常見的問題，標題像口號，在這一步就解決，不會帶進排版。
 
@@ -267,7 +267,7 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ## 延伸閱讀
 
-- 這門課找過的三份標準：分頁的[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)、[文案語氣規則](../skills/chinese-copy-style.md)、[廠商語氣指引筆記](../kb/tools/vendor-writing-style-guidance.md)。
+- 這門課找過的三份標準：分頁的[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)、[文案語氣規則](../skills/chinese-copy-style.md)、[廠商語氣指引筆記](../kb/reference/vendor-writing-style-guidance.md)。
 - 用使用者原話當 ghost deck 的底：[skill 說明](../skills/ghost-deck-from-own-words.md)。
 - 組織證據、處理反對意見與排練：[TEDx 講者指南，第 4–7 頁](https://storage.ted.com/tedx/manuals/tedx_speaker_guide.pdf#page=4)。
 - 早期故事板就預想圖表與照片：[Reynolds, Preparation Tips](https://www.garrreynolds.com/preparation-tips)。

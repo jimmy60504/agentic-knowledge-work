@@ -15,10 +15,10 @@
 
 | 主題／想法 | 可以怎麼用、還可展開什麼 | 目前狀態與來源 |
 |---|---|---|
-| 公部門 AI 規範與導入 | 行政院指引、數發部手冊、TryAI、資料與權限；區分個人日常操作與機關導入系統 | 候選；[數發部手冊](arguments/moda-public-sector-ai-playbook.md)、[導入阻礙與案例](arguments/public-sector-ai-adoption-barriers-and-examples.md)。正式使用前重查規範與方案 |
+| 公部門 AI 規範與導入 | 行政院指引、數發部手冊、TryAI、資料與權限；區分個人日常操作與機關導入系統 | 候選；[數發部手冊](reference/moda-public-sector-ai-playbook.md)、[導入阻礙與案例](arguments/public-sector-ai-adoption-barriers-and-examples.md)。正式使用前重查規範與方案 |
 | 組織支持與採用動機 | 帳號費用、電腦網路、責任、心智模型、主管示範；國內外案例與「秘密半機械人」 | 候選；[學員需求](arguments/what-makes-civil-servants-want-to-learn-ai.md)、[導入阻礙](arguments/public-sector-ai-adoption-barriers-and-examples.md)。不以推測當署內現況 |
 | CODE、雙鑽石與 PKM | 收集到表達、發散與收斂；用框架回顧熟悉工作，不增加必背流程 | 部分採用：第四週方法主線；框架名稱與比較仍候選。[歷次選材](../archive/week2-2026-09-19/deferred-materials.md)、[工作紀錄](../工作紀錄.md) |
-| 閱讀、摘要與蒸餾 | 收藏家謬誤、文獻／永久筆記、漸進式摘要；用自己的長文比對摘要，分開原意與洞見 | 部分採用：第四週閱讀段；具體練習待選。[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md)、[研究寫作講座](arguments/sun-ai-assisted-research-writing-lecture.md) |
+| 閱讀、摘要與蒸餾 | 收藏家謬誤、文獻／永久筆記、漸進式摘要；用自己的長文比對摘要，分開原意與洞見 | 部分採用：第四週閱讀段；具體練習待選。[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md)、[研究寫作講座](reference/sun-ai-assisted-research-writing-lecture.md) |
 | 帶目的學習與快速試作 | 提問、預測、試作、比較與說明取捨；辨認有成品與自己學會的差別 | 候選；[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md) |
 | 共同環境與中間產物 | 文件櫃、工作台、agent、加工工具；A→C→B，讓雙方看見理解差異 | 部分採用：第四週前半；其他工作情境仍可延伸。[協作討論](../archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md)、[前半 draft](../drafts/03-week4-lecture.md) |
 | 管理、溝通、教練與角色分工 | 交代目的、背景、標準、回饋；用具體任務分工，探索管理方法的適用範圍 | 部分採用：第四週操作方法；管理書與研究留講師參考。[協作討論](../archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md) |
@@ -27,13 +27,13 @@
 | 三圈跨場景與工程類比 | 用產物與檢查理解流程；各圈的跨場景用語、細步驟，以及「讀者腦袋是執行環境」的類比 | 部分採用：第四週引用三圈；類比留講師參考，未採用第四圈。[三圈正本](../ssot/three-loops.md)、[原底稿](../archive/week4-2026-09-19/11-week4-workflow-outline.md)、[工作紀錄](../工作紀錄.md) |
 | 論述、受眾與敘事結構 | 目的、核心訊息、金字塔、SCQA、故事線；按受眾選擇結構 | 部分採用：目的與順序已入第二、四週，完整方法候選。[流程前後對照](arguments/presentation-process-before-and-after.md)、[簡報原則](tools/slide-design-principles-argument-to-slides.md) |
 | Agent 價值與新用途 | 省時、強化判斷、讓原本維護不起的工作可行；比較總成本、風險與知識累積 | 部分採用：第四週後半；企業案例與其他任務可延伸。[價值與知識資產](arguments/agent-value-workflow-and-knowledge-assets.md)、[工作坊 draft](../drafts/04-week4-agent-value-workshop.md) |
-| 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；完整組織診斷未排。[工作坊照片筆記](tools/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
+| 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；完整組織診斷未排。[工作坊照片筆記](reference/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
 | 地震測報中心業務盤點 | 現行六科、地震工作鏈與產物；用公開資料提出跨科交接、資訊版本及回饋的待訪談問題 | 講師參考、課程案例候選；[地震業務參考資料](reference/cwa-earthquake-center/README.md)。2019 專刊的七課架構僅供沿革，未經中心同仁確認實務缺口 |
-| 人的判斷與組織風險 | 認知債、窄化、附和、假文獻、倫理與揭露；主管加量、決策疲勞、審核負擔 | 候選；第四週只選必要例子。[研究寫作](arguments/sun-ai-assisted-research-writing-lecture.md)、[Agent 時代研究](arguments/agent-era-2026-what-changed.md)、[工作紀錄](../工作紀錄.md) |
+| 人的判斷與組織風險 | 認知債、窄化、附和、假文獻、倫理與揭露；主管加量、決策疲勞、審核負擔 | 候選；第四週只選必要例子。[研究寫作](reference/sun-ai-assisted-research-writing-lecture.md)、[Agent 時代研究](arguments/agent-era-2026-what-changed.md)、[工作紀錄](../工作紀錄.md) |
 | 協作模式與生產力研究 | Author／Editor／Director／Orchestrator；主觀省時和實際效果的差異 | 講師參考；[Agent 時代研究](arguments/agent-era-2026-what-changed.md)。研究結論不能直接外推全部任務 |
 | 模型配置與比較 | 模型能力、說明品質、推理強度與額度；保留同任務對照的實驗想法 | 候選；[模型配置](tools/model-tier-and-effort-comparison.md)。不預設免費／付費固定高下 |
 | App 與跨裝置能力 | 遠端接手、背景任務、排程、通知、連接器、手機收素材、操作畫面 | 候選；[工作紀錄](../工作紀錄.md)、[Agent 時代材料](arguments/agent-era-2026-what-changed.md)。展示前依實際版本確認 |
-| 簡報形式與視覺深入 | 圖片／HTML／PPTX、可編輯性、theme、母片、design token、混合素材、語氣與圖文分工 | 候選；[形式比較](tools/nesa-slide-presentation-forms.md)、[PPTX 設計](tools/pptx-theme-design-token.md)、[設計標準](tools/design-system-as-skill.md)、[語氣來源](tools/vendor-writing-style-guidance.md) |
+| 簡報形式與視覺深入 | 圖片／HTML／PPTX、可編輯性、theme、母片、design token、混合素材、語氣與圖文分工 | 候選；[形式比較](reference/nesa-slide-presentation-forms.md)、[PPTX 設計](reference/pptx-theme-design-token.md)、[設計標準](tools/design-system-as-skill.md)、[語氣來源](reference/vendor-writing-style-guidance.md) |
 | 引用、選圖與可讀性 | 原圖、引文、示意與實證；對比、閱讀順序、圖片替代文字、試講 | 部分採用：基本引用在第二週；完整視覺練習候選。[圖文標準](../skills/teaching-visuals-and-citations.md)、[逐段素材](arguments/week2-paragraph-evidence-and-visuals.md) |
 | 跨場景選材 | 公文、報告、研究、資料圖表等如何組合文案、結構、視覺、資料與格式技巧 | 講師參考；[場景與技巧矩陣](../drafts/05-scenario-skill-matrix.md)。格式仍須驗收 |
 | 課程需求與參與設計 | JTBD、SPIN、AIDA、手冊檢查面向；改善開場與現場提問 | 講師參考；[課程參與設計](arguments/sales-frameworks-for-course-engagement.md)、[學員需求](arguments/what-makes-civil-servants-want-to-learn-ai.md) |
@@ -63,7 +63,7 @@
 | 保存、資料夾與脈絡重用 | 第二週正式文章「把過程保存下來」與實作第一步；第四週前半第一、七節 draft | 從實際讀寫深化到材料、決定、規則與跨次任務接續；第四週後半引導四回存試作結果 | [專案結構正本](../ssot/project-structure.md)，含索引與回存循環 |
 | 查找、閱讀、查證與洞見 | 第二週正式文章實作第二至四步；第四週前半第四節 draft | 從挑一句查證，深化到區分原意、摘要與自己的洞見；長文實作仍候選 | 尚未另立 SSOT；[閱讀筆記](arguments/purposeful-reading-and-agent-assisted-practice.md) |
 | 受眾、論述、結構與風格 | 第二週正式文章三圈與實作第三至八步；第四週前半第三、六節 draft | 由簡報回顧源頭修改、明確規則與程式分工；SCQA 等完整方法仍候選 | 三圈共用正本；具體表達標準見 [圖文規則](../skills/teaching-visuals-and-citations.md) |
-| 資料邊界與公部門規範 | 第二週正式文章「開始前確認兩件事」；第四週後半引導三 draft：資料與權限 | 日常資料使用可回顧；機關導入制度與完整規範仍候選 | 外部規範以官方來源為準；[手冊筆記](arguments/moda-public-sector-ai-playbook.md) |
+| 資料邊界與公部門規範 | 第二週正式文章「開始前確認兩件事」；第四週後半引導三 draft：資料與權限 | 日常資料使用可回顧；機關導入制度與完整規範仍候選 | 外部規範以官方來源為準；[手冊筆記](reference/moda-public-sector-ai-playbook.md) |
 | 價值、成本、風險與驗證 | 第四週後半引導一至四 draft | 後續可拿試作結果重新檢視收益、審核負擔與例外，尚未排週次 | 尚未另立 SSOT；[價值筆記](arguments/agent-value-workflow-and-knowledge-assets.md) |
 
 ## 迭代成熟後回到 SSOT

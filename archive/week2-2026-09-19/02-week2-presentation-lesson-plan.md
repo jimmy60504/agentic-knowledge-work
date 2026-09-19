@@ -100,7 +100,7 @@ flowchart TD
 - **第二圈從逐頁稿開始。** 文稿一定下來就排成逐頁稿，前置是只有標題的 ghost deck，每頁一句主張句；連讀時看得出跳接與缺口，人在這裡調整邏輯順序，改回文稿再重排；依序連讀能講完故事才算架構定了。分頁的原則（一頁一主張、畫面是證據）是架構的標準，在這一圈拿。
 - **第三圈每個面向的入口都是標準。** 自己沒有判斷力的面向，先請 agent 整理別人的做法，自己挑出要用的，寫成標準再產出；有判斷力的面向直接拿出自己的規則檔。標準用過確定有效就補進 `AGENTS.md`，下次這一格就變短。看整份成品時發現的多半是內容問題，退回第二圈改，不在成品上修。
 
-這門課三種標準各找過一次，都留在 repo 裡：架構的標準，是 Alley 的主張句標題、Duarte 的一頁一重點、顧問業的 ghost deck，幾種分法各有一套，本課選了綜合的一種，見[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)；文字與語氣，是盡量用自己說過的原話，加上[文案語氣規則](../skills/chinese-copy-style.md)，很多人詬病的 AI 語氣就是這個面向沒有標準，維基百科的 [AI 寫作特徵清單](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)與兩家廠商自己的寫作指引可以當對照，見[廠商語氣指引筆記](../kb/tools/vendor-writing-style-guidance.md)；版面與圖文，是[視覺設計規則](07-visual-design-rules.md)。
+這門課三種標準各找過一次，都留在 repo 裡：架構的標準，是 Alley 的主張句標題、Duarte 的一頁一重點、顧問業的 ghost deck，幾種分法各有一套，本課選了綜合的一種，見[原則筆記](../kb/tools/slide-design-principles-argument-to-slides.md)；文字與語氣，是盡量用自己說過的原話，加上[文案語氣規則](../skills/chinese-copy-style.md)，很多人詬病的 AI 語氣就是這個面向沒有標準，維基百科的 [AI 寫作特徵清單](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)與兩家廠商自己的寫作指引可以當對照，見[廠商語氣指引筆記](../../kb/reference/vendor-writing-style-guidance.md)；版面與圖文，是[視覺設計規則](07-visual-design-rules.md)。
 
 第三圈管的是成品像不像自己的，只有輸出成品之後才是調風格。三個迴圈和軟體開發的需求探索、建立架構、寫程式是同一個結構，做過第一門課的人可以對照。
 
@@ -222,7 +222,7 @@ Agent 起草時常出現這樣的結尾：「這個系統功能完整，適合�
 
 ### 六、修改語氣：把每一頁改成自己會說的話
 
-進調整風格，第一個面向，還在 Markdown 上做，便宜。標準兩條：能用自己說過的原話就用原話，討論紀錄與 kb 筆記裡都找得到；其餘依一份寫下來的文案語氣規則改，例如不用金句口號、動詞用工整的書面詞、一句一件事。沒有自己的規則，可以請 agent 先整理「AI 寫作有哪些特徵」的清單當對照，再挑幾條寫成自己的規則。現成的來源有三份：維基百科的 AI 寫作特徵清單、OpenAI 給 GPT-6 Astra 的寫作規則與禁用詞清單、Anthropic 給 Claude 的「mannered prose」反模式定義，整理見[廠商語氣指引筆記](../kb/tools/vendor-writing-style-guidance.md)。兩家廠商自己都承認模型有固定腔調，並教使用者怎麼壓掉，這件事可以講給學員聽。
+進調整風格，第一個面向，還在 Markdown 上做，便宜。標準兩條：能用自己說過的原話就用原話，討論紀錄與 kb 筆記裡都找得到；其餘依一份寫下來的文案語氣規則改，例如不用金句口號、動詞用工整的書面詞、一句一件事。沒有自己的規則，可以請 agent 先整理「AI 寫作有哪些特徵」的清單當對照，再挑幾條寫成自己的規則。現成的來源有三份：維基百科的 AI 寫作特徵清單、OpenAI 給 GPT-6 Astra 的寫作規則與禁用詞清單、Anthropic 給 Claude 的「mannered prose」反模式定義，整理見[廠商語氣指引筆記](../../kb/reference/vendor-writing-style-guidance.md)。兩家廠商自己都承認模型有固定腔調，並教使用者怎麼壓掉，這件事可以講給學員聽。
 
 做法：把分頁文案整份交給 agent，請它依規則逐頁改寫，並標出哪些句子它沒有原話依據；人讀一遍，讀起來不像自己講話的句子指出來，再改。看畫面時最常見的問題，標題像口號，在這一步就解決，不會帶進排版。
 

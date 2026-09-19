@@ -17,9 +17,9 @@
 | [原第四週三圈底稿](../archive/week4-2026-09-19/11-week4-workflow-outline.md)及工作紀錄 09-09 | 三圈來歷、各自產物、累積與回存、命名與步驟待釐清事項 |
 | [三圈正本](../ssot/three-loops.md)、[專案結構正本](../ssot/project-structure.md) | 已定概念只引用；本稿的教學延伸不取代正本 |
 | [跨週課程素材](../kb/index.md)、[場景與技巧矩陣](05-scenario-skill-matrix.md) | 蒸餾、框架、長期知識管理、跨場景使用，以及跨週素材索引 |
-| [帶目的閱讀與實作](../kb/arguments/purposeful-reading-and-agent-assisted-practice.md)、[孫以瀚講座筆記](../kb/arguments/sun-ai-assisted-research-writing-lecture.md) | 閱讀與摘要差異、請教與交辦、形成判斷力、自己的長文摘要練習 |
+| [帶目的閱讀與實作](../kb/arguments/purposeful-reading-and-agent-assisted-practice.md)、[孫以瀚講座筆記](../kb/reference/sun-ai-assisted-research-writing-lecture.md) | 閱讀與摘要差異、請教與交辦、形成判斷力、自己的長文摘要練習 |
 | [簡報流程前後對照](../kb/arguments/presentation-process-before-and-after.md)及工作紀錄待消化項 | 以熟悉文章或報告作例子、保留人的原想法、依受眾調整，避免備課歷史變成主線 |
-| [工作坊架構照片筆記](../kb/tools/workshop-root-cause-and-value-discovery.md)、[價值與知識資產照片筆記](../kb/arguments/agent-value-workflow-and-knowledge-assets.md) | 前半只接知識累積、人工到數位化、執行條件；完整價值分析與提問收在後半稿 |
+| [工作坊架構照片筆記](../kb/reference/workshop-root-cause-and-value-discovery.md)、[價值與知識資產照片筆記](../kb/arguments/agent-value-workflow-and-knowledge-assets.md) | 前半只接知識累積、人工到數位化、執行條件；完整價值分析與提問收在後半稿 |
 
 照片已移回 iCloud，原本地路徑只作歷史索引。本稿依已保存文字整理，不依賴原圖；原講者主張、使用者經驗與課程延伸分別說明。未查核的研究解釋、產品效益與制度內容留在備選，不直接當成教學結論。
 
@@ -104,7 +104,7 @@ C 可以是資料、決定、規格、草稿或試作結果。它要補上一個
 | 自己的新洞見 | 加入了什麼經驗與判斷、與原文有何關聯 |
 | Agent 的提案 | 哪些仍是候選，需要用什麼驗證 |
 
-蒸餾是依用途取捨，不只是縮短字數。摘要可能漏掉研究方法、限制或關鍵例外；當結論要拿來支持決定、摘要與理解衝突，或想深入找新問題時，回讀相關原文。這與 [孫以瀚講座筆記](../kb/arguments/sun-ai-assisted-research-writing-lecture.md) 中對摘要與深讀的區分相呼應；只取此觀點，不帶入整套學倫或工具建議。
+蒸餾是依用途取捨，不只是縮短字數。摘要可能漏掉研究方法、限制或關鍵例外；當結論要拿來支持決定、摘要與理解衝突，或想深入找新問題時，回讀相關原文。這與 [孫以瀚講座筆記](../kb/reference/sun-ai-assisted-research-writing-lecture.md) 中對摘要與深讀的區分相呼應；只取此觀點，不帶入整套學倫或工具建議。
 
 ### 候選短練習：用自己的長文檢查摘要
 

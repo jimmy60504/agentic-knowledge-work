@@ -11,7 +11,7 @@
 
 ## 素材來源與界線
 
-- [工作坊照片筆記](../kb/tools/workshop-root-cause-and-value-discovery.md)：IMG_8312 的流程／系統／痛點／數據／可能，IMG_8313 的原因分析，IMG_8314 的第一線經驗卡牌。
+- [工作坊照片筆記](../kb/reference/workshop-root-cause-and-value-discovery.md)：IMG_8312 的流程／系統／痛點／數據／可能，IMG_8313 的原因分析，IMG_8314 的第一線經驗卡牌。
 - [價值、組織與知識資產筆記](../kb/arguments/agent-value-workflow-and-knowledge-assets.md)：另 14 張照片，包含三種收益、冰山圖、知識循環、利害關係人、跨工具流程、驗證與五個基礎問題。
 - [工作紀錄](../工作紀錄.md) 2026-09-19：使用者提出價值／成本／風險的方向，確定第四週合併兩週時數，先講課再自主工作坊。09-05 設計原則保留不增加課前與課後負擔的方向。
 

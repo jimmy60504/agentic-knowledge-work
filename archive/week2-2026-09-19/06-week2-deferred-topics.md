@@ -74,7 +74,7 @@
 - 帶目的讀書 → 提問與查閱 → 預測 → agent 試作 → 比較修正 → 說明取捨；區分生成成果與自己學會。
 - 認知債、認知窄化、附和與過度依賴，可以接在學員已有的實作經驗之後。
 
-來源：`kb/arguments/purposeful-reading-and-agent-assisted-practice.md`、`kb/arguments/sun-ai-assisted-research-writing-lecture.md`、原教案與工作紀錄。第四週主軸已定，新增閱讀實作等細項仍待挑選。
+來源：`kb/arguments/purposeful-reading-and-agent-assisted-practice.md`、`kb/reference/sun-ai-assisted-research-writing-lecture.md`、原教案與工作紀錄。第四週主軸已定，新增閱讀實作等細項仍待挑選。
 
 ## 二、專案化、脈絡保存與重用：基本操作本週、維護後續深化
 
@@ -95,7 +95,7 @@
 - 行政院相關指引與管理規範、數發部手冊與 TryAI、國科會 agent 風險提醒、台灣機關案例。
 - 國外政府提供帳號與環境、試驗評估、集中採購；主管示範、組織支持與持續採用。
 
-來源：`kb/arguments/public-sector-ai-adoption-barriers-and-examples.md`、`kb/arguments/what-makes-civil-servants-want-to-learn-ai.md`、`kb/arguments/moda-public-sector-ai-playbook.md`、`kb/arguments/agent-era-2026-what-changed.md`。
+來源：`kb/arguments/public-sector-ai-adoption-barriers-and-examples.md`、`kb/arguments/what-makes-civil-servants-want-to-learn-ai.md`、`kb/reference/moda-public-sector-ai-playbook.md`、`kb/arguments/agent-era-2026-what-changed.md`。
 使用前重查官方規範、方案與統計的日期、樣本和適用範圍。原有「專案化即合規」「資料夾就是邊界、紀錄就是揭露」須改寫，不能把檔案結構視為合規保證。
 
 ## 四、人的分工、生產力與組織風險：後續風險主題
@@ -106,7 +106,7 @@
 - 決策疲勞、時程被壓縮、效率悖論；產出量增加後如何保留人工審核。
 - 主管加量 → 下屬來不及審 → 成為傳話筒 → 品質把關上移；候選改善是明確驗收標準、自審與觀察來回修改成本。
 
-來源：`kb/arguments/agent-era-2026-what-changed.md`、`kb/arguments/sun-ai-assisted-research-writing-lecture.md`、`工作紀錄.md` 的主管加量討論與課程地圖。
+來源：`kb/arguments/agent-era-2026-what-changed.md`、`kb/reference/sun-ai-assisted-research-writing-lecture.md`、`工作紀錄.md` 的主管加量討論與課程地圖。
 第二週只透過選擇建議和修正成果，體驗人的判斷；開始前的練習資料提醒仍保留，不延後。
 
 ## 五、模型與工具配置：操作補充或後續工具主題
@@ -125,13 +125,13 @@
 - theme、母片、版面配置與 design token；從範例抽取設計規則、用 skill 保存風格判斷。
 - 視覺、生圖與混合素材流程；排版與資訊正確性如何分開檢查。
 
-來源：`kb/tools/pptx-theme-design-token.md`、`kb/tools/design-system-as-skill.md`、原教案。
+來源：`kb/reference/pptx-theme-design-token.md`、`kb/tools/design-system-as-skill.md`、原教案。
 第二週只用範例說明步驟，讓學員快速排版並比較改善；不把這些理論當成實作先修。
 
 ## 七、只留講師備課的方法
 
 JTBD、SPIN、AIDA 用來設計開場與收集需求；數發部手冊的檢查面向供講師補盲點，不變成學員作業或必背內容。
-來源：`kb/arguments/sales-frameworks-for-course-engagement.md`、`kb/arguments/moda-public-sector-ai-playbook.md`、工作紀錄的三條課程設計原則。
+來源：`kb/arguments/sales-frameworks-for-course-engagement.md`、`kb/reference/moda-public-sector-ai-playbook.md`、工作紀錄的三條課程設計原則。
 
 ## 2026-09-07：客服 AI 研究移出第二週
 
