@@ -67,7 +67,9 @@ toc: false
 | 1 | [Agent 是什麼，它為什麼能幫你做事？](lessons/00-agent-introduction.html)（教材整理中） | [環境建立](setup.html) | — |
 | 2 | [簡報：讓 agent 把你的想法做成成果](lessons/01-presentation-and-the-knowledge-work-loop.html)<br>先看直接生成的簡報缺什麼，再自選題目走一遍材料、論點、文章到可編輯簡報 | [知識工作專案](tools.html#project)、[Agent 產 pptx](tools.html#pptx) | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQAM3J8zls1MR5anu0ITdGDAAZw2_fOCFa9wbXtOuutHiVA) |
 | 3 | 放假 | — | — |
-| [4]{.wip} | [從自己的業務找出可以交給 agent 的一段](lessons/02-agent-in-your-work.html)<br>上午講 agent 的運作、介入方式與從 A 到 B，再以其他組織的用法配對地震業務；下午工作坊拿自己的工作攤開、拆一段、評估、試做（兩倍時數） | [知識工作專案](tools.html#project) | — |
+| [4-1]{.wip} | [Agent 怎麼運作、站在流程的哪裡、一段工作怎麼做](lessons/02-agent-and-methods.html)<br>上半場講課：agent 只產生文字、執行框架派工具；六種介入方式；A→C→B 拆一段 | [知識工作專案](tools.html#project) | — |
+| [4-2]{.wip} | [別人怎麼用 agent，自己的業務翻成同樣的語意](lessons/03-back-to-your-work.html)<br>下半場講課：十種用法樣式拆到操作與完成證據；地震業務十種動詞配對 | — | — |
+| [4-3]{.wip} | [工作坊：從自己的工作找出值得嘗試的一段](lessons/04-workshop-find-agent-use.html)<br>攤開整件、拆一段配對、評估、試做；附三張講義 | — | — |
 :::
 
 ### 第五週之後：需求驅動滾動排課
