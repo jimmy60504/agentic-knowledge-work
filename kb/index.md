@@ -33,6 +33,7 @@
 | Agent 的產出與作用方式 | 除圖文、程式碼、控制程式外，還可產生結構化資料、分析依據、系統狀態改變、通知交接、持續監看、互動答覆及可重用知識；區分草稿與實際執行 | 已併入用法樣式表的「中間產物與完成證據」欄；三條界線不採用。[產出方式](tools/agent-output-modes.md) 留作演變紀錄 |
 | Agent 操作到業務動詞的連接 | 先說明模型以文字或結構化呼叫指揮 harness 提供的工具，再把操作、中間產物、成果接到地震業務動詞；另比較請教、一次性交付、製作工具、固定模型節點、Agent 節點與跨節點協調的接手範圍 | 已入 draft：第四週前半第一段（底層機制、Markdown 檔例子）、第二段（六種介入方式）及貫穿案例「測站斷訊」；四層對照、十二類操作、兩個案例降為附錄未採用。[底層機制與介入方式](tools/agent-operation-output-business-map.md)。實際流程仍待同仁確認 |
 | OpenClaw／「龍蝦」實際用途 | 官方日常用途及社群展示：每日摘要、跨 App 代辦、研究回存、遠端程式工作、排程監看與多 Agent 協調；觀察入口、工具、產出與驗收如何串接 | 已併入用法樣式表；講課不點名產品。[OpenClaw 使用案例](reference/openclaw-how-people-use-it.md)。展示個案不能推算普遍使用率 |
+| 地震預警 2024 花蓮事件檢討 | 預警四段流程各幾秒、發布門檻、0403 漏報七縣市的四項原因與四項改善、0816 事件驗證、年度時效統計；管線內的機器學習模型即「固定節點呼叫一次模型」 | 候選：第四週貫穿案例的替代方案（事後檢討取代測站斷訊）、介入方式第四種實例、完成證據實例。[演講投影片筆記](reference/cwa-earthquake-center/cwa-eew-2024-hualien-case-study.md)。中心同仁的公開檢討，引用時以流程為主、不評論事件 |
 | 地震測報中心業務盤點 | 現行六科、地震工作鏈與產物；另以守視、發布、解釋、資料服務、維運、管理等工作動詞對照外部流程，提出待訪談問題 | 已入 draft：第四週前半第五段與學員講義動詞對照表，請學員當場修正；[地震業務參考資料](reference/cwa-earthquake-center/README.md)、[工作類型](reference/cwa-earthquake-center/cwa-earthquake-center-work-types.md)。2019 專刊的七課架構僅供沿革，未經中心同仁確認實務缺口 |
 | 人的判斷與組織風險 | 認知債、窄化、附和、假文獻、倫理與揭露；主管加量、決策疲勞、審核負擔 | 候選；第四週只選必要例子。[研究寫作](reference/sun-ai-assisted-research-writing-lecture.md)、[Agent 時代研究](arguments/agent-era-2026-what-changed.md)、[工作紀錄](../工作紀錄.md) |
 | 協作模式與生產力研究 | Author／Editor／Director／Orchestrator；主觀省時和實際效果的差異 | 講師參考；[Agent 時代研究](arguments/agent-era-2026-what-changed.md)。研究結論不能直接外推全部任務 |
