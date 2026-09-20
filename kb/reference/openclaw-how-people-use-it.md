@@ -1,5 +1,7 @@
 # 大家怎麼用「龍蝦」OpenClaw（2026-09）
 
+> 狀態（2026-09-19）：使用模式已併入 [[agent-use-patterns]]，講課與投影片不點名產品，因為目前一般 Agent 多具備類似功能；本檔保留作來源與演變紀錄。
+
 ## 來源
 
 - 查核日：2026-09-19。「龍蝦」依 [OpenClaw 官方繁體中文沿革](https://docs.openclaw.ai/zh-TW/start/lore)確認為 OpenClaw 的暱稱；此處不泛指所有 Agent。

@@ -18,21 +18,22 @@
 | 公部門 AI 規範與導入 | 行政院指引、數發部手冊、TryAI、資料與權限；區分個人日常操作與機關導入系統 | 候選；[數發部手冊](reference/moda-public-sector-ai-playbook.md)、[導入阻礙與案例](arguments/public-sector-ai-adoption-barriers-and-examples.md)。正式使用前重查規範與方案 |
 | 組織支持與採用動機 | 帳號費用、電腦網路、責任、心智模型、主管示範；國內外案例與「秘密半機械人」 | 候選；[學員需求](arguments/what-makes-civil-servants-want-to-learn-ai.md)、[導入阻礙](arguments/public-sector-ai-adoption-barriers-and-examples.md)。不以推測當署內現況 |
 | CODE、雙鑽石與 PKM | 收集到表達、發散與收斂；用框架回顧熟悉工作，不增加必背流程 | 部分採用：第四週方法主線；框架名稱與比較仍候選。[歷次選材](../archive/week2-2026-09-19/deferred-materials.md)、[工作紀錄](../工作紀錄.md) |
-| 閱讀、摘要與蒸餾 | 收藏家謬誤、文獻／永久筆記、漸進式摘要；用自己的長文比對摘要，分開原意與洞見 | 部分採用：第四週閱讀段；具體練習待選。[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md)、[研究寫作講座](reference/sun-ai-assisted-research-writing-lecture.md) |
+| 閱讀、摘要與蒸餾 | 收藏家謬誤、文獻／永久筆記、漸進式摘要；用自己的長文比對摘要，分開原意與洞見 | 部分採用：第四週前半收尾「存的時候分清四種內容」；長文檢查摘要練習列後半工作坊備援題（2026-09-19）。[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md)、[研究寫作講座](reference/sun-ai-assisted-research-writing-lecture.md) |
 | 帶目的學習與快速試作 | 提問、預測、試作、比較與說明取捨；辨認有成品與自己學會的差別 | 候選；[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md) |
-| 共同環境與中間產物 | 文件櫃、工作台、agent、加工工具；A→C→B，讓雙方看見理解差異 | 部分採用：第四週前半；其他工作情境仍可延伸。[協作討論](../archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md)、[前半 draft](../drafts/03-week4-lecture.md) |
+| 共同環境與中間產物 | 文件櫃、工作台、agent、加工工具；A→C→B，讓雙方看見理解差異 | 部分採用：第四週前半第三段 A→C→B 與誰做；文件櫃與工作台比喻縮到收尾一頁。[協作討論](../archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md)、[前半 draft](../drafts/03-week4-lecture.md) |
 | 管理、溝通、教練與角色分工 | 交代目的、背景、標準、回饋；用具體任務分工，探索管理方法的適用範圍 | 部分採用：第四週操作方法；管理書與研究留講師參考。[協作討論](../archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md) |
 | 表達與輸入的缺口 | 想法如何轉成文字、模型看不到什麼；多模態、實際觀察與設備連接 | 部分採用：第四週思考外部化；多模態與實體設備延伸候選。[協作討論](../archive/week4-2026-09-19/12-ai-collaboration-intent-and-intermediate-artifacts.md) |
 | 長期知識庫與脈絡重用 | 來源、草稿、決定、例外、版本與回退；好範例和退件經驗如何成為標準 | 部分採用：第二週最小保存、第四週回存；Git 操作與完整維護制度候選。[結構正本](../ssot/project-structure.md)、[知識資產](arguments/agent-value-workflow-and-knowledge-assets.md) |
-| 三圈跨場景與工程類比 | 用產物與檢查理解流程；各圈的跨場景用語、細步驟，以及「讀者腦袋是執行環境」的類比 | 部分採用：第四週引用三圈；類比留講師參考，未採用第四圈。[三圈正本](../ssot/three-loops.md)、[原底稿](../archive/week4-2026-09-19/11-week4-workflow-outline.md)、[工作紀錄](../工作紀錄.md) |
+| 三圈跨場景與工程類比 | 用產物與檢查理解流程；各圈的跨場景用語、細步驟，以及「讀者腦袋是執行環境」的類比 | 部分採用：第四週前半第三段一句帶過三圈作為三個 C 的實例；類比留講師參考，未採用第四圈。[三圈正本](../ssot/three-loops.md)、[原底稿](../archive/week4-2026-09-19/11-week4-workflow-outline.md)、[工作紀錄](../工作紀錄.md) |
 | 論述、受眾與敘事結構 | 目的、核心訊息、金字塔、SCQA、故事線；按受眾選擇結構 | 部分採用：目的與順序已入第二、四週，完整方法候選。[流程前後對照](arguments/presentation-process-before-and-after.md)、[簡報原則](tools/slide-design-principles-argument-to-slides.md) |
 | Agent 價值與新用途 | 省時、強化判斷、讓原本維護不起的工作可行；比較總成本、風險與知識累積 | 部分採用：第四週後半；企業案例與其他任務可延伸。[價值與知識資產](arguments/agent-value-workflow-and-knowledge-assets.md)、[工作坊 draft](../drafts/04-week4-agent-value-workshop.md) |
 | 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；完整組織診斷未排。[工作坊照片筆記](reference/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
-| 外部 Agent 業務用途與缺口 | 客服、知識檢索、文件抽取、事件分流、跨工具交接、初稿與銷售；用「缺口 → Agent 位置 → 人的驗收」找可訪談問題 | 講師參考、工作坊案例候選；[外部案例盤點](reference/external-agent-business-use-cases.md)。廠商案例為選題線索，不代表署內現況或平均效益 |
-| Agent 的產出與作用方式 | 除圖文、程式碼、控制程式外，還可產生結構化資料、分析依據、系統狀態改變、通知交接、持續監看、互動答覆及可重用知識；區分草稿與實際執行 | 候選分類工具；[產出方式](tools/agent-output-modes.md)。尚未定為課程正式框架 |
-| Agent 操作到業務動詞的連接 | 先說明模型以文字或結構化呼叫指揮 harness 提供的工具，再把操作、中間產物、成果接到地震業務動詞；另比較請教、一次性交付、製作工具、固定模型節點、Agent 節點與跨節點協調的接手範圍 | 候選分析工具；[底層機制、四層對照、接手程度與案例](tools/agent-operation-output-business-map.md)。實際流程仍待同仁確認 |
-| OpenClaw／「龍蝦」實際用途 | 官方日常用途及社群展示：每日摘要、跨 App 代辦、研究回存、遠端程式工作、排程監看與多 Agent 協調；觀察入口、工具、產出與驗收如何串接 | 講師參考、案例候選；[OpenClaw 使用案例](reference/openclaw-how-people-use-it.md)。展示個案不能推算普遍使用率 |
-| 地震測報中心業務盤點 | 現行六科、地震工作鏈與產物；另以守視、發布、解釋、資料服務、維運、管理等工作動詞對照外部流程，提出待訪談問題 | 講師參考、課程案例候選；[地震業務參考資料](reference/cwa-earthquake-center/README.md)、[工作類型](reference/cwa-earthquake-center/cwa-earthquake-center-work-types.md)。2019 專刊的七課架構僅供沿革，未經中心同仁確認實務缺口 |
+| 外部 Agent 業務用途與缺口 | 客服、知識檢索、文件抽取、事件分流、跨工具交接、初稿與銷售；用「缺口 → Agent 位置 → 人的驗收」找可訪談問題 | 已併入用法樣式表；[外部案例盤點](reference/external-agent-business-use-cases.md)。廠商案例為選題線索，不代表署內現況或平均效益 |
+| Agent 常見用法樣式 | 十種用法樣式（例行詢問答覆、研究底稿、文件抽欄位、事件初篩、跨工具流程、初稿、定期摘要、監看提醒、線上代辦、遠端程式修改），每種列通用動詞、具體操作、中間產物與完成證據、人驗收；十個動作動詞；「工具成功不等於業務完成」 | 已入 draft：第四週前半第四段講三到四種；整表與工作動詞配對成學員講義的動詞對照表。[用法樣式](tools/agent-use-patterns.md)，合併自外部案例與 OpenClaw 兩份筆記 |
+| Agent 的產出與作用方式 | 除圖文、程式碼、控制程式外，還可產生結構化資料、分析依據、系統狀態改變、通知交接、持續監看、互動答覆及可重用知識；區分草稿與實際執行 | 已併入用法樣式表的「中間產物與完成證據」欄；三條界線不採用。[產出方式](tools/agent-output-modes.md) 留作演變紀錄 |
+| Agent 操作到業務動詞的連接 | 先說明模型以文字或結構化呼叫指揮 harness 提供的工具，再把操作、中間產物、成果接到地震業務動詞；另比較請教、一次性交付、製作工具、固定模型節點、Agent 節點與跨節點協調的接手範圍 | 已入 draft：第四週前半第一段（底層機制、Markdown 檔例子）、第二段（六種介入方式）及貫穿案例「測站斷訊」；四層對照、十二類操作、兩個案例降為附錄未採用。[底層機制與介入方式](tools/agent-operation-output-business-map.md)。實際流程仍待同仁確認 |
+| OpenClaw／「龍蝦」實際用途 | 官方日常用途及社群展示：每日摘要、跨 App 代辦、研究回存、遠端程式工作、排程監看與多 Agent 協調；觀察入口、工具、產出與驗收如何串接 | 已併入用法樣式表；講課不點名產品。[OpenClaw 使用案例](reference/openclaw-how-people-use-it.md)。展示個案不能推算普遍使用率 |
+| 地震測報中心業務盤點 | 現行六科、地震工作鏈與產物；另以守視、發布、解釋、資料服務、維運、管理等工作動詞對照外部流程，提出待訪談問題 | 已入 draft：第四週前半第五段與學員講義動詞對照表，請學員當場修正；[地震業務參考資料](reference/cwa-earthquake-center/README.md)、[工作類型](reference/cwa-earthquake-center/cwa-earthquake-center-work-types.md)。2019 專刊的七課架構僅供沿革，未經中心同仁確認實務缺口 |
 | 人的判斷與組織風險 | 認知債、窄化、附和、假文獻、倫理與揭露；主管加量、決策疲勞、審核負擔 | 候選；第四週只選必要例子。[研究寫作](reference/sun-ai-assisted-research-writing-lecture.md)、[Agent 時代研究](arguments/agent-era-2026-what-changed.md)、[工作紀錄](../工作紀錄.md) |
 | 協作模式與生產力研究 | Author／Editor／Director／Orchestrator；主觀省時和實際效果的差異 | 講師參考；[Agent 時代研究](arguments/agent-era-2026-what-changed.md)。研究結論不能直接外推全部任務 |
 | 模型配置與比較 | 模型能力、說明品質、推理強度與額度；保留同任務對照的實驗想法 | 候選；[模型配置](tools/model-tier-and-effort-comparison.md)。不預設免費／付費固定高下 |
@@ -62,13 +63,14 @@
 | 想法 | 已採用的位置與範圍 | 後續回顧或深化 | 成熟正本 |
 |---|---|---|---|
 | 能力互補與自己的判斷 | 第二週正式文章「AI 如何配合自己的能力與需要」「交付物代表自己」 | 第四週前半閱讀與分工 draft：加入人的洞見；後半評估收益與驗收 | 尚未另立 SSOT |
-| 請教與交辦 | 第二週正式文章同名節；第四週前半第五節 draft | 從說清楚需要，深化為具體角色、分工與回饋 | 尚未另立 SSOT；操作語氣標準見 [skill](../skills/chinese-copy-style.md) |
-| 三個迴圈與中間產物 | 第二週正式文章：文稿、逐頁稿與成品；第四週前半第三節 draft：轉換與 A→C→B | 從簡報回顧，再探索其他知識工作的產物與檢查點 | [三圈正本 v3](../ssot/three-loops.md)；第二週保留當時「確認方向」，後續使用「形成論述」；A→C→B 延伸未定案 |
-| 保存、資料夾與脈絡重用 | 第二週正式文章「把過程保存下來」與實作第一步；第四週前半第一、七節 draft | 從實際讀寫深化到材料、決定、規則與跨次任務接續；第四週後半引導四回存試作結果 | [專案結構正本](../ssot/project-structure.md)，含索引與回存循環 |
-| 查找、閱讀、查證與洞見 | 第二週正式文章實作第二至四步；第四週前半第四節 draft | 從挑一句查證，深化到區分原意、摘要與自己的洞見；長文實作仍候選 | 尚未另立 SSOT；[閱讀筆記](arguments/purposeful-reading-and-agent-assisted-practice.md) |
-| 受眾、論述、結構與風格 | 第二週正式文章三圈與實作第三至八步；第四週前半第三、六節 draft | 由簡報回顧源頭修改、明確規則與程式分工；SCQA 等完整方法仍候選 | 三圈共用正本；具體表達標準見 [圖文規則](../skills/teaching-visuals-and-citations.md) |
+| 請教與交辦 | 第二週正式文章同名節；第四週前半第三段「找到 C 之後誰做」draft | 從說清楚需要，深化為具體角色、分工與回饋 | 尚未另立 SSOT；操作語氣標準見 [skill](../skills/chinese-copy-style.md) |
+| 三個迴圈與中間產物 | 第二週正式文章：文稿、逐頁稿與成品；第四週前半第三段 draft：A→C→B，三圈退為三個 C 的實例 | 從簡報回顧，再探索其他知識工作的產物與檢查點 | [三圈正本 v3](../ssot/three-loops.md)；第二週保留當時「確認方向」，後續使用「形成論述」；A→C→B 延伸未定案 |
+| 保存、資料夾與脈絡重用 | 第二週正式文章「把過程保存下來」與實作第一步；第四週前半收尾「做完留什麼」一頁 draft | 從實際讀寫深化到材料、決定、規則與跨次任務接續；第四週後半引導四回存試作結果 | [專案結構正本](../ssot/project-structure.md)，含索引與回存循環 |
+| 查找、閱讀、查證與洞見 | 第二週正式文章實作第二至四步；第四週前半收尾「存的時候分清四種內容」draft；長文練習列後半備援題 | 從挑一句查證，深化到區分原意、摘要與自己的洞見；長文實作仍候選 | 尚未另立 SSOT；[閱讀筆記](arguments/purposeful-reading-and-agent-assisted-practice.md) |
+| 受眾、論述、結構與風格 | 第二週正式文章三圈與實作第三至八步；第四週前半第三段 draft | 由簡報回顧源頭修改、明確規則與程式分工；SCQA 等完整方法仍候選 | 三圈共用正本；具體表達標準見 [圖文規則](../skills/teaching-visuals-and-citations.md) |
 | 資料邊界與公部門規範 | 第二週正式文章「開始前確認兩件事」；第四週後半引導三 draft：資料與權限 | 日常資料使用可回顧；機關導入制度與完整規範仍候選 | 外部規範以官方來源為準；[手冊筆記](reference/moda-public-sector-ai-playbook.md) |
-| 價值、成本、風險與驗證 | 第四週後半引導一至四 draft | 後續可拿試作結果重新檢視收益、審核負擔與例外，尚未排週次 | 尚未另立 SSOT；[價值筆記](arguments/agent-value-workflow-and-knowledge-assets.md) |
+| 價值、成本、風險與驗證 | 第四週後半引導一至四 draft；學員講義評估表（收益、條件、成本、風險、累積五列） | 後續可拿試作結果重新檢視收益、審核負擔與例外，尚未排週次 | 尚未另立 SSOT；[價值筆記](arguments/agent-value-workflow-and-knowledge-assets.md) |
+| Agent 運作機制、介入方式與三角度配對 | 第四週前半第一、二、四、五、六段 draft（2026-09-19）：執行框架循環、六種介入方式、十種用法樣式與動作詞彙、十種工作動詞、六欄配對表；學員講義 [06](../drafts/06-week4-student-handouts.md) 三張表：動詞對照表（樣式與動詞配對）、工作單、評估表 | 學員修正動詞表與工作坊實填六欄後，回看樣式與動詞是否可用；尚未排定回顧週次 | 尚未另立 SSOT；[底層機制與介入方式](tools/agent-operation-output-business-map.md)、[用法樣式](tools/agent-use-patterns.md)、[工作類型](reference/cwa-earthquake-center/cwa-earthquake-center-work-types.md) |
 
 ## 迭代成熟後回到 SSOT
 
