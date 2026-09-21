@@ -1,0 +1,23 @@
+' 語法範例：三種演員、六種工作物件、邊界、各種編號寫法、註記、行內建立物件。對照 kb/tools/domain-storytelling.md「語法總覽」。
+@startuml syntax-sample
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Boundary(center, 測報中心) {
+  Person(a, 承辦)
+  Group(team, 值班小組)
+  System(sys, 資料庫)
+}
+Person(b, 主管, $note="^負責決行")
+Document(d, 簽稿)
+Folder(f, 案卷)
+Email(m, 通知信)
+Call(c, 電話)
+Info(i, 狀態)
+activity(_, a, 撰寫, d, 呈給, b)
+activity(|, a, 同時通知, team, 以, c)
+activity(3, b, 核定, d)
+activity(=5, b, 歸入, f)
+activity(_, sys, 寄出, m, 給, a)
+activity(., a, 查看, Conversation: 討論紀錄)
+activity(>_, team, 更新, i)
+@enduml

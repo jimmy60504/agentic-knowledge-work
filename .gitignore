@@ -47,3 +47,7 @@ dist/
 # Local trial runs and scratch outputs
 /tmp/
 __pycache__/
+
+# Codex 外掛的建置與審查暫存（含 pptx）
+.codex-build/
+.codex-review/

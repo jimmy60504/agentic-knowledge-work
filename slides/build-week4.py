@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """第四週投影片建置：把三份逐頁稿（drafts/09、10、11）各產成一份素版 PPTX。
 
-用法：python3 slides/build-week4.py            → slides/week4-1.pptx、week4-2.pptx、week4-3.pptx
+用法：python3 slides/build-week4.py            → slides/week4-1-plain.pptx、week4-2.pptx、week4-3.pptx（week4-1.pptx 由使用者外掛維護，不覆寫）
       python3 slides/build-week4.py 09         → 只建其中一份
 
 逐頁稿格式（drafts/09-week4-1-slides.md 等）：
@@ -9,7 +9,10 @@
 - 內文：一般條列「- 」、編號「1. 」、Markdown 表格、```text 程式區塊，依序放到畫面。
 - 「- 原話：」「- 口述：」「- 【無原話】」「- 案例：」「- 圖：」「- 來源：」不上畫面，進備註。
 - 「- 引文頁內文：『…』」以引文方塊放到畫面。
+- 「- 主訊息：…」以粗體大字放在條列之前，一頁一句。
+- 圖：加 `--figures` 才套用 week4_figures.py 的原生圖形（依頁標題），預設不畫。
 - 第 1 頁視為封面。
+- 「### 段｜標題」為段落標題頁，不佔頁碼；畫面只有標題，不放副標，筆記照常進備註。
 
 素版原則：白底、標題一句、內文條列或表格、備註放原話與口述；不做視覺設計，供使用者先有東西改。
 """
@@ -23,9 +26,12 @@ from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.util import Inches, Pt
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from week4_figures import FIGURES  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 DECKS = {
-    "09": ("drafts/09-week4-1-slides.md", "week4-1.pptx"),
+    "09": ("drafts/09-week4-1-slides.md", "week4-1-plain.pptx"),  # week4-1.pptx 已由使用者外掛接手，不覆寫
     "10": ("drafts/10-week4-2-slides.md", "week4-2.pptx"),
     "11": ("drafts/11-week4-3-slides.md", "week4-3.pptx"),
 }
@@ -51,10 +57,11 @@ def parse(md_path):
     in_code = False
     section = "畫面"
     for line in text.split("\n"):
-        m = re.match(r"^### (\d+)｜(.+)$", line)
+        m = re.match(r"^### (\d+|段)｜(.+)$", line)
         if m:
-            cur = {"n": int(m.group(1)), "title": m.group(2).strip(),
-                   "blocks": [], "notes": []}
+            n = m.group(1)
+            cur = {"n": None if n == "段" else int(n), "title": m.group(2).strip(),
+                   "blocks": [], "notes": [], "divider": n == "段"}
             pages.append(cur)
             section = "畫面"
             continue
@@ -100,6 +107,9 @@ def parse(md_path):
                 q = body[len("引文頁內文："):].strip()
                 q = re.sub(r"（[^）]*）$", "", q).strip().strip("「」")
                 cur["blocks"].append(("quote", q))
+                continue
+            if body.startswith("主訊息："):
+                cur["blocks"].append(("lead", body[len("主訊息："):].strip()))
                 continue
             if body.startswith(NOTE_PREFIXES):
                 cur["notes"].append(body)
@@ -210,6 +220,15 @@ def cover(prs, page, deck_label):
     return s
 
 
+def divider(prs, page):
+    s = prs.slides.add_slide(prs.slide_layouts[6])
+    rect(s, 0, 0, W, H, fill=TINT)
+    rect(s, 0, 0, 0.35, H, fill=ACCENT)
+    textbox(s, M + 0.4, 2.9, W - 2 * M - 0.4, 1.4, [page["title"]], size=34, bold=True)
+    notes(s, page["notes"])
+    return s
+
+
 def content(prs, page, total):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     textbox(s, M, 0.45, W - 2 * M, 0.9, [page["title"]], size=28, bold=True)
@@ -238,10 +257,16 @@ def content(prs, page, total):
             bullets.append(val)
             continue
         flush_bullets()
-        if kind == "table":
+        if kind == "lead":
+            per_line = max(int(avail_w * 72 / (22 * 1.05)), 1)
+            est = (22 / 72) * 1.5 * -(-len(val) // per_line) + 0.1
+            textbox(s, M, y, avail_w, est, [val], size=22, bold=True)
+            y += est + 0.2
+        elif kind == "table":
             nrow = len(val)
             size = 13 if nrow <= 7 else 12 if nrow <= 9 else 11
-            h = table(s, M, y, avail_w, val, size=size)
+            row_h = 0.42 if nrow <= 7 else 0.36 if nrow <= 9 else 0.31
+            h = table(s, M, y, avail_w, val, size=size, row_h=row_h)
             y += h + 0.25
         elif kind == "code":
             lines = [l for l in val]
@@ -259,6 +284,10 @@ def content(prs, page, total):
             textbox(s, M + 0.4, y + 0.2, avail_w - 0.8, h - 0.4, [val], size=18, anchor="m")
             y += h + 0.25
     flush_bullets()
+    fig = FIGURES.get(page["title"]) if USE_FIGURES else None
+    if fig:
+        fig(s, M, y + 0.1, avail_w, H - 0.7 - (y + 0.1))
+        y = H - 0.6
     textbox(s, W - M - 1.2, H - 0.55, 1.2, 0.35, [f"{page['n']} / {total}"], size=11, color=MUTED, align="c")
     if y > H - 0.4:
         print(f"  [溢出警告] 第 {page['n']} 頁「{page['title']}」內容估計高度到 {y:.1f} in")
@@ -272,17 +301,24 @@ def build(key):
     prs = Presentation()
     prs.slide_width, prs.slide_height = Inches(W), Inches(H)
     label = {"09": "第四週 4-1", "10": "第四週 4-2", "11": "第四週 4-3"}[key]
+    total = sum(1 for p in pages if not p.get("divider"))
     for p in pages:
-        if p["n"] == 1:
+        if p.get("divider"):
+            divider(prs, p)
+        elif p["n"] == 1:
             cover(prs, p, label)
         else:
-            content(prs, p, len(pages))
+            content(prs, p, total)
     out_path = ROOT / "slides" / out
     prs.save(out_path)
-    print(f"{out}: {len(pages)} 頁 ← {md}")
+    print(f"{out}: {len(pages)} 頁（含 {len(pages) - total} 頁段落標題）← {md}")
 
+
+USE_FIGURES = False
 
 if __name__ == "__main__":
-    keys = sys.argv[1:] or list(DECKS)
+    args = [a for a in sys.argv[1:] if a != "--figures"]
+    USE_FIGURES = "--figures" in sys.argv[1:]
+    keys = args or list(DECKS)
     for k in keys:
         build(k)

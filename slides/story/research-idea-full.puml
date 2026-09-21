@@ -1,0 +1,43 @@
+' 研究情境的完整版故事（候選）：依實際研究做法畫，含資料取得、比較基準、迭代與審閱修改。
+' 六個演員、十四個活動。課堂版可從中挑十個。
+@startuml research-idea-full
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+
+Person(researcher, 研究者)
+Person(advisor, 指導者或同事)
+System(litdb, 文獻資料庫)
+Person(datakeeper, 資料管理者)
+System(env, 計算環境)
+Person(reviewer, 審閱者)
+
+Document(question, 研究問題)
+Document(papers, 論文清單)
+Document(notes, 閱讀筆記)
+Document(method, 方法與評估指標)
+Folder(dataset, 原始資料)
+Folder(clean, 整理後資料)
+Document(code, 程式碼)
+Document(charts, 結果圖表)
+Document(baseline, 現行方法的結果)
+Document(compare, 比較表)
+Document(conclusion, 結論)
+Document(report, 報告)
+Document(feedback, 審閱意見)
+
+activity(_, researcher, 寫下, question)
+activity(_, researcher, 依研究問題向, litdb, 檢索出, papers)
+activity(_, researcher, 閱讀, papers, 整理成, notes)
+activity(_, researcher, 拿, notes, 請教, advisor)
+activity(_, advisor, 建議, method)
+activity(_, researcher, 向, datakeeper, 申請到, dataset)
+activity(_, researcher, 清理, dataset, 整理成, clean)
+activity(_, researcher, 依方法與評估指標撰寫, code)
+activity(_, env, 以整理後資料執行, code, 產出, charts)
+activity(_, researcher, 對照, baseline, 比較成, compare)
+activity(_, researcher, 檢視比較表後修改, code)
+activity(_, researcher, 依, compare, 歸納出, conclusion)
+activity(_, researcher, 依, conclusion, 撰寫, report)
+activity(_, reviewer, 審閱, report, 寫出, feedback)
+activity(_, researcher, 依審閱意見修改, report)
+@enduml

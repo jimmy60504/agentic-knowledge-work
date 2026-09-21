@@ -1,0 +1,32 @@
+' 4-1 第 3 頁：測試一個研究想法（domain storytelling，四個演員、七個活動）
+' 語法：DomainStory-PlantUML，https://github.com/johthor/DomainStory-PlantUML
+' 句型：activity(編號, 演員, 動詞, 物件[, 動詞或介詞, 下一個物件或演員])
+'   六參數形式會把前一個物件連到下一個物件，念作「演員 依 物件 動詞 物件」，這樣物件之間才有連線。
+'   八參數（再接介詞與演員）函式庫不支援，要交給別人另寫一句。
+' 念法：研究者向文獻資料庫檢索出論文清單；研究者依論文清單選定主要方法；研究者依主要方法撰寫程式碼；
+'       計算環境以歷史資料執行程式碼產出結果圖表；研究者分析結果圖表歸納出分析結論；研究者依分析結論撰寫報告；同儕審閱報告寫出審閱意見。
+' 產圖：python3 slides/story/render.py  → slides/story/research-idea.svg
+@startuml research-idea
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+
+Person(researcher, 研究者)
+System(litdb, 文獻資料庫)
+System(env, 計算環境)
+Person(peer, 同儕)
+Document(papers, 論文清單)
+Document(method, 主要方法)
+Document(code, 程式碼)
+Document(charts, 結果圖表)
+Document(conclusion, 分析結論)
+Document(report, 報告)
+Document(feedback, 審閱意見)
+
+activity(_, researcher, 向, litdb, 檢索出, papers)
+activity(_, researcher, 依, papers, 選定, method)
+activity(_, researcher, 依, method, 撰寫, code)
+activity(_, env, 以歷史資料執行, code, 產出, charts)
+activity(_, researcher, 分析, charts, 歸納出, conclusion)
+activity(_, researcher, 依, conclusion, 撰寫, report)
+activity(_, peer, 審閱, report, 寫出, feedback)
+@enduml
