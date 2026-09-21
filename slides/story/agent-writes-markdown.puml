@@ -1,0 +1,133 @@
+' Agent 成功修改一次 Markdown 的五階段故事。
+' 同一個 Agent 執行環境與 LLM 在每個階段重畫一次；上下文是階段間的交接物件。
+@startuml agent-writes-markdown
+!$Story_Layout = "top-to-bottom"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+
+!include <material/settings>
+!include <material/memory>
+!include <material/magnify>
+!include <material/book_open_variant>
+!include <material/pencil>
+!include <material/call_split>
+!include <material/check_circle>
+
+title 一次成功的 Markdown 修改｜LLM 反覆呼叫工具的完整過程
+
+Boundary(phase1, "1｜接收需求") {
+  Person(user1, 使用者)
+  Actor("AgentRuntime", "$ma_settings", runtime1, "Agent 執行環境", "", "", "", 1.1, "#1D4ED8", "#DBEAFE")
+  Actor("LLM", "$ma_memory", llm1, "LLM", "", "", "", 1.15, "#7C3AED", "#F3E8FF")
+  Document(request, 修改需求)
+  Info(context1, 上下文 ①\n需求、對話、工作環境)
+
+  activity(_, user1, 說明, request, 交給, runtime1)
+  activity(_, runtime1, 結合對話與工作環境整理, request, 形成, context1)
+  activity(_, runtime1, 將初始上下文傳送給, llm1)
+  activity(_, llm1, 依上下文決定先搜尋再讀取, context1)
+}
+
+Boundary(phase2, "2｜搜尋與讀取") {
+  Actor("AgentRuntime", "$ma_settings", runtime2, "Agent 執行環境", "", "", "", 1.1, "#1D4ED8", "#DBEAFE")
+  Actor("LLM", "$ma_memory", llm2, "LLM", "", "", "", 1.15, "#7C3AED", "#F3E8FF")
+  Actor("SearchTool", "$ma_magnify", search2, "搜尋工具", "", "", "", 1.0, "#0F766E", "#CCFBF1")
+  Actor("ReadTool", "$ma_book_open_variant", reader2, "讀取工具", "", "", "", 1.0, "#0F766E", "#CCFBF1")
+  Folder(workspace, 工作區)
+  Document(search_request, 搜尋請求)
+  Document(paths, 候選檔案清單)
+  Document(read_request, 讀取請求)
+  Document(rules, 專案規則)
+  Document(markdown_before, 現有 Markdown)
+  Folder(references, 參考材料)
+  Info(context2, 上下文 ②\n需求、規則、原文、材料)
+
+  activity(_, runtime2, 將上下文 ① 傳送給, llm2)
+  activity(_, llm2, 提出, search_request, 交給, runtime2)
+  activity(_, runtime2, 依搜尋請求呼叫, search2)
+  activity(_, search2, 搜尋, workspace, 回傳, paths)
+  activity(_, runtime2, 將候選檔案清單傳送給, llm2)
+  activity(_, llm2, 提出, read_request, 交給, runtime2)
+  activity(_, runtime2, 依讀取請求呼叫, reader2)
+  activity(_, reader2, 從工作區讀取, rules)
+  activity(_, reader2, 從工作區讀取, markdown_before)
+  activity(_, reader2, 從工作區讀取, references)
+  activity(_, runtime2, 彙整規則、原文與材料形成, context2)
+  activity(_, runtime2, 將完整上下文傳送給, llm2)
+}
+
+activity(_, runtime1, 交接, context1, 提供給, runtime2)
+
+Boundary(phase3, "3｜產生並套用 Patch") {
+  Actor("AgentRuntime", "$ma_settings", runtime3, "Agent 執行環境", "", "", "", 1.1, "#1D4ED8", "#DBEAFE")
+  Actor("LLM", "$ma_memory", llm3, "LLM", "", "", "", 1.15, "#7C3AED", "#F3E8FF")
+  Actor("EditTool", "$ma_pencil", editor3, "編輯工具", "", "", "", 1.0, "#C2410C", "#FFEDD5")
+  Document(patch, Patch)
+  Document(edit_request, 編輯請求)
+  Document(markdown_after, 更新後的 Markdown)
+  Document(write_result, 寫入結果)
+  Info(context3, 上下文 ③\n修改內容、寫入結果)
+
+  activity(_, runtime3, 將上下文 ② 傳送給, llm3)
+  activity(_, llm3, 依規則、原文與材料產生, patch)
+  activity(_, llm3, 將 Patch 組成, edit_request, 交給, runtime3)
+  activity(_, runtime3, 依編輯請求呼叫, editor3)
+  activity(_, editor3, 將 Patch 套用至, markdown_before, 寫成, markdown_after)
+  activity(_, editor3, 回傳, write_result, 交給, runtime3)
+  activity(_, runtime3, 將修改內容與寫入結果整理成, context3)
+  activity(_, runtime3, 將寫入後的上下文傳送給, llm3)
+}
+
+activity(_, runtime2, 交接, context2, 提供給, runtime3)
+
+Boundary(phase4, "4｜複查與比較") {
+  Actor("AgentRuntime", "$ma_settings", runtime4, "Agent 執行環境", "", "", "", 1.1, "#1D4ED8", "#DBEAFE")
+  Actor("LLM", "$ma_memory", llm4, "LLM", "", "", "", 1.15, "#7C3AED", "#F3E8FF")
+  Actor("ReadTool", "$ma_book_open_variant", reader4, "讀取工具", "", "", "", 1.0, "#0F766E", "#CCFBF1")
+  Actor("GitTool", "$ma_call_split", git4, "Git", "", "", "", 1.0, "#334155", "#E2E8F0")
+  Document(review_request, 複查請求)
+  Document(diff_request, 差異請求)
+  Document(diff, Git diff)
+  Info(context4, 上下文 ④\n更新內容、修改差異)
+
+  activity(_, runtime4, 將上下文 ③ 傳送給, llm4)
+  activity(_, llm4, 為確認實際內容提出, review_request, 交給, runtime4)
+  activity(_, runtime4, 依複查請求再次呼叫, reader4)
+  activity(_, reader4, 重新讀取, markdown_after)
+  activity(_, runtime4, 將更新內容傳送給, llm4)
+  activity(_, llm4, 為檢查修改範圍提出, diff_request, 交給, runtime4)
+  activity(_, runtime4, 依差異請求呼叫, git4)
+  activity(_, git4, 比對工作區版本產生, diff)
+  activity(_, runtime4, 將更新內容與 Git diff 整理成, context4)
+  activity(_, runtime4, 將複查後的上下文傳送給, llm4)
+}
+
+activity(_, runtime3, 交接, context3, 提供給, runtime4)
+
+Boundary(phase5, "5｜建置驗證與回報") {
+  Actor("AgentRuntime", "$ma_settings", runtime5, "Agent 執行環境", "", "", "", 1.1, "#1D4ED8", "#DBEAFE")
+  Actor("LLM", "$ma_memory", llm5, "LLM", "", "", "", 1.15, "#7C3AED", "#F3E8FF")
+  Actor("CheckTool", "$ma_check_circle", checker5, "建置與檢查工具", "", "", "", 1.0, "#15803D", "#DCFCE7")
+  Person(user5, 使用者)
+  Document(check_request, 驗證請求)
+  Document(check_result, 驗證結果)
+  Document(summary, 完成回報)
+
+  activity(_, runtime5, 將上下文 ④ 傳送給, llm5)
+  activity(_, llm5, 為確認頁面可用提出, check_request, 交給, runtime5)
+  activity(_, runtime5, 依驗證請求呼叫, checker5)
+  activity(_, checker5, 以更新後的 Markdown 執行檢查產生, check_result)
+  activity(_, runtime5, 將驗證結果傳送給, llm5)
+  activity(_, llm5, 依修改內容、Git diff 與驗證證據撰寫, summary)
+  activity(_, runtime5, 顯示, summary, 交給, user5)
+}
+
+activity(_, runtime4, 交接, context4, 提供給, runtime5)
+
+phase1 -[hidden]down-> phase2
+phase2 -[hidden]down-> phase3
+phase3 -[hidden]down-> phase4
+phase4 -[hidden]down-> phase5
+
+@enduml

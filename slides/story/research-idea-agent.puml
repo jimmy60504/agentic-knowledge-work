@@ -1,0 +1,73 @@
+' 4-1 收尾：把六種介入方式套回研究案例。
+' 這是採用 Agent 後的故事，不要求沿用開場圖的版面。
+@startuml research-idea-agent
+!$Story_Layout = "left-to-right"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+
+!include <material/memory>
+!include <material/magnify>
+!include <material/check_circle>
+!include <material/pencil>
+!include <material/settings>
+!include <material/call_split>
+
+title 六種介入方式套回研究流程
+
+Person(researcher, 研究者)
+Person(datakeeper, 資料管理者)
+Person(reviewer, 審閱者)
+System(litdb, 文獻資料庫)
+System(env, 計算環境)
+
+Actor("DialogAgent", "$ma_memory", dialog_agent, "① 對話 Agent", "", "", "", 1.05, "#7C3AED", "#F3E8FF")
+Actor("WorkAgent", "$ma_magnify", work_agent, "② 交辦 Agent", "", "", "", 1.05, "#7C3AED", "#F3E8FF")
+Actor("BuildAgent", "$ma_pencil", build_agent, "③ 程式建置 Agent", "", "", "", 1.05, "#C2410C", "#FFEDD5")
+Actor("JudgmentModel", "$ma_check_circle", judgment_model, "④ 結構化判斷模型", "", "", "", 1.05, "#0F766E", "#CCFBF1")
+Actor("NodeAgent", "$ma_settings", node_agent, "⑤ 實驗節點 Agent", "", "", "", 1.05, "#15803D", "#DCFCE7")
+Actor("Orchestrator", "$ma_call_split", main_agent, "⑥ 主 Agent", "", "", "", 1.15, "#1D4ED8", "#DBEAFE")
+
+Document(question, 研究問題)
+Conversation(discussion, 方法討論)
+Document(options, 方法選項與限制)
+Document(brief, 研究任務與權限)
+Info(approvals, 人工核准點\n方法、結論、定稿)
+Document(search_task, 文獻檢索任務)
+Document(papers, 附來源的論文清單)
+Document(relevant, 相關性標記)
+Document(method, 方法與評估指標)
+Folder(dataset, 整理後資料)
+Document(code, 程式碼與測試)
+Document(charts, 結果圖表)
+Document(compare, 與現行方法的比較表)
+Document(conclusion, 結論)
+Document(report, 報告草稿)
+Document(feedback, 審閱意見)
+Info(progress, 進度與操作紀錄)
+
+activity(_, researcher, 寫下, question)
+activity(_, researcher, 帶研究問題進行, discussion, 交給, dialog_agent)
+activity(_, dialog_agent, 依方法討論整理, options)
+
+activity(_, researcher, 設定, brief, 交給, main_agent)
+activity(_, main_agent, 記錄並等待, approvals)
+activity(_, main_agent, 建立, search_task, 指派給, work_agent)
+activity(_, work_agent, 依文獻檢索任務向, litdb, 檢索出, papers)
+activity(_, judgment_model, 依固定類別判斷, papers, 標記成, relevant)
+activity(_, researcher, 依方法選項與相關性標記選定, method)
+
+activity(_, researcher, 向, datakeeper, 申請並整理成, dataset)
+activity(_, main_agent, 依核准的方法要求, build_agent, 建立, code)
+activity(_, env, 以整理後資料執行, code, 產出, charts)
+
+activity(_, main_agent, 將結果圖表交給, node_agent)
+activity(_, node_agent, 使用程式碼與整理後資料呼叫, env, 產出, compare)
+activity(_, researcher, 檢視比較表後決定, conclusion)
+
+activity(_, main_agent, 依人確認的結論交辦, work_agent)
+activity(_, work_agent, 依, conclusion, 撰寫, report)
+activity(_, reviewer, 審閱, report, 寫出, feedback)
+activity(_, main_agent, 依審閱意見更新, progress)
+
+@enduml
