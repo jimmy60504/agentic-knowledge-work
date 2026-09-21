@@ -76,7 +76,7 @@
 | 受眾、論述、結構與風格 | 第二週正式文章三圈與實作第三至八步；第四週前半第三段 draft | 由簡報回顧源頭修改、明確規則與程式分工；SCQA 等完整方法仍候選 | 三圈共用正本；具體表達標準見 [圖文規則](../skills/teaching-visuals-and-citations.md) |
 | 資料邊界與公部門規範 | 第二週正式文章「開始前確認兩件事」；第四週後半引導三 draft：資料與權限 | 日常資料使用可回顧；機關導入制度與完整規範仍候選 | 外部規範以官方來源為準；[手冊筆記](reference/moda-public-sector-ai-playbook.md) |
 | 價值、成本、風險與驗證 | 第四週後半引導一至四 draft；學員講義評估表（收益、條件、成本、風險、累積五列） | 後續可拿試作結果重新檢視收益、審核負擔與例外，尚未排週次 | 尚未另立 SSOT；[價值筆記](arguments/agent-value-workflow-and-knowledge-assets.md) |
-| Agent 運作機制、介入方式與三角度配對 | 第四週正式文章三頁（2026-09-19 發布）：lessons/02-agent-and-methods.qmd（4-1 上半場）、03-back-to-your-work.qmd（4-2 下半場）、04-workshop-find-agent-use.qmd（4-3 工作坊，附三張講義）；第四週前半第一、二、四、五、六段 draft：執行框架循環、六種介入方式、十種用法樣式與動作詞彙、十種工作動詞、六欄配對表；學員講義 [06](../drafts/06-week4-student-handouts.md) 三張表：動詞對照表（樣式與動詞配對）、工作單、評估表 | 學員修正動詞表與工作坊實填六欄後，回看樣式與動詞是否可用；尚未排定回顧週次 | 尚未另立 SSOT；[底層機制與介入方式](tools/agent-operation-output-business-map.md)、[用法樣式](tools/agent-use-patterns.md)、[工作類型](reference/cwa-earthquake-center/cwa-earthquake-center-work-types.md) |
+| Agent 運作機制、介入方式與三角度配對 | 第四週正式文章三頁：lessons/02-agent-and-methods.qmd（4-1 上半場，2026-09-22 依 27 張授課投影片改為研究流程案例，加入 Markdown 五階段與六種介入方式故事圖）、03-back-to-your-work.qmd（4-2 下半場）、04-workshop-find-agent-use.qmd（4-3 工作坊，附三張講義）；第四週前半第一、二、四、五、六段 draft：執行框架循環、六種介入方式、十種用法樣式與動作詞彙、十種工作動詞、六欄配對表；學員講義 [06](../drafts/06-week4-student-handouts.md) 三張表：動詞對照表（樣式與動詞配對）、工作單、評估表 | 學員修正動詞表與工作坊實填六欄後，回看樣式與動詞是否可用；尚未排定回顧週次 | 尚未另立 SSOT；[底層機制與介入方式](tools/agent-operation-output-business-map.md)、[用法樣式](tools/agent-use-patterns.md)、[工作類型](reference/cwa-earthquake-center/cwa-earthquake-center-work-types.md) |
 
 ## 迭代成熟後回到 SSOT
 

@@ -1,0 +1,137 @@
+' 六種介入方式分開套入研究流程；一種方式一張圖。
+
+@startuml research-agent-method-1
+!$Story_Layout = "left-to-right"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+!include <material/memory>
+title ① 對話｜Agent 提供建議，研究者仍自行決定
+Person(researcher1, 研究者)
+Actor("DialogAgent", "$ma_memory", agent1, "對話 Agent", "", "", "", 1.1, "#7C3AED", "#F3E8FF")
+Document(question1, 研究問題)
+Conversation(discussion1, 方法討論)
+Document(options1, 方法選項與限制)
+Document(method1, 方法與評估指標)
+activity(_, researcher1, 寫下, question1)
+activity(_, researcher1, 帶研究問題進行, discussion1, 交給, agent1)
+activity(_, agent1, 依方法討論整理, options1)
+activity(_, researcher1, 依, options1, 選定, method1)
+@enduml
+
+@startuml research-agent-method-2
+!$Story_Layout = "left-to-right"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+!include <material/magnify>
+title ② 交辦｜Agent 交出可檢查的文獻成果後退出
+Person(researcher2, 研究者)
+Actor("WorkAgent", "$ma_magnify", agent2, "交辦 Agent", "", "", "", 1.1, "#7C3AED", "#F3E8FF")
+System(litdb2, 文獻資料庫)
+Document(task2, 文獻檢索任務)
+Document(papers2, 附來源的論文清單)
+Document(checked2, 確認後的論文清單)
+activity(_, researcher2, 說明範圍與來源要求形成, task2, 交給, agent2)
+activity(_, agent2, 依文獻檢索任務向, litdb2, 檢索出, papers2)
+activity(_, researcher2, 檢查, papers2, 確認成, checked2)
+@enduml
+
+@startuml research-agent-method-3
+!$Story_Layout = "left-to-right"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+!include <material/pencil>
+title ③ 製作工具｜建置時有 Agent，運行時只有程式
+Person(researcher3, 研究者)
+Actor("BuildAgent", "$ma_pencil", agent3, "程式建置 Agent", "", "", "", 1.1, "#C2410C", "#FFEDD5")
+System(env3, 計算環境)
+Document(method3, 方法與評估指標)
+Document(spec3, 輸入、輸出與測試條件)
+Document(code3, 程式碼與測試)
+Folder(data3, 整理後資料)
+Document(charts3, 結果圖表)
+Info(exit3, Agent 交付工具後退出)
+activity(_, researcher3, 依方法整理, spec3, 交給, agent3)
+activity(_, agent3, 依輸入、輸出與測試條件建立, code3)
+activity(_, agent3, 交付程式後退出並留下, exit3)
+activity(_, env3, 載入, code3)
+activity(_, env3, 執行, data3, 產出, charts3)
+activity(_, researcher3, 查驗, charts3)
+@enduml
+
+@startuml research-agent-method-4
+!$Story_Layout = "left-to-right"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+!include <material/check_circle>
+title ④ 結構化判斷｜程式限定問題，模型只回傳固定格式
+Person(researcher4, 研究者)
+System(flow4, 固定流程)
+Actor("JudgmentModel", "$ma_check_circle", model4, "結構化判斷模型", "", "", "", 1.1, "#0F766E", "#CCFBF1")
+Document(categories4, 相關性類別與範例)
+Document(papers4, 論文題名與摘要)
+Document(labels4, 相關性標記與分數)
+Document(checked4, 抽查與例外處理結果)
+activity(_, researcher4, 定義, categories4, 寫入, flow4)
+activity(_, flow4, 讀入, papers4, 送給, model4)
+activity(_, model4, 依固定類別判斷, papers4, 回傳, labels4)
+activity(_, researcher4, 抽查標記並處理例外形成, checked4)
+@enduml
+
+@startuml research-agent-method-5
+!$Story_Layout = "left-to-right"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+!include <material/settings>
+title ⑤ 流程指派 Agent｜事件觸發後，一段工作交給 Agent
+Person(researcher5, 研究者)
+System(flow5, 研究流程)
+Actor("NodeAgent", "$ma_settings", agent5, "實驗節點 Agent", "", "", "", 1.1, "#15803D", "#DCFCE7")
+System(env5, 計算環境)
+Folder(data5, 新一批整理後資料)
+Document(task5, 重跑任務與停止條件)
+Document(record5, 執行紀錄與異常)
+Document(compare5, 與現行方法的比較表)
+activity(_, flow5, 收到, data5, 建立, task5)
+activity(_, flow5, 將重跑任務與停止條件指派給, agent5)
+activity(_, agent5, 選擇工具並呼叫, env5)
+activity(_, env5, 以新資料執行程式產生, record5)
+activity(_, agent5, 依執行紀錄整理, compare5)
+activity(_, researcher5, 檢查比較表與異常後接受或退回, compare5)
+@enduml
+
+@startuml research-agent-method-6
+!$Story_Layout = "left-to-right"
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+skinparam shadowing false
+!include <material/call_split>
+title ⑥ Agent 管理流程｜主 Agent 串接各段，於核准點等待
+Person(researcher6, 研究者)
+Person(reviewer6, 審閱者)
+Actor("Orchestrator", "$ma_call_split", agent6, "主 Agent", "", "", "", 1.2, "#1D4ED8", "#DBEAFE")
+System(litdb6, 文獻資料庫)
+System(env6, 計算環境)
+Document(brief6, 研究任務、權限與停止條件)
+Document(plan6, 工作計畫與進度紀錄)
+Document(papers6, 文獻整理結果)
+Document(method6, 方法選項)
+Document(compare6, 實驗比較表)
+Document(conclusion6, 結論草稿)
+Document(report6, 報告草稿)
+Document(feedback6, 審閱意見)
+Info(approval6, 人工核准點\n方法、結論、定稿)
+activity(_, researcher6, 設定, brief6, 交給, agent6)
+activity(_, agent6, 建立並持續更新, plan6)
+activity(_, agent6, 查找, litdb6, 整理成, papers6)
+activity(_, agent6, 依文獻整理形成, method6, 交給, researcher6)
+activity(_, agent6, 在方法核准後呼叫, env6, 產出, compare6)
+activity(_, agent6, 依實驗比較表整理, conclusion6, 交給, researcher6)
+activity(_, agent6, 在人確認結論後撰寫, report6, 交給, reviewer6)
+activity(_, reviewer6, 審閱報告草稿寫出, feedback6)
+activity(_, agent6, 於方法、結論與定稿前等待, approval6, 交給, researcher6)
+@enduml
