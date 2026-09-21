@@ -11,7 +11,7 @@
 - 「- 引文頁內文：『…』」以引文方塊放到畫面。
 - 「- 主訊息：…」以粗體大字放在條列之前，一頁一句。
 - 圖：加 `--figures` 才套用 week4_figures.py 的原生圖形（依頁標題），預設不畫。
-- 圖片：筆記裡以反引號寫出的 `slides/story/*.svg` 會置入畫面（先以 rsvg-convert 轉成 slides/story/png/*.png）；一張放文字下方，文字太長時改為左文右圖；多張並排。原圖寬度超過 1400 px 的大圖（整張研究流程圖）另立一頁全幅放，頁碼與文字頁相同。
+- 圖片：筆記裡以反引號寫出的 `slides/story/*.svg` 會置入畫面（先以 rsvg-convert 轉成 slides/story/png/*.png）；一張放文字下方，文字太長時改為左文右圖；多張並排。原圖寬度超過 1400 px 的大圖（整張研究流程圖）另立一頁全幅放，頁碼與文字頁相同。畫面裡「- 圖下：」之後的編號清單是圖下句子，放在圖頁的圖下方（編號寫活動編號），不放在文字頁。
 - 第 1 頁視為封面。
 - 「### 段｜標題」為段落標題頁，不佔頁碼；畫面只有標題，不放副標，筆記照常進備註。
 
@@ -245,12 +245,40 @@ def is_big(rel):
     return iw / 3 > BIG_PX  # svg_png 以 3 倍縮放
 
 
-def figure_slide(prs, page, images, total):
+def split_captions(page):
+    """把「- 圖下：」之後連續的編號項抽出，回傳 (其餘 blocks, captions)。"""
+    blocks, caps, grab = [], [], False
+    for kind, val in page["blocks"]:
+        if kind == "bullet" and val.strip() == "圖下：":
+            grab = True
+            continue
+        if grab and kind == "num":
+            caps.append(val)
+            continue
+        grab = False
+        blocks.append((kind, val))
+    return blocks, caps
+
+
+def figure_slide(prs, page, images, total, captions=()):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     textbox(s, M, 0.45, W - 2 * M, 0.9, [page["title"]], size=28, bold=True)
     ln = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(M), Inches(1.32), Inches(W - 2 * M), Inches(0.03))
     ln.fill.solid(); ln.fill.fore_color.rgb = ACCENT; ln.line.fill.background()
-    place_images(s, images, M, 1.5, W - 2 * M, H - 1.5 - 0.65)
+    avail_w = W - 2 * M
+    cap_h = 0.0
+    if captions:
+        n = len(captions)
+        cols = 2 if n > 5 else 1
+        per = -(-n // cols)
+        cap_h = per * 0.3 + 0.15
+        cy = H - 0.65 - cap_h
+        cw = (avail_w - 0.3 * (cols - 1)) / cols
+        for c in range(cols):
+            chunk = captions[c * per:(c + 1) * per]
+            if chunk:
+                textbox(s, M + c * (cw + 0.3), cy, cw, cap_h, chunk, size=12, spacing=2)
+    place_images(s, images, M, 1.5, avail_w, H - 1.5 - 0.65 - cap_h - (0.15 if captions else 0))
     textbox(s, W - M - 1.2, H - 0.55, 1.2, 0.35, [f"{page['n']} / {total}"], size=11, color=MUTED, align="c")
     notes(s, ["圖頁：與前一頁同一頁碼，圖全幅。"] + page["notes"][:2])
     return s
@@ -349,6 +377,7 @@ def content(prs, page, total):
     page["figure_slide"] = bool(images) and any(is_big(i) for i in images)
     if page["figure_slide"]:
         images = []  # 大圖另立一頁
+        page["blocks"], page["captions"] = split_captions(page)
     img_box = None  # (x, y, w, h)
     compact = False
     if images:
@@ -448,7 +477,7 @@ def build(key):
         else:
             content(prs, p, total)
             if p.get("figure_slide"):
-                figure_slide(prs, p, page_images(p), total)
+                figure_slide(prs, p, page_images(p), total, p.get("captions", ()))
     out_path = ROOT / "slides" / out
     prs.save(out_path)
     print(f"{out}: {len(pages)} 頁（含 {len(pages) - total} 頁段落標題）← {md}")

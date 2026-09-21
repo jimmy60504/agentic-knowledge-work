@@ -1,0 +1,20 @@
+' 4-2 實例：員工詢問規定（Newfront 福利助理、ServiceNow IT 服務台）。把別人的 Agent 當演員讀出來。
+@startuml w42-case-faq
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(employee, 員工)
+System(agent, Agent)
+System(kb, 知識庫)
+Person(staff, 承辦)
+Document(question, 詢問)
+Document(rule, 相關條文)
+Document(answer, 答覆)
+Document(summary, 轉交摘要)
+activity(_, employee, 提出, question, 交給, agent)
+activity(_, agent, 依詢問查找, kb, 擷取出, rule)
+activity(_, agent, 依, rule, 草擬, answer)
+activity(_, agent, 送出, answer, 交予, employee)
+activity(_, agent, 摘要無法回答的, question, 寫成, summary)
+activity(_, agent, 轉交, summary, 給, staff)
+activity(_, staff, 抽查, answer)
+@enduml

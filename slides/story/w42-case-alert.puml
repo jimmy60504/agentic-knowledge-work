@@ -1,0 +1,17 @@
+' 4-2 實例：資安警報分級（Trellix）。
+@startuml w42-case-alert
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+System(siem, 監控系統)
+System(agent, Agent)
+Person(analyst, 分析師)
+Document(alert, 警報)
+Document(card, 事件卡)
+Info(level, 分級建議)
+Document(rule, 分級規則)
+activity(_, siem, 發出, alert, 交給, agent)
+activity(_, agent, 依警報彙集紀錄與相似案例，製成, card)
+activity(_, agent, 依, card, 判斷出, level)
+activity(_, agent, 送出, level, 交予, analyst)
+activity(_, analyst, 確認, level, 修正, rule)
+@enduml

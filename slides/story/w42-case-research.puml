@@ -1,0 +1,17 @@
+' 4-2 實例：投資研究助理（Schroders 原型、Balyasny 實際使用）。
+@startuml w42-case-research
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(analyst, 分析師)
+System(agent, Agent)
+System(sources, 報告、新聞與資料庫)
+Document(question, 問題)
+Document(evidence, 附來源的資料)
+Document(draft, 研究底稿)
+Document(conclusion, 結論)
+activity(_, analyst, 寫下, question, 交給, agent)
+activity(_, agent, 依問題向, sources, 檢索出, evidence)
+activity(_, agent, 整理矛盾並依, evidence, 草擬, draft)
+activity(_, agent, 送出, draft, 交予, analyst)
+activity(_, analyst, 檢查, draft, 決定, conclusion)
+@enduml

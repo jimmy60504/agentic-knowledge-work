@@ -1,0 +1,16 @@
+' 4-2 實例：合約資料擷取（OpenAI 內部合約資料 Agent）。
+@startuml w42-case-contract
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(finance, 財務)
+System(agent, Agent)
+Document(contract, 合約 PDF)
+Document(fields, 欄位表)
+Document(exceptions, 例外清單，附原文位置)
+Document(decision, 處置)
+activity(_, finance, 交付, contract, 給, agent)
+activity(_, agent, 讀取, contract, 擷取出, fields)
+activity(_, agent, 比對標準條款後標記出, exceptions)
+activity(_, agent, 送出, exceptions, 交予, finance)
+activity(_, finance, 審核, exceptions, 決定, decision)
+@enduml
