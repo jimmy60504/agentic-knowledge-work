@@ -1,0 +1,31 @@
+' 4-2 第 13 頁：在第一版現況圖上標三種活動。紅：無法銜接（結果圖表到比較表）；藍：每次相同（執行程式、調整程式）；綠：由人決定（選定方法、歸納結論）。
+@startuml w42-gaps
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(researcher, 研究者)
+System(litdb, 文獻資料庫)
+Person(datakeeper, 資料管理者)
+System(env, 計算環境)
+Person(reviewer, 審閱者)
+Document(question, 研究問題)
+Document(papers, 論文清單)
+Document(method, 方法與評估指標, $note="^由人決定：核准點")
+Folder(dataset, 整理後資料)
+Document(code, 程式碼)
+Document(charts, 結果圖表, $note="v每次相同：可收斂為程式")
+Document(compare, 與現行方法的比較表, $note="^無法銜接：參數與例外未交代")
+Document(conclusion, 結論, $note="^由人決定：核准點")
+Document(report, 報告)
+Document(feedback, 審閱意見)
+activity(_, researcher, 寫下, question)
+activity(_, researcher, 依研究問題向, litdb, 檢索出, papers)
+activity(_, researcher, 閱讀論文清單並與同事討論後選定, method, "", "", "-[#2e7d32,bold]->")
+activity(_, researcher, 向, datakeeper, 申請並整理成, dataset)
+activity(_, researcher, 依方法與評估指標撰寫, code)
+activity(_, env, 以整理後資料執行, code, 產出, charts, "-[#1565c0,bold]->", "-[#1565c0,bold]->")
+activity(_, researcher, 對照現行方法整理, charts, 製成, compare, "-[#c62828,bold]->", "-[#c62828,bold]->")
+activity(_, researcher, 檢視比較表後調整, code, "", "", "-[#1565c0,bold]->")
+activity(_, researcher, 依, compare, 歸納出, conclusion, "-[#2e7d32,bold]->", "-[#2e7d32,bold]->")
+activity(_, researcher, 依, conclusion, 撰寫, report)
+activity(_, reviewer, 審閱, report, 寫出, feedback)
+@enduml

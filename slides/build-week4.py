@@ -11,14 +11,19 @@
 - 「- 引文頁內文：『…』」以引文方塊放到畫面。
 - 「- 主訊息：…」以粗體大字放在條列之前，一頁一句。
 - 圖：加 `--figures` 才套用 week4_figures.py 的原生圖形（依頁標題），預設不畫。
+- 圖片：筆記裡以反引號寫出的 `slides/story/*.svg` 會置入畫面（先以 rsvg-convert 轉成 slides/story/png/*.png）；一張放文字下方，文字太長時改為左文右圖；多張並排。原圖寬度超過 1400 px 的大圖（整張研究流程圖）另立一頁全幅放，頁碼與文字頁相同。
 - 第 1 頁視為封面。
 - 「### 段｜標題」為段落標題頁，不佔頁碼；畫面只有標題，不放副標，筆記照常進備註。
 
 素版原則：白底、標題一句、內文條列或表格、備註放原話與口述；不做視覺設計，供使用者先有東西改。
 """
 import re
+import shutil
+import subprocess
 import sys
 from pathlib import Path
+
+from PIL import Image
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -164,15 +169,14 @@ def rect(slide, x, y, w, h, fill=TINT, line=None):
     return shp
 
 
-def table(slide, x, y, w, rows, size=13, row_h=0.42):
+def table_layout(w, rows, size=13, row_h=0.42):
+    """欄寬與每列高度的估算，畫表與量高共用。"""
     ncol = max(len(r) for r in rows)
     rows = [r + [""] * (ncol - len(r)) for r in rows]
-    # 欄寬依內容長度分配
     lens = [max(len(r[c]) for r in rows) for c in range(ncol)]
     lens = [max(l, 4) for l in lens]
     total = sum(lens)
     col_w = [w * l / total for l in lens]
-    # 估行高：每行字數超過欄寬可容納量就加高
     heights = []
     for r in rows:
         mx = 1
@@ -180,6 +184,12 @@ def table(slide, x, y, w, rows, size=13, row_h=0.42):
             per_line = max(int(col_w[c] * 72 / (size * 1.05)), 1)
             mx = max(mx, -(-len(cell) // per_line))
         heights.append(row_h * (0.55 + 0.45 * mx))
+    return rows, col_w, heights
+
+
+def table(slide, x, y, w, rows, size=13, row_h=0.42):
+    rows, col_w, heights = table_layout(w, rows, size, row_h)
+    ncol = len(col_w)
     shp = slide.shapes.add_table(len(rows), ncol, Inches(x), Inches(y), Inches(w), Inches(sum(heights)))
     tbl = shp.table
     for c in range(ncol):
@@ -199,6 +209,66 @@ def table(slide, x, y, w, rows, size=13, row_h=0.42):
             run.text = cell.replace("**", "")
             _run(run, size, bold=(i == 0 or c == 0), color=DARK)
     return sum(heights)
+
+
+# ---------- 圖片 ----------
+IMG_RE = re.compile(r"`(slides/story/[^`]+\.svg)`")
+
+
+def page_images(page):
+    """筆記裡以反引號標出的 story 圖 SVG，依出現順序、不重複。"""
+    seen = []
+    for line in page["notes"]:
+        for m in IMG_RE.findall(line):
+            if m not in seen and (ROOT / m).exists():
+                seen.append(m)
+    return seen
+
+
+def svg_png(rel):
+    """SVG → PNG（slides/story/png/，git 忽略）。需要 rsvg-convert（brew install librsvg）。"""
+    src = ROOT / rel
+    out = src.parent / "png" / (src.stem + ".png")
+    out.parent.mkdir(exist_ok=True)
+    if not out.exists() or out.stat().st_mtime < src.stat().st_mtime:
+        if not shutil.which("rsvg-convert"):
+            sys.exit("找不到 rsvg-convert：brew install librsvg")
+        subprocess.run(["rsvg-convert", "-z", "3", str(src), "-o", str(out)], check=True)
+    return out
+
+
+BIG_PX = 1400
+
+
+def is_big(rel):
+    iw, _ = Image.open(svg_png(rel)).size
+    return iw / 3 > BIG_PX  # svg_png 以 3 倍縮放
+
+
+def figure_slide(prs, page, images, total):
+    s = prs.slides.add_slide(prs.slide_layouts[6])
+    textbox(s, M, 0.45, W - 2 * M, 0.9, [page["title"]], size=28, bold=True)
+    ln = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(M), Inches(1.32), Inches(W - 2 * M), Inches(0.03))
+    ln.fill.solid(); ln.fill.fore_color.rgb = ACCENT; ln.line.fill.background()
+    place_images(s, images, M, 1.5, W - 2 * M, H - 1.5 - 0.65)
+    textbox(s, W - M - 1.2, H - 0.55, 1.2, 0.35, [f"{page['n']} / {total}"], size=11, color=MUTED, align="c")
+    notes(s, ["圖頁：與前一頁同一頁碼，圖全幅。"] + page["notes"][:2])
+    return s
+
+
+def place_images(slide, paths, x, y, w, h):
+    """把幾張圖等寬並排放進 (x, y, w, h)，各自保持比例、置中。"""
+    n = len(paths)
+    gap = 0.2
+    cell_w = (w - gap * (n - 1)) / n
+    for i, rel in enumerate(paths):
+        png = svg_png(rel)
+        iw, ih = Image.open(png).size
+        scale = min(cell_w / iw, h / ih)
+        pw, ph = iw * scale, ih * scale
+        cx = x + i * (cell_w + gap) + (cell_w - pw) / 2
+        cy = y + (h - ph) / 2
+        slide.shapes.add_picture(str(png), Inches(cx), Inches(cy), Inches(pw), Inches(ph))
 
 
 def notes(slide, lines):
@@ -229,6 +299,45 @@ def divider(prs, page):
     return s
 
 
+def measure(page, avail_w):
+    """不畫，只估文字區排完後的 y，與 content() 的算法一致。"""
+    y = 1.6
+    bullets = []
+
+    def flush():
+        nonlocal y, bullets
+        if not bullets:
+            return
+        n = len(bullets)
+        size = 18 if n <= 5 else 16 if n <= 7 else 14
+        est = 0.0
+        for b in bullets:
+            per_line = max(int(avail_w * 72 / (size * 1.05)), 1)
+            est += (size / 72) * 1.5 * -(-len(b) // per_line) + 0.08
+        y += est + 0.25
+        bullets = []
+
+    for kind, val in page["blocks"]:
+        if kind in ("bullet", "num"):
+            bullets.append(val)
+            continue
+        flush()
+        if kind == "lead":
+            per_line = max(int(avail_w * 72 / (22 * 1.05)), 1)
+            y += (22 / 72) * 1.5 * -(-len(val) // per_line) + 0.1 + 0.2
+        elif kind == "table":
+            nrow = len(val)
+            size = 13 if nrow <= 7 else 12 if nrow <= 9 else 11
+            row_h = 0.42 if nrow <= 7 else 0.36 if nrow <= 9 else 0.31
+            y += sum(table_layout(avail_w, val, size, row_h)[2]) + 0.25
+        elif kind == "code":
+            y += 0.32 * len(val) + 0.3 + 0.25
+        elif kind == "quote":
+            y += 1.5 + 0.25
+    flush()
+    return y
+
+
 def content(prs, page, total):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     textbox(s, M, 0.45, W - 2 * M, 0.9, [page["title"]], size=28, bold=True)
@@ -236,6 +345,23 @@ def content(prs, page, total):
     ln.fill.solid(); ln.fill.fore_color.rgb = ACCENT; ln.line.fill.background()
     y = 1.6
     avail_w = W - 2 * M
+    images = page_images(page)
+    page["figure_slide"] = bool(images) and any(is_big(i) for i in images)
+    if page["figure_slide"]:
+        images = []  # 大圖另立一頁
+    img_box = None  # (x, y, w, h)
+    compact = False
+    if images:
+        full_w = avail_w
+        rest = H - 0.75 - measure(page, full_w)
+        iw, ih = Image.open(svg_png(images[0])).size
+        if rest >= 2.2 and iw / ih >= 2.0:  # 扁圖放下方，方圖放右欄
+            img_box = ("below", rest)
+        else:  # 左文右圖
+            col = full_w * 0.5 - 0.15
+            avail_w = col
+            compact = True
+            img_box = ("right", (M + full_w * 0.5 + 0.15, 1.6, col, H - 1.6 - 0.7))
     bullets = []
 
     def flush_bullets():
@@ -244,6 +370,8 @@ def content(prs, page, total):
             return
         n = len(bullets)
         size = 18 if n <= 5 else 16 if n <= 7 else 14
+        if compact:
+            size = 14
         est = 0.0
         for b in bullets:
             per_line = max(int(avail_w * 72 / (size * 1.05)), 1)
@@ -258,21 +386,25 @@ def content(prs, page, total):
             continue
         flush_bullets()
         if kind == "lead":
-            per_line = max(int(avail_w * 72 / (22 * 1.05)), 1)
-            est = (22 / 72) * 1.5 * -(-len(val) // per_line) + 0.1
-            textbox(s, M, y, avail_w, est, [val], size=22, bold=True)
+            ls = 18 if compact else 22
+            per_line = max(int(avail_w * 72 / (ls * 1.05)), 1)
+            est = (ls / 72) * 1.5 * -(-len(val) // per_line) + 0.1
+            textbox(s, M, y, avail_w, est, [val], size=ls, bold=True)
             y += est + 0.2
         elif kind == "table":
             nrow = len(val)
             size = 13 if nrow <= 7 else 12 if nrow <= 9 else 11
             row_h = 0.42 if nrow <= 7 else 0.36 if nrow <= 9 else 0.31
+            if compact:
+                size, row_h = 11, 0.3
             h = table(s, M, y, avail_w, val, size=size, row_h=row_h)
             y += h + 0.25
         elif kind == "code":
             lines = [l for l in val]
-            h = 0.32 * len(lines) + 0.3
+            cs = 11 if compact else 14
+            h = (0.26 if compact else 0.32) * len(lines) + 0.3
             rect(s, M, y, avail_w, h, fill=TINT)
-            box = textbox(s, M + 0.2, y + 0.15, avail_w - 0.4, h - 0.3, lines, size=14)
+            box = textbox(s, M + 0.2, y + 0.15, avail_w - 0.4, h - 0.3, lines, size=cs)
             for p in box.text_frame.paragraphs:
                 for r in p.runs:
                     r.font.name = "Menlo"
@@ -284,6 +416,12 @@ def content(prs, page, total):
             textbox(s, M + 0.4, y + 0.2, avail_w - 0.8, h - 0.4, [val], size=18, anchor="m")
             y += h + 0.25
     flush_bullets()
+    if img_box:
+        if img_box[0] == "below":
+            place_images(s, images, M, y + 0.05, avail_w, H - 0.75 - (y + 0.05))
+            y = H - 0.6
+        else:
+            place_images(s, images, *img_box[1])
     fig = FIGURES.get(page["title"]) if USE_FIGURES else None
     if fig:
         fig(s, M, y + 0.1, avail_w, H - 0.7 - (y + 0.1))
@@ -309,6 +447,8 @@ def build(key):
             cover(prs, p, label)
         else:
             content(prs, p, total)
+            if p.get("figure_slide"):
+                figure_slide(prs, p, page_images(p), total)
     out_path = ROOT / "slides" / out
     prs.save(out_path)
     print(f"{out}: {len(pages)} 頁（含 {len(pages) - total} 頁段落標題）← {md}")

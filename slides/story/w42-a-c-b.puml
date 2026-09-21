@@ -1,0 +1,15 @@
+' 4-2 第 16 頁：中間節點 C。結果圖表（A）無法直接製成比較表（B），插入逐次實驗紀錄表（C），由人檢查後再製表。
+@startuml w42-a-c-b
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+System(env, 計算環境)
+System(agent, Agent)
+Person(researcher, 研究者)
+Document(charts, 結果圖表, $note="^A")
+Document(log, 逐次實驗紀錄表, $note="^C：參數、資料範圍、排除註記")
+Document(compare, 與現行方法的比較表, $note="^B：可重現")
+activity(_, env, 每次執行產出, charts)
+activity(_, agent, 依每次的參數與, charts, 填寫, log)
+activity(_, researcher, 檢查參數是否一致、例外如何處理, log)
+activity(_, agent, 依核准的, log, 製成, compare)
+@enduml

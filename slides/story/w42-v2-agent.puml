@@ -1,0 +1,33 @@
+' 4-2 第 14 頁：第二版。Agent 作為演員加入第一版現況圖，接手檢索、撰寫程式、執行、比較表；選定方法與歸納結論由研究者核准。與 research-idea-class 並列，差異即介入範圍。
+@startuml w42-v2-agent
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(researcher, 研究者)
+System(agent, Agent, $note="^交辦與製作工具")
+System(litdb, 文獻資料庫)
+Person(datakeeper, 資料管理者)
+System(env, 計算環境)
+Person(reviewer, 審閱者)
+Document(question, 研究問題)
+Document(papers, 附來源的論文清單)
+Document(method, 方法與評估指標, $note="^核准點")
+Folder(dataset, 整理後資料)
+Document(code, 程式碼)
+Document(log, 逐次實驗紀錄表)
+Document(compare, 與現行方法的比較表)
+Document(conclusion, 結論, $note="^核准點")
+Document(report, 報告草稿)
+Document(feedback, 審閱意見)
+activity(_, researcher, 寫下, question, 交給, agent)
+activity(_, agent, 依研究問題向, litdb, 檢索出, papers)
+activity(_, researcher, 閱讀論文清單並與同事討論後選定, method)
+activity(_, researcher, 向, datakeeper, 申請並整理成, dataset)
+activity(_, agent, 依方法與評估指標草擬, code)
+activity(_, agent, 以整理後資料於, env, 執行程式並填寫, log)
+activity(_, agent, 依, log, 製成, compare)
+activity(_, researcher, 檢查紀錄表與比較表後核准或退回, compare)
+activity(_, researcher, 依, compare, 歸納出, conclusion)
+activity(_, agent, 依, conclusion, 草擬, report)
+activity(_, researcher, 修改, report, 送交, reviewer)
+activity(_, reviewer, 審閱, report, 寫出, feedback)
+@enduml

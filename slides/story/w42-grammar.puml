@@ -1,0 +1,14 @@
+' 4-2 第 9 頁：一行一句的三種句型。(1) 演員＋動詞＋物件；(2) 演員＋動詞＋物件＋動詞＋下一個物件；(3) 演員＋動詞＋物件＋介詞＋演員。
+@startuml w42-grammar
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(researcher, 研究者)
+Person(reviewer, 審閱者)
+Document(question, 研究問題)
+Document(compare, 比較表)
+Document(conclusion, 結論)
+Document(report, 報告)
+activity(_, researcher, 寫下, question)
+activity(_, researcher, 依, compare, 歸納出, conclusion)
+activity(_, researcher, 撰寫, report, 送交, reviewer)
+@enduml

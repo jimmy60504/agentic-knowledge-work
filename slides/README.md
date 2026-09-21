@@ -23,3 +23,5 @@
 - 2026-09-22：`slides/story/` 放 domain storytelling 圖的 PlantUML 原始檔，`render.py` 轉 SVG（需 `brew install plantuml`）。句型：演員＋動詞＋工作物件（＋介詞＋演員），動詞寫在箭頭上，受詞是箭頭指到的物件；活動用 `_` 自動編號。agent 先把故事寫成一行一句，再轉成 `activity(...)`。
 - 2026-09-22 續：activity 六參數形式 `activity(_, 演員, 動詞, 物件, 動詞, 下一個物件)` 會把物件串起來，故事才讀得出前後關係；系統（文獻資料庫、計算環境）也當演員畫，演員多了版面自動橫排。
 
+
+- 圖片置入（2026-09-22）：逐頁稿筆記裡以反引號寫出的 `slides/story/*.svg` 會由建置腳本置入畫面。SVG 先以 rsvg-convert（`brew install librsvg`）轉成 `slides/story/png/`（git 忽略）。扁圖放文字下方、方圖放右欄；原圖寬度超過 1400 px 的整張流程圖另立一頁全幅放，頁碼與文字頁相同。

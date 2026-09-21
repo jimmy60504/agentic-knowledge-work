@@ -1,0 +1,11 @@
+' 4-2 第 8 頁：三個元素。取研究流程圖的前兩句，以註記標出演員（人、系統）、工作物件、編號活動。
+@startuml w42-elements
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(researcher, 研究者, $note="^演員：人")
+System(litdb, 文獻資料庫, $note="^演員：系統")
+Document(question, 研究問題, $note="v工作物件：文件")
+Document(papers, 論文清單, $note="v工作物件：文件")
+activity(_, researcher, 寫下, question)
+activity(_, researcher, 依研究問題向, litdb, 檢索出, papers)
+@enduml

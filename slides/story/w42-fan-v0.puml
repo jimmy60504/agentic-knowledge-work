@@ -1,0 +1,18 @@
+' 4-2 第 11 頁左：第一次請 Agent 畫出的版本。只有一個演員、箭頭上是結果詞、物件之間沒有連線，圖呈扇形。
+@startuml w42-fan-v0
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(researcher, 研究者)
+Document(papers, 論文清單)
+Document(method, 主要方法)
+Document(code, 程式碼)
+Document(charts, 結果圖表)
+Document(conclusion, 分析結論)
+Document(report, 報告)
+activity(_, researcher, 找文獻，得到, papers)
+activity(_, researcher, 選方法，得到, method)
+activity(_, researcher, 寫程式，得到, code)
+activity(_, researcher, 跑資料，得到, charts)
+activity(_, researcher, 分析，得到, conclusion)
+activity(_, researcher, 寫報告，得到, report)
+@enduml

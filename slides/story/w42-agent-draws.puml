@@ -1,0 +1,18 @@
+' 4-2 第 10 頁：請 Agent 畫圖。這張圖本身也是一個 domain story：人口述，Agent 寫句子與文字檔，工具產圖，人讀圖再回到句子修改。
+@startuml w42-agent-draws
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(person, 講師)
+System(agent, Agent)
+System(tool, 產圖工具)
+Conversation(talk, 口述的一次工作)
+Document(sentences, 活動句)
+Document(puml, 文字檔)
+Document(diagram, 圖)
+activity(_, person, 說出, talk, 交給, agent)
+activity(_, agent, 依口述列出, sentences, 交回, person)
+activity(_, person, 逐句修改, sentences)
+activity(_, agent, 依活動句寫成, puml, 交給, tool)
+activity(_, tool, 讀取文字檔產出, diagram, 交回, person)
+activity(_, person, 通讀圖後指出不通順的, sentences)
+@enduml

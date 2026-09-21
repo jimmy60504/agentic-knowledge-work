@@ -1,0 +1,31 @@
+' 4-2 第 15 頁：從整件挑出一段。A 是方法與評估指標、整理後資料；B 是可重現的比較表。以註記標出 A 與 B，段內的活動加粗。
+@startuml w42-segment
+!include <DomainStory/domainStory>
+skinparam defaultFontName "PingFang TC"
+Person(researcher, 研究者)
+System(litdb, 文獻資料庫)
+Person(datakeeper, 資料管理者)
+System(env, 計算環境)
+Person(reviewer, 審閱者)
+Document(question, 研究問題)
+Document(papers, 論文清單)
+Document(method, 方法與評估指標, $note="^A：起點材料")
+Folder(dataset, 整理後資料, $note="vA：起點材料")
+Document(code, 程式碼)
+Document(charts, 結果圖表)
+Document(compare, 與現行方法的比較表, $note="^B：完成證據，比較表可重現")
+Document(conclusion, 結論)
+Document(report, 報告)
+Document(feedback, 審閱意見)
+activity(_, researcher, 寫下, question)
+activity(_, researcher, 依研究問題向, litdb, 檢索出, papers)
+activity(_, researcher, 閱讀論文清單並與同事討論後選定, method)
+activity(_, researcher, 向, datakeeper, 申請並整理成, dataset)
+activity(_, researcher, 依方法與評估指標撰寫, code, "", "", "-[#1565c0,bold]->")
+activity(_, env, 以整理後資料執行, code, 產出, charts, "-[#1565c0,bold]->", "-[#1565c0,bold]->")
+activity(_, researcher, 對照現行方法整理, charts, 製成, compare, "-[#1565c0,bold]->", "-[#1565c0,bold]->")
+activity(_, researcher, 檢視比較表後調整, code)
+activity(_, researcher, 依, compare, 歸納出, conclusion)
+activity(_, researcher, 依, conclusion, 撰寫, report)
+activity(_, reviewer, 審閱, report, 寫出, feedback)
+@enduml
