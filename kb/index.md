@@ -15,7 +15,7 @@
 
 | 主題／想法 | 可以怎麼用、還可展開什麼 | 目前狀態與來源 |
 |---|---|---|
-| 公部門 AI 規範與導入 | 行政院指引、數發部手冊、TryAI、資料與權限；區分個人日常操作與機關導入系統 | 候選；[數發部手冊](reference/moda-public-sector-ai-playbook.md)、[導入阻礙與案例](arguments/public-sector-ai-adoption-barriers-and-examples.md)。正式使用前重查規範與方案 |
+| 公部門 AI 規範與導入 | 行政院指引、數發部手冊、TryAI、資料與權限；區分個人日常操作與機關導入系統 | 部分採用：第四週 4-1 六種介入方式頁與總結頁引手冊 2.2、4.2.9、4.2.17、4.3.6、4.4.3 與行政院指引、國科會 Agent 提醒作信任的官方依據（2026-09-21）；機關導入制度仍候選。[數發部手冊](reference/moda-public-sector-ai-playbook.md)、[導入阻礙與案例](arguments/public-sector-ai-adoption-barriers-and-examples.md)。正式使用前重查規範與方案 |
 | 組織支持與採用動機 | 帳號費用、電腦網路、責任、心智模型、主管示範；國內外案例與「秘密半機械人」 | 候選；[學員需求](arguments/what-makes-civil-servants-want-to-learn-ai.md)、[導入阻礙](arguments/public-sector-ai-adoption-barriers-and-examples.md)。不以推測當署內現況 |
 | CODE、雙鑽石與 PKM | 收集到表達、發散與收斂；用框架回顧熟悉工作，不增加必背流程 | 部分採用：第四週方法主線；框架名稱與比較仍候選。[歷次選材](../archive/week2-2026-09-19/deferred-materials.md)、[工作紀錄](../工作紀錄.md) |
 | 閱讀、摘要與蒸餾 | 收藏家謬誤、文獻／永久筆記、漸進式摘要；用自己的長文比對摘要，分開原意與洞見 | 部分採用：第四週前半收尾「存的時候分清四種內容」；長文檢查摘要練習列後半工作坊備援題（2026-09-19）。[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md)、[研究寫作講座](reference/sun-ai-assisted-research-writing-lecture.md) |
@@ -30,6 +30,9 @@
 | 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；完整組織診斷未排。[工作坊照片筆記](reference/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
 | 外部 Agent 業務用途與缺口 | 客服、知識檢索、文件抽取、事件分流、跨工具交接、初稿與銷售；用「缺口 → Agent 位置 → 人的驗收」找可訪談問題 | 已併入用法樣式表；[外部案例盤點](reference/external-agent-business-use-cases.md)。廠商案例為選題線索，不代表署內現況或平均效益 |
 | Agent 常見用法樣式 | 十種用法樣式（例行詢問答覆、研究底稿、文件抽欄位、事件初篩、跨工具流程、初稿、定期摘要、監看提醒、線上代辦、遠端程式修改），每種列通用動詞、具體操作、中間產物與完成證據、人驗收；十個動作動詞；「工具成功不等於業務完成」 | 已入 draft：第四週前半第四段講三到四種；整表與工作動詞配對成學員講義的動詞對照表。[用法樣式](tools/agent-use-patterns.md)，合併自外部案例與 OpenClaw 兩份筆記 |
+| Grok Bot 託管常駐 Agent | xAI 2026-08 發布：Bot 在雲端有自己的電腦，聊天交辦、登入既有 App 跨工具做事、核准點回報；與 OpenClaw 同形狀，差在託管與自架 | 講師參考：4-1 第 7 頁口述「常駐 Agent 有自架與託管兩種」。[筆記](reference/grok-bot-hosted-agents.md)。不點名、不推薦採購 |
+| Jev 決策模型 | TypeSafe AI 2026-09 發布：輸入狀態與問題，回傳選項、評分、是非的機率，不生成文字、不選工具；經 API 呼叫 | 已入 draft：第四週 4-1 第 8 頁介入方式第四格「固定節點呼叫一次模型」的通用例子。[筆記](reference/jev-system-one-decision-model.md)。廠商數字未驗證，不推薦採購 |
+| vibe coding | Karpathy 2025-02 提出：用自然語言描述意圖，讓 AI 生成程式，人只引導、測試、回饋，不逐行寫；Collins 2025 年度詞 | 已入 draft：第四週 4-1 第 8 頁介入方式第三格「建置工具後退出」的通俗名稱。[筆記](reference/vibe-coding.md)。課程用它指「Agent 寫出程式後退出，運行時只有程式」 |
 | Agent 的產出與作用方式 | 除圖文、程式碼、控制程式外，還可產生結構化資料、分析依據、系統狀態改變、通知交接、持續監看、互動答覆及可重用知識；區分草稿與實際執行 | 已併入用法樣式表的「中間產物與完成證據」欄；三條界線不採用。[產出方式](tools/agent-output-modes.md) 留作演變紀錄 |
 | Agent 操作到業務動詞的連接 | 先說明模型以文字或結構化呼叫指揮 harness 提供的工具，再把操作、中間產物、成果接到地震業務動詞；另比較請教、一次性交付、製作工具、固定模型節點、Agent 節點與跨節點協調的接手範圍 | 已入 draft：第四週前半第一段（底層機制、Markdown 檔例子）、第二段（六種介入方式）及貫穿案例「測站斷訊」；四層對照、十二類操作、兩個案例降為附錄未採用。[底層機制與介入方式](tools/agent-operation-output-business-map.md)。實際流程仍待同仁確認 |
 | OpenClaw／「龍蝦」實際用途 | 官方日常用途及社群展示：每日摘要、跨 App 代辦、研究回存、遠端程式工作、排程監看與多 Agent 協調；觀察入口、工具、產出與驗收如何串接 | 已併入用法樣式表；講課不點名產品。[OpenClaw 使用案例](reference/openclaw-how-people-use-it.md)。展示個案不能推算普遍使用率 |

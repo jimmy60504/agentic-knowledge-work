@@ -14,4 +14,5 @@
 
 - `build-week4.py`：把 `drafts/09、10、11` 三份逐頁稿各產成素版 PPTX（`week4-1.pptx`、`week4-2.pptx`、`week4-3.pptx`）。標題一句、內文條列或表格、原話與口述進備註；不做視覺設計。改內容改逐頁稿再重跑，改版面改腳本。
 - 檢查方式：用 PowerPoint 匯出 PDF 後逐頁看，或 `osascript` 批次匯出。
+- 注意：PowerPoint 直接開 OneDrive 路徑可能拿到未同步的舊檔，檢查前先把 PPTX 複製到本機暫存目錄再匯出 PDF。
 

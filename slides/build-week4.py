@@ -5,9 +5,9 @@
       python3 slides/build-week4.py 09         → 只建其中一份
 
 逐頁稿格式（drafts/09-week4-1-slides.md 等）：
-- 「## 逐頁」之後，每頁以「### N｜標題」開頭。
+- 「## 逐頁」之後，每頁以「### N｜標題」開頭；頁內可用「**畫面**」「**筆記**」「**原話與來源**」「**圖規格**」分區，畫面區上投影片，其餘進備註。舊格式（無分區，以「- 原話：」等前綴區分）仍支援。
 - 內文：一般條列「- 」、編號「1. 」、Markdown 表格、```text 程式區塊，依序放到畫面。
-- 「- 原話：」「- 口述：」「- 【無原話】」「- 案例：」不上畫面，進備註。
+- 「- 原話：」「- 口述：」「- 【無原話】」「- 案例：」「- 圖：」「- 來源：」不上畫面，進備註。
 - 「- 引文頁內文：『…』」以引文方塊放到畫面。
 - 第 1 頁視為封面。
 
@@ -39,7 +39,7 @@ WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 FONT = "PingFang TC"
 W, H, M = 13.333, 7.5, 0.7
 
-NOTE_PREFIXES = ("原話：", "口述：", "【無原話】", "案例：", "備註用：")
+NOTE_PREFIXES = ("原話：", "口述：", "【無原話】", "案例：", "備註用：", "圖：", "來源：", "圖格：")
 
 
 # ---------- 解析 ----------
@@ -49,14 +49,27 @@ def parse(md_path):
     pages = []
     cur = None
     in_code = False
+    section = "畫面"
     for line in text.split("\n"):
         m = re.match(r"^### (\d+)｜(.+)$", line)
         if m:
             cur = {"n": int(m.group(1)), "title": m.group(2).strip(),
                    "blocks": [], "notes": []}
             pages.append(cur)
+            section = "畫面"
             continue
         if cur is None:
+            continue
+        m = re.match(r"^\*\*(畫面|筆記|原話與來源|圖規格)\*\*$", line.strip())
+        if m:
+            section = m.group(1)
+            if section != "畫面":
+                cur["notes"].append(f"【{section}】")
+            continue
+        if section != "畫面":
+            t = line.strip()
+            if t and t != "無。":
+                cur["notes"].append(re.sub(r"^- ", "", t))
             continue
         if line.startswith("```"):
             if in_code:
