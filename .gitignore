@@ -46,3 +46,4 @@ dist/
 
 # Local trial runs and scratch outputs
 /tmp/
+__pycache__/
