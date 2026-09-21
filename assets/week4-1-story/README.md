@@ -7,5 +7,6 @@
 - `research-idea-class`：原始研究流程，來源檔為 `slides/story/research-idea-class.puml`。
 - `agent-writes-markdown-1` 至 `agent-writes-markdown-5`：Agent 修改 Markdown 的五個階段，來源檔為 `slides/story/agent-writes-markdown-panels.puml`。
 - `research-agent-method-1` 至 `research-agent-method-6`：六種介入方式套入研究流程，來源檔為 `slides/story/research-agent-methods-panels.puml`。
+- `method-overview-dialogue`、`method-overview-delegation`、`method-overview-tool`、`method-overview-structured-judgment`、`method-overview-workflow-agent`、`method-overview-agent-managed`：六種介入方式的一般流程，分別裁自 `slides/week4-1.pptx` 第 12、15、17、19、22、25 頁。
 
-以上圖面由本課程製作，使用 [DomainStory-PlantUML](https://github.com/johthor/DomainStory-PlantUML) 的圖示與巨集產生。修改內容時應先修改 `.puml` 來源，再重新產生 PNG 與 SVG，並同步到本資料夾。
+Domain Storytelling 圖面由本課程製作，使用 [DomainStory-PlantUML](https://github.com/johthor/DomainStory-PlantUML) 的圖示與巨集產生。修改內容時應先修改 `.puml` 來源，再重新產生 PNG 與 SVG，並同步到本資料夾。六張一般流程圖則以 PowerPoint 原生 PNG 匯出後裁切，若投影片內容變動，應從原始簡報重新匯出。
