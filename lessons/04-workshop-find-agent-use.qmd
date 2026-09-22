@@ -6,6 +6,8 @@ author: "黃俊銘"
 institute: "藍震有限公司"
 ---
 
+[開啟第四週 4-3 工作坊投影片](https://1drv.ms/p/c/02708679a802899d/IQBulN54ccwvTZI2PrfZT7jQARUecfnXemDwl-ihVTDb1PM?e=DS6eqv)。
+
 ## 目的
 
 [上半場](02-agent-and-methods.html)與[下半場](03-back-to-your-work.html)的講課說明了 Agent 如何運作、可以站在流程的哪個位置、一段工作如何從 A 走到 B，以及其他組織的用法與地震業務的通用語意如何配對。工作坊由學員把這套方法用在自己的工作上：先理解一件工作的目的與現況，再探索不同做法，判斷收益是否值得付出新增的成本與風險。
