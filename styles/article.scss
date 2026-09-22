@@ -283,6 +283,15 @@ main.content blockquote {
   line-height: 1.5;
 }
 
+.wide-handout {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.wide-handout table {
+  min-width: 70rem;
+}
+
 @media (max-width: 760px) {
   .folder-map {
     display: flex;

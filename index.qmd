@@ -68,8 +68,8 @@ toc: false
 | 2 | [簡報：讓 agent 把你的想法做成成果](lessons/01-presentation-and-the-knowledge-work-loop.html)<br>先看直接生成的簡報缺什麼，再自選題目走一遍材料、論點、文章到可編輯簡報 | [知識工作專案](tools.html#project)、[Agent 產 pptx](tools.html#pptx) | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQAM3J8zls1MR5anu0ITdGDAAZw2_fOCFa9wbXtOuutHiVA) |
 | 3 | 放假 | — | — |
 | 4-1 | [Agent 的用法](lessons/02-agent-and-methods.html)<br>上半場講課：模型與執行框架如何配合；六種介入方式；以研究工作流程比較 Agent 的位置與責任 | [知識工作專案](tools.html#project) | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQDj6J5-aiDqRIs5R12DMrSyAahOCmnErrJZtN-Fx91goR4?e=qoWyow) |
-| [4-2]{.wip} | [別人怎麼用 agent，自己的業務翻成同樣的語意](lessons/03-back-to-your-work.html)<br>下半場講課：十種用法樣式拆到操作與完成證據；地震業務十種動詞配對 | — | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQCJIiorE-INR4-WN4BPJUiBAQ5Z5WzeRoEvetw0XTo7LMY?e=VZyzOg) |
-| [4-3]{.wip} | [工作坊：從自己的工作找出值得嘗試的一段](lessons/04-workshop-find-agent-use.html)<br>攤開整件、拆一段配對、評估、試做；附三張講義 | — | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQBulN54ccwvTZI2PrfZT7jQARUecfnXemDwl-ihVTDb1PM?e=DS6eqv) |
+| 4-2 | [回到業務：畫出現況、讀箭頭上的動詞、討論介入](lessons/03-back-to-your-work.html)<br>用 Domain Storytelling 畫第一版現況圖，從外部案例讀 Agent 的活動，再找缺口並畫第二版 | — | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQCJIiorE-INR4-WN4BPJUiBAQ5Z5WzeRoEvetw0XTo7LMY?e=VZyzOg) |
+| 4-3 | [工作坊：從自己的工作找出值得嘗試的一段](lessons/04-workshop-find-agent-use.html)<br>畫兩版 Story 圖、拆出一段、評估、試作與紀錄；附三張講義 | — | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQBulN54ccwvTZI2PrfZT7jQARUecfnXemDwl-ihVTDb1PM?e=DS6eqv) |
 :::
 
 ### 第五週之後：需求驅動滾動排課
