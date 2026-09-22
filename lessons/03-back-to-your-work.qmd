@@ -8,6 +8,8 @@ institute: "藍震有限公司"
 
 [上半場](02-agent-and-methods.html)說明了 agent 如何運作、可以用六種方式介入流程、一段工作如何用 A→C→B 拆開。本頁自方法回到業務：先看其他組織與個人怎麼用 agent 協助工作，再把地震業務翻成能與之比較的語意，看兩邊能否對應。最後用貫穿的案例「年度預警成效統計」填一次工作單，銜接[工作坊](04-workshop-find-agent-use.html)。
 
+[開啟第四週 4-2 授課投影片](https://1drv.ms/p/c/02708679a802899d/IQCJIiorE-INR4-WN4BPJUiBAQ5Z5WzeRoEvetw0XTo7LMY?e=VZyzOg)。
+
 本頁引用的三張講義（動詞對照表、工作單、評估表）附於[工作坊頁](04-workshop-find-agent-use.html#講義三張表)文末。
 
 ## 四、其他組織如何以 Agent 協助工作
