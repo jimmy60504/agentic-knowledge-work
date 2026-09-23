@@ -1,10 +1,14 @@
 # Domain Storytelling：用演員、工作物件、編號活動畫流程
 
-整理日期：2026-09-22。使用者提出整份第四週演講的流程圖可以改用 domain storytelling 來畫；4-1 第 3 頁「示範：拆解一件工作」在 PPTX 裡已經是這種畫法（演員「研究者」、六個工作物件、六個編號活動）。本筆記記下方法要點與課程用法，來源細節待查核補上。
+整理日期：2026-09-22，來源查核：2026-09-23。使用者提出整份第四週演講的流程圖可以改用 domain storytelling 來畫；4-1 第 3 頁「示範：拆解一件工作」在 PPTX 裡已經是這種畫法（演員「研究者」、六個工作物件、六個編號活動）。本筆記記下方法要點與課程用法。
 
 ## 來源
 
-- Stefan Hofer、Henning Schwentner《Domain Storytelling: A Collaborative, Visual, and Agile Way to Build Domain-Driven Software》（Addison-Wesley，2021）；官方網站 domainstorytelling.org 有圖形語言說明與免費的 Egon.io 繪圖工具。以上為記憶所及，連結與版次待查核。
+- Stefan Hofer、Henning Schwentner《Domain Storytelling: A Collaborative, Visual, and Agile Way to Build Domain-Driven Software》（Addison-Wesley，2022）；[官方書籍介紹](https://domainstorytelling.org/book)。
+- [官方入門指南](https://domainstorytelling.org/quick-start-guide)：圖形語言、具體情境、現況／未來範圍與共同建模工作坊。
+- [官方 DDD 說明](https://domainstorytelling.org/domain-driven-design)：共同語言、限界脈絡與從故事形成領域模型。
+- [官方需求說明](https://domainstorytelling.org/requirements)：通常需要從具體情境先形成可討論的需求，再進入程式實作。
+- [官方工具比較](https://domainstorytelling.org/articles/best-tool/)：Egon.io、Miro 與 PlantUML 的用途差異。
 
 ## 重點
 
