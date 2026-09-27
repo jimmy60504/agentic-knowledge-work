@@ -25,7 +25,7 @@
 | St. Louis Fed（Bick、Blandin、Deming），[2025-11](https://www.stlouisfed.org/on-the-economy/2025/nov/state-generative-ai-adoption-2025) | 全美代表性問卷 | 使用者自報省 5.4% 工時，換算全體勞工約 1.4% | 使用逐漸常態化 | 自陳 |
 | Dillon 等（微軟）〈Shifting Work Patterns〉2025，[arXiv](https://arxiv.org/abs/2504.11436) | 66 家企業約 6,000 人隨機分派，以系統紀錄追蹤 | 處理信件每週少近 3 小時 | 會議時間與性質沒有改變 | 只有個人能自行調整的工作改變 |
 | Ranganathan、Ye（柏克萊）HBR 2026-02，[連結](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it) | 一家科技公司約 200 人追蹤 | 無明顯減少 | 節奏加快、範圍擴大、工作時段延長、同時處理多件事與反覆檢查 | 單一公司、質性研究 |
-| Anthropic 內部研究 2025，[Axios 報導](https://www.axios.com/2026/01/15/anthropic-study-work-ai-jobs) | 132 人問卷、53 人訪談 | 可完全交出的工作約 0 至 20%，多為容易驗證或枯燥的任務 | 27% 是原本不會去做的工作 | 與同事協作與指導新人的機會減少 |
+| Anthropic 內部研究 2025，[Anthropic 研究頁](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic) | 132 人問卷、53 人訪談 | 可完全交出的工作約 0 至 20%，多為容易驗證或枯燥的任務 | 27% 是原本不會去做的工作 | 與同事協作與指導新人的機會減少 |
 | Lancet Gastro 2025-08，[摘要](https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00289-4/abstract) | 內視鏡醫師接觸 AI 前後比較 | 不用 AI 時腺瘤偵測率由 28.4% 降至 22.4% | — | 觀察性研究 |
 | Lee 等（微軟與 CMU）CHI 2025，[論文](https://dl.acm.org/doi/full/10.1145/3706598.3713778) | 319 名知識工作者、936 個案例 | 越信任 AI，投入的批判思考越少 | 思考的內容轉為查證、整合與監督 | 自陳、橫斷面 |
 | Brynjolfsson 等〈Canaries in the Coal Mine〉2026-08 更新，[連結](https://digitaleconomy.stanford.edu/news/canariesaug26/) | 薪資服務商資料 | AI 以取代為主的職業中，22 至 25 歲就業相對落後 19% | 以輔助為主的職業，資深者就業持平或上升 | 相關性，非實驗 |
