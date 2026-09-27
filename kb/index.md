@@ -27,7 +27,7 @@
 | 三圈跨場景與工程類比 | 用產物與檢查理解流程；各圈的跨場景用語、細步驟，以及「讀者腦袋是執行環境」的類比 | 部分採用：第四週前半第三段一句帶過三圈作為三個 C 的實例；類比留講師參考，未採用第四圈。[三圈正本](../ssot/three-loops.md)、[原底稿](../archive/week4-2026-09-19/11-week4-workflow-outline.md)、[工作紀錄](../工作紀錄.md) |
 | 論述、受眾與敘事結構 | 目的、核心訊息、金字塔、SCQA、故事線；按受眾選擇結構 | 部分採用：目的與順序已入第二、四週，完整方法候選。[流程前後對照](arguments/presentation-process-before-and-after.md)、[簡報原則](tools/slide-design-principles-argument-to-slides.md) |
 | Agent 價值與新用途 | 省時、強化判斷、讓原本維護不起的工作可行；比較總成本、風險與知識累積 | 部分採用：第四週後半；企業案例與其他任務可延伸。[價值與知識資產](arguments/agent-value-workflow-and-knowledge-assets.md)、[工作坊 draft](../drafts/04-week4-agent-value-workshop.md) |
-| 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；完整組織診斷未排。[工作坊照片筆記](reference/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
+| 流程盤點、根因與小範圍驗證 | 五欄、冰山、五個基礎問題、利害關係人；找交接與失敗條件 | 部分採用：第四週後半；2026-09-27 提問順序改寫為第五週痛點工作坊的「從症狀追到原因」，並加入事件回溯、浪費類型與驗證難度 × 失敗代價四格表，已入[草稿](../drafts/14-week5-pain-point-workshop.md)；完整組織診斷未排。[工作坊照片筆記](reference/workshop-root-cause-and-value-discovery.md)、[企業案例](arguments/agent-value-workflow-and-knowledge-assets.md) |
 | 外部 Agent 業務用途與缺口 | 客服、知識檢索、文件抽取、事件分流、跨工具交接、初稿與銷售；用「缺口 → Agent 位置 → 人的驗收」找可訪談問題 | 已併入用法樣式表；[外部案例盤點](reference/external-agent-business-use-cases.md)。廠商案例為選題線索，不代表署內現況或平均效益 |
 | Agent 常見用法樣式 | 十種用法樣式（例行詢問答覆、研究底稿、文件抽欄位、事件初篩、跨工具流程、初稿、定期摘要、監看提醒、線上代辦、遠端程式修改），每種列通用動詞、具體操作、中間產物與完成證據、人驗收；十個動作動詞；「工具成功不等於業務完成」 | 已入 draft：第四週前半第四段講三到四種；整表與工作動詞配對成學員講義的動詞對照表。[用法樣式](tools/agent-use-patterns.md)，合併自外部案例與 OpenClaw 兩份筆記 |
 | Grok Bot 託管常駐 Agent | xAI 2026-08 發布：Bot 在雲端有自己的電腦，聊天交辦、登入既有 App 跨工具做事、核准點回報；與 OpenClaw 同形狀，差在託管與自架 | 講師參考：4-1 第 7 頁口述「常駐 Agent 有自架與託管兩種」。[筆記](reference/grok-bot-hosted-agents.md)。不點名、不推薦採購 |
