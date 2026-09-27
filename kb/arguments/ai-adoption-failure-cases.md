@@ -80,3 +80,41 @@
 - 討論框架可能增加兩題：「如何知道真的有效，而非只是感覺有效」、「事先定好什麼情況下停止」。
 - MIT 95% 可搭配批評一起給學員看，練習判斷數字的可信度。
 - ECMWF 作為氣象業務的正面對照，說明並行驗證與公開限制。
+
+## 五、已發表的失敗分類（2026-09-27 補）
+
+起因：使用者問「兩種失敗」是自己想的，應該不只兩種，是否有人整理過並有來源。由 sub-agent 搜尋，主責整合。
+
+| 來源 | 方法 | 分類 | 可信度 |
+|---|---|---|---|
+| Lyytinen、Hirschheim 1987〈Information Systems Failures〉，[摘要](https://www.researchgate.net/publication/234809690) | 實證文獻回顧 | 對應失敗（未達設計目標）、過程失敗（超出預算時程）、互動失敗（使用者不用）、期望失敗（未滿足利害關係人期望，涵蓋前三者） | 高。資訊系統經典分類，非 AI 專屬 |
+| RAND 2024，[報告](https://www.rand.org/pubs/research_reports/RRA2680-1.html) | 從業者訪談 | 問題定義錯誤、訓練資料不足、技術優先、基礎設施不足、問題超出技術能力 | 中高。智庫質性歸納 |
+| BCG 10-20-70 法則 | 顧問經驗 | 價值約一成來自演算法、兩成來自技術與資料、七成來自人與流程 | 中。溝通用的概略比例 |
+| MIT NANDA 2025 | 案例、訪談、問卷 | 核心為學習落差：工具無法記憶、調整與融入工作流程 | 中。「95%」定義有爭議 |
+| Gartner 2024、2025 新聞稿 | 分析師預測 | 成本攀升、商業價值不明、風險控管不足、agent washing、試點到部署的落差 | 中。方法不透明 |
+| Standish CHAOS | 大量 IT 專案問卷 | 使用者參與不足、需求不完整、需求變動 | 中。成功定義受批評 |
+| Wirtz、Weyerer、Geyer 2019，International Journal of Public Administration | 概念整合 | 公部門 AI 挑戰：技術、法規、倫理、社會 | 高 |
+| Madan、Ashok 2023，[Government Information Quarterly](https://www.sciencedirect.com/science/article/pii/S0740624X22001101) | 系統性文獻回顧 | 採用前因（組織、技術、環境）、實施策略、擴散結果，以及公平、透明、隱私、資料治理的張力 | 高。公部門最接近的學術分類 |
+| OECD 2025《Governing with Artificial Intelligence》，[執行障礙章](https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287/full-report/implementation-challenges-that-hinder-the-strategic-use-of-ai-in-government_05cfe2bb.html) | 200 個政府案例 | 技能短缺、老舊系統、資料可取用性與品質、財務限制、法規過時；多數停在試點 | 高 |
+| 資策會 MIC、HBR 繁中版，[HBR](https://www.hbrtaiwan.com/article/25094/taiwan-ai-transformation-six-key-issues) | 產業調查 | 資料問題、技術導向陷阱；治理落後於投資 | 中。企業視角，查無公部門中文分類 |
+
+### 綜合成八類，與使用者的兩種失敗對照
+
+主責判斷的對應（與 sub-agent 原稿略有不同：技術優先與問題定義錯誤歸入流於形式）：
+
+| 失敗類型 | 主要來源 | 對應 | 第五週草稿處理位置 |
+|---|---|---|---|
+| 技術優先、問題定義不清 | RAND、MIC、Gartner | 流於形式 | 第二步 |
+| 問題超出能力、不適合的工作 | RAND、Lyytinen 對應失敗 | 多此一舉 | 第二步 |
+| 使用者不用、誘因不足 | Lyytinen 互動失敗、CHAOS、BCG 七成 | 兩者皆未涵蓋 | 第三步上下層利益衝突 |
+| 期望落差 | Lyytinen 期望失敗 | 兩者皆未涵蓋 | 第五步 |
+| 資料未就緒 | RAND、OECD、MIC | 兩者皆未涵蓋 | 規劃第 4 項 |
+| 技能與學習落差 | MIT NANDA、OECD | 兩者皆未涵蓋 | 前幾週課程本身 |
+| 基礎設施、部署與規模化 | RAND、Gartner、OECD | 兩者皆未涵蓋 | 第三類結果「需要正式專案」 |
+| 治理與風險控管 | Gartner、Madan、Ashok | 兩者皆未涵蓋 | 第六步條件 |
+
+### 洞見
+
+- 使用者的兩種失敗集中在「選題與目的」，是個人層級可以處理的部分；其餘六類多屬組織與執行層級。
+- 第五週的故事其實已經涵蓋多數類型，只是分散在原因、代價、條件與三類結果中；互動失敗與期望失敗分別對應第三步與第五步。
+- Lyytinen 與 Hirschheim 的四分類有學術出處且簡短，可作為第二步的外部依據。
