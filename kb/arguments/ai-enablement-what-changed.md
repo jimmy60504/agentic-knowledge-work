@@ -137,3 +137,19 @@ Ethan Mollick 稱為「秘密半機械人」：規範只談禁止，員工改用
 - 這是內驅力問題在組織層級的樣子：用 AI 對當事人無益（只換來更多工作），人就不會自發使用或分享。
 - 隱藏使用也帶來風險：不驗證輸出、把公司資料放上公開平台，都發生在沒人知道的地方。
 - 「省下的時間用在哪裡」須在導入前由當事人與主管說定；公部門以人力編制與業務量計算，這個問題可能更敏感。
+
+### 兩種賦能的實際案例（2026-09-28 補）
+
+使用者要求為 PM 與 RD 的例子找年會分享或文章。由 sub-agent 搜尋，截圖在 `assets/week5-sources/`。
+
+- **做不到→能做**
+  - [How Anthropic teams use Claude Code](https://claude.com/blog/how-anthropic-teams-use-claude-code)（2025-07）：法務自建電話樹雛形；成長行銷自建讀取廣告成效、生成新廣告的流程；Figma 外掛一次產生上百組廣告變體。公司自陳。
+  - Colin Matthews〈[How to get your entire team prototyping with AI](https://www.lennysnewsletter.com/p/how-to-get-your-entire-team-prototyping)〉（Lenny's Newsletter，2025-06）：教過 500 多位 PM 用 v0、Bolt、Cursor 等工具做雛形。
+  - 學術：〈[Vibe Coding in Product Teams](https://arxiv.org/pdf/2509.10652)〉（2025）：效率提升，也帶來信任與責任歸屬的新張力。
+  - 台灣：僅查到社群發文，未找到具名的年會分享。
+- **沒時間→有時間**
+  - Airbnb〈[Accelerating Large-Scale Test Migration with LLMs](https://airbnb.tech/infrastructure/accelerating-large-scale-test-migration-with-llms/)〉（2025）：約 3,500 個測試檔遷移，原估 1.5 年，6 週完成，自動成功率 97%。
+  - Meta〈[Automated Unit Test Improvement using LLMs](https://arxiv.org/abs/2402.09171)〉（FSE 2024）：73% 的測試改善建議被工程師採納上線。
+  - Google〈[Accelerating code migrations with AI](https://research.google/blog/accelerating-code-migrations-with-ai/)〉（2024）與 ICSE 2025 論文：遷移時間約省一半。
+  - 台灣：DevOpsDays Taipei 2025，SmartNews 的 Ikuo Suyama〈[Creating "Awesome Change" in SmartNews](https://speakerdeck.com/martin_lover/devopsdays-taipei-2025-creating-awesome-change-in-smartnews)〉：過去趕工使測試被犧牲，以 LLM 協助補測試、提升覆蓋率。
+- **反面提醒**：[iThome 2025 CIO 大調查](https://www.ithome.com.tw/article/170648)：開發流程與程式碼規範不標準時，AI 輔助開發成效不如預期，既有技術債反而拖累導入。
