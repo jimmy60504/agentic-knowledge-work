@@ -62,6 +62,7 @@ Agent 降低了寫規格與程式的成本，但要解決什麼、業務本來�
 做好讓當事人自己先受益，才會自發使用。RD 補了測試，就不必再處理同樣的錯誤。以 KPI 推動則做不到這一點。使用者：「變成 KPI 本身不會增加內驅力，反而會變成 overfitting 的地方」。
 
 - **Deci 等人後設分析**（128 篇實驗）：預期中的獎勵會削弱內在動機，告訴對方哪裡做得好的回饋則會提升。
+- **新加坡會議紀錄工具**：市售工具每次都要重新交代政府格式與品質要求，GovTech 把標準寫進工具，一份紀錄從四到六小時縮為一小時內的可編輯初稿。標準寫一次，之後不必再重改（見[拉力筆記](../kb/arguments/what-makes-civil-servants-want-to-learn-ai.md)）。
 
 ### 五、代價：做好會先變慢，但更完整
 
@@ -100,18 +101,32 @@ Agent 降低了寫規格與程式的成本，但要解決什麼、業務本來�
 
 ## 後段：工作坊
 
-學員各自選一件工作，講師逐一聊天。聊天時先辨認對方屬於哪一類，再依序談六個問題：
+學員各自選一件工作，講師逐一聊天。聊天時先辨認對方屬於哪一類；提問可依 SPIN 的順序：現況、問題、影響、解決後的價值（見[提問框架筆記](../kb/arguments/sales-frameworks-for-course-engagement.md)），再依序談六個問題：
 
-1. 要解決哪一件實際發生的事？屬於做不到，還是沒時間做？
+1. 要解決哪一件實際發生的事？屬於做不到，還是沒時間做？（對應數發部手冊 2.2：目標、範圍、可行動、可量化）
 2. 現在怎麼做？多常返工？
 3. 有沒有比 AI 更合適的做法，例如調整流程或寫一般程式？
 4. 資料整理好了嗎？現有的帳號、設備與規定允許嗎？
-5. 誰檢查？檢查的人能從中得到什麼？
+5. 誰檢查？檢查的人能從中得到什麼？（對應數發部手冊 4.4.3：減少授權 AI 執行無法回復的任務）
 6. 怎樣算成功、何時停止、省下的時間用在哪裡？由做事的人自己判斷。
 
 工作坊找出的問題，是之後以真實情境重畫 Story 圖的起點。
 
 結果分三類：現在可以開始、須由機關提供條件、需要正式專案。舊地震資料庫的整理屬於第三類，聊天時詢問實際問題，看能否形成招標案或內部計畫。
+
+## 講師備用：相關 kb 筆記
+
+| 筆記 | 用途 |
+|---|---|
+| [拉力筆記](../kb/arguments/what-makes-civil-servants-want-to-learn-ai.md) | 會議紀錄、公文、簡報是常見起點；品質與底氣；對 ADHD 與讀寫障礙同仁的可及性 |
+| [價值與知識資產](../kb/arguments/agent-value-workflow-and-knowledge-assets.md) | 三種價值；「產出者變快，可能使審查者負擔增加」 |
+| [閱讀與實作](../kb/arguments/purposeful-reading-and-agent-assisted-practice.md) | 交辦條件：目標說得清楚、材料取得到、結果能檢查、失敗可修改；資深者提供範例與檢查 |
+| [2026 研究](../kb/arguments/agent-era-2026-what-changed.md) | AI 影響 67% 來自組織因素；主管示範使員工信任高 30 個百分點 |
+| [外部業務用途](../kb/reference/external-agent-business-use-cases.md)、[用法樣式](../kb/tools/agent-use-patterns.md) | 為「不知道和工作的關係」的學員找例子 |
+| [數發部手冊](../kb/reference/moda-public-sector-ai-playbook.md) | 2.2 問題定義、4.2.17 先形成自身觀點、4.4.3 不可回復任務 |
+| [工作坊提問順序](../kb/reference/workshop-root-cause-and-value-discovery.md) | 從症狀追到原因 |
+| [地震測報中心業務](../kb/reference/cwa-earthquake-center/README.md) | 資料庫整理、年報筆數差異、跨年代資料查找 |
+| [研究寫作講座](../kb/reference/sun-ai-assisted-research-writing-lecture.md) | 認知債、窄化、假文獻；屬後續「判斷如何累積」主題 |
 
 ## 待確認
 
