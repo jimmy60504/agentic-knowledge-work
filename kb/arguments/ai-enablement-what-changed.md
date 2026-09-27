@@ -174,3 +174,15 @@ Ethan Mollick 稱為「秘密半機械人」：規範只談禁止，員工改用
 - [Quanta Magazine〈Why the Legendary Erdős Problems Are Falling to AI〉](https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/)（2026-08-03）：形式化驗證工具（Harmonic 的 Aristotle）讓非專家也能確認證明成立；Thomas Bloom 擔心上百頁無人閱讀的 AI 證明；Wouter van Doorn 表示自己寫的證明比 ChatGPT 的更簡潔、更一般化、更易讀；Noga Alon 則因 AI 能解而放棄這類問題。
 - Terence Tao 維護的 [AI 對 Erdős 問題的貢獻](https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems)；Tao 指出許多問題過去沒人認真嘗試，現有工具能在少量引導下解決的僅約一到二成（[Scientific American](https://www.scientificamerican.com/article/ai-uncovers-solutions-to-erdos-problems-moving-closer-to-transforming-math/)，比例待核對原文）。
 - 洞見：通過檢查代表結果正確，不代表人理解問題或工作真正推進；與「做好工作」、「判斷如何累積」相連。
+
+### 決策疲勞與認知負荷（2026-09-28）
+
+使用者問決策疲勞如何放入第五週，並提出可連到認知負荷的觀念。
+
+- 位置：驗證的人不只要在流程中，還要負荷得了；負荷過重時驗證變成蓋章，形同移除驗證者。
+- 認知負荷理論（Sweller, J. (1988). Cognitive load during problem solving. *Cognitive Science*, 12(2)，原為教學設計理論，出處待核對）將負荷分為內在、外在、增生三類。對應到驗證工作：
+  - 內在負荷＝判斷本身，應由人保留。
+  - 外在負荷＝產出呈現與工作切換造成的負擔，應由 Agent 預處理、外部檢查減少。
+  - 增生負荷＝形成理解的投入，應保留；全部交出會只得到答案而沒有理解（數學例子），也使新進人員失去練習。
+- 佐證：HBR 2026 工作加密研究（認知疲勞、決策品質下降）；Upwork 2025（高產能 AI 使用者 88% 倦怠）；Microsoft 與 CMU 2025（越信任 AI，投入的批判思考越少）。
+- 注意：「決策疲勞」常引用的假釋法官研究（Danziger 等 2011）與自我耗損研究有重現爭議，課堂以認知負荷理論與 AI 工作研究為主，不引用該研究。
