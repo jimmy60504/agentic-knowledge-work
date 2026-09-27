@@ -50,6 +50,8 @@
 | `s3-hbr-workslop.png` | 三 | [AI-Generated "Workslop"](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity)（HBR 2025） | 查核成本轉給別人；頁首有廣告 |
 | `s3-kpmg-trust-study.png` | 三 | [Trust, attitudes and use of AI 2025](https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html)（KPMG） | 57% 隱藏使用；有 cookie 框 |
 | `s4-deci-koestner-ryan-1999.png` | 四 | [Deci、Koestner、Ryan](https://www.selfdeterminationtheory.org/SDT/documents/2001_DeciKoestnerRyan.pdf)（PDF） | 獎勵削弱內在動機 |
+| `s4b-dora-2025.png` | 四（評估） | [DORA Research: 2025](https://dora.dev/dora-report-2025/)（Google Cloud DORA） | AI 是放大器、返工率；頁面有繁體中文摘要版可供學員閱讀 |
+| `s4b-oecd-dgo-2026.png` | 四（評估） | [Digital Government Outlook 2026](https://www.oecd.org/en/publications/digital-government-outlook_0496b2bc-en/)（OECD，2026-06-15） | 政府 AI 影響評估最落後 |
 | `s6-singapore-pair.png` | 七 | [Pair](https://www.tech.gov.sg/products-and-services/for-government-agencies/productivity-and-marketing/pair/)（GovTech） | 政府提供環境；有 cookie 框 |
 | `s6-uk-copilot-statement.png` | 七 | [AI in Government: Cross Government Experiment Report](https://questions-statements.parliament.uk/written-statements/detail/2025-06-02/hlws667)（英國國會） | 政府提供環境；有 cookie 框 |
 | `s6-gsa-onegov.png` | 七 | [GSA OneGov deal with Anthropic](https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-strikes-onegov-deal-with-anthropic-08122025)（GSA） | 集中採購 |
@@ -68,4 +70,4 @@
 - iThome 2025 CIO 大調查：資料為 2025 年，早於 2026 年 4、5 月 agent 產出品質明顯提升的時間點，屬能力限制類的負面結論，已過時（使用者 2026-09-28）。
 - Axios 報導 Anthropic 研究：內容為另一份就業影響研究，與內部研究不同，避免混淆。
 
-未取得：Klarna 回聘人力（Forbes 阻擋、CX Dive 為廣告頁，改附連結 https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/ ）；Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
+未取得：Workday〈Beyond Productivity〉頁面（截圖逾時，連結 https://www.workday.com/en-us/artificial-intelligence/research/beyond-productivity-ai-value.html ）；Klarna 回聘人力（Forbes 阻擋、CX Dive 為廣告頁，改附連結 https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/ ）；Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
