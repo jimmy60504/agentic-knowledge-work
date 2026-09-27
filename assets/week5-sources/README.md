@@ -29,6 +29,8 @@
 | `s2-us-federal-pilots.png` | 二 | [US agencies log nearly 9x more GenAI use cases](https://www.theregister.com/2025/07/29/us_government_identified_ai_use/)（The Register） | 流於形式；頁首有廣告 |
 | `s2-cba-reverses-cuts.png` | 二 | [CBA backtracks on AI job cuts](https://www.abc.net.au/news/2025-08-21/cba-backtracks-on-ai-job-cuts-as-chatbot-lifts-call-volumes/105679492)（ABC News） | 用錯指標 |
 | `s2-deloitte-report-incident.png` | 二 | [Deloitte Refunds Australia](https://oecd.ai/en/incidents/2025-10-05-be45)（OECD.AI） | 多此一舉；查核責任 |
+| `s2-shu-ltn-ai-replaces-office.png` | 二 | [世新砍光系辦、拔行政權限「改用AI」](https://news.ltn.com.tw/news/life/breakingnews/5582285)（自由時報，2026-09-22） | 台灣案例；頁面有廣告與訂閱提示 |
+| `s2-shu-ctwant-ai-no-answer.png` | 二 | [世新大亂象1／問事全推AI「查無此題」](https://www.ctwant.com/article/499621/)（CTWANT，2026-09-25） | 台灣案例；有廣告與 cookie 提示。校方說法見[太報／Yahoo](https://tw.news.yahoo.com/%E7%B3%BB%E8%BE%A6%E8%A2%AB%E7%A0%8D-%E6%94%B9%E5%95%8Fai-%E5%AD%B8%E7%94%9F%E6%8A%B1%E6%80%A8%E9%80%A3%E9%80%A3-%E4%B8%96%E6%96%B0%E5%A4%A7%E5%AD%B8-%E5%9B%9E%E6%AD%B8-134642655.html)，截圖未取得 |
 | `s2-nyc-mycity-2024.png` | 二 | [Malfunctioning NYC AI Chatbot](https://themarkup.org/artificial-intelligence/2024/04/02/malfunctioning-nyc-ai-chatbot-still-active-despite-widespread-evidence-its-encouraging-illegal-behavior)（The Markup） | 多此一舉；與下一張擇一 |
 | `s2-nyc-mycity-2026.png` | 二 | [Mamdani to kill the NYC AI chatbot](https://themarkup.org/artificial-intelligence/2026/01/30/mamdani-to-kill-the-nyc-ai-chatbot-we-caught-telling-businesses-to-break-the-law)（The Markup） | 同一事件的結局 |
 | `s3-humlum-denmark.png` | 三 | [Still Waters, Rapid Currents](https://www.nber.org/papers/w33777)（NBER） | 省下的時間轉為檢查與新任務；有 cookie 框 |
