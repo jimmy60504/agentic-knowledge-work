@@ -98,3 +98,42 @@
 - PM 寫小工具：PM 清楚工具要解決什麼、結果對不對，缺的只是寫程式的操作；小工具自己使用，做錯的代價低。對應「知道要什麼、只是不熟操作」。
 - RD 做 CI/CD 與測試：省下的時間用在把原本的工作做好，而不是做更多新東西；測試與自動部署本身就是檢查機制，會降低之後檢查 Agent 產出的成本。對應「省下的時間用在哪裡」的好答案。
 - 反面版本：不懂業務的人用 Agent 做出看似完整的分析（做不到而且審不出）；省下的時間拿去接更多工作，而品質沒有改善（工作加密）。
+
+## 六、省下的時間歸誰（2026-09-27 補）
+
+起因：使用者提到新聞說導入 AI 後越來越忙，省下的時間紅利被公司吸收，員工因此不想用 AI，以免被塞更多工作。由 sub-agent 搜尋。
+
+### 員工隱藏 AI 使用
+
+| 來源 | 樣本 | 數字 | 原因 | 可信度 |
+|---|---|---|---|---|
+| KPMG 與墨爾本大學 2025-04，[連結](https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html) | 47 國逾 48,000 人 | 57% 隱藏使用、把 AI 產出當自己的成果；66% 不驗證輸出 | 政策與信任落差 | 高 |
+| Ivanti 2025-05，[新聞稿](https://www.ivanti.com/company/press-releases/2025/nearly-a-third-of-employees-are-keeping-their-ai-driven-productivity-a-secret-finds-ivanti-research) | 逾 6,000 名員工 | 約三分之一隱藏使用 | 36% 想保有優勢、30% 怕被裁、27% 怕能力被質疑 | 中。廠商調查 |
+| Slack Workforce Lab 2024，[連結](https://slack.com/blog/transformation/how-workers-really-feel-about-ai) | 美國辦公室員工 | 48% 不願讓主管知道用 AI 做常見任務 | 怕被認為能力不足或作弊 | 中高 |
+| Forbes 2026-08，[連結](https://www.forbes.com/sites/niritcohen/2026/08/02/ai-saves-time-66-of-employees-stay-online-to-hide-it/) | 未查到原始調查 | 66% 完成工作後仍掛線上裝忙，每週近 5 小時 | 怕被指派更多工作 | 中低。須查原始調查 |
+
+Ethan Mollick 稱為「秘密半機械人」：規範只談禁止，員工改用私人帳號、不分享方法，組織學不到經驗。[One Useful Thing](https://www.oneusefulthing.org/p/detecting-the-secret-cyborgs)
+
+### 省下的時間被吸收
+
+| 來源 | 數字 | 可信度 |
+|---|---|---|
+| Workday 2026-01，[新聞稿](https://newsroom.workday.com/2026-01-14-New-Workday-Research-Companies-Are-Leaving-AI-Gains-on-the-Table) | 3,200 名 AI 使用者；企業把省下的時間用於增加工作量者多於投入員工發展 | 中高。廠商委託 |
+| Upwork 2025-07，[新聞稿](https://investors.upwork.com/news-releases/news-release-details/upwork-research-reveals-new-insights-ai-human-work-dynamic) | 生產力提升最多的 AI 使用者 88% 有倦怠，離職意願為低度使用者兩倍 | 高 |
+| Allwork 2026-02，[連結](https://allwork.space/2026/02/31-of-workers-say-ai-added-tasks-instead-of-saving-time-at-work) | 31% 工作量增加、16% 減少；近半數表示主管派工時直接以「有 AI 可用」為由 | 中。媒體整理 |
+| CIO Dive 2026，[連結](https://www.ciodive.com/news/workers-spend-more-time-managing-ai/822554/) | 省下的時間大量用於管理與校正 AI 輸出 | 中 |
+| Orange Hello Future 整理 arXiv 2602.12695，[連結](https://hellofuture.orange.com/en/the-ai-productivity-paradox-the-new-tech-may-be-eating-into-your-leisure-time/) | 高度暴露者每週工時增加約 3 小時，休閒等量減少 | 中。須讀原論文 |
+
+台灣未找到專門調查或深度報導。
+
+### 把時間還給員工的做法
+
+- 四天工作週試辦（Nature Human Behaviour 2025-07，141 家組織、2,896 人）：倦怠下降、身心改善，九成以上企業續行。[Autonomy](https://autonomy.work/portfolio/uk4dwpilotresults/)。注意：試辦本身與 AI 無直接關係，未量測企業生產力。
+- OpenAI 2026-04 政策提案建議以誘因推動不減薪的四天工作制，屬倡議。[Forbes](https://www.forbes.com/sites/jodiecook/2026/04/28/openai-just-proposed-a-4-day-work-week-what-aprils-ai-news-means-for-you/)
+
+### 洞見
+
+- 越有效率、越忙、越要隱藏，形成循環；受益最多的人最傾向隱藏，組織因此看不到真正有效的用法，也無法擴散。
+- 這是內驅力問題在組織層級的樣子：用 AI 對當事人無益（只換來更多工作），人就不會自發使用或分享。
+- 隱藏使用也帶來風險：不驗證輸出、把公司資料放上公開平台，都發生在沒人知道的地方。
+- 「省下的時間用在哪裡」須在導入前由當事人與主管說定；公部門以人力編制與業務量計算，這個問題可能更敏感。
