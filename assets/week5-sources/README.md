@@ -4,6 +4,8 @@
 
 新聞與網站截圖屬原網站著作，僅供課堂介紹出處使用，投影片需標示來源。
 
+檔名前綴 s6 為早期命名，對應草稿第七步「條件」；草稿第六步「對象」目前無截圖。
+
 ## 篩選原則（2026-09-28 使用者要求）
 
 保留 agent 大量使用後仍成立的結論。依賴工具能力的結論（變快多少、哪類任務做得差、錯誤率）以 2023 至 2024 年聊天工具量得，已刪除；依賴人與組織的結論（問題定義、時間紅利、考核與動機、主管）保留；agent 時代的證據補上。
@@ -31,17 +33,20 @@
 | `s2-deloitte-report-incident.png` | 二 | [Deloitte Refunds Australia](https://oecd.ai/en/incidents/2025-10-05-be45)（OECD.AI） | 多此一舉；查核責任 |
 | `s2-shu-ltn-ai-replaces-office.png` | 二 | [世新砍光系辦、拔行政權限「改用AI」](https://news.ltn.com.tw/news/life/breakingnews/5582285)（自由時報，2026-09-22） | 台灣案例；頁面有廣告與訂閱提示 |
 | `s2-shu-ctwant-ai-no-answer.png` | 二 | [世新大亂象1／問事全推AI「查無此題」](https://www.ctwant.com/article/499621/)（CTWANT，2026-09-25） | 台灣案例；有廣告與 cookie 提示。校方說法見[太報／Yahoo](https://tw.news.yahoo.com/%E7%B3%BB%E8%BE%A6%E8%A2%AB%E7%A0%8D-%E6%94%B9%E5%95%8Fai-%E5%AD%B8%E7%94%9F%E6%8A%B1%E6%80%A8%E9%80%A3%E9%80%A3-%E4%B8%96%E6%96%B0%E5%A4%A7%E5%AD%B8-%E5%9B%9E%E6%AD%B8-134642655.html)，截圖未取得 |
+| `s2-judicial-ai-draft-paused.png` | 二 | [生成式AI導入司法判決書系統喊停](https://futurecity.cw.com.tw/article/3272)（未來城市） | 台灣案例：司法院；有 cookie 提示與頂部廣告位 |
 | `s2-nyc-mycity-2024.png` | 二 | [Malfunctioning NYC AI Chatbot](https://themarkup.org/artificial-intelligence/2024/04/02/malfunctioning-nyc-ai-chatbot-still-active-despite-widespread-evidence-its-encouraging-illegal-behavior)（The Markup） | 多此一舉；與下一張擇一 |
 | `s2-nyc-mycity-2026.png` | 二 | [Mamdani to kill the NYC AI chatbot](https://themarkup.org/artificial-intelligence/2026/01/30/mamdani-to-kill-the-nyc-ai-chatbot-we-caught-telling-businesses-to-break-the-law)（The Markup） | 同一事件的結局 |
 | `s3-humlum-denmark.png` | 三 | [Still Waters, Rapid Currents](https://www.nber.org/papers/w33777)（NBER） | 省下的時間轉為檢查與新任務；有 cookie 框 |
 | `s3-hbr-workslop.png` | 三 | [AI-Generated "Workslop"](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity)（HBR 2025） | 查核成本轉給別人；頁首有廣告 |
 | `s3-kpmg-trust-study.png` | 三 | [Trust, attitudes and use of AI 2025](https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html)（KPMG） | 57% 隱藏使用；有 cookie 框 |
 | `s4-deci-koestner-ryan-1999.png` | 四 | [Deci、Koestner、Ryan](https://www.selfdeterminationtheory.org/SDT/documents/2001_DeciKoestnerRyan.pdf)（PDF） | 獎勵削弱內在動機 |
-| `s6-singapore-pair.png` | 六 | [Pair](https://www.tech.gov.sg/products-and-services/for-government-agencies/productivity-and-marketing/pair/)（GovTech） | 政府提供環境；有 cookie 框 |
-| `s6-uk-copilot-statement.png` | 六 | [AI in Government: Cross Government Experiment Report](https://questions-statements.parliament.uk/written-statements/detail/2025-06-02/hlws667)（英國國會） | 政府提供環境；有 cookie 框 |
-| `s6-gsa-onegov.png` | 六 | [GSA OneGov deal with Anthropic](https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-strikes-onegov-deal-with-anthropic-08122025)（GSA） | 集中採購 |
-| `s6-gallup-global-workplace.png` | 六 | [State of the Global Workplace](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)（Gallup） | 主管的影響；有 cookie 框 |
-| `s6-moda-tryai.png` | 六 | [政府 AI 應用平臺](https://moda.gov.tw/press/press-releases/17952)（數發部） | 台灣的環境 |
+| `s6-singapore-pair.png` | 七 | [Pair](https://www.tech.gov.sg/products-and-services/for-government-agencies/productivity-and-marketing/pair/)（GovTech） | 政府提供環境；有 cookie 框 |
+| `s6-uk-copilot-statement.png` | 七 | [AI in Government: Cross Government Experiment Report](https://questions-statements.parliament.uk/written-statements/detail/2025-06-02/hlws667)（英國國會） | 政府提供環境；有 cookie 框 |
+| `s6-gsa-onegov.png` | 七 | [GSA OneGov deal with Anthropic](https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-strikes-onegov-deal-with-anthropic-08122025)（GSA） | 集中採購 |
+| `s6-gallup-global-workplace.png` | 七 | [State of the Global Workplace](https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx)（Gallup） | 主管的影響；有 cookie 框 |
+| `s7-ey-genai-guideline.png` | 七 | [行政院及所屬機關(構)使用生成式AI參考指引](https://www.ey.gov.tw/Page/448DE008087A1971/40c1a925-121d-4b6b-8f40-7e9e1a5401f2)（行政院） | 台灣已有的資源 |
+| `s7-moda-ai-playbook.png` | 七 | [公部門人工智慧應用參考手冊](https://moda.gov.tw/digital-affairs/digital-service/ai-resource/18248)（數發部） | 台灣已有的資源 |
+| `s6-moda-tryai.png` | 七 | [政府 AI 應用平臺](https://moda.gov.tw/press/press-releases/17952)（數發部） | 台灣的環境 |
 | `x-ecmwf-ml-forecasting.png` | 備用 | [The rise of machine learning in weather forecasting](https://www.ecmwf.int/en/about/media-centre/science-blog/2023/rise-machine-learning-weather-forecasting)（ECMWF） | 氣象業務的正面例子 |
 
 ## 已刪除（依賴聊天時代的工具能力）
