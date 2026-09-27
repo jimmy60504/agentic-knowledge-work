@@ -32,7 +32,7 @@
 | Agent 常見用法樣式 | 十種用法樣式（例行詢問答覆、研究底稿、文件抽欄位、事件初篩、跨工具流程、初稿、定期摘要、監看提醒、線上代辦、遠端程式修改），每種列通用動詞、具體操作、中間產物與完成證據、人驗收；十個動作動詞；「工具成功不等於業務完成」 | 已入 draft：第四週前半第四段講三到四種；整表與工作動詞配對成學員講義的動詞對照表。[用法樣式](tools/agent-use-patterns.md)，合併自外部案例與 OpenClaw 兩份筆記 |
 | Grok Bot 託管常駐 Agent | xAI 2026-08 發布：Bot 在雲端有自己的電腦，聊天交辦、登入既有 App 跨工具做事、核准點回報；與 OpenClaw 同形狀，差在託管與自架 | 講師參考：4-1 第 7 頁口述「常駐 Agent 有自架與託管兩種」。[筆記](reference/grok-bot-hosted-agents.md)。不點名、不推薦採購 |
 | Agent 的角色 | 網路上的角色來自對話人設、多 Agent 分工、子 Agent 目錄三處，上百個名字收斂成想事情、做事情、管事情十種動作；角色決定權限；與介入方式是兩條軸 | 部分採用：4-1 第 14 到 17 頁採幕僚版（[做法草稿](../drafts/12-week4-role-division-method.md)），十種角色沿公文流程排開；三群分法與網路來源留在[筆記](reference/agent-roles-in-use.md) |
-| Domain Storytelling 與 DDD | 說明為何用 Story 圖分析工作、如何與 Agent 對齊理解，以及如何從圖界定自動化範圍並形成規格 | 部分採用：第四週已入教材；2026-09-23 第五週方向入草稿，2026-09-27 併入[第五週痛點工作坊草稿](../drafts/13-week5-pain-point-workshop.md)的「現況圖的作用」與「從痛點卡到規格」，尚未升格正式教材。[方法筆記](tools/domain-storytelling.md) |
+| Domain Storytelling 與 DDD | 說明為何用 Story 圖分析工作、如何與 Agent 對齊理解，以及如何從圖界定自動化範圍並形成規格 | 部分採用：第四週已入教材；2026-09-23 第五週方向入草稿，2026-09-27 併入[第五週草稿](../drafts/13-week5-pain-point-workshop.md)，同日主線重訂後暫移出（見 commit b2eb425），尚未升格正式教材。[方法筆記](tools/domain-storytelling.md) |
 | Jev 決策模型 | TypeSafe AI 2026-09 發布：輸入狀態與問題，回傳選項、評分、是非的機率，不生成文字、不選工具；經 API 呼叫 | 已入 draft：第四週 4-1 第 8 頁介入方式第四格「固定節點呼叫一次模型」的通用例子。[筆記](reference/jev-system-one-decision-model.md)。廠商數字未驗證，不推薦採購 |
 | vibe coding | Karpathy 2025-02 提出：用自然語言描述意圖，讓 AI 生成程式，人只引導、測試、回饋，不逐行寫；Collins 2025 年度詞 | 已入 draft：第四週 4-1 第 8 頁介入方式第三格「建置工具後退出」的通俗名稱。[筆記](reference/vibe-coding.md)。課程用它指「Agent 寫出程式後退出，運行時只有程式」 |
 | Agent 的產出與作用方式 | 除圖文、程式碼、控制程式外，還可產生結構化資料、分析依據、系統狀態改變、通知交接、持續監看、互動答覆及可重用知識；區分草稿與實際執行 | 已併入用法樣式表的「中間產物與完成證據」欄；三條界線不採用。[產出方式](tools/agent-output-modes.md) 留作演變紀錄 |
