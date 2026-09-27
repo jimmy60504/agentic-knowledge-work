@@ -152,4 +152,4 @@ Ethan Mollick 稱為「秘密半機械人」：規範只談禁止，員工改用
   - Meta〈[Automated Unit Test Improvement using LLMs](https://arxiv.org/abs/2402.09171)〉（FSE 2024）：73% 的測試改善建議被工程師採納上線。
   - Google〈[Accelerating code migrations with AI](https://research.google/blog/accelerating-code-migrations-with-ai/)〉（2024）與 ICSE 2025 論文：遷移時間約省一半。
   - 台灣：DevOpsDays Taipei 2025，SmartNews 的 Ikuo Suyama〈[Creating "Awesome Change" in SmartNews](https://speakerdeck.com/martin_lover/devopsdays-taipei-2025-creating-awesome-change-in-smartnews)〉：過去趕工使測試被犧牲，以 LLM 協助補測試、提升覆蓋率。
-- **反面提醒**：[iThome 2025 CIO 大調查](https://www.ithome.com.tw/article/170648)：開發流程與程式碼規範不標準時，AI 輔助開發成效不如預期，既有技術債反而拖累導入。
+- ~~反面提醒：iThome 2025 CIO 大調查~~：2026-09-28 使用者指出資料早於 2026 年 4、5 月 agent 產出品質提升的時間點，無法說明現況，不採用。

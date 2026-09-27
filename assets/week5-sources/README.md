@@ -10,6 +10,8 @@
 
 保留 agent 大量使用後仍成立的結論。依賴工具能力的結論（變快多少、哪類任務做得差、錯誤率）以 2023 至 2024 年聊天工具量得，已刪除；依賴人與組織的結論（問題定義、時間紅利、考核與動機、主管）保留；agent 時代的證據補上。
 
+補充原則（2026-09-28 使用者）：agent 產出幾乎不需檢查，大約是 2026 年 4、5 月的事。此前的「能力做不到」類負面結論多已過時；此前的「做得到」類正面案例（如補測試、做雛形），工具變強後只會更成立，可保留但標示年份。
+
 ## agent 時代的證據
 
 | 檔案 | 步驟 | 來源 | 要點 |
@@ -19,7 +21,6 @@
 | `s1-airbnb-test-migration.png` | 一 | [Accelerating Large-Scale Test Migration with LLMs](https://airbnb.tech/infrastructure/accelerating-large-scale-test-migration-with-llms/)（Airbnb，2025） | 沒時間→有時間：約 3,500 個測試檔遷移，原估 1.5 年，6 週完成 |
 | `s1-devopsdays-tpe-smartnews.png` | 一 | [Creating "Awesome Change" in SmartNews](https://speakerdeck.com/martin_lover/devopsdays-taipei-2025-creating-awesome-change-in-smartnews)（Ikuo Suyama，DevOpsDays Taipei 2025） | 沒時間→有時間：以 LLM 補測試、提升覆蓋率；台灣年會分享 |
 | `s1-meta-testgen-llm.png` | 一 | [Automated Unit Test Improvement using LLMs at Meta](https://arxiv.org/abs/2402.09171)（Meta，FSE 2024） | 沒時間→有時間：73% 的測試建議被工程師採納 |
-| `s1-ithome-cio-ai-se.png` | 一 | [iThome 2025 CIO 大調查（下）](https://www.ithome.com.tw/article/170648)（iThome） | 反面提醒：流程與規範不標準時，AI 輔助開發成效不如預期；頁面有廣告 |
 | `s1-anthropic-internal-study.png` | 一 | [How AI is transforming work at Anthropic](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic)（Anthropic，2025-12-02） | 工程師大量使用 Claude Code，約 27% 是原本不會做的工作；也擔心指導新人的機會減少 |
 | `s3-hbr-intensifies.png` | 三 | [AI Doesn't Reduce Work—It Intensifies It](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it)（HBR，2026-02） | 同時處理多條工作、反覆檢查 AI 產出，工作加密；頁首有廣告 |
 | `s3-metr-2026-update.png` | 三 | [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/)（METR，2026-02-24） | 開發者不願在沒有 AI 的情況下工作，同時使用多個 agent 時連耗時都量不準；取代 2025 年的舊研究 |
@@ -61,6 +62,7 @@
 - 英國商業貿易部 Copilot 評估（The Register 與官方部落格）：Excel、簡報表現屬 2024 年 Copilot 能力。
 - Brynjolfsson 客服研究：2020 至 2021 年的工具。
 - 澳洲財政部 Copilot 評估（The Register 與 PDF）：評估 2024 年 Copilot；期望落差改以講師自身經驗說明。
+- iThome 2025 CIO 大調查：資料為 2025 年，早於 2026 年 4、5 月 agent 產出品質明顯提升的時間點，屬能力限制類的負面結論，已過時（使用者 2026-09-28）。
 - Axios 報導 Anthropic 研究：內容為另一份就業影響研究，與內部研究不同，避免混淆。
 
 未取得：Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
