@@ -41,6 +41,8 @@
 | `s2-shu-ltn-ai-replaces-office.png` | 二 | [世新砍光系辦、拔行政權限「改用AI」](https://news.ltn.com.tw/news/life/breakingnews/5582285)（自由時報，2026-09-22） | 台灣案例；頁面有廣告與訂閱提示 |
 | `s2-shu-ctwant-ai-no-answer.png` | 二 | [世新大亂象1／問事全推AI「查無此題」](https://www.ctwant.com/article/499621/)（CTWANT，2026-09-25） | 台灣案例；有廣告與 cookie 提示。校方說法見[太報／Yahoo](https://tw.news.yahoo.com/%E7%B3%BB%E8%BE%A6%E8%A2%AB%E7%A0%8D-%E6%94%B9%E5%95%8Fai-%E5%AD%B8%E7%94%9F%E6%8A%B1%E6%80%A8%E9%80%A3%E9%80%A3-%E4%B8%96%E6%96%B0%E5%A4%A7%E5%AD%B8-%E5%9B%9E%E6%AD%B8-134642655.html)，截圖未取得 |
 | `s2-judicial-ai-draft-paused.png` | 二 | [生成式AI導入司法判決書系統喊停](https://futurecity.cw.com.tw/article/3272)（未來城市） | 台灣案例：司法院；有 cookie 提示與頂部廣告位 |
+| `s2b-robodebt-algorithm.png` | 二 | [The flawed algorithm at the heart of Robodebt](https://pursuit.unimelb.edu.au/articles/the-flawed-algorithm-at-the-heart-of-robodebt)（墨爾本大學 Pursuit） | 完全取代：移除人工複核；較早期自動化決策；有 cookie 框 |
+| `s2b-stanford-canaries.png` | 二 | [No Widespread Displacement, but the AI Employment Gap for Young Workers Has Widened to 19%](https://digitaleconomy.stanford.edu/news/canariesaug26/)（史丹佛數位經濟實驗室，2026-08-12） | 取代多在任務層級，新進人員受影響；頁面有半透明遮罩 |
 | `s2-nyc-mycity-2024.png` | 二 | [Malfunctioning NYC AI Chatbot](https://themarkup.org/artificial-intelligence/2024/04/02/malfunctioning-nyc-ai-chatbot-still-active-despite-widespread-evidence-its-encouraging-illegal-behavior)（The Markup） | 多此一舉；與下一張擇一 |
 | `s2-nyc-mycity-2026.png` | 二 | [Mamdani to kill the NYC AI chatbot](https://themarkup.org/artificial-intelligence/2026/01/30/mamdani-to-kill-the-nyc-ai-chatbot-we-caught-telling-businesses-to-break-the-law)（The Markup） | 同一事件的結局 |
 | `s3-humlum-denmark.png` | 三 | [Still Waters, Rapid Currents](https://www.nber.org/papers/w33777)（NBER） | 省下的時間轉為檢查與新任務；有 cookie 框 |
@@ -65,4 +67,4 @@
 - iThome 2025 CIO 大調查：資料為 2025 年，早於 2026 年 4、5 月 agent 產出品質明顯提升的時間點，屬能力限制類的負面結論，已過時（使用者 2026-09-28）。
 - Axios 報導 Anthropic 研究：內容為另一份就業影響研究，與內部研究不同，避免混淆。
 
-未取得：Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
+未取得：Klarna 回聘人力（Forbes 阻擋、CX Dive 為廣告頁，改附連結 https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/ ）；Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
