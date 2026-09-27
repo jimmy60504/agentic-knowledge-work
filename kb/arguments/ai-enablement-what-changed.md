@@ -153,3 +153,12 @@ Ethan Mollick 稱為「秘密半機械人」：規範只談禁止，員工改用
   - Google〈[Accelerating code migrations with AI](https://research.google/blog/accelerating-code-migrations-with-ai/)〉（2024）與 ICSE 2025 論文：遷移時間約省一半。
   - 台灣：DevOpsDays Taipei 2025，SmartNews 的 Ikuo Suyama〈[Creating "Awesome Change" in SmartNews](https://speakerdeck.com/martin_lover/devopsdays-taipei-2025-creating-awesome-change-in-smartnews)〉：過去趕工使測試被犧牲，以 LLM 協助補測試、提升覆蓋率。
 - ~~反面提醒：iThome 2025 CIO 大調查~~：2026-09-28 使用者指出資料早於 2026 年 4、5 月 agent 產出品質提升的時間點，無法說明現況，不採用。
+
+### 可驗證性決定賦能能走多遠（2026-09-28 使用者）
+
+使用者：程式碼可以用測試驗證，不是 LLM 自己球員兼裁判；agent 可能偷改測試，但做隔離與限制即可處理。文獻是否存在、文件是否正確，很難用寫好的測試檢查，否則不需要 LLM 處理複雜的文字理解。
+
+- 兩種賦能的成功案例多來自程式（Airbnb、Meta、Google、SmartNews），這與程式碼有外部檢查機制有關，不能直接類推到文書工作。
+- 文書任務可以部分檢查（例如以 DOI 確認文獻存在），但「來源是否支持這個主張」仍需理解內容，檢查落回人的判斷。Deloitte 案例因此不因工具變強而過時。
+- 選擇導入方向時，優先找有外部檢查方式的任務：測試、既有規則、已知答案。檢查者與產出者要分開，對應導入前規劃第 5 題。
+- （agent 補充，待確認）氣象業務有不少可驗證的部分，例如資料品管規則、格式檢查、預報校驗；這類任務可能較適合先導入。
