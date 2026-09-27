@@ -24,6 +24,7 @@
 | `s1-anthropic-internal-study.png` | 一 | [How AI is transforming work at Anthropic](https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic)（Anthropic，2025-12-02） | 工程師大量使用 Claude Code，約 27% 是原本不會做的工作；也擔心指導新人的機會減少 |
 | `s3-hbr-intensifies.png` | 三 | [AI Doesn't Reduce Work—It Intensifies It](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it)（HBR，2026-02） | 同時處理多條工作、反覆檢查 AI 產出，工作加密；頁首有廣告 |
 | `s3-metr-2026-update.png` | 三 | [We are Changing our Developer Productivity Experiment Design](https://metr.org/blog/2026-02-24-uplift-update/)（METR，2026-02-24） | 開發者不願在沒有 AI 的情況下工作，同時使用多個 agent 時連耗時都量不準；取代 2025 年的舊研究 |
+| `s3-quanta-erdos-ai.png` | 三 | [Why the Legendary Erdős Problems Are Falling to AI](https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/)（Quanta Magazine，2026-08-03） | 數學容易驗證所以 AI 能解，但找到答案不等於推進理解 |
 | `s4-ms-work-trend-index-2026.png` | 五 | [Agents, human agency, and the opportunity for every organization](https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization)（Microsoft，2026-05-05） | 人的工作轉向定方向、定標準、看結果 |
 | `s3-allwork-added-tasks.png` | 三 | [31% Of Workers Say AI Added Tasks](https://allwork.space/2026/02/31-of-workers-say-ai-added-tasks-instead-of-saving-time-at-work)（Allwork，2026-02） | 媒體整理，可信度中等；頁首有廣告 |
 

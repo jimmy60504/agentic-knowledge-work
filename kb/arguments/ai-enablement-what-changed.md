@@ -164,3 +164,13 @@ Ethan Mollick 稱為「秘密半機械人」：規範只談禁止，員工改用
 - （agent 補充，待確認）氣象業務有不少可驗證的部分，例如資料品管規則、格式檢查、預報校驗；這類任務可能較適合先導入。
 
 補充（同日使用者）：PM 或領域專家做出的小工具，本人就能驗證結果，這也是一種測試。由 LLM 在執行時直接產出文字對外的應用（聊天機器人）沒有機會先被檢查；程式則測試過才上線、行為固定，兩者本質不同。對應第四週六種介入方式：交辦（人檢查成品）與製作工具（AI 只在建置時參與）有檢查點；模型在流程中執行且直接對外時，缺少檢查點。
+
+### 外部驗證是關鍵，但驗證不等於理解（2026-09-28 使用者）
+
+使用者歸納：重點在於有沒有辦法外部驗證。查核成本高的是沒有外部檢查方式的產出，文字大多如此，沒有測試的程式碼亦同（workslop 定義含程式碼，[BetterUp](https://www.betterup.com/workslop)）；有明確標準的文字也能檢查（廣告成效、會議紀錄格式）。第五週草稿因此將三個失敗改寫為三種驗證問題：產出能不能驗證、成效能不能驗證、驗證的人還在不在。
+
+使用者另舉數學為例：數學答案對不對很好驗證，所以 AI 能解題；但數學家認為單純找到答案無法推進人類對數學的理解。
+
+- [Quanta Magazine〈Why the Legendary Erdős Problems Are Falling to AI〉](https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/)（2026-08-03）：形式化驗證工具（Harmonic 的 Aristotle）讓非專家也能確認證明成立；Thomas Bloom 擔心上百頁無人閱讀的 AI 證明；Wouter van Doorn 表示自己寫的證明比 ChatGPT 的更簡潔、更一般化、更易讀；Noga Alon 則因 AI 能解而放棄這類問題。
+- Terence Tao 維護的 [AI 對 Erdős 問題的貢獻](https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems)；Tao 指出許多問題過去沒人認真嘗試，現有工具能在少量引導下解決的僅約一到二成（[Scientific American](https://www.scientificamerican.com/article/ai-uncovers-solutions-to-erdos-problems-moving-closer-to-transforming-math/)，比例待核對原文）。
+- 洞見：通過檢查代表結果正確，不代表人理解問題或工作真正推進；與「做好工作」、「判斷如何累積」相連。
