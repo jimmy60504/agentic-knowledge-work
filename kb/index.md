@@ -21,6 +21,7 @@
 | 導入前規劃與既有框架 | 四項反推結果與數發部手冊、英國 AI Playbook、Magenta Book、澳洲 DTA、NIST AI RMF、AI Canvas 比對；補資料與權限、替代做法、受影響者，區分個人與機關層級 | 已入 draft：2026-09-27 第五週導入前規劃擴為六項。[比對筆記](tools/ai-pre-adoption-plan-frameworks.md) |
 | 離職原因與非薪資留任因素 | 台灣公務員離職集中於年資未滿五年、官方多歸個人因素而七成員工不說真正理由；主管、成就感、成長、自主、公平、工時邊界；自我決定論與外在獎勵削弱內在動機的後設分析；與自發使用 AI 的條件相同 | 候選：2026-09-27 為第五週「把事情做好」與內驅力討論的依據，尚未入草稿。[留任筆記](arguments/retention-and-intrinsic-motivation.md)。多項數字待查原始表格 |
 | 用 AI 的人與沒在用的人 | 非日常使用者七類（沒權限、用錯任務後放棄、不知道與工作的關係、原則性不信任、私下使用、沒時間學、確實不適合）；離不開的證據（METR 2026、英國 82%、學習曲線）；Slack、BCG 分群，Pew、Gallup 比例，UTAUT 與創新擴散 | 已入 draft：2026-09-28 第五週前段第六步「對象」與工作坊聊天辨認類型。[使用者分類](arguments/ai-users-and-non-users.md) |
+| 需求工程的基本觀念 | 需求需要挖掘、區分問題與解法（Zave 與 Jackson 的 R、D、S）、協商後的共識、可驗證（fit criterion）、會改變；Agent 降低規格成本，需求與領域知識仍靠懂業務的人 | 已入 draft：2026-09-28 第五週定位為需求探索階段；後續規格與設計候選。[需求工程筆記](tools/requirements-engineering-basics.md)。出處待查證 |
 | 組織支持與採用動機 | 帳號費用、電腦網路、責任、心智模型、主管示範；國內外案例與「秘密半機械人」 | 部分採用：2026-09-27 四個阻礙作為第五週分析導入方向的條件，已入[草稿](../drafts/13-week5-pain-point-workshop.md)第一步與導入前規劃第 4 項；其餘候選；[學員需求](arguments/what-makes-civil-servants-want-to-learn-ai.md)、[導入阻礙](arguments/public-sector-ai-adoption-barriers-and-examples.md)。不以推測當署內現況 |
 | CODE、雙鑽石與 PKM | 收集到表達、發散與收斂；用框架回顧熟悉工作，不增加必背流程 | 部分採用：第四週方法主線；框架名稱與比較仍候選。[歷次選材](../archive/week2-2026-09-19/deferred-materials.md)、[工作紀錄](../工作紀錄.md) |
 | 閱讀、摘要與蒸餾 | 收藏家謬誤、文獻／永久筆記、漸進式摘要；用自己的長文比對摘要，分開原意與洞見 | 部分採用：第四週前半收尾「存的時候分清四種內容」；長文檢查摘要練習列後半工作坊備援題（2026-09-19）。[閱讀與實作](arguments/purposeful-reading-and-agent-assisted-practice.md)、[研究寫作講座](reference/sun-ai-assisted-research-writing-lecture.md) |

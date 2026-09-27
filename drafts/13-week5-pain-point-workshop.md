@@ -5,6 +5,10 @@
 > 案例篩選（2026-09-28 使用者）：保留 agent 大量使用後仍成立的結論，刪除依賴聊天時代工具能力的案例，見 `assets/week5-sources/README.md`。
 > 取材：[失敗案例](../kb/arguments/ai-adoption-failure-cases.md)、[賦能研究](../kb/arguments/ai-enablement-what-changed.md)、[留任與內在動機](../kb/arguments/retention-and-intrinsic-motivation.md)、[導入阻礙](../kb/arguments/public-sector-ai-adoption-barriers-and-examples.md)、[導入框架比對](../kb/tools/ai-pre-adoption-plan-frameworks.md)。來源截圖在 `assets/week5-sources/`。
 
+## 本週的定位
+
+把 Agent 導入流程，通常也是一個軟體開發的過程；本週討論的是最前面找需求的階段，對應軟體工程的需求工程（使用者 2026-09-28）。需求工程的五個觀念與本週各步的對應，見[需求工程筆記](../kb/tools/requirements-engineering-basics.md)。Agent 降低了寫規格與程式的成本，但要解決什麼、業務本來怎麼運作，仍須由懂業務的人說清楚。
+
 ## 前段
 
 ### 一、期待：兩種賦能
@@ -81,7 +85,7 @@
 
 ### 八、方法：導入前規劃
 
-前面幾步歸納成六個問題，帶到後段。
+前面幾步歸納成六個問題，帶到後段。這六個問題就是需求探索：先弄清楚問題與現況，再判斷解法；需要正式專案的方向，之後進入規格與設計。
 
 ## 後段：工作坊
 
