@@ -12,6 +12,7 @@
 素版原則：只做文字階層與圖片位置，不做視覺設計，供使用者套用素材。
 """
 import importlib.util
+import re
 import sys
 from pathlib import Path
 
@@ -49,13 +50,15 @@ def rect(slide, x, y, w, h, fill, line=None):
 
 
 def images_of(page):
-    """畫面中「圖：`路徑`」進了備註；依序取出路徑，保留不存在者作為預留位置。"""
+    """畫面中「圖：`路徑`｜圖說」進了備註；依序取出 (路徑, 圖說)，保留不存在者作為預留位置。"""
     out = []
     for line in page["notes"]:
         if line.startswith("圖："):
-            p = line[len("圖："):].strip().strip("`")
-            if p and p not in out:
-                out.append(p)
+            body = line[len("圖："):].strip()
+            rel, _, cap = body.partition("｜")
+            rel = rel.strip().strip("`")
+            if rel and rel not in [r for r, _ in out]:
+                out.append((rel, cap.strip()))
     page["notes"] = [l for l in page["notes"] if not l.startswith("圖：")]
     return out
 
@@ -100,14 +103,14 @@ def header(slide, title):
 
 
 def fit_box(rel, x, y, w, h):
-    """回傳圖片等比縮放後的實際位置 (x, y, w, h)；檔案不存在時回傳整個框。"""
+    """回傳圖片等比縮放後的實際位置 (x, y, w, h)，靠右、垂直置中；檔案不存在時回傳整個框。"""
     path = ROOT / rel
     if not path.exists():
         return x, y, w, h
     iw, ih = Image.open(path).size
     scale = min(w / iw, h / ih)
     pw, ph = iw * scale, ih * scale
-    return x + (w - pw), y + (h - ph) / 2, pw, ph  # 靠右對齊，左側留給文字
+    return x + (w - pw), y + (h - ph) / 2, pw, ph
 
 
 def pic_at(slide, rel, box):
@@ -122,62 +125,117 @@ def pic_at(slide, rel, box):
         pic.line.width = Pt(0.75)
 
 
+CAP_H = 0.42  # 圖說保留高度
+
+
 def visual_boxes(imgs, x, y, w, h):
-    """右側視覺區的各圖位置：一張靠右；兩張上下；三張為上大下二小。回傳 [(rel, box)] 與最左緣。"""
+    """右側視覺區：一張靠右；兩張並排；三張為上大下二小。回傳 [(rel, cap, box)] 與最左緣。"""
     gap = 0.25
+    has_cap = any(c for _, c in imgs)
+    ch = CAP_H if has_cap else 0
     out = []
+
+    def cell(r, c, cx, cy, cw, chh, center):
+        bx, by, bw, bh = fit_box(r, cx, cy, cw, chh - ch)
+        if center:
+            bx = cx + (cw - bw) / 2
+        out.append((r, c, (bx, by, bw, bh)))
+
     if len(imgs) == 1:
-        out.append((imgs[0], fit_box(imgs[0], x, y, w, h)))
-    elif len(imgs) == 2:  # 左右並排，各自置中於半格
+        cell(*imgs[0], x, y, w, h, False)
+    elif len(imgs) == 2:
         cw = (w - gap) / 2
-        for i, r in enumerate(imgs):
-            bx, by, bw, bh = fit_box(r, x + i * (cw + gap), y, cw, h)
-            out.append((r, (x + i * (cw + gap) + (cw - bw) / 2, by, bw, bh)))
+        for i, (r, c) in enumerate(imgs):
+            cell(r, c, x + i * (cw + gap), y, cw, h, True)
     else:
         top_h = h * 0.56
-        out.append((imgs[0], fit_box(imgs[0], x, y, w, top_h)))
+        cell(*imgs[0], x, y, w, top_h, False)
         cw = (w - gap) / 2
-        for i, r in enumerate(imgs[1:3]):
-            bx, by, bw, bh = fit_box(r, x + i * (cw + gap), y + top_h + gap, cw, h - top_h - gap)
-            # 下排兩張各自置中於半格，不靠右
-            out.append((r, (x + i * (cw + gap) + (cw - bw) / 2, by, bw, bh)))
-    left = min(b[0] for _, b in out)
+        for i, (r, c) in enumerate(imgs[1:3]):
+            cell(r, c, x + i * (cw + gap), y + top_h + gap, cw, h - top_h - gap, True)
+    left = min(b[0] for _, _, b in out)
     return out, left
 
 
-def content(prs, page, total):
+def rich_bullets(slide, x, y, w, items, key_size, body_size, plain_size):
+    """條列：「**關鍵詞**：說明」排成粗體關鍵詞加灰色說明兩層；其餘為一般條列。回傳高度。"""
+    box = slide.shapes.add_textbox(Inches(x), Inches(y), Inches(w), Inches(1))
+    tf = box.text_frame
+    tf.word_wrap = True
+    tf.margin_left = tf.margin_right = Inches(0.05)
+    total = 0.0
+    first = True
+    for it in items:
+        m = re.match(r"^\*\*(.+?)\*\*[：:]\s*(.*)$", it)
+        p = tf.paragraphs[0] if first else tf.add_paragraph()
+        first = False
+        if m:
+            key, body = m.group(1), m.group(2)
+            p.space_before = Pt(10)
+            r = p.add_run(); r.text = key
+            bw4._run(r, key_size, True, DARK)
+            total += text_height([key], key_size, w) + 0.14
+            if body:
+                q = tf.add_paragraph()
+                q.space_after = Pt(4)
+                r2 = q.add_run(); r2.text = body
+                bw4._run(r2, body_size, False, MUTED)
+                total += text_height([body], body_size, w)
+        else:
+            p.space_after = Pt(8)
+            r = p.add_run(); r.text = "•  " + it
+            bw4._run(r, plain_size, False, DARK)
+            total += text_height([it], plain_size, w) + 0.1
+    box.height = Inches(total + 0.2)
+    return total
+
+
+def content(prs, page, total, section=""):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     rect(s, 0, 0, W, H, fill=WHITE)
     imgs = images_of(page)
     lead = [v for k, v in page["blocks"] if k == "lead"]
     bullets = [v for k, v in page["blocks"] if k in ("bullet", "num")]
+    sources = [l[len("來源："):].strip() for l in page["notes"] if l.startswith("來源：")]
     full = W - 2 * M
-    # 標題與主訊息橫跨全寬
-    textbox(s, M, 0.5, full, 0.8, [page["title"]], size=26, bold=True, color=DARK)
-    rect(s, M, 1.28, 1.0, 0.05, fill=ACCENT)
-    y = 1.55
-    if lead:
-        ls = 22
-        lh = text_height(lead, ls, full)
-        textbox(s, M, y, full, lh, lead, size=ls, bold=True)
-        y += lh + 0.35
+    # 第一層：小標（段落｜頁名）
+    kicker = f"{section}｜{page['title']}" if section else page["title"]
+    textbox(s, M, 0.38, full, 0.35, [kicker], size=12, color=MUTED)
+    # 第二層：主張
+    y = 0.78
+    claim = lead[0] if lead else page["title"]
+    ch = text_height([claim], 28, full)
+    textbox(s, M, y, full, ch, [claim], size=28, bold=True, color=DARK)
+    y += ch + 0.12
+    rect(s, M, y, 0.9, 0.05, fill=ACCENT)
+    y += 0.4
+    foot_h = 0.45 if sources else 0.0
+    bottom = H - 0.45 - foot_h
     col = full
     if imgs:
-        vx = W * 0.44
-        boxes, left = visual_boxes(imgs, vx, y, W - M - vx, H - 0.55 - y)
-        for rel, box in boxes:
+        vx = W * 0.46
+        boxes, left = visual_boxes(imgs, vx, y, W - M - vx, bottom - y)
+        for rel, cap, box in boxes:
             pic_at(s, rel, box)
-        col = left - 0.35 - M  # 條列延伸到圖片實際左緣
+            if cap:
+                bx, by, bw, bh = box
+                textbox(s, bx, by + bh + 0.05, max(bw, 2.2), CAP_H - 0.05, [cap], size=10.5, color=MUTED, spacing=0)
+        col = left - 0.4 - M
+    # 第三層：要點
     if bullets:
-        bs = 17 if imgs else 20
-        if imgs and len(bullets) > 4:
-            bs = 16
-        bh = text_height(bullets, bs, col) + 0.12 * len(bullets)
-        textbox(s, M, y, col, bh + 0.2, bullets, size=bs, bullet=True, spacing=10)
-        y += bh + 0.3
-    if y > H - 0.5:
+        dense = any(re.match(r"^\*\*.+?\*\*[：:]", b) for b in bullets)
+        if dense:
+            h = rich_bullets(s, M, y, col, bullets, 18, 14.5, 16)
+        else:
+            h = rich_bullets(s, M, y, col, bullets, 18, 14.5, 17 if imgs else 19)
+        y += h
+    if y > bottom + 0.1:
         print(f"  [溢出警告] 第 {page['n']} 頁「{page['title']}」文字估計高度到 {y:.1f} in")
-    textbox(s, M, H - 0.5, 1.2, 0.35, [f"{page['n']} / {total}"], size=11, color=MUTED)
+    # 第四層：來源
+    if sources:
+        textbox(s, M, H - 0.45 - foot_h + 0.05, full - 1.0, foot_h, ["來源：" + "；".join(sources)],
+                size=9.5, color=MUTED, spacing=0)
+    textbox(s, W - M - 0.8, H - 0.45, 0.8, 0.3, [f"{page['n']} / {total}"], size=10, color=MUTED, align="c")
     notes(s, page["notes"])
 
 
@@ -185,8 +243,8 @@ def cover(prs, page):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     imgs = images_of(page)
     rect(s, 0, 0, W, H, fill=IVORY)
-    if imgs and (ROOT / imgs[0]).exists():
-        s.shapes.add_picture(str(ROOT / imgs[0]), 0, 0, Inches(W), Inches(H))
+    if imgs and (ROOT / imgs[0][0]).exists():
+        s.shapes.add_picture(str(ROOT / imgs[0][0]), 0, 0, Inches(W), Inches(H))
     lines = [v for k, v in page["blocks"] if k == "bullet"]
     title = lines[0] if lines else page["title"]
     sub = lines[1:]
@@ -210,19 +268,21 @@ def main():
     prs.slide_width, prs.slide_height = Inches(W), Inches(H)
     total = sum(1 for p in pages if not p.get("divider"))
     missing = []
+    section = ""
     for p in pages:
         if p.get("divider"):
             divider(prs, p)
+            section = p["title"]
             continue
         for line in p["notes"]:
             if line.startswith("圖："):
-                rel = line[3:].strip().strip("`")
+                rel = line[3:].strip().partition("｜")[0].strip().strip("`")
                 if not (ROOT / rel).exists():
                     missing.append(rel)
         if p["n"] == 1:
             cover(prs, p)
         else:
-            content(prs, p, total)
+            content(prs, p, total, section)
     prs.save(OUT)
     print(f"{OUT.name}: {len(pages)} 頁（含 {len(pages) - total} 頁段落標題）← {SRC.relative_to(ROOT)}")
     for m in missing:

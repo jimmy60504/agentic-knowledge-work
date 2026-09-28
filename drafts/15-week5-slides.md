@@ -77,12 +77,13 @@
 **畫面**
 
 - 主訊息：PM 不會寫程式，現在能自行製作小工具
-- Anthropic 的法務與行銷人員以 Claude Code 自建工具
-- 產品經理以 AI 製作雛形，約二十分鐘完成一頁
-- P&G 研究：一人加 AI 的方案品質追平兩人團隊
-- 圖：`assets/week5-sources/s1-anthropic-teams-claude-code.png`
-- 圖：`assets/week5-sources/s1-lenny-pm-prototyping.png`
-- 圖：`assets/week5-sources/s1-pg-cybernetic-teammate.png`
+- **操作不再是門檻**：清楚需求的人，可以把自己的想法直接做成可用的工具
+- **做的人自己就能驗證**：PM 知道好的結果長什麼樣子，工具對不對，一試便知
+- **一人涵蓋多種觀點**：P&G 研究中，一人加 AI 提出的方案品質追平兩人團隊
+- 圖：`assets/week5-sources/s1-anthropic-teams-claude-code.png`｜Anthropic，2025-07：法務與行銷人員以 Claude Code 自建工具
+- 圖：`assets/week5-sources/s1-lenny-pm-prototyping.png`｜Lenny's Newsletter，2025-06：教過 500 多位 PM 以 AI 做雛形
+- 圖：`assets/week5-sources/s1-pg-cybernetic-teammate.png`｜NBER，2025：P&G 776 人實驗
+
 
 **原話與來源**
 
@@ -196,12 +197,13 @@
 **畫面**
 
 - 主訊息：以完全取代人力為目標，錯誤便無人承接
-- 需要個案判斷的事，AI 無法承接，最後只得回頭補人
-- 世新大學：秘書縮為一人，詢問改由 AI 回覆，個案無人受理
-- Klarna 取代約 700 名客服後重新聘人；Robodebt 移除複核後大規模誤判
-- 圖：`assets/week5-sources/s2-shu-ltn-ai-replaces-office.png`
-- 圖：`assets/week5-sources/s2-shu-ctwant-ai-no-answer.png`
-- 圖：`assets/week5-sources/s2b-robodebt-algorithm.png`
+- **個案判斷無人承接**：需要判斷的事 AI 接不住，最後只得回頭補人
+- **與利益歸屬無關**：即使省下的利益歸承辦人，完全交給 AI 仍會出問題
+- **先減人再補資料，順序相反**：世新大學的資料庫與個案承接都還沒準備好，人就先調走了
+- 圖：`assets/week5-sources/s2-shu-ltn-ai-replaces-office.png`｜自由時報，2026-09-22：各系秘書縮為一人，詢問改由 AI 回覆
+- 圖：`assets/week5-sources/s2-shu-ctwant-ai-no-answer.png`｜CTWANT，2026-09-25：機器人反覆回覆「查無此題」
+- 圖：`assets/week5-sources/s2b-robodebt-algorithm.png`｜墨爾本大學：澳洲 Robodebt 移除人工複核後大規模誤判
+
 
 **筆記**
 
@@ -334,10 +336,10 @@
 **畫面**
 
 - 主訊息：AI 產出直接對外，便沒有機會先經檢查
-- 交辦與製作工具都有檢查點：人檢查成品，或以測試把關
-- 直接對外的聊天機器人沒有檢查點
-- 流程指派 Agent 處理到節點，等人確認後才送出
-- 圖：`assets/week5-diagrams/d18-checkpoints-sq.png`
+- **交辦與製作工具有檢查點**：人檢查成品後才使用，或以測試把關後才讓程式上線
+- **直接對外沒有檢查點**：聊天機器人說錯的話，由機關負責，免責聲明轉移不了責任
+- **流程指派 Agent 可以預處理**：由外部事件觸發，處理到節點停下，等人確認後才送出
+- 圖：`assets/week5-diagrams/d18-checkpoints-sq.png`｜上週六種介入方式中，檢查點所在的位置
 
 
 **筆記**
