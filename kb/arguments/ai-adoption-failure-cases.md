@@ -36,6 +36,9 @@
 | 澳洲聯邦銀行 | 2025 年以語音機器人為由裁撤 45 名客服，實際通話量上升，8 月撤回。[ABC](https://www.abc.net.au/news/2025-08-21/cba-backtracks-on-ai-job-cuts-as-chatbot-lifts-call-volumes/105679492) | 以單一指標評估效益，未驗證實際工作量 | 高 |
 | 麥當勞與 IBM 點餐 | 百餘家門市測試語音點餐，錯誤頻傳，2024-06 終止。[CNBC](https://www.cnbc.com/2024/06/17/mcdonalds-to-end-ibm-ai-drive-thru-test.html) | 準確率不足，更正與善後成本超過效益 | 高 |
 | 強制使用 AI | 多家企業把 AI 使用率納入績效，另有調查指員工繞過指定工具。[IT Brew](https://www.itbrew.com/stories/2026/02/27/most-companies-are-requiring-employees-to-use-ai-some-it-pros-think-that-could-backfire) | 以使用率代替解決問題作為成功指標 | 中。部分數字為媒體轉述 |
+| Token maxxing | Meta 設員工 token 用量排行榜，2026-04 撤除；Amazon 以 Kiro 使用量排名，員工刻意灌用量後關閉；Uber 2026-05 承認全年 AI 預算四月底用完。[Fortune](https://fortune.com/2026/05/28/tokenmaxxing-is-dead-companies-didnt-get-the-roi-from-ai-they-wanted-to-see/)、[HRD](https://www.hcamag.com/us/specialization/hr-technology/amazon-shuts-down-ai-leaderboard-after-tokenmaxxing/577189) | 指標與成效脫鉤：量的是用量而非成效（2026-09-28 補） | 中高。多家媒體報導 |
+| Gartner：不需要 Agent 的用例 | 2025-06 新聞稿：分析師 Anushree Verma 指出許多被定位為 agentic 的用例其實不需要 agentic 實作；另有 agent washing。[RCR Wireless 轉述](https://www.rcrwireless.com/20250627/business/agentic-ai-gartner) | 多此一舉：需求清楚但解法過大（2026-09-28 補） | 中。分析師說法 |
+| 工程師自述「只剩按 Enter」 | 匿名工程師在 X 發文：公司大量使用 Claude Code，每天工作十二到十三小時，L1 到 L7 工作方式幾無差別，「沒有人在思考了」。[ETtoday 2026-09-27](https://ai.ettoday.net/news/3242616) | 上下層目標不一致：組織以速度衡量看似成功，員工失去意義與判斷累積（2026-09-28 使用者提供） | 低中。單一匿名自述 |
 | SEC「AI washing」執法 | 2024 至 2025 年多家公司宣稱使用 AI 而實際沒有，遭裁罰。[DLA Piper](https://www.dlapiper.com/en/insights/publications/ai-outlook/2025/sec-emphasizes-focus-on-ai-washing) | 以「有 AI」作為賣點 | 高 |
 | 澳洲 Robodebt、荷蘭育兒津貼 | 自動化決策（非生成式 AI）誤判大量民眾，前者和解賠償約 18 億澳幣，後者內閣總辭。[Robodebt](https://pursuit.unimelb.edu.au/articles/the-flawed-algorithm-at-the-heart-of-robodebt)、[荷蘭](https://www.lighthousereports.com/investigation/the-algorithm-addiction/) | 需個案判斷的認定工作全面自動化，移除人工複核 | 高。較早期案例 |
 
