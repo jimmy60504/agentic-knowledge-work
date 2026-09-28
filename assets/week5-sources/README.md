@@ -52,6 +52,7 @@
 | `s2-nyc-mycity-2026.png` | 二 | [Mamdani to kill the NYC AI chatbot](https://themarkup.org/artificial-intelligence/2026/01/30/mamdani-to-kill-the-nyc-ai-chatbot-we-caught-telling-businesses-to-break-the-law)（The Markup） | 同一事件的結局 |
 | `s2-gartner-agentic-canceled.png` | 二 | [Gartner: More than 40% of agentic AI projects will fail by 2027](https://www.rcrwireless.com/20250627/business/agentic-ai-gartner)（RCR Wireless 轉述；Gartner 官網擋截圖） | 多此一舉；右側有廣告 |
 | `s2-ettoday-press-enter.png` | 二 | [Claude Code讓開發變成流水線？工程師：每天12小時只剩「按Enter」](https://ai.ettoday.net/news/3242616)（ETtoday，2026-09-27） | 上下層目標不一致；單一匿名自述 |
+| `s5-ms-wti-2026-readiness-matrix.png` | 五 | [2026 Work Trend Index Annual Report](https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2026/09/2026_Work_Trend_Index_Annual_Report_090326_6a99e3f096b6e.pdf) 第 12 頁（Microsoft） | 個人能力 × 組織準備度矩陣；由 PDF 以 200 dpi 裁切 |
 | `s3-humlum-denmark.png` | 三 | [Still Waters, Rapid Currents](https://www.nber.org/papers/w33777)（NBER） | 省下的時間轉為檢查與新任務；有 cookie 框 |
 | `s3-hbr-workslop.png` | 三 | [AI-Generated "Workslop"](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity)（HBR 2025） | 查核成本轉給別人；頁首有廣告 |
 | `s3-kpmg-trust-study.png` | 三 | [Trust, attitudes and use of AI 2025](https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html)（KPMG） | 57% 隱藏使用；有 cookie 框 |

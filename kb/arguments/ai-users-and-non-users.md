@@ -13,6 +13,7 @@
 | Slack Workforce Lab 2024，[Salesforce 整理](https://www.salesforce.com/news/stories/ai-personas-at-work/) | 積極公開使用 30%、私下使用不公開 20%、抗拒 19%、欣賞但未整合進工作 16%、觀望 16% | 中。企業調查，樣本大 |
 | BCG AI at Work 2025，[連結](https://www.bcg.com/publications/2025/ai-at-work-momentum-builds-but-gaps-remain) | 推動者、自主探索者、跟隨組織者、被動觀察者、謹慎懷疑者；第一線員工經常使用率停在 51% | 中高。11 國逾 10,600 人 |
 | Microsoft WTI 2025，[連結](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born) | 懷疑者、新手、探索者、重度使用者 | 中。廠商報告，未公布各類比例 |
+| Microsoft WTI 2026，[報告頁](https://www.microsoft.com/en-us/worklab/work-trend-index/agents-human-agency-and-the-opportunity-for-every-organization)、[PDF](https://assets-c4akfrf5b4d3f4b7.z01.azurefd.net/assets/2026/09/2026_Work_Trend_Index_Annual_Report_090326_6a99e3f096b6e.pdf) 第 12 頁 | 個人 AI 能力 × 組織準備度：Frontier 19%、Blocked agency 10%、Unclaimed capacity 5%、Stalled 16%、Emergent 50%；10 國逾 2 萬人，自陳問卷 | 中高。廠商報告，樣本大，有公布比例；2026-09-29 補 |
 
 ### 不用與少用的比例與原因
 
