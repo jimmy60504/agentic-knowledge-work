@@ -47,6 +47,9 @@ FONT = "PingFang TC"
 W, H, M = 13.333, 7.5, 0.7
 CARD_ASPECT = 1.6
 ANGLES = [-3.5, 2.5, -2.0, 3.0, -1.5]
+# 示意圖已包含要點文字的頁面：畫面只留主訊息，要點移到講者備註，示意圖放大
+DIAGRAM_CARRIES = {"兩種賦能", "成功的條件", "失敗的全貌", "程式與文字", "檢查點的位置", "認知負荷",
+                   "使用的程度", "上半場回顧", "下半場回顧", "主管的清單"}
 
 notes = bw4.notes
 
@@ -290,6 +293,8 @@ def text_column(slide, lead, items, x, y, w, bottom, page):
             break
     else:
         print(f"  [文字偏多] 第 {page['n']} 頁「{page['title']}」")
+    if not items:
+        ls = 24
     if lead:
         lh = est_h(lead, ls, w)
         runs(slide, x, y, w, lh + 0.1, [(lead, ls, True, DARK, 0)])
@@ -343,8 +348,12 @@ def content(prs, page, total, section):
     lead, items = parse_bullets(page)
     sources = [l[len("來源："):].strip() for l in page["notes"] if l.startswith("來源：")]
     header(s, section, page["title"])
+    col_w = 5.2
+    if imgs and page["title"] in DIAGRAM_CARRIES:
+        page["notes"] = ["【畫面要點（已由示意圖呈現）】"] + [f"{k}：{b}" if k else b for k, b in items] + page["notes"]
+        items = []
+        col_w = 3.9
     if imgs:
-        col_w = 5.2
         text_column(s, lead, items, M, 1.75, col_w, H - 0.75, page)
         vx = M + col_w + 0.45
         visuals(s, imgs, vx, 1.7, W - M - vx, H - 0.75 - 1.7)
