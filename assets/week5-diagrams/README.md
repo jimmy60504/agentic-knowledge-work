@@ -26,3 +26,4 @@
 | `d08-three-failures-sq.svg` / `.png` | 第 8 頁 | d08 的方形版：三種斷點改為三欄直向流程，斷點名稱置於各欄下方 |
 | `d18-checkpoints-sq.svg` / `.png` | 第 18 頁 | d18 的方形版：四種流程改為 2×2 排列，流程指派 Agent 置於右下 |
 | `d20-cognitive-load-sq.svg` / `.png` | 第 20 頁 | d20 的方形版：負荷改為直向堆疊長條，保留與交付標示置於右側 |
+| `d-users-on-readiness-matrix-sq.svg` / `.png` | 未定 | 第四段各類使用者與不使用者放在 Microsoft WTI 2026 個人能力 × 組織準備度矩陣上的位置，以及主管作為的移動方向；位置為課程示意，非報告資料（2026-09-29 草擬） |
