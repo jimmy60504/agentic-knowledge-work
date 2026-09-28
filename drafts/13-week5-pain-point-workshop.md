@@ -3,6 +3,7 @@
 > 狀態：供討論的初稿，尚未放入正式教材。2026-09-28 以需求工程與外部驗證為主軸，結構為緣由加六段：期待、未達期待的原因、導入應達到的標準、因人而異的需求、主管可採取的作為、工作坊。每步一句核心想法，案例附一句要點，完整數字與來源留在 kb。
 > 已定（使用者）：目的是找出合適的導入方向；全部在課堂完成；前段講述提供討論框架，後段講師逐一與學員討論，收集各人要解決的問題供下週延伸，不填寫學習單；學員約一半是主管。
 > 案例篩選（2026-09-28 使用者）：保留 agent 大量使用後仍成立的結論，刪除依賴聊天時代工具能力的案例，見 `assets/week5-sources/README.md`。
+> 投影片：ghost deck 見 [14-week5-ghost-deck.md](14-week5-ghost-deck.md)。
 > 取材：[需求工程](../kb/tools/requirements-engineering-basics.md)、[失敗案例](../kb/arguments/ai-adoption-failure-cases.md)、[賦能研究](../kb/arguments/ai-enablement-what-changed.md)、[使用者分類](../kb/arguments/ai-users-and-non-users.md)、[留任與內在動機](../kb/arguments/retention-and-intrinsic-motivation.md)、[導入阻礙](../kb/arguments/public-sector-ai-adoption-barriers-and-examples.md)、[導入框架比對](../kb/tools/ai-pre-adoption-plan-frameworks.md)。
 
 ## 上週繪製 Story 圖的緣由
