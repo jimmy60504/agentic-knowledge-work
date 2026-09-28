@@ -28,9 +28,9 @@
 <text x="730" y="762" font-size="17" font-weight="400" fill="#6B6560">考核逼出的使用，只停在數字</text>
 <rect x="173" y="403" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="253" y="439" fill="#6B6560">不敢用</text>
 <rect x="150" y="483" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="230" y="519" fill="#6B6560">不能用</text>
-<rect x="420" y="571" width="250" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="545" y="607" fill="#6B6560">不想用：不信任</text>
+<rect x="460" y="571" width="170" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="545" y="607" fill="#6B6560">不信任</text>
 <text x="545" y="648" font-size="17" font-weight="400" fill="#6B6560">縱軸只量 AI 能力，不含業務判斷</text>
-<rect x="155" y="645" width="250" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="280" y="681" fill="#6B6560">不想用：怕被取代</text>
+<rect x="185" y="645" width="190" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="280" y="681" fill="#6B6560">怕被取代</text>
 <rect x="419" y="763" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="499" y="799" fill="#6B6560">不會用</text>
 </g>
 <path d="M420,262 C500,250 560,245 606,236" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
