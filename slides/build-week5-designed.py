@@ -48,8 +48,7 @@ W, H, M = 13.333, 7.5, 0.7
 CARD_ASPECT = 1.6
 ANGLES = [-3.5, 2.5, -2.0, 3.0, -1.5]
 # 示意圖已包含要點文字的頁面：畫面只留主訊息，要點移到講者備註，示意圖放大
-DIAGRAM_CARRIES = {"兩種賦能", "成功的條件", "失敗的全貌", "程式與文字", "檢查點的位置", "認知負荷",
-                   "使用的程度", "上半場回顧", "下半場回顧", "主管的清單"}
+DIAGRAM_CARRIES = {"兩種賦能", "成功的條件", "失敗的全貌", "程式與文字", "使用的程度", "上半場回顧", "下半場回顧"}
 
 notes = bw4.notes
 
@@ -322,6 +321,9 @@ def text_only(slide, lead, items, page):
         y += lh + 0.85
     if not items:
         return
+    if any("／" in body for _, body in items):
+        question_panels(slide, items, y)
+        return
     cols = 2 if len(items) >= 3 or any(k for k, _ in items) else 1
     gap = 0.3
     cw = (W - 2 * M - gap * (cols - 1)) / cols
@@ -339,6 +341,25 @@ def text_only(slide, lead, items, page):
         if b:
             paras.append((b, 13.5, False, MUTED, 0))
         runs(slide, cx + 0.3, cy + 0.1, cw - 0.5, rh - 0.2, paras, anchor="m")
+
+
+def question_panels(slide, items, y):
+    """題目以「／」分隔時：每組一欄，題目逐行加編號。"""
+    gap = 0.35
+    cols = len(items)
+    cw = (W - 2 * M - gap * (cols - 1)) / cols
+    ph = H - 0.75 - y
+    for c, (k, body) in enumerate(items):
+        cx = M + c * (cw + gap)
+        rect(slide, cx, y, cw, ph, WHITE, line=GREY, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.04)
+        rect(slide, cx, y, cw, 0.62, IVORY, shape=MSO_SHAPE.RECTANGLE)
+        rect(slide, cx, y, 0.08, 0.62, ACCENT)
+        runs(slide, cx + 0.3, y + 0.1, cw - 0.5, 0.45, [(k, 18, True, DARK, 0)], anchor="m")
+        qs = [q.strip() for q in body.split("／") if q.strip()]
+        size = 15 if len(qs) <= 6 else 14
+        paras = [(f"{i + 1}.  {q}？" if not q.endswith("？") else f"{i + 1}.  {q}", size, False, DARK, 7)
+                 for i, q in enumerate(qs)]
+        runs(slide, cx + 0.3, y + 0.8, cw - 0.5, ph - 0.9, paras)
 
 
 def content(prs, page, total, section):
