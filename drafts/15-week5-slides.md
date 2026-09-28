@@ -108,9 +108,8 @@
 **畫面**
 
 - 主訊息：成功的關鍵在於結果能否外部驗證
-- 產出能被外部驗證
-- 成效能被驗證
-- 驗證的人仍在流程中
+- 圖：`assets/week5-diagrams/d07-three-conditions.png`
+
 
 **筆記**
 
@@ -129,16 +128,13 @@
 **畫面**
 
 - 主訊息：多數導入未達期待，原因大多與模型能力無關
-- 產出無法驗證：沒有外部檢查方式，檢查比原本更費力，於是多此一舉
-- 成效無法驗證：沒有定義成功，省下的時間被吸收也看不見，於是流於形式
-- 移除驗證者：拿掉確認的人，出錯時無人承接
-- 三者各自破壞了成功的一個條件
-- 圖：`assets/week5-sources/s2-rand-root-causes.png`
-- 圖：`assets/week5-sources/s2-oecd-governing-with-ai.png`
+- 圖：`assets/week5-diagrams/d08-three-failures.png`
+
 
 **筆記**
 
 - 口述：OECD 分析兩百個政府案例，多數停在試點。三種失敗各自破壞第一段的一個條件。
+- 口述：RAND 與 OECD 的截圖（s2-rand-root-causes、s2-oecd-governing-with-ai）可另放一頁或於口述帶過。
 
 **原話與來源**
 
@@ -327,10 +323,8 @@
 **畫面**
 
 - 主訊息：AI 產出直接對外，便沒有機會先經檢查
-- 交辦：成品由人檢查後才使用
-- 製作工具：上線的是測試過的程式
-- 流程指派 Agent：處理到節點，等人確認
-- 圖：`assets/week4-1-story/method-overview-workflow-agent.png`
+- 圖：`assets/week5-diagrams/d18-checkpoints.png`
+
 
 **筆記**
 
@@ -361,9 +355,8 @@
 **畫面**
 
 - 主訊息：驗證的人要在流程中，也要負荷得了
-- 內在負荷：判斷本身，由人保留
-- 外在負荷：呈現與切換，交由 Agent 預處理
-- 增生負荷：形成理解，由人保留
+- 圖：`assets/week5-diagrams/d20-cognitive-load.png`
+
 
 **筆記**
 

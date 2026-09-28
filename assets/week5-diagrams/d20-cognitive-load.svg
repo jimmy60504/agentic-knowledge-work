@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<defs><clipPath id="bar"><rect x="100" y="290" width="1400" height="170" rx="18"/></clipPath>
+</defs>
+<path d="M100,250 L100,220 L1500,220 L1500,250" stroke="#D8D2C9" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="710.0" y="160" width="180" height="60" rx="18" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<text x="800.0" y="190" font-size="30" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">總負荷</text>
+<rect clip-path="url(#bar)" x="100" y="290" width="560" height="170" fill="#A6B7BA"/>
+<text x="380.0" y="350" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">內在負荷</text>
+<text x="380.0" y="405" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">判斷本身</text>
+<rect x="660" y="290" width="380" height="170" fill="#BE8979"/>
+<text x="850.0" y="350" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">外在負荷</text>
+<text x="850.0" y="405" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">呈現與切換</text>
+<rect clip-path="url(#bar)" x="1040" y="290" width="460" height="170" fill="#F5F2EC"/>
+<text x="1270.0" y="350" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">增生負荷</text>
+<text x="1270.0" y="405" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">形成理解</text>
+<rect x="100" y="290" width="1400" height="170" rx="18" fill="none" stroke="#D8D2C9" stroke-width="3"/>
+<text x="380.0" y="515" font-size="30" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">由人保留</text>
+<text x="850.0" y="515" font-size="30" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">交給 Agent</text>
+<text x="1270.0" y="515" font-size="30" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">由人保留</text>
+<line x1="850.0" y1="555" x2="850.0" y2="655" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
+<rect x="680.0" y="665" width="340" height="100" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="850.0" y="715" font-size="36" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 預處理</text>
+<line x1="680" y1="268" x2="800" y2="268" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
+<line x1="1020" y1="268" x2="900" y2="268" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
+</svg>

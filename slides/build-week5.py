@@ -81,8 +81,9 @@ def place(slide, rels, x, y, w, h):
         pw, ph = iw * scale, ih * scale
         pic = slide.shapes.add_picture(str(path), Inches(cx0 + (cell_w - pw) / 2),
                                        Inches(y + (h - ph) / 2), Inches(pw), Inches(ph))
-        pic.line.color.rgb = GREY
-        pic.line.width = Pt(0.75)
+        if "week5-diagrams" not in rel:  # 截圖加細框，自繪圖不加
+            pic.line.color.rgb = GREY
+            pic.line.width = Pt(0.75)
 
 
 def text_height(lines, size, w):

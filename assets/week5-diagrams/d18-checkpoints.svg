@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<rect x="40" y="640" width="1520" height="176" rx="26" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/>
+<line x1="60" y1="600" x2="1540" y2="600" stroke="#D8D2C9" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 10"/>
+<text x="70" y="108.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">交辦</text>
+<rect x="372" y="60" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="497.0" y="108.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">人發起</text>
+<line x1="630" y1="108.0" x2="668" y2="108.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="676" y="60" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="801.0" y="108.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">Agent 產出</text>
+<line x1="934" y1="108.0" x2="972" y2="108.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="980" y="60" width="250" height="96" rx="18" fill="#A6B7BA" stroke="#A6B7BA" stroke-width="3"/>
+<text x="1105.0" y="108.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">人檢查</text>
+<line x1="1238" y1="108.0" x2="1276" y2="108.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1284" y="60" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1409.0" y="108.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">使用</text>
+<text x="70" y="298.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">製作工具</text>
+<rect x="372" y="250" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="497.0" y="298.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">Agent 建置工具</text>
+<line x1="630" y1="298.0" x2="668" y2="298.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="676" y="250" width="250" height="96" rx="18" fill="#A6B7BA" stroke="#A6B7BA" stroke-width="3"/>
+<text x="801.0" y="298.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試</text>
+<line x1="934" y1="298.0" x2="972" y2="298.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="980" y="250" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1105.0" y="298.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">程式上線</text>
+<line x1="1238" y1="298.0" x2="1276" y2="298.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1284" y="250" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1409.0" y="298.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">使用</text>
+<text x="70" y="488.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">直接對外</text>
+<rect x="372" y="440" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="497.0" y="488.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">外部詢問</text>
+<line x1="630" y1="488.0" x2="668" y2="488.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="676" y="440" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="801.0" y="488.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">AI 回覆</text>
+<line x1="934" y1="488.0" x2="972" y2="488.0" stroke="#BE8979" stroke-width="3" marker-end="url(#ahT)"/>
+<rect x="980" y="440" width="250" height="96" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4" stroke-dasharray="12 10"/>
+<text x="1105.0" y="488.0" font-size="30" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">無檢查點</text>
+<line x1="1238" y1="488.0" x2="1276" y2="488.0" stroke="#BE8979" stroke-width="3" marker-end="url(#ahT)"/>
+<rect x="1284" y="440" width="250" height="96" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1409.0" y="488.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">送出</text>
+<text x="70" y="728.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">流程指派 Agent</text>
+<rect x="372" y="680" width="250" height="96" rx="18" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<text x="497.0" y="728.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">外部詢問</text>
+<line x1="630" y1="728.0" x2="668" y2="728.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="676" y="680" width="250" height="96" rx="18" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<text x="801.0" y="728.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">Agent 整理草稿</text>
+<line x1="934" y1="728.0" x2="972" y2="728.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="980" y="680" width="250" height="96" rx="18" fill="#A6B7BA" stroke="#A6B7BA" stroke-width="3"/>
+<text x="1105.0" y="728.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">人確認</text>
+<line x1="1238" y1="728.0" x2="1276" y2="728.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1284" y="680" width="250" height="96" rx="18" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1409.0" y="728.0" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">回覆</text>
+</svg>
