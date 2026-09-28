@@ -5,26 +5,26 @@
 </defs>
 <rect width="1600" height="900" fill="#FFFFFF"/>
 <g transform="translate(0,28)"><rect x="455" y="150" width="700" height="210" rx="26" fill="none" stroke="#A6B7BA" stroke-width="3" stroke-dasharray="10 10"/>
-<text x="805.0" y="118" font-size="28" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">AI 之外的驗證</text>
+<text x="805.0" y="118" font-size="28" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">AI 之外的檢查與判斷</text>
 <rect x="115" y="190" width="270" height="130" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <text x="250.0" y="255.0" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 產出</text>
 <line x1="397" y1="255.0" x2="473" y2="255.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="485" y="190" width="270" height="130" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="620.0" y="255.0" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">外部驗證</text>
+<text x="620.0" y="255.0" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">外部檢查</text>
 <line x1="767" y1="255.0" x2="843" y2="255.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="855" y="190" width="270" height="130" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="990.0" y="255.0" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">人員確認</text>
+<text x="990.0" y="255.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">承擔判斷的人</text>
 <line x1="1137" y1="255.0" x2="1213" y2="255.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="1225" y="190" width="270" height="130" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <text x="1360.0" y="255.0" font-size="40" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">交付使用</text>
 <line x1="620.0" y1="360" x2="620.0" y2="460" stroke="#A6B7BA" stroke-width="3" stroke-linecap="round"/>
 <rect x="460.0" y="460" width="320" height="70" rx="35" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="3"/>
-<text x="620.0" y="495" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">產出能被外部驗證</text>
+<text x="620.0" y="495" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">不靠 AI 自己判斷</text>
 <line x1="990.0" y1="360" x2="990.0" y2="460" stroke="#A6B7BA" stroke-width="3" stroke-linecap="round"/>
 <rect x="830.0" y="460" width="320" height="70" rx="35" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="3"/>
-<text x="990.0" y="495" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">驗證的人仍在流程中</text>
+<text x="990.0" y="495" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">例外與出錯有人負責</text>
 <path d="M115,600 L115,640 L1495,640 L1495,600" stroke="#D8D2C9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <line x1="805.0" y1="640" x2="805.0" y2="680" stroke="#D8D2C9" stroke-width="4" stroke-linecap="round"/>
 <rect x="645.0" y="680" width="320" height="70" rx="35" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
-<text x="805.0" y="715" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">成效能被驗證</text>
+<text x="805.0" y="715" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">驗收標準</text>
 </g></svg>

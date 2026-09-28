@@ -29,7 +29,7 @@
 - **本週處理最前面的需求階段**：不先釐清問題，做得再快，方向也可能是錯的
 - **業務知識仍在人身上**：Agent 降低了寫規格與程式的成本，但要解決什麼，只有熟悉業務的人說得清楚
 - 圖：`assets/week4-2-story/w42-elements.png`｜上週介紹的 Story 圖三個元素：演員、工作物件、活動
-- 圖：`assets/week5-diagrams/d02-dev-stages.png`｜需求、規格、設計、實作、驗證，本週在第一格（待畫）
+- 圖：`assets/week5-diagrams/d02-dev-stages.png`｜需求、規格、設計、實作、驗證，本週在第一格
 
 **筆記**
 
@@ -69,8 +69,11 @@
 - **能力的延伸**：不會寫程式的領域專家，現在能自行製作小工具；做的人知道好的結果長什麼樣子，一試便知
 - **時間的釋放**：RD 過去無暇處理 CI/CD 與測試，現在有時間補齊；測試本身就是檢查機制
 - **共同的前提**：做的人清楚好的結果長什麼樣子
+- 圖：`assets/week5-diagrams/d04-two-empowerments.png`｜兩種賦能
 - 圖：`assets/week5-sources/s1-anthropic-teams-claude-code.png`｜Anthropic，2025-07：法務與行銷人員以 Claude Code 自建工具
+- 圖：`assets/week5-sources/s1-lenny-pm-prototyping.png`｜Lenny's Newsletter，2025-06：教過 500 多位 PM 以 AI 做雛形
 - 圖：`assets/week5-sources/s1-airbnb-test-migration.png`｜Airbnb，2025：約 3,500 個測試檔的遷移，原估一年半，六週完成
+- 圖：`assets/week5-sources/s1-devopsdays-tpe-smartnews.png`｜DevOpsDays Taipei 2025：SmartNews 以 LLM 補齊測試
 
 **筆記**
 
@@ -92,8 +95,8 @@
 - **產出在交付前經過外部檢查**：不靠模型自己判斷，可以是測試、搜尋比對、規則或人實際試用
 - **判斷與責任仍由熟悉業務的人承擔**：例外與個案有人處理，出錯有人負責，而且負荷得了
 - **做的人同時是檢查與負責的人**：領域專家自己試用，RD 有測試，也都為自己的成果負責
-- 圖：`assets/week5-diagrams/d07-three-conditions-sq.png`｜三個條件在流程中的位置（待改圖：標籤換為新名稱）
-- 圖：`assets/week5-diagrams/d08-conditions-by-case.png`｜兩個案例與三個條件的對照（待畫）
+- 圖：`assets/week5-diagrams/d07-three-conditions-sq.png`｜三個條件在流程中的位置
+- 圖：`assets/week5-diagrams/d08-conditions-by-case.png`｜兩個案例與三個條件的對照
 
 **筆記**
 
@@ -115,7 +118,8 @@
 - **不需要 AI 而多此一舉**：需求清楚，但解法過大
 - **流程未設檢查點而錯誤直接外流**：送出前沒有任何檢查
 - **完全取代人力而錯誤無人承接**：把承擔判斷的人移除
-- 圖：`assets/week5-diagrams/d08-three-failures-sq.png`｜四種失敗依軟體開發順序排列（待改圖：由三種改為四種）
+- 圖：`assets/week5-diagrams/d08-four-failures-sq.png`｜四種失敗依軟體開發順序排列
+- 圖：`assets/week5-sources/s2-oecd-governing-with-ai.png`｜OECD，2025：兩百個政府案例多停在試點
 
 **筆記**
 
@@ -136,6 +140,7 @@
 - **不需要 AI 而多此一舉**：簡單的方法就能完成，卻架上一套複雜又昂貴的 AI
 - **兩者都要先回到需求**：先知道要解決什麼、怎樣算成功，才能判斷解法是否過大
 - 圖：`assets/week5-sources/s2-uk-ai-pilots-closed.png`｜Global Government Forum，2025：英國多項 AI 試辦工具數月後關閉
+- 圖：`assets/week5-sources/s2-us-federal-pilots.png`｜The Register，2025-07：美國聯邦生成式 AI 用例多停在試辦
 - 圖：`assets/week5-sources/s2-rand-root-causes.png`｜RAND，2024：失敗根因之一是為了用技術而用技術
 - 圖：`assets/week5-sources/s2-gartner-agentic-canceled.png`｜RCR Wireless 轉述 Gartner，2025-06：許多被定位為 Agent 的用例其實不需要 Agent
 
@@ -225,7 +230,7 @@
 - **有外部依據的錯誤，交給 Agent 或分類器**：文獻是否存在可搜尋確認；特定議題可在送出前攔截
 - **內容是否正確、是否適用個案，由熟悉業務的人確認**：這部分仍難寫成固定的檢查
 - **模型自帶的防護有範圍**：只涵蓋廠商定義的高風險議題，業務上的錯誤要自行設定
-- 圖：`assets/week5-diagrams/d17-code-vs-text.png`｜程式與文字的檢查方式（待改圖：文字改為分層檢查）
+- 圖：`assets/week5-diagrams/d17-code-vs-text.png`｜程式與文字的檢查方式
 
 **筆記**
 
@@ -317,7 +322,7 @@
 - **產出在交付前經過外部檢查**：失敗是錯誤直接外流；做法是設置檢查點，文字分層檢查
 - **判斷與責任仍由熟悉業務的人承擔**：失敗是完全取代人力；做法是保留承擔判斷的人，並注意負荷
 - **另外兩件事**：不需要 AI 的，用簡單方法就好；把事情做好，初期會變慢
-- 圖：`assets/week5-diagrams/d21-recap-first-half.png`｜條件、失敗與做法的對照表（待畫）
+- 圖：`assets/week5-diagrams/d21-recap-first-half.png`｜條件、失敗與做法的對照表
 
 **筆記**
 
@@ -373,7 +378,7 @@
 - **探索者、跟隨者**：多停在一問一答；跟隨者是組織要求才用
 - **私下使用者**：深度不一定低，只是不公開
 - **被迫使用者**：為了達到數字而用，是個人層次的做做樣子
-- 圖：`assets/week5-diagrams/d24b-usage-depth.png`｜使用深度與六種類型（待畫）
+- 圖：`assets/week5-diagrams/d24b-usage-depth.png`｜使用深度與六種類型
 
 **筆記**
 
@@ -432,8 +437,8 @@
 - **不敢用**：不知道界線與責任，要講清楚可以怎麼做
 - **怕被取代**：團隊缺乏安全感，要先說定利益與保障
 - **不信任**：多為資深者，判斷最強，適合請來擔任檢查者
-- 圖：`assets/week5-sources/s4-hmrc-copilot.png`｜英國 HMRC Copilot 試驗：未使用者 46% 因資安與隱私疑慮（待截）
-- 圖：`assets/week5-sources/s4-pew-2025.png`｜Pew，2025：未使用者 45% 認為工作無法運用（待截）
+- 圖：`assets/week5-sources/s4-hmrc-copilot.png`｜英國 HMRC Copilot 試驗：未使用者 46% 因資安與隱私疑慮
+- 圖：`assets/week5-sources/s4-pew-2025.png`｜Pew，2025：未使用者 45% 認為工作無法運用
 
 **筆記**
 
@@ -515,7 +520,7 @@
 - **個人的使用是任務層次**：自己發起、自己交出
 - **組織的導入是流程層次**：工具經過核准、放進固定流程、看得到成效
 - **以用量考核，大家就灌用量**：token 用量排行榜撤除，全年預算四月底用完
-- 圖：`assets/week5-sources/s5-tokenmaxxing-fortune.png`｜Fortune，2026-05：以 token 量衡量 AI 投資報酬是錯誤的做法（待截）
+- 圖：`assets/week5-sources/s5-tokenmaxxing-fortune.png`｜HRD，2026：Amazon 員工刻意灌用量後關閉 AI 排行榜
 
 **筆記**
 
@@ -537,7 +542,7 @@
 - **AI 是放大器**：組織體質決定放大的是優點還是缺點
 - **不用同一套標準推動**：否則容易造成更多麻煩與反彈
 - 圖：`assets/week5-sources/s6-gallup-global-workplace.png`｜Gallup，State of the Global Workplace
-- 圖：`assets/week5-diagrams/d33-seven-actions.png`｜七項作為總覽，標出全署層級與單位層級（待畫）
+- 圖：`assets/week5-diagrams/d33-seven-actions.png`｜七項作為總覽，標出全署層級與單位層級
 
 **原話與來源**
 
@@ -553,7 +558,7 @@
 - **分梯次並保留學習時間**：賓州政府 175 人分五梯次導入，搭配現場教學與每週回饋
 - **依受益安排順序**：做不到的事找領域專家，沒時間做的事找資深者
 - **新人需要資深者帶領**：提供範例與檢查，也保留練習判斷的機會
-- 圖：`assets/week5-sources/s6-pa-pilot-report.png`｜賓州政府試辦報告，2025：使用者平均每週省約 8 小時（待截）
+- 圖：`assets/week5-sources/s6-pa-pilot-report.png`｜OpenAI 與賓州政府，2025-03：生成式 AI 試辦報告，使用者平均每週省約 8 小時
 - 圖：`assets/week5-diagrams/d24-judgment-benefit.png`｜有無判斷決定受益
 
 **筆記**
@@ -611,7 +616,8 @@
 - 主訊息：省下的利益與保障先說定，同仁才不必隱藏使用
 - **省下的時間歸誰**：導入前與當事人說定，例如用來把原本的工作做好
 - **工會協議的例子**：AI 不用於懲戒、導入新工具須提供訓練、優先再訓練而非裁員
-- 圖：`assets/week5-sources/s6-union-agreements.png`｜賓州與 SEIU、Bank of Ireland 與 FSU 的 AI 協議（待截）
+- 圖：`assets/week5-sources/s6-union-agreements.png`｜Partnership on AI，2026：三份工會 AI 協議，含賓州與 SEIU
+- 圖：`assets/week5-sources/s6-union-fsu.png`｜FSU，2025-03：Bank of Ireland 與金融業工會的 AI 協議
 
 **筆記**
 
@@ -712,7 +718,7 @@
 - **個人**：有人用得很兇，有人不用；不用的五類中，只有一類是真的不會
 - **組織**：同樣能力的人位置不同，差在單位；上下層目標、判斷集中與使用率考核，讓導入難以持續
 - **主管**：七項作為，除了帳號與環境，多數在主管手上
-- 圖：`assets/week5-diagrams/d42-recap-second-half.png`｜不用的原因與主管作為的對照表（待畫）
+- 圖：`assets/week5-diagrams/d42-recap-second-half.png`｜不用的原因與主管作為的對照表
 
 **筆記**
 

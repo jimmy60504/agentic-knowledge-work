@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<rect width="1000" height="1000" fill="#FFFFFF"/>
+<rect x="60" y="150" width="880" height="460" rx="20" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<rect x="60" y="150" width="880" height="90" rx="20" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<rect x="60" y="195" width="880" height="45" fill="#F5F2EC"/>
+<line x1="353" y1="150" x2="353" y2="610" stroke="#D8D2C9" stroke-width="2"/>
+<line x1="647" y1="150" x2="647" y2="610" stroke="#D8D2C9" stroke-width="2"/>
+<line x1="60" y1="240" x2="940" y2="240" stroke="#D8D2C9" stroke-width="2"/>
+<line x1="60" y1="363" x2="940" y2="363" stroke="#D8D2C9" stroke-width="2"/>
+<line x1="60" y1="487" x2="940" y2="487" stroke="#D8D2C9" stroke-width="2"/>
+<text x="206" y="195" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">條件</text>
+<text x="500" y="195" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">失敗</text>
+<text x="793" y="195" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">做法</text>
+<text x="206" y="301" font-size="25" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">驗收標準</text>
+<text x="500" y="301" font-size="24" fill="#BE8979" font-weight="500" text-anchor="middle" dominant-baseline="central">成功條件不明</text>
+<text x="793" y="301" font-size="24" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">以返工驗收</text>
+<text x="206" y="425" font-size="25" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">外部檢查</text>
+<text x="500" y="425" font-size="24" fill="#BE8979" font-weight="500" text-anchor="middle" dominant-baseline="central">錯誤直接外流</text>
+<text x="793" y="425" font-size="24" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">設置檢查點</text>
+<text x="206" y="548" font-size="25" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">承擔判斷</text>
+<text x="500" y="548" font-size="24" fill="#BE8979" font-weight="500" text-anchor="middle" dominant-baseline="central">完全取代人力</text>
+<text x="793" y="548" font-size="23" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">保留承擔判斷的人</text>
+<text x="500" y="700" font-size="24" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">不需要 AI 的，用簡單方法就好</text>
+<text x="500" y="740" font-size="24" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">把事情做好，初期會變慢</text>
+</svg>

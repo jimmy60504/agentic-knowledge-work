@@ -79,3 +79,9 @@
 - Axios 報導 Anthropic 研究：內容為另一份就業影響研究，與內部研究不同，避免混淆。
 
 未取得：Duolingo「AI 優先」反彈報導（TechCrunch 截圖逾時，連結 https://techcrunch.com/2025/08/07/the-backlash-against-duolingo-going-ai-first-didnt-even-matter/ ）；Workday〈Beyond Productivity〉頁面（截圖逾時，連結 https://www.workday.com/en-us/artificial-intelligence/research/beyond-productivity-ai-value.html ）；Klarna 回聘人力（Forbes 阻擋、CX Dive 為廣告頁，改附連結 https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/ ）；Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
+| `s4-hmrc-copilot.png` | 四 | [Evaluation report: phase 3 trial of Microsoft Copilot](https://www.gov.uk/government/publications/evaluation-report-phase-3-trial-of-microsoft-copilot)（GOV.UK，HMRC） | 不敢用：未使用者 46% 因資安與隱私疑慮 |
+| `s4-pew-2025.png` | 四 | [About 1 in 5 U.S. workers now use AI in their job](https://www.pewresearch.org/short-reads/2025/10/06/about-1-in-5-us-workers-now-use-ai-in-their-job-up-since-last-year/)（Pew，2025-10） | 不會用：未使用者 45% 認為工作無法運用 |
+| `s5-tokenmaxxing-fortune.png` | 五 | [Amazon shuts down AI leaderboard after 'tokenmaxxing'](https://www.hcamag.com/us/specialization/hr-technology/amazon-shuts-down-ai-leaderboard-after-tokenmaxxing/577189)（HRD） | Fortune 原頁截圖全白，改截 HRD，檔名沿用 |
+| `s6-pa-pilot-report.png` | 六 | [Lessons from Pennsylvania's Generative AI Pilot with ChatGPT](https://www.pa.gov/content/dam/copapwp-pagov/en/oa/documents/programs/information-technology/documents/openai-pilot-report-2025.pdf)（PDF 封面，2025-03） | 新聞稿頁截圖全白，改用報告封面 |
+| `s6-union-agreements.png` | 六 | [These 3 Agreements Secured AI Protections for 30,000 Union Workers](https://partnershiponai.org/these-3-agreements-secured-ai-protections-for-30000-union-workers/)（Partnership on AI） | 工會協議 |
+| `s6-union-fsu.png` | 六 | [FSU and Bank of Ireland launch AI Agreement](https://www.fsunion.org/latest/news/fsu-and-bank-of-ireland-launch-ai-agreement/)（FSU，2025-03） | 工會協議 |

@@ -27,3 +27,10 @@
 | `d18-checkpoints-sq.svg` / `.png` | 第 18 頁 | d18 的方形版：四種流程改為 2×2 排列，流程指派 Agent 置於右下 |
 | `d20-cognitive-load-sq.svg` / `.png` | 第 20 頁 | d20 的方形版：負荷改為直向堆疊長條，保留與交付標示置於右側 |
 | `d-users-on-readiness-matrix-sq.svg` / `.png` | 未定 | 第四段各類使用者與不使用者放在 Microsoft WTI 2026 個人能力 × 組織準備度矩陣上的位置，以及主管作為的移動方向；位置為課程示意，非報告資料（2026-09-29 草擬） |
+| `d02-dev-stages.svg` / `.png` | 第 2 頁 | 需求、規格、設計、實作、驗證五格，標出本週在需求階段 |
+| `d08-four-failures-sq.svg` / `.png` | 第 6 頁 | 工作層面的四種失敗 |
+| `d08-conditions-by-case.svg` / `.png` | 第 5 頁 | 領域專家與 RD 如何符合三個條件 |
+| `d24b-usage-depth.svg` / `.png` | 使用的程度 | 使用深度三層與各類使用者 |
+| `d33-seven-actions.svg` / `.png` | 主管的影響 | 七項作為，區分全署層級與單位層級 |
+| `d21-recap-first-half.svg` / `.png` | 上半場回顧 | 條件、失敗與做法的對照 |
+| `d42-recap-second-half.svg` / `.png` | 下半場回顧 | 不用的原因與主管作為的對照 |

@@ -129,7 +129,7 @@ CAP_H = 0.42  # 圖說保留高度
 
 
 def visual_boxes(imgs, x, y, w, h):
-    """右側視覺區：一張靠右；兩張並排；三張為上大下二小。回傳 [(rel, cap, box)] 與最左緣。"""
+    """右側視覺區：一張靠右；兩張並排；三張以上為上方一張大圖、其餘排成下方一列。回傳 [(rel, cap, box)] 與最左緣。"""
     gap = 0.25
     has_cap = any(c for _, c in imgs)
     ch = CAP_H if has_cap else 0
@@ -148,10 +148,12 @@ def visual_boxes(imgs, x, y, w, h):
         for i, (r, c) in enumerate(imgs):
             cell(r, c, x + i * (cw + gap), y, cw, h, True)
     else:
-        top_h = h * 0.56
+        # 三張以上：上方一張大圖，其餘排成下方一列（素材先全部放上，版面之後再調）
+        rest = imgs[1:]
+        top_h = h * (0.56 if len(rest) <= 2 else 0.5)
         cell(*imgs[0], x, y, w, top_h, False)
-        cw = (w - gap) / 2
-        for i, (r, c) in enumerate(imgs[1:3]):
+        cw = (w - gap * (len(rest) - 1)) / len(rest)
+        for i, (r, c) in enumerate(rest):
             cell(r, c, x + i * (cw + gap), y + top_h + gap, cw, h - top_h - gap, True)
     left = min(b[0] for _, _, b in out)
     return out, left
