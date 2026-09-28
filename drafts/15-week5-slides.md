@@ -60,6 +60,9 @@
 - 主訊息：以前無法完成的，現在能完成；以前無暇處理的，現在有時間處理
 - 能力的延伸：補上原本不會的操作
 - 時間的釋放：把原本該做的事做好
+- 前提：做的人清楚好的結果長什麼樣子
+- 圖：`assets/week5-diagrams/d04-two-empowerments.png`
+
 
 **筆記**
 
@@ -108,7 +111,10 @@
 **畫面**
 
 - 主訊息：成功的關鍵在於結果能否外部驗證
-- 圖：`assets/week5-diagrams/d07-three-conditions.png`
+- 產出能被外部驗證：有測試，或由熟悉業務的人自行檢查
+- 成效能被驗證：事先知道要解決什麼、怎樣算成功
+- 驗證的人仍在流程中：成果經確認後才使用
+- 圖：`assets/week5-diagrams/d07-three-conditions-sq.png`
 
 
 **筆記**
@@ -128,7 +134,10 @@
 **畫面**
 
 - 主訊息：多數導入未達期待，原因大多與模型能力無關
-- 圖：`assets/week5-diagrams/d08-three-failures.png`
+- 產出無法驗證：沒有外部檢查方式，檢查比原本更費力，於是多此一舉
+- 成效無法驗證：沒有定義成功，省下的時間被吸收也看不見，於是流於形式
+- 移除驗證者：拿掉確認的人，出錯時無人承接
+- 圖：`assets/week5-diagrams/d08-three-failures-sq.png`
 
 
 **筆記**
@@ -308,6 +317,8 @@
 - 程式：由測試判斷，而非由 LLM 自評
 - 文字：文獻是否存在、內容是否正確，須理解內容才能判斷
 - 寫程式的成功案例不能直接類推到文書工作
+- 圖：`assets/week5-diagrams/d17-code-vs-text.png`
+
 
 **筆記**
 
@@ -323,7 +334,10 @@
 **畫面**
 
 - 主訊息：AI 產出直接對外，便沒有機會先經檢查
-- 圖：`assets/week5-diagrams/d18-checkpoints.png`
+- 交辦與製作工具都有檢查點：人檢查成品，或以測試把關
+- 直接對外的聊天機器人沒有檢查點
+- 流程指派 Agent 處理到節點，等人確認後才送出
+- 圖：`assets/week5-diagrams/d18-checkpoints-sq.png`
 
 
 **筆記**
@@ -355,7 +369,10 @@
 **畫面**
 
 - 主訊息：驗證的人要在流程中，也要負荷得了
-- 圖：`assets/week5-diagrams/d20-cognitive-load.png`
+- 內在負荷是判斷本身，由人保留
+- 外在負荷來自呈現與切換，交給 Agent 預處理
+- 增生負荷用來形成理解，由人保留
+- 圖：`assets/week5-diagrams/d20-cognitive-load-sq.png`
 
 
 **筆記**
@@ -425,10 +442,12 @@
 **畫面**
 
 - 主訊息：新人尚未累積判斷，仍需資深者帶領
-- PM：清楚需求，缺的是操作
-- RD：已有判斷，缺的是時間
-- 新人：尚未累積判斷，看不出結果對錯
+- PM 清楚需求，缺的是操作
+- RD 已有判斷，缺的是時間
+- 新人尚未累積判斷，看不出結果對錯
 - ADHD、讀寫障礙與非母語同仁受益最明顯
+- 圖：`assets/week5-diagrams/d24-judgment-benefit.png`
+
 
 **原話與來源**
 
@@ -514,7 +533,10 @@
 - 同仁送出前先照清單檢查
 - 被退回之處再補入清單
 - 同仁與主管各有版本，不必強制同步
+- 手術安全檢查清單使併發症由 11.0% 降至 7.0%
+- 圖：`assets/week5-diagrams/d29-checklist-loop.png`
 - 圖：`assets/week5-sources/s5b-harvard-checklist.png`
+
 
 **筆記**
 

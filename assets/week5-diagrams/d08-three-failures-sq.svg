@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<g transform="translate(0,70)">
+<rect x="20" y="40" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="140.0" y="85.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 產出</text>
+<line x1="140.0" y1="137" x2="140.0" y2="163" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="20" y="170" width="240" height="90" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4" stroke-dasharray="12 10"/>
+<text x="140.0" y="215.0" font-size="34" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">外部驗證</text>
+<circle cx="254" cy="176" r="22" fill="#BE8979"/>
+<line x1="245" y1="167" x2="263" y2="185" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+<line x1="263" y1="167" x2="245" y2="185" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+<line x1="140.0" y1="267" x2="140.0" y2="293" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="20" y="300" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="140.0" y="345.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">人員確認</text>
+<line x1="140.0" y1="397" x2="140.0" y2="423" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="20" y="430" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="140.0" y="475.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">交付使用</text>
+<path d="M268,40 L290,40 L290,520 L268,520" stroke="#D8D2C9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="125.0" y1="610" x2="185.0" y2="610" stroke="#BE8979" stroke-width="4" stroke-linecap="round"/>
+<text x="155.0" y="660" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">產出無法驗證</text>
+<text x="155.0" y="718" font-size="30" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">多此一舉</text>
+<line x1="323" y1="20" x2="323" y2="720" stroke="#D8D2C9" stroke-width="2" stroke-linecap="round"/>
+<rect x="345" y="40" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="465.0" y="85.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 產出</text>
+<line x1="465.0" y1="137" x2="465.0" y2="163" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="345" y="170" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="465.0" y="215.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">外部驗證</text>
+<line x1="465.0" y1="267" x2="465.0" y2="293" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="345" y="300" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="465.0" y="345.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">人員確認</text>
+<line x1="465.0" y1="397" x2="465.0" y2="423" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="345" y="430" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="465.0" y="475.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">交付使用</text>
+<path d="M593,40 L615,40 L615,260.0" stroke="#BE8979" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M615,300.0 L615,520 L593,520" stroke="#BE8979" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M615,260.0 l-14,12 l24,12 l-10,8" stroke="#BE8979" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M615,300.0 l14,-12 l-24,-12 l10,-8" stroke="#BE8979" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="450.0" y1="610" x2="510.0" y2="610" stroke="#BE8979" stroke-width="4" stroke-linecap="round"/>
+<text x="480.0" y="660" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">成效無法驗證</text>
+<text x="480.0" y="718" font-size="30" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">流於形式</text>
+<line x1="648" y1="20" x2="648" y2="720" stroke="#D8D2C9" stroke-width="2" stroke-linecap="round"/>
+<rect x="670" y="40" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="790.0" y="85.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 產出</text>
+<line x1="790.0" y1="137" x2="790.0" y2="163" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="670" y="170" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="790.0" y="215.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">外部驗證</text>
+<line x1="790.0" y1="267" x2="790.0" y2="293" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="670" y="300" width="240" height="90" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4" stroke-dasharray="12 10"/>
+<line x1="790.0" y1="397" x2="790.0" y2="423" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="670" y="430" width="240" height="90" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="790.0" y="475.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">交付使用</text>
+<path d="M918,40 L940,40 L940,520 L918,520" stroke="#D8D2C9" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="775.0" y1="610" x2="835.0" y2="610" stroke="#BE8979" stroke-width="4" stroke-linecap="round"/>
+<text x="805.0" y="660" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">移除驗證者</text>
+<text x="805.0" y="718" font-size="30" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">錯誤無人承接</text>
+</g></svg>

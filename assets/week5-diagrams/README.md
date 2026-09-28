@@ -13,3 +13,16 @@
 - 色票：文字 #2A2623、次要文字 #6B6560、陶土紅 #BE8979（僅標示失敗或關鍵處）、灰藍 #A6B7BA、暖灰 #D8D2C9、象牙白 #F5F2EC。
 - 字型：PingFang TC, Hiragino Sans GB, sans-serif。
 - 輸出 PNG：`rsvg-convert -w 1920 檔名.svg -o 檔名.png`
+
+以下四張為方形圖（viewBox 0 0 1000 1000，透明背景，置於投影片右欄；PNG 以 `rsvg-convert -w 1400` 輸出）：
+
+| 檔案 | 投影片 | 內容 |
+|---|---|---|
+| `d04-two-empowerments.svg` / `.png` | 第 4 頁 | 兩種賦能：能力的延伸（補上操作）與時間的釋放（補上時間），共同前提為清楚好的結果，方形 |
+| `d17-code-vs-text.svg` / `.png` | 第 17 頁 | 程式與文字：程式產出由測試判斷，文字產出難以寫成測試、須由人理解內容判斷，方形 |
+| `d24-judgment-benefit.svg` / `.png` | 第 24 頁 | 有無判斷決定受益：PM 補上操作、RD 釋放時間、新人欠缺判斷仍需資深者帶領，方形 |
+| `d29-checklist-loop.svg` / `.png` | 第 29 頁 | 檢查清單的循環：送出前檢查、主管審閱、被退回之處、補入清單，同仁與主管兩份清單不必同步，方形 |
+| `d07-three-conditions-sq.svg` / `.png` | 第 7 頁 | d07 的方形版：流程改為由上而下，條件標籤置於左側，成效驗證以右側括號涵蓋整段流程 |
+| `d08-three-failures-sq.svg` / `.png` | 第 8 頁 | d08 的方形版：三種斷點改為三欄直向流程，斷點名稱置於各欄下方 |
+| `d18-checkpoints-sq.svg` / `.png` | 第 18 頁 | d18 的方形版：四種流程改為 2×2 排列，流程指派 Agent 置於右下 |
+| `d20-cognitive-load-sq.svg` / `.png` | 第 20 頁 | d20 的方形版：負荷改為直向堆疊長條，保留與交付標示置於右側 |

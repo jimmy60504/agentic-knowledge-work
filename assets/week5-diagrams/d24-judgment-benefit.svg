@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect x="40" y="40" width="920" height="240" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="140" y="160.0" font-size="46" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">PM</text>
+<circle cx="290" cy="118.0" r="20" fill="#A6B7BA"/><path d="M281,119.0 L288,126.0 L300,111.0" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="325" y="118.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">判斷</text>
+<circle cx="290" cy="202.0" r="18" fill="#FFFFFF" stroke="#6B6560" stroke-width="3"/>
+<text x="325" y="202.0" font-size="36" fill="#6B6560" font-weight="500" text-anchor="start" dominant-baseline="central">操作</text>
+<line x1="470" y1="160.0" x2="560" y2="160.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="575" y="100.0" width="355" height="120" rx="18" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="4"/>
+<text x="752.5" y="160.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">AI 補上操作</text>
+<rect x="40" y="330" width="920" height="240" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="140" y="450.0" font-size="46" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">RD</text>
+<circle cx="290" cy="408.0" r="20" fill="#A6B7BA"/><path d="M281,409.0 L288,416.0 L300,401.0" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="325" y="408.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">判斷</text>
+<circle cx="290" cy="492.0" r="18" fill="#FFFFFF" stroke="#6B6560" stroke-width="3"/>
+<text x="325" y="492.0" font-size="36" fill="#6B6560" font-weight="500" text-anchor="start" dominant-baseline="central">時間</text>
+<line x1="470" y1="450.0" x2="560" y2="450.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="575" y="390.0" width="355" height="120" rx="18" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="4"/>
+<text x="752.5" y="450.0" font-size="36" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">AI 釋放時間</text>
+<rect x="40" y="620" width="920" height="240" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="140" y="740.0" font-size="46" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">新人</text>
+<circle cx="290" cy="740.0" r="18" fill="#FFFFFF" stroke="#6B6560" stroke-width="3"/>
+<text x="325" y="740.0" font-size="36" fill="#6B6560" font-weight="500" text-anchor="start" dominant-baseline="central">判斷</text>
+<line x1="470" y1="740.0" x2="560" y2="740.0" stroke="#BE8979" stroke-width="3" marker-end="url(#ahT)"/>
+<rect x="575" y="680.0" width="355" height="120" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="752.5" y="740.0" font-size="36" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">仍需資深者帶領</text>
+<circle cx="365" cy="945" r="20" fill="#A6B7BA"/><path d="M356,946 L363,953 L375,938" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="398" y="945" font-size="28" fill="#6B6560" font-weight="500" text-anchor="start" dominant-baseline="central">具備</text>
+<circle cx="560" cy="945" r="18" fill="#FFFFFF" stroke="#6B6560" stroke-width="3"/>
+<text x="593" y="945" font-size="28" fill="#6B6560" font-weight="500" text-anchor="start" dominant-baseline="central">欠缺</text>
+</svg>

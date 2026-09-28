@@ -99,41 +99,85 @@ def header(slide, title):
     rect(slide, M, 1.18, 1.2, 0.05, fill=ACCENT)
 
 
+def fit_box(rel, x, y, w, h):
+    """回傳圖片等比縮放後的實際位置 (x, y, w, h)；檔案不存在時回傳整個框。"""
+    path = ROOT / rel
+    if not path.exists():
+        return x, y, w, h
+    iw, ih = Image.open(path).size
+    scale = min(w / iw, h / ih)
+    pw, ph = iw * scale, ih * scale
+    return x + (w - pw), y + (h - ph) / 2, pw, ph  # 靠右對齊，左側留給文字
+
+
+def pic_at(slide, rel, box):
+    x, y, w, h = box
+    path = ROOT / rel
+    if not path.exists():
+        placeholder(slide, x, y, w, h, rel)
+        return
+    pic = slide.shapes.add_picture(str(path), Inches(x), Inches(y), Inches(w), Inches(h))
+    if "week5-diagrams" not in rel:
+        pic.line.color.rgb = GREY
+        pic.line.width = Pt(0.75)
+
+
+def visual_boxes(imgs, x, y, w, h):
+    """右側視覺區的各圖位置：一張靠右；兩張上下；三張為上大下二小。回傳 [(rel, box)] 與最左緣。"""
+    gap = 0.25
+    out = []
+    if len(imgs) == 1:
+        out.append((imgs[0], fit_box(imgs[0], x, y, w, h)))
+    elif len(imgs) == 2:  # 左右並排，各自置中於半格
+        cw = (w - gap) / 2
+        for i, r in enumerate(imgs):
+            bx, by, bw, bh = fit_box(r, x + i * (cw + gap), y, cw, h)
+            out.append((r, (x + i * (cw + gap) + (cw - bw) / 2, by, bw, bh)))
+    else:
+        top_h = h * 0.56
+        out.append((imgs[0], fit_box(imgs[0], x, y, w, top_h)))
+        cw = (w - gap) / 2
+        for i, r in enumerate(imgs[1:3]):
+            bx, by, bw, bh = fit_box(r, x + i * (cw + gap), y + top_h + gap, cw, h - top_h - gap)
+            # 下排兩張各自置中於半格，不靠右
+            out.append((r, (x + i * (cw + gap) + (cw - bw) / 2, by, bw, bh)))
+    left = min(b[0] for _, b in out)
+    return out, left
+
+
 def content(prs, page, total):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     rect(s, 0, 0, W, H, fill=WHITE)
-    header(s, page["title"])
     imgs = images_of(page)
     lead = [v for k, v in page["blocks"] if k == "lead"]
     bullets = [v for k, v in page["blocks"] if k in ("bullet", "num")]
-    avail = W - 2 * M
-    lead_h = text_height(lead, 22, avail) if lead else 0
-    bsize = 18 if len(bullets) <= 4 else 16
-    body_h = text_height(bullets, bsize, avail) if bullets else 0
-    top = 1.5
-    below_room = H - 0.7 - (top + lead_h + 0.2 + body_h + 0.3)
-    if imgs and below_room < 2.2:
-        # 左文右圖
-        col = avail * 0.46
-        lead_h = text_height(lead, 20, col) if lead else 0
-        y = top
-        if lead:
-            textbox(s, M, y, col, lead_h, lead, size=20, bold=True)
-            y += lead_h + 0.2
-        if bullets:
-            textbox(s, M, y, col, text_height(bullets, 15, col) + 0.2, bullets, size=15, bullet=True)
-        place(s, imgs, M + col + 0.3, top, avail - col - 0.3, H - top - 0.75)
-    else:
-        y = top
-        if lead:
-            textbox(s, M, y, avail, lead_h, lead, size=22, bold=True)
-            y += lead_h + 0.2
-        if bullets:
-            textbox(s, M, y, avail, body_h + 0.2, bullets, size=bsize, bullet=True)
-            y += body_h + 0.3
-        if imgs:
-            place(s, imgs, M, y, avail, H - 0.75 - y)
-    textbox(s, W - M - 1.2, H - 0.5, 1.2, 0.35, [f"{page['n']} / {total}"], size=11, color=MUTED, align="c")
+    full = W - 2 * M
+    # 標題與主訊息橫跨全寬
+    textbox(s, M, 0.5, full, 0.8, [page["title"]], size=26, bold=True, color=DARK)
+    rect(s, M, 1.28, 1.0, 0.05, fill=ACCENT)
+    y = 1.55
+    if lead:
+        ls = 22
+        lh = text_height(lead, ls, full)
+        textbox(s, M, y, full, lh, lead, size=ls, bold=True)
+        y += lh + 0.35
+    col = full
+    if imgs:
+        vx = W * 0.44
+        boxes, left = visual_boxes(imgs, vx, y, W - M - vx, H - 0.55 - y)
+        for rel, box in boxes:
+            pic_at(s, rel, box)
+        col = left - 0.35 - M  # 條列延伸到圖片實際左緣
+    if bullets:
+        bs = 17 if imgs else 20
+        if imgs and len(bullets) > 4:
+            bs = 16
+        bh = text_height(bullets, bs, col) + 0.12 * len(bullets)
+        textbox(s, M, y, col, bh + 0.2, bullets, size=bs, bullet=True, spacing=10)
+        y += bh + 0.3
+    if y > H - 0.5:
+        print(f"  [溢出警告] 第 {page['n']} 頁「{page['title']}」文字估計高度到 {y:.1f} in")
+    textbox(s, M, H - 0.5, 1.2, 0.35, [f"{page['n']} / {total}"], size=11, color=MUTED)
     notes(s, page["notes"])
 
 
