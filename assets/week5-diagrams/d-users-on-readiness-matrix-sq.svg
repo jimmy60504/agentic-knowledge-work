@@ -4,48 +4,38 @@
 <marker id="ahG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
 </defs>
 <rect width="1000" height="1000" fill="#FFFFFF"/>
-<!-- plot area -->
 <rect x="130" y="70" width="820" height="800" fill="#FBFAF7" stroke="#D8D2C9" stroke-width="2"/>
 <line x1="540" y1="70" x2="540" y2="870" stroke="#D8D2C9" stroke-width="2" stroke-dasharray="6 8"/>
 <line x1="130" y1="470" x2="950" y2="470" stroke="#D8D2C9" stroke-width="2" stroke-dasharray="6 8"/>
-<ellipse cx="560" cy="480" rx="190" ry="120" fill="none" stroke="#A6B7BA" stroke-width="2" stroke-dasharray="10 8"/>
-<!-- quadrant names (WTI 2026) -->
+<ellipse cx="540" cy="470" rx="190" ry="120" fill="none" stroke="#A6B7BA" stroke-width="2" stroke-dasharray="10 8"/>
 <text x="145" y="98" font-size="21" fill="#6B6560" font-weight="600">能力受阻 Blocked agency 10%</text>
 <text x="935" y="98" font-size="21" fill="#6B6560" font-weight="600" text-anchor="end">前沿 Frontier 19%</text>
 <text x="145" y="856" font-size="21" fill="#6B6560" font-weight="600">停滯 Stalled 16%</text>
 <text x="935" y="856" font-size="21" fill="#6B6560" font-weight="600" text-anchor="end">閒置的條件 Unclaimed capacity 5%</text>
-<text x="560" y="592" font-size="19" fill="#6B6560" text-anchor="middle">發展中 Emergent 50%</text>
-<!-- axes -->
+<text x="540" y="410" font-size="19" fill="#6B6560" text-anchor="middle">發展中 Emergent 50%</text>
 <line x1="95" y1="860" x2="95" y2="85" stroke="#6B6560" stroke-width="3" marker-end="url(#ahG)"/>
 <text x="70" y="470" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" transform="rotate(-90 70 470)">個人的 AI 能力（第四段）</text>
 <line x1="140" y1="905" x2="940" y2="905" stroke="#6B6560" stroke-width="3" marker-end="url(#ahG)"/>
 <text x="540" y="950" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle">所在單位的準備度：主管支持、團隊文化（第五段）</text>
-<!-- users: solid pills -->
 <g font-size="24" font-weight="600" text-anchor="middle">
-<rect x="735" y="130" width="170" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="820" y="166" fill="#2A2623">推廣者</text>
-<rect x="615" y="215" width="190" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="710" y="251" fill="#2A2623">深度使用者</text>
-<rect x="175" y="170" width="250" height="54" rx="27" fill="#F5F2EC" stroke="#BE8979" stroke-width="3"/><text x="300" y="206" fill="#2A2623">私下的深度使用者</text>
-<rect x="470" y="420" width="170" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="555" y="456" fill="#2A2623">探索者</text>
-<rect x="690" y="560" width="170" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="775" y="596" fill="#2A2623">跟隨者</text>
-<rect x="710" y="690" width="210" height="54" rx="27" fill="#F5F2EC" stroke="#BE8979" stroke-width="3"/><text x="815" y="726" fill="#2A2623">被迫使用者</text>
+<rect x="747" y="123" width="160" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="827" y="159" fill="#2A2623">推廣者</text>
+<rect x="609" y="203" width="190" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="704" y="239" fill="#2A2623">深度使用者</text>
+<rect x="169" y="243" width="250" height="54" rx="27" fill="#F5F2EC" stroke="#BE8979" stroke-width="3"/><text x="294" y="279" fill="#2A2623">私下的深度使用者</text>
+<text x="294" y="320" font-size="17" font-weight="400" fill="#6B6560">會用，但所在單位讓他不敢公開</text>
+<rect x="460" y="443" width="160" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="540" y="479" fill="#2A2623">探索者</text>
+<rect x="640" y="539" width="160" height="54" rx="27" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="3"/><text x="720" y="575" fill="#2A2623">跟隨者</text>
+<rect x="630" y="685" width="200" height="54" rx="27" fill="#F5F2EC" stroke="#BE8979" stroke-width="3"/><text x="730" y="721" fill="#2A2623">被迫使用者</text>
+<text x="730" y="762" font-size="17" font-weight="400" fill="#6B6560">考核逼出的使用，只停在數字</text>
+<rect x="173" y="403" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="253" y="439" fill="#6B6560">不敢用</text>
+<rect x="150" y="483" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="230" y="519" fill="#6B6560">不能用</text>
+<rect x="420" y="571" width="250" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="545" y="607" fill="#6B6560">不想用：不信任</text>
+<text x="545" y="648" font-size="17" font-weight="400" fill="#6B6560">縱軸只量 AI 能力，不含業務判斷</text>
+<rect x="155" y="645" width="250" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="280" y="681" fill="#6B6560">不想用：怕被取代</text>
+<rect x="419" y="763" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="499" y="799" fill="#6B6560">不會用</text>
 </g>
-<!-- non-users: dashed pills -->
-<g font-size="24" font-weight="600" text-anchor="middle">
-<rect x="175" y="360" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="255" y="396" fill="#6B6560">不敢用</text>
-<rect x="175" y="560" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="255" y="596" fill="#6B6560">不能用</text>
-<rect x="200" y="760" width="160" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="280" y="796" fill="#6B6560">不會用</text>
-<rect x="350" y="645" width="250" height="54" rx="27" fill="#FFFFFF" stroke="#6B6560" stroke-width="2" stroke-dasharray="8 6"/><text x="475" y="681" fill="#6B6560">不想用（不信任）</text>
-</g>
-<!-- notes -->
-<g font-size="17" fill="#6B6560">
-<text x="300" y="248" text-anchor="middle">會用，但組織看不到</text>
-<text x="815" y="768" text-anchor="middle">考核逼出的使用，只停在數字</text>
-<text x="475" y="721" text-anchor="middle">多為資深者，適合擔任檢查者</text>
-</g>
-<!-- arrows: 主管的作為 -->
-<path d="M430,197 C500,190 560,215 608,238" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
-<text x="515" y="170" font-size="20" fill="#BE8979" font-weight="600" text-anchor="middle">建立環境與誘因</text>
-<path d="M775,555 L775,285" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
-<text x="790" y="420" font-size="20" fill="#BE8979" font-weight="600">教會挑任務</text>
-<text x="790" y="446" font-size="20" fill="#BE8979" font-weight="600">與判斷</text>
+<path d="M420,262 C500,250 560,245 606,236" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
+<text x="500" y="222" font-size="20" fill="#BE8979" font-weight="600" text-anchor="middle">建立環境與誘因</text>
+<path d="M740,537 L740,262" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahT)"/>
+<text x="755" y="380" font-size="20" fill="#BE8979" font-weight="600">教會挑任務</text>
+<text x="755" y="406" font-size="20" fill="#BE8979" font-weight="600">與判斷</text>
 </svg>
