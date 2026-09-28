@@ -6,6 +6,8 @@
 
 檔名前綴 s6 為早期命名，對應草稿第七步「條件」；草稿第六步「對象」目前無截圖。
 
+2026-09-28 案例重新分配：澳洲聯邦銀行、荷蘭育兒津貼已自草稿刪除（截圖保留供查核）；workslop 移至第三段，丹麥研究與 METR 2026 移至第五段評估成效，KPMG 移至第四段。
+
 ## 篩選原則（2026-09-28 使用者要求）
 
 保留 agent 大量使用後仍成立的結論。依賴工具能力的結論（變快多少、哪類任務做得差、錯誤率）以 2023 至 2024 年聊天工具量得，已刪除；依賴人與組織的結論（問題定義、時間紅利、考核與動機、主管）保留；agent 時代的證據補上。
@@ -52,6 +54,7 @@
 | `s4-deci-koestner-ryan-1999.png` | 四 | [Deci、Koestner、Ryan](https://www.selfdeterminationtheory.org/SDT/documents/2001_DeciKoestnerRyan.pdf)（PDF） | 獎勵削弱內在動機 |
 | `s4b-dora-2025.png` | 四（評估） | [DORA Research: 2025](https://dora.dev/dora-report-2025/)（Google Cloud DORA） | AI 是放大器、返工率；頁面有繁體中文摘要版可供學員閱讀 |
 | `s4b-oecd-dgo-2026.png` | 四（評估） | [Digital Government Outlook 2026](https://www.oecd.org/en/publications/digital-government-outlook_0496b2bc-en/)（OECD，2026-06-15） | 政府 AI 影響評估最落後 |
+| `s5b-harvard-checklist.png` | 五（清單） | [Surgical safety checklist drops deaths and complications by more than one-third](https://news.harvard.edu/gazette/story/2009/01/surgical-safety-checklist-drops-deaths-and-complications-by-more-than-one-third/)（Harvard Gazette，2009） | 檢查清單的實證；原始論文 Haynes 等 NEJM 2009 |
 | `s6-singapore-pair.png` | 七 | [Pair](https://www.tech.gov.sg/products-and-services/for-government-agencies/productivity-and-marketing/pair/)（GovTech） | 政府提供環境；有 cookie 框 |
 | `s6-uk-copilot-statement.png` | 七 | [AI in Government: Cross Government Experiment Report](https://questions-statements.parliament.uk/written-statements/detail/2025-06-02/hlws667)（英國國會） | 政府提供環境；有 cookie 框 |
 | `s6-gsa-onegov.png` | 七 | [GSA OneGov deal with Anthropic](https://www.gsa.gov/about-gsa/newsroom/news-releases/gsa-strikes-onegov-deal-with-anthropic-08122025)（GSA） | 集中採購 |
@@ -70,4 +73,4 @@
 - iThome 2025 CIO 大調查：資料為 2025 年，早於 2026 年 4、5 月 agent 產出品質明顯提升的時間點，屬能力限制類的負面結論，已過時（使用者 2026-09-28）。
 - Axios 報導 Anthropic 研究：內容為另一份就業影響研究，與內部研究不同，避免混淆。
 
-未取得：Workday〈Beyond Productivity〉頁面（截圖逾時，連結 https://www.workday.com/en-us/artificial-intelligence/research/beyond-productivity-ai-value.html ）；Klarna 回聘人力（Forbes 阻擋、CX Dive 為廣告頁，改附連結 https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/ ）；Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
+未取得：Duolingo「AI 優先」反彈報導（TechCrunch 截圖逾時，連結 https://techcrunch.com/2025/08/07/the-backlash-against-duolingo-going-ai-first-didnt-even-matter/ ）；Workday〈Beyond Productivity〉頁面（截圖逾時，連結 https://www.workday.com/en-us/artificial-intelligence/research/beyond-productivity-ai-value.html ）；Klarna 回聘人力（Forbes 阻擋、CX Dive 為廣告頁，改附連結 https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/ ）；Lyytinen 與 Hirschheim 1987（ResearchGate 阻擋）。
