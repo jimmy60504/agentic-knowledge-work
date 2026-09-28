@@ -4,65 +4,74 @@
 <marker id="ahT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
 </defs>
 <rect width="1000" height="1000" fill="#FFFFFF"/>
-<line x1="500" y1="30" x2="500" y2="970" stroke="#D8D2C9" stroke-width="2" stroke-dasharray="6 8"/>
-<line x1="30" y1="500" x2="970" y2="500" stroke="#D8D2C9" stroke-width="2" stroke-dasharray="6 8"/>
 
-<g transform="translate(40,40)">
-<rect x="15" y="30" width="110" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="70" y="65" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent</text>
-<text x="70" y="65" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central" dy="26">產出</text>
-<line x1="125" y1="65" x2="163" y2="65" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="165" y="30" width="110" height="70" rx="16" fill="#FFFFFF" stroke="#BE8979" stroke-width="4" stroke-dasharray="10 8"/>
-<text x="220" y="65" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">驗收</text>
-<text x="220" y="65" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central" dy="26">標準</text>
-<circle cx="277" cy="26" r="18" fill="#BE8979"/>
-<text x="277" y="27" font-size="22" fill="#FFFFFF" font-weight="700" text-anchor="middle" dominant-baseline="central">？</text>
-<line x1="275" y1="65" x2="313" y2="65" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="315" y="30" width="110" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="370" y="65" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">交付使用</text>
-<text x="220" y="220" font-size="30" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">成功條件不明</text>
-<text x="220" y="262" font-size="21" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">沒有驗收標準，流於形式</text>
+<!-- 左側：開發順序 -->
+<line x1="40" y1="70" x2="40" y2="930" stroke="#D8D2C9" stroke-width="3" marker-end="url(#ah)"/>
+<text x="22" y="500" font-size="20" fill="#6B6560" text-anchor="middle" transform="rotate(-90 22 500)">軟體開發的順序</text>
+
+<!-- 列分隔 -->
+<g stroke="#D8D2C9" stroke-width="2" stroke-dasharray="6 8">
+<line x1="70" y1="285" x2="975" y2="285"/>
+<line x1="70" y1="505" x2="975" y2="505"/>
+<line x1="70" y1="725" x2="975" y2="725"/>
 </g>
 
-<g transform="translate(520,40)">
-<rect x="20" y="150" width="150" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="95" y="185" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">簡單問題</text>
-<line x1="170" y1="185" x2="222" y2="185" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="230" y="40" width="190" height="290" rx="20" fill="#F5F2EC" stroke="#BE8979" stroke-width="4"/>
-<text x="325" y="185" font-size="72" fill="#BE8979" font-weight="700" text-anchor="middle" dominant-baseline="central">AI</text>
-<text x="220" y="380" font-size="30" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">不需要 AI</text>
-<text x="220" y="422" font-size="21" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">簡單方法就夠，多此一舉</text>
+<!-- ===== 1 成功條件不明：定義需求 ===== -->
+<text x="75" y="120" font-size="19" fill="#6B6560">定義需求</text>
+<text x="75" y="160" font-size="30" fill="#BE8979" font-weight="700">流於形式</text>
+<text x="75" y="195" font-size="19" fill="#6B6560">不知道怎樣算成功</text>
+<g font-size="24" font-weight="600" text-anchor="middle">
+<rect x="330" y="120" width="150" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/><text x="405" y="164" fill="#2A2623">先有工具</text>
+<line x1="486" y1="155" x2="530" y2="155" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="538" y="120" width="130" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/><text x="603" y="164" fill="#2A2623">試辦</text>
+<line x1="674" y1="155" x2="718" y2="155" stroke="#BE8979" stroke-width="3" stroke-dasharray="6 6" marker-end="url(#ahT)"/>
+<rect x="726" y="110" width="230" height="90" rx="16" fill="#FFFFFF" stroke="#BE8979" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="841" y="150" fill="#BE8979" font-size="26">？</text>
+<text x="841" y="183" fill="#6B6560" font-size="19" font-weight="400">怎樣算成功</text>
+</g>
+<text x="330" y="245" font-size="19" fill="#6B6560">停在展示，無法決定擴大或停止，或只量使用量</text>
+
+<!-- ===== 2 不需要 AI：選擇解法 ===== -->
+<text x="75" y="340" font-size="19" fill="#6B6560">選擇解法</text>
+<text x="75" y="380" font-size="30" fill="#BE8979" font-weight="700">多此一舉</text>
+<text x="75" y="415" font-size="19" fill="#6B6560">需求清楚，解法過大</text>
+<g font-weight="600" text-anchor="middle">
+<rect x="330" y="360" width="150" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/><text x="405" y="404" font-size="24" fill="#2A2623">簡單需求</text>
+<line x1="486" y1="395" x2="600" y2="395" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="608" y="305" width="220" height="180" rx="18" fill="#F5F2EC" stroke="#BE8979" stroke-width="4"/>
+<text x="718" y="405" font-size="60" fill="#BE8979">AI</text>
+<text x="718" y="450" font-size="18" font-weight="400" fill="#6B6560">複雜又昂貴</text>
+<rect x="850" y="360" width="115" height="70" rx="16" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="3"/>
+<text x="907" y="390" font-size="19" fill="#2A2623">表單</text>
+<text x="907" y="416" font-size="19" fill="#2A2623">即可</text>
 </g>
 
-<g transform="translate(40,520)">
-<rect x="15" y="30" width="110" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="70" y="65" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent</text>
-<text x="70" y="65" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central" dy="26">產出</text>
-<line x1="125" y1="65" x2="163" y2="65" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="165" y="30" width="110" height="70" rx="16" fill="#FFFFFF" stroke="#BE8979" stroke-width="4" stroke-dasharray="10 8"/>
-<circle cx="220" cy="65" r="22" fill="#BE8979"/>
-<line x1="211" y1="56" x2="229" y2="74" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-<line x1="229" y1="56" x2="211" y2="74" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-<line x1="275" y1="65" x2="313" y2="65" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="315" y="30" width="110" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="370" y="65" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">交付使用</text>
-<text x="220" y="220" font-size="30" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">未設檢查點</text>
-<text x="220" y="262" font-size="21" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">錯誤直接外流</text>
+<!-- ===== 3 未設檢查點：設計流程 ===== -->
+<text x="75" y="560" font-size="19" fill="#6B6560">設計流程</text>
+<text x="75" y="600" font-size="30" fill="#BE8979" font-weight="700">錯誤直接外流</text>
+<text x="75" y="635" font-size="19" fill="#6B6560">送出前沒有任何檢查</text>
+<g font-size="24" font-weight="600" text-anchor="middle">
+<rect x="330" y="575" width="150" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/><text x="405" y="619" fill="#2A2623">Agent 產出</text>
+<line x1="486" y1="610" x2="780" y2="610" stroke="#BE8979" stroke-width="3" marker-end="url(#ahT)"/>
+<rect x="560" y="560" width="130" height="100" rx="16" fill="none" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="10 8"/>
+<text x="625" y="690" font-size="18" font-weight="400" fill="#6B6560">沒有檢查點</text>
+<circle cx="625" cy="610" r="22" fill="#BE8979"/><text x="625" y="619" font-size="26" fill="#FFFFFF">!</text>
+<rect x="788" y="575" width="170" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/><text x="873" y="619" fill="#2A2623">民眾、使用者</text>
 </g>
 
-<g transform="translate(520,520)">
-<rect x="15" y="30" width="110" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="70" y="65" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent</text>
-<text x="70" y="65" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central" dy="26">產出</text>
-<line x1="125" y1="65" x2="163" y2="65" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="165" y="30" width="110" height="70" rx="16" fill="#FFFFFF" stroke="#BE8979" stroke-width="4" stroke-dasharray="10 8"/>
-<circle cx="220" cy="65" r="22" fill="#BE8979"/>
-<line x1="211" y1="56" x2="229" y2="74" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-<line x1="229" y1="56" x2="211" y2="74" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
-<line x1="275" y1="65" x2="313" y2="65" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="315" y="30" width="110" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="370" y="65" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">交付使用</text>
-<text x="220" y="220" font-size="30" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">完全取代人力</text>
-<text x="220" y="262" font-size="21" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">錯誤無人承接</text>
+<!-- ===== 4 完全取代人力：安排人力 ===== -->
+<text x="75" y="780" font-size="19" fill="#6B6560">安排人力</text>
+<text x="75" y="820" font-size="30" fill="#BE8979" font-weight="700">錯誤無人承接</text>
+<text x="75" y="855" font-size="19" fill="#6B6560">承擔判斷的人被移除</text>
+<g font-size="24" font-weight="600" text-anchor="middle">
+<rect x="330" y="795" width="150" height="70" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/><text x="405" y="839" fill="#2A2623">例外與個案</text>
+<line x1="486" y1="830" x2="600" y2="830" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="608" y="780" width="170" height="100" rx="16" fill="#FFFFFF" stroke="#BE8979" stroke-width="3" stroke-dasharray="10 8"/>
+<circle cx="693" cy="815" r="16" fill="none" stroke="#BE8979" stroke-width="3"/>
+<path d="M663,862 C663,838 723,838 723,862" fill="none" stroke="#BE8979" stroke-width="3"/>
+<line x1="668" y1="795" x2="718" y2="870" stroke="#BE8979" stroke-width="4"/>
+<text x="693" y="910" font-size="18" font-weight="400" fill="#6B6560">承擔判斷的人</text>
+<line x1="784" y1="830" x2="830" y2="830" stroke="#BE8979" stroke-width="3" stroke-dasharray="6 6" marker-end="url(#ahT)"/>
+<text x="900" y="838" fill="#BE8979">無人承接</text>
 </g>
 </svg>
