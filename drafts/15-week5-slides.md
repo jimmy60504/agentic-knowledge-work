@@ -129,9 +129,10 @@
 **畫面**
 
 - 主訊息：多數導入未達期待，原因大多與模型能力無關
-- 產出無法驗證而多此一舉
-- 成效無法驗證而流於形式
-- 移除驗證者導致錯誤無人承接
+- 產出無法驗證：沒有外部檢查方式，檢查比原本更費力，於是多此一舉
+- 成效無法驗證：沒有定義成功，省下的時間被吸收也看不見，於是流於形式
+- 移除驗證者：拿掉確認的人，出錯時無人承接
+- 三者各自破壞了成功的一個條件
 - 圖：`assets/week5-sources/s2-rand-root-causes.png`
 - 圖：`assets/week5-sources/s2-oecd-governing-with-ai.png`
 
@@ -149,6 +150,7 @@
 **畫面**
 
 - 主訊息：不適合的工作交給 AI，檢查反而更費力
+- 文字產出難以用測試檢查，錯誤常在被引用或被抱怨後才發現
 - Deloitte：為澳洲政府撰寫的報告引用不存在的文獻，退還部分費用
 - 紐約市：聊天機器人建議店家違法，運作近兩年後關閉
 - 圖：`assets/week5-sources/s2-deloitte-report-incident.png`
@@ -168,8 +170,9 @@
 **畫面**
 
 - 主訊息：未經規劃便導入，淪為形式；省下的時間也被更多工作吸收
+- 先有工具、沒有成功條件，就無從判斷效果，試辦停在展示
 - 英國多項 AI 試辦工具數月後關閉；美國聯邦用例多停在試辦
-- HBR 2026：同時處理多條工作，省下的產能被更多期待吸收
+- 省下的時間沒有說定用途，就被更多工作吸收（HBR 2026）
 - 圖：`assets/week5-sources/s2-uk-ai-pilots-closed.png`
 - 圖：`assets/week5-sources/s2-us-federal-pilots.png`
 - 圖：`assets/week5-sources/s3-hbr-intensifies.png`
@@ -188,9 +191,9 @@
 **畫面**
 
 - 主訊息：以完全取代人力為目標，錯誤便無人承接
+- 需要個案判斷的事，AI 無法承接，最後只得回頭補人
 - 世新大學：秘書縮為一人，詢問改由 AI 回覆，個案無人受理
-- Klarna：以 AI 取代約 700 名客服後，重新聘用人力
-- 澳洲 Robodebt：移除人工複核後大規模誤判
+- Klarna 取代約 700 名客服後重新聘人；Robodebt 移除複核後大規模誤判
 - 圖：`assets/week5-sources/s2-shu-ltn-ai-replaces-office.png`
 - 圖：`assets/week5-sources/s2-shu-ctwant-ai-no-answer.png`
 - 圖：`assets/week5-sources/s2b-robodebt-algorithm.png`
@@ -211,8 +214,9 @@
 **畫面**
 
 - 主訊息：需要判斷的工作集中到較少人身上，仍可能縮編
-- 取代的方式不同於過去的一對一取代
-- 驗證者負荷過重時，形同被移除
+- 取代不再是一人換一台機器，而是判斷集中到少數人
+- 確認的人負荷過重，就只能蓋章，形同被移除
+- 新進人員的職缺受影響最大，練習機會也跟著減少
 - 圖：`assets/week5-visuals/w5-12-review-load-scene-candidate.png`
 - 圖：`assets/week5-sources/s2b-stanford-canaries.png`
 
@@ -231,9 +235,9 @@
 **畫面**
 
 - 主訊息：試點後接受度不高，源於上下層目標不一致
-- 上層期待效率與人力節省
-- 承辦人擔心被加派工作或被取代，於是隱藏使用
-- 司法院：判決書草稿因說明與溝通不足而暫緩
+- 上層期待效率與人力節省，容易走向移除人員
+- 承辦人擔心被加派工作或被取代，於是隱藏使用，試點推不下去
+- 司法院：與利害關係人的說明不足，判決書草稿暫緩試辦
 - 圖：`assets/week5-sources/s2-judicial-ai-draft-paused.png`
 
 **筆記**
