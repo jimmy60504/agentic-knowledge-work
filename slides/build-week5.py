@@ -199,13 +199,14 @@ def content(prs, page, total, section=""):
     sources = [l[len("來源："):].strip() for l in page["notes"] if l.startswith("來源：")]
     full = W - 2 * M
     # 第一層：小標（段落｜頁名）
-    kicker = f"{section}｜{page['title']}" if section else page["title"]
-    textbox(s, M, 0.38, full, 0.35, [kicker], size=12, color=MUTED)
+    kicker = section
+    if kicker:
+        textbox(s, M, 0.38, full, 0.35, [kicker], size=12, color=MUTED)
     # 第二層：主張
     y = 0.78
-    claim = lead[0] if lead else page["title"]
-    ch = text_height([claim], 28, full)
-    textbox(s, M, y, full, ch, [claim], size=28, bold=True, color=DARK)
+    claim = page["title"]  # 大標題用書面的名詞短語；主訊息移到內文第一行
+    ch = text_height([claim], 30, full)
+    textbox(s, M, y, full, ch, [claim], size=30, bold=True, color=DARK)
     y += ch + 0.12
     rect(s, M, y, 0.9, 0.05, fill=ACCENT)
     y += 0.4
@@ -221,6 +222,11 @@ def content(prs, page, total, section=""):
                 bx, by, bw, bh = box
                 textbox(s, bx, by + bh + 0.05, max(bw, 2.2), CAP_H - 0.05, [cap], size=10.5, color=MUTED, spacing=0)
         col = left - 0.4 - M
+    # 主訊息：內文第一行
+    if lead:
+        lh = text_height(lead, 19, col)
+        textbox(s, M, y, col, lh + 0.1, lead, size=19, bold=True, color=DARK)
+        y += lh + 0.25
     # 第三層：要點
     if bullets:
         dense = any(re.match(r"^\*\*.+?\*\*[：:]", b) for b in bullets)
