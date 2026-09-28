@@ -324,12 +324,26 @@ def text_only(slide, lead, items, page):
     if any("／" in body for _, body in items):
         question_panels(slide, items, y)
         return
+    quote = [b for k, b in items if not k and b.startswith("課堂提問")]
+    items = [(k, b) for k, b in items if not (not k and b.startswith("課堂提問"))]
+    if quote:
+        qt = quote[0].split("：", 1)[-1]
+        qy = H - 0.75 - 1.75
+        rect(slide, M, qy, W - 2 * M, 1.55, WHITE, line=ACCENT, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.08)
+        runs(slide, M + 0.4, qy + 0.12, 3, 0.4, [("課堂提問", 13, True, ACCENT, 0)])
+        runs(slide, M + 0.4, qy + 0.45, W - 2 * M - 0.8, 1.0, [(qt, 24, True, DARK, 0)], anchor="m")
+        bottom_limit = qy - 0.3
+    else:
+        bottom_limit = H - 0.75
+    if not items:
+        return
     cols = 2 if len(items) >= 3 or any(k for k, _ in items) else 1
     gap = 0.3
     cw = (W - 2 * M - gap * (cols - 1)) / cols
     rows = -(-len(items) // cols)
-    avail = H - 0.75 - y
-    rh = min(1.5, (avail - gap * (rows - 1)) / rows)
+    avail = bottom_limit - y
+    rh = min(2.2 if len(items) <= 2 else 1.5, (avail - gap * (rows - 1)) / rows)
+    big = len(items) <= 2
     for i, (k, b) in enumerate(items):
         r, c = divmod(i, cols)
         cx, cy = M + c * (cw + gap), y + r * (rh + gap)
@@ -337,9 +351,9 @@ def text_only(slide, lead, items, page):
         rect(slide, cx, cy + 0.2, 0.07, rh - 0.4, ACCENT)
         paras = []
         if k:
-            paras.append((k, 17, True, DARK, 3))
+            paras.append((k, 22 if big else 17, True, DARK, 4))
         if b:
-            paras.append((b, 13.5, False, MUTED, 0))
+            paras.append((b, 16 if big else 13.5, False, MUTED, 0))
         runs(slide, cx + 0.3, cy + 0.1, cw - 0.5, rh - 0.2, paras, anchor="m")
 
 
@@ -362,7 +376,39 @@ def question_panels(slide, items, y):
         runs(slide, cx + 0.3, y + 0.8, cw - 0.5, ph - 0.9, paras)
 
 
+def intermission(prs, page, total):
+    s = prs.slides.add_slide(prs.slide_layouts[6])
+    rect(s, 0, 0, W, H, IVORY)
+    cover_img = ROOT / "assets/week5-visuals/w5-01-abstract.png"
+    if cover_img.exists():
+        pic = s.shapes.add_picture(str(cover_img), Inches(W * 0.55), 0, Inches(W * 0.45), Inches(H))
+        iw, ih = Image.open(cover_img).size
+        want = (W * 0.45) / H
+        have = iw / ih
+        if have > want:
+            cut = (1 - want / have)
+            pic.crop_left = cut / 2
+            pic.crop_right = cut / 2
+    lead, items = parse_bullets(page)
+    runs(s, M, 0.9, 6.5, 1.0, [("中場休息", 44, True, DARK, 0)])
+    rect(s, M + 0.05, 1.95, 1.0, 0.06, ACCENT)
+    runs(s, M, 2.2, 6.8, 0.6, [(lead, 20, True, DARK, 0)])
+    y = 3.0
+    for k, b in items:
+        if not k:
+            runs(s, M, H - 1.0, 7, 0.5, [(b, 13, False, MUTED, 0)])
+            continue
+        rect(s, M, y, 6.6, 0.95, WHITE, line=GREY, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=0.1)
+        rect(s, M, y + 0.18, 0.07, 0.6, ACCENT)
+        runs(s, M + 0.3, y + 0.08, 6.1, 0.8, [(k + "？", 19, True, DARK, 2), (b, 12.5, False, MUTED, 0)], anchor="m")
+        y += 1.1
+    notes(s, page["notes"])
+
+
 def content(prs, page, total, section):
+    if page["title"] == "中場休息":
+        intermission(prs, page, total)
+        return
     s = prs.slides.add_slide(prs.slide_layouts[6])
     rect(s, 0, 0, W, H, WHITE)
     imgs = images_of(page)
@@ -374,7 +420,19 @@ def content(prs, page, total, section):
         page["notes"] = ["【畫面要點（已由示意圖呈現）】"] + [f"{k}：{b}" if k else b for k, b in items] + page["notes"]
         items = []
         col_w = 3.9
-    if imgs:
+    wide = (len(imgs) == 1 and not is_source(imgs[0][0])
+            and (lambda sz: sz[0] / sz[1])(Image.open(ROOT / imgs[0][0]).size) > 1.8)
+    if wide:
+        # 寬圖：文字在上方兩欄，圖橫跨下方
+        if lead:
+            runs(s, M, 1.7, W - 2 * M, 0.6, [(lead, 20, True, DARK, 0)])
+        half = (W - 2 * M - 0.4) / 2
+        for i, (k, bd) in enumerate(items[:2]):
+            x = M + i * (half + 0.4)
+            rect(s, x, 2.45, 0.05, 0.62, ACCENT)
+            runs(s, x + 0.18, 2.4, half - 0.2, 0.8, [(k, 16.5, True, DARK, 1), (bd, 13, False, MUTED, 0)])
+        picture(s, imgs[0][0], M, 3.45, W - 2 * M, H - 0.8 - 3.45)
+    elif imgs:
         text_column(s, lead, items, M, 1.75, col_w, H - 0.75, page)
         vx = M + col_w + 0.45
         visuals(s, imgs, vx, 1.7, W - M - vx, H - 0.75 - 1.7)

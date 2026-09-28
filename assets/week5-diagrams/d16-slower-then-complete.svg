@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<rect width="1000" height="1000" fill="#FFFFFF"/>
+<text x="40" y="172" font-size="30" fill="#2A2623" font-weight="700" text-anchor="start">過去</text>
+<rect x="190" y="120" width="322" height="96" rx="14" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="351.0" y="178" font-size="24" fill="#2A2623" font-weight="700" text-anchor="middle">執行</text>
+<rect x="520" y="120" width="322" height="96" rx="14" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="681.0" y="178" font-size="24" fill="#BE8979" font-weight="700" text-anchor="middle">返工</text>
+<text x="205" y="270" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start">做得快，返工多</text>
+<text x="40" y="452" font-size="30" fill="#2A2623" font-weight="700" text-anchor="start">導入初期</text>
+<rect x="190" y="400" width="142" height="96" rx="14" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<text x="261" y="458" font-size="24" fill="#6B6560" font-weight="700" text-anchor="middle">熟悉工具</text>
+<rect x="340" y="400" width="392" height="96" rx="14" fill="#E9EEEF" stroke="#A6B7BA" stroke-width="3"/>
+<text x="536.0" y="458" font-size="24" fill="#2A2623" font-weight="700" text-anchor="middle">分析與判斷</text>
+<rect x="740" y="400" width="132" height="96" rx="14" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="806.0" y="458" font-size="24" fill="#2A2623" font-weight="700" text-anchor="middle">執行</text>
+<rect x="880" y="400" width="72" height="96" rx="14" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="916.0" y="458" font-size="20" fill="#BE8979" font-weight="700" text-anchor="middle">返工</text>
+<text x="205" y="550" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start">時間拉長，移到分析與判斷</text>
+<text x="40" y="732" font-size="30" fill="#2A2623" font-weight="700" text-anchor="start">熟悉之後</text>
+<rect x="190" y="680" width="292" height="96" rx="14" fill="#E9EEEF" stroke="#A6B7BA" stroke-width="3"/>
+<text x="336.0" y="738" font-size="24" fill="#2A2623" font-weight="700" text-anchor="middle">分析與判斷</text>
+<rect x="490" y="680" width="102" height="96" rx="14" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="541.0" y="738" font-size="20" fill="#2A2623" font-weight="700" text-anchor="middle">執行</text>
+<rect x="600" y="680" width="62" height="96" rx="14" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="631.0" y="738" font-size="20" fill="#BE8979" font-weight="700" text-anchor="middle">返工</text>
+<text x="205" y="830" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start">變快，成果更完整</text>
+<line x1="190" y1="72" x2="190" y2="930" stroke="#D8D2C9" stroke-width="2" stroke-dasharray="6 8"/>
+<text x="190" y="55" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle">時間</text>
+</svg>

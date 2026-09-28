@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<rect width="1600" height="700" fill="#FFFFFF"/>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker></defs>
+<rect x="40" y="230" width="320" height="190" rx="24" fill="#F6EAE5" stroke="#BE8979" stroke-width="4"/>
+<text x="200.0" y="315" font-size="40" fill="#2A2623" font-weight="700" text-anchor="middle">收集問題</text>
+<text x="200.0" y="370" font-size="28" fill="#6B6560" font-weight="400" text-anchor="middle">工作坊交談</text>
+<line x1="368" y1="325" x2="422" y2="325" stroke="#6B6560" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="430" y="230" width="320" height="190" rx="24" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="590.0" y="315" font-size="40" fill="#2A2623" font-weight="700" text-anchor="middle">重畫 Story 圖</text>
+<text x="590.0" y="370" font-size="28" fill="#6B6560" font-weight="400" text-anchor="middle">用真實情境</text>
+<line x1="758" y1="325" x2="812" y2="325" stroke="#6B6560" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="820" y="230" width="320" height="190" rx="24" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="980.0" y="315" font-size="40" fill="#2A2623" font-weight="700" text-anchor="middle">選出一段</text>
+<text x="980.0" y="370" font-size="28" fill="#6B6560" font-weight="400" text-anchor="middle">交給 Agent</text>
+<line x1="1148" y1="325" x2="1202" y2="325" stroke="#6B6560" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="1210" y="230" width="320" height="190" rx="24" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="1370.0" y="315" font-size="40" fill="#2A2623" font-weight="700" text-anchor="middle">規格、實作</text>
+<text x="1370.0" y="370" font-size="28" fill="#6B6560" font-weight="400" text-anchor="middle">並驗證</text>
+<text x="200.0" y="180" font-size="30" fill="#BE8979" font-weight="700" text-anchor="middle">本週</text>
+<line x1="395.0" y1="150" x2="395.0" y2="520" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="8 8"/>
+<text x="980.0" y="180" font-size="30" fill="#6B6560" font-weight="700" text-anchor="middle">下週</text>
+<text x="800" y="520" font-size="28" fill="#6B6560" font-weight="400" text-anchor="middle">需求工程的下一步：從找需求走到規格與實作</text>
+</svg>
