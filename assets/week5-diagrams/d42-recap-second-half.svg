@@ -3,50 +3,50 @@
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
 </defs>
 <rect width="1000" height="1000" fill="#FFFFFF"/>
-<text x="235" y="95" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">不用或用不好的原因</text>
-<text x="765" y="95" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">主管的作為</text>
+<text x="235" y="95" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">不用或用不好的原因</text>
+<text x="765" y="95" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">主管的作為</text>
 
-<rect x="60" y="130" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="235" y="170" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">不會用</text>
+<rect x="60" y="130" width="350" height="80" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="235" y="170" font-size="28" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">不會用</text>
 <line x1="410" y1="170" x2="580" y2="170" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="590" y="130" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="765" y="170" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">教會挑任務與判斷</text>
+<text x="765" y="170" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">教會挑任務與判斷</text>
 
-<rect x="60" y="225" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="235" y="265" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">不能用</text>
+<rect x="60" y="225" width="350" height="80" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="235" y="265" font-size="28" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">不能用</text>
 <line x1="410" y1="265" x2="580" y2="265" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="590" y="225" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="765" y="265" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">提供帳號與環境</text>
+<text x="765" y="265" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">提供帳號與環境</text>
 
-<rect x="60" y="320" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="235" y="360" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">不敢用</text>
+<rect x="60" y="320" width="350" height="80" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="235" y="360" font-size="28" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">不敢用</text>
 <line x1="410" y1="360" x2="580" y2="360" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="590" y="320" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="765" y="360" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">講清楚可以怎麼做</text>
+<text x="765" y="360" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">講清楚可以怎麼做</text>
 
-<rect x="60" y="415" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="235" y="455" font-size="23" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">怕被取代、私下使用</text>
+<rect x="60" y="415" width="350" height="80" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="235" y="455" font-size="28" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">怕被取代、私下使用</text>
 <line x1="410" y1="455" x2="580" y2="455" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="590" y="415" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="765" y="455" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">說定利益與保障</text>
+<text x="765" y="455" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">說定利益與保障</text>
 
-<rect x="60" y="510" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="235" y="550" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">被迫使用</text>
+<rect x="60" y="510" width="350" height="80" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="235" y="550" font-size="28" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">被迫使用</text>
 <line x1="410" y1="550" x2="580" y2="550" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="590" y="510" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="765" y="550" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">不以使用率考核</text>
+<text x="765" y="550" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">不以使用率考核</text>
 
-<rect x="60" y="605" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="235" y="645" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">不信任</text>
+<rect x="60" y="605" width="350" height="80" rx="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="235" y="645" font-size="28" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">不信任</text>
 <line x1="410" y1="645" x2="580" y2="645" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="590" y="605" width="350" height="80" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="765" y="645" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">借重懷疑者的判斷</text>
+<text x="765" y="645" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">借重懷疑者的判斷</text>
 
 <line x1="60" y1="730" x2="940" y2="730" stroke="#D8D2C9" stroke-width="2" stroke-dasharray="8 8"/>
 
 <rect x="300" y="780" width="160" height="90" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="380" y="825" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">全體</text>
+<text x="380" y="825" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">全體</text>
 <line x1="460" y1="825" x2="530" y2="825" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <rect x="540" y="780" width="300" height="90" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="690" y="825" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">以返工評估成效</text>
+<text x="690" y="825" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">以返工評估成效</text>
 </svg>

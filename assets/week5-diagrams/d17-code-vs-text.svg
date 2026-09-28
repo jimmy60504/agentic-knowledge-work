@@ -17,17 +17,17 @@
 <text x="510" y="385" font-size="30" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">由測試判斷</text>
 <line x1="40" y1="500" x2="960" y2="500" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="4 10" stroke-linecap="round"/>
 <text x="40" y="580" font-size="44" fill="#2A2623" font-weight="700" text-anchor="start" dominant-baseline="central">文字</text>
-<rect x="40" y="640" width="190" height="150" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="135" y="715.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 產出</text>
-<line x1="230" y1="715.0" x2="260" y2="715.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="260" y="640" width="260" height="150" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="390" y="700.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">有外部依據的錯誤</text>
-<text x="390" y="740.0" font-size="21" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">Agent 或分類器</text>
-<line x1="520" y1="715.0" x2="550" y2="715.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="550" y="640" width="260" height="150" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
-<text x="680" y="700.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">內容是否正確</text>
-<text x="680" y="740.0" font-size="21" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">熟悉業務的人</text>
-<line x1="810" y1="715.0" x2="840" y2="715.0" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
-<rect x="840" y="640" width="120" height="150" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="900" y="715.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">送出</text>
+<rect x="40" y="640" width="170" height="150" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="125" y="715" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 產出</text>
+<line x1="210" y1="715" x2="234" y2="715" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="234" y="640" width="284" height="150" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="376" y="698" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">有外部依據的錯誤</text>
+<text x="376" y="742" font-size="22" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">Agent 或分類器</text>
+<line x1="518" y1="715" x2="542" y2="715" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="542" y="640" width="284" height="150" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
+<text x="684" y="698" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">內容是否正確</text>
+<text x="684" y="742" font-size="22" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">熟悉業務的人</text>
+<line x1="826" y1="715" x2="850" y2="715" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="850" y="640" width="110" height="150" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="905" y="715" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">送出</text>
 </svg>

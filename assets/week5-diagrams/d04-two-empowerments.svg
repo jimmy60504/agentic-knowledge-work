@@ -3,8 +3,7 @@
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
 <marker id="ahT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
 </defs>
-<text x="260" y="80" font-size="44" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">能力的延伸</text>
-<text x="260" y="138" font-size="28" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">已具備判斷</text>
+<text x="260" y="125" font-size="44" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">能力的延伸</text>
 <rect x="50" y="190" width="420" height="110" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <text x="260" y="245" font-size="36" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">以前無法完成</text>
 <line x1="260" y1="310" x2="260" y2="352" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
@@ -14,9 +13,8 @@
 <rect x="50" y="490" width="420" height="110" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
 <text x="260" y="545" font-size="36" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">現在能完成</text>
 <rect x="110.0" y="632.0" width="300" height="66" rx="33.0" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
-<text x="260" y="665" font-size="28" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">例：PM 自製小工具</text>
-<text x="740" y="80" font-size="44" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">時間的釋放</text>
-<text x="740" y="138" font-size="28" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">已具備判斷</text>
+<text x="260" y="665" font-size="28" fill="#6B6560" font-weight="500" text-anchor="middle" dominant-baseline="central">例：領域專家自製小工具</text>
+<text x="740" y="125" font-size="44" fill="#2A2623" font-weight="700" text-anchor="middle" dominant-baseline="central">時間的釋放</text>
 <rect x="530" y="190" width="420" height="110" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <text x="740" y="245" font-size="36" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">以前無暇處理</text>
 <line x1="740" y1="310" x2="740" y2="352" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>

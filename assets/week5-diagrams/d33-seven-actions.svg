@@ -3,23 +3,25 @@
 <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
 </defs>
 <rect width="1000" height="1000" fill="#FFFFFF"/>
+<g transform="translate(0,75)">
 <text x="500" y="45" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">全署層級：向上爭取</text>
 <rect x="300" y="70" width="400" height="150" rx="22" fill="#FBFAF7" stroke="#D8D2C9" stroke-width="2" stroke-dasharray="8 8"/>
 <rect x="350" y="100" width="300" height="90" rx="18" fill="#F5F2EC" stroke="#A6B7BA" stroke-width="4"/>
 <text x="500" y="145" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">提供帳號與環境</text>
 <line x1="500" y1="220" x2="500" y2="280" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <text x="500" y="325" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">單位層級：主管手上</text>
-<rect x="60" y="350" width="880" height="580" rx="24" fill="#FBFAF7" stroke="#D8D2C9" stroke-width="2"/>
+<rect x="60" y="350" width="880" height="470" rx="24" fill="#FBFAF7" stroke="#D8D2C9" stroke-width="2"/>
 <rect x="100" y="400" width="390" height="100" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="295" y="450" font-size="26" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">教會挑任務與判斷</text>
+<text x="295" y="450" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">教會挑任務與判斷</text>
 <rect x="530" y="400" width="390" height="100" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="725" y="450" font-size="26" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">講清楚可以怎麼做</text>
+<text x="725" y="450" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">講清楚可以怎麼做</text>
 <rect x="100" y="540" width="390" height="100" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="295" y="590" font-size="26" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">說定利益與保障</text>
+<text x="295" y="590" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">說定利益與保障</text>
 <rect x="530" y="540" width="390" height="100" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="725" y="590" font-size="26" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">不以使用率考核</text>
+<text x="725" y="590" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">不以使用率考核</text>
 <rect x="100" y="680" width="390" height="100" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="295" y="730" font-size="26" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">借重懷疑者的判斷</text>
+<text x="295" y="730" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">借重懷疑者的判斷</text>
 <rect x="530" y="680" width="390" height="100" rx="18" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="725" y="730" font-size="26" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">以返工評估成效</text>
+<text x="725" y="730" font-size="28" fill="#2A2623" font-weight="500" text-anchor="middle" dominant-baseline="central">以返工評估成效</text>
+</g>
 </svg>
