@@ -30,3 +30,4 @@
 |---|---|---|
 | 第二週 | 深海軍藍與鈷藍、紙頁與半透明壓克力板的靜物攝影 | `assets/week2-blue/README.md` |
 | 第四週 | 未使用生成圖，素版白底 | `slides/build-week4.py` |
+| 第五週 | 紙本與校對痕跡：米白與淺灰紙張、鉛筆與磚紅修改筆觸、自然光靜物攝影 | `assets/week5-visuals/README.md` |
