@@ -254,7 +254,7 @@ def visuals(slide, imgs, x, y, w, h):
     diags = [i for i in imgs if not is_source(i[0])]
     srcs = [i for i in imgs if is_source(i[0])]
     if diags and srcs:
-        dw = w * (0.46 if len(srcs) <= 2 else 0.36)
+        dw = w * (0.62 if len(srcs) <= 2 else 0.5)
         diagrams(slide, diags, x, y, dw, h)
         x, w = x + dw + 0.3, w - dw - 0.3
     elif diags:
@@ -433,9 +433,17 @@ def content(prs, page, total, section):
             runs(s, x + 0.18, 2.4, half - 0.2, 0.8, [(k, 16.5, True, DARK, 1), (bd, 13, False, MUTED, 0)])
         picture(s, imgs[0][0], M, 3.45, W - 2 * M, H - 0.8 - 3.45)
     elif imgs:
-        text_column(s, lead, items, M, 1.75, col_w, H - 0.75, page)
-        vx = M + col_w + 0.45
-        visuals(s, imgs, vx, 1.7, W - M - vx, H - 0.75 - 1.7)
+        only_diag = any(not is_source(r) for r, _ in imgs)  # 有示意圖的頁面都放大
+        if only_diag:
+            # 只有示意圖：文字欄收窄，圖往上延伸到標題旁，盡量放大
+            col_w = 4.6
+            text_column(s, lead, items, M, 1.75, col_w, H - 0.75, page)
+            vx = M + col_w + 0.35
+            visuals(s, imgs, vx, 0.45, W - 0.35 - vx, H - 0.7 - 0.45)
+        else:
+            text_column(s, lead, items, M, 1.75, col_w, H - 0.75, page)
+            vx = M + col_w + 0.45
+            visuals(s, imgs, vx, 1.7, W - M - vx, H - 0.75 - 1.7)
     else:
         text_only(s, lead, items, page)
     footer(s, page, total, sources)
