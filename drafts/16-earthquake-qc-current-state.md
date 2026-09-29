@@ -1,5 +1,6 @@
 # 地震資料庫 QC 現況整理
 
+> 2026-09-29 第六版：故事圖加入除錯重跑的程式（文字編輯器、HYPO、CheckPfile 重新掃描、Samp.exe、MERGEPO 與 BIGSORT1）。
 > 2026-09-29 第五版：新增「發生錯誤後需要重跑的程式」；兩方改稱資料處理承辦與目錄維護承辦。
 > 2026-09-29 第四版：新增「現況故事圖」。
 > 2026-09-29 第三版：新增「步驟與檢查清單」與「發現錯誤時的修正位置」（含流程圖），依投影片原文整理，未說明處標出。
@@ -52,22 +53,25 @@ Sb-A-3 是目錄維護端的新進人員教材，說明一日 QC 從環境準備
 
 ## 現況故事圖
 
-以 domain storytelling 畫出一日事件從資料處理端定位到入庫的現況，具體案例為當日有一筆 header 出現 24 時、一筆定位後未跑 HYPO，被目錄維護端退回一次。第 5 至 8 號活動（退件與重送）來自使用者說明的背景，不在投影片內。原始檔為 [story/earthquake-qc-current.puml](story/earthquake-qc-current.puml)。
+以 domain storytelling 畫出一日事件從資料處理端定位到入庫的現況，具體案例為當日有一筆 header 出現 24 時、一筆定位後未跑 HYPO，被目錄維護端退回一次。第 5 至 9 號活動（退件、修正與重送）來自使用者說明的背景，不在投影片內；第 7、8、10、11 號為除錯時重跑的程式。原始檔為 [story/earthquake-qc-current.puml](story/earthquake-qc-current.puml)。
 
 ![地震資料庫 QC 現況故事圖](story/earthquake-qc-current.svg)
 
 1. 資料處理承辦在 EventPick 定位，存成當日 P file。
 2. 資料處理承辦將當日 P file 送交目錄維護承辦。
 3. 目錄維護承辦在 RTD 網頁登記認領當日 QC。
-4. CheckPfile 掃描當日 P file，列出 ERRFILE.BAT 錯誤清單。
+4. RE_LIST 與 CheckPfile 掃描當日 P file，列出 ERRFILE.BAT 錯誤清單。
 5. 目錄維護承辦逐項判讀錯誤清單，整理為退件通知。
 6. 目錄維護承辦寄出退件通知，退回資料處理承辦。
-7. 資料處理承辦重新定位並修正 header，產出修正後 P file。
-8. 資料處理承辦再次將修正後 P file 送交目錄維護承辦。
-9. 目錄維護承辦篩選並排序，產出 TOTAL.LIS 入庫清單。
-10. 目錄維護承辦依入庫清單併入月份資料庫。
-11. 目錄維護承辦備份月份資料，並寫入 SCDB。
-12. 目錄維護承辦填寫地震與入庫件數，回報至 RTD 網頁。
+7. 資料處理承辦以文字編輯器修正 24 時的 header，存成修正後 P file。
+8. 資料處理承辦在 EventPick 對未跑 HYPO 的事件重跑 HYPO，更新修正後 P file。
+9. 資料處理承辦再次將修正後 P file 送交目錄維護承辦。
+10. RE_LIST 與 CheckPfile 重新掃描修正後 P file，產出清空的錯誤清單。
+11. Samp.exe 比對修正後 P file 中發震時間相近的事件。
+12. 目錄維護承辦篩選並排序，產出 TOTAL.LIS 入庫清單。
+13. MERGEPO 與 BIGSORT1 依入庫清單併入月份資料庫並排序。
+14. 目錄維護承辦以 UPDATEP 備份月份資料，並寫入 SCDB。
+15. 目錄維護承辦填寫地震與入庫件數，回報至 RTD 網頁。
 
 ## 步驟與檢查清單
 
