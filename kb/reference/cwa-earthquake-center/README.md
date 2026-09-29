@@ -13,6 +13,6 @@
 
 事件層級的公開材料：[地震預警系統與 2024 花蓮地震檢討](cwa-eew-2024-hualien-case-study.md)（預警四段流程與秒數、0403 漏報原因與改善、年度成效統計；含固定節點模型與事後檢討兩個課程例子）。
 
-內部教材原文：[Sb-A-3 地震資料庫品管與維護實務訓練](cwa-earthquake-db-qc-training.md)（地震資料科 QC 流程投影片 18 頁全文與紙本 QC 檢查清單轉錄，已去識別化；尚未整理成四段筆記）。現況整理見 [QC 現況 draft](../../../drafts/16-earthquake-qc-current-state.md)。定位程式的 UI 操作見 [EventPick 使用說明](cwa-eventpick-manual.md)（25 頁全文，截圖未轉錄）。
+內部教材原文：[Sb-A-3 地震資料庫品管與維護實務訓練](cwa-earthquake-db-qc-training.md)（地震資料科 QC 流程投影片 18 頁全文與紙本 QC 檢查清單轉錄，已去識別化；尚未整理成四段筆記）。現況整理見 [QC 現況 draft](../../../drafts/16-earthquake-qc-current-state.md)。定位程式的 UI 操作見 [EventPick 使用說明](cwa-eventpick-manual.md)（25 頁全文，截圖未轉錄）。P file 與月份資料庫的欄位格式見 [P file 格式](cwa-pfile-format.md)。
 
 範圍限地震測報中心的**地震業務**；海嘯與火山只記與地震工作相接的部分。現行職掌以[中心官網](https://scweb.cwa.gov.tw/zh-tw/page/intro/6)為準；缺口仍是待中心同仁確認的訪談假設。
