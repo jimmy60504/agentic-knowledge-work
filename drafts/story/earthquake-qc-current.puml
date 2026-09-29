@@ -1,4 +1,4 @@
-' 地震資料庫 QC 現況（as-is）：一日事件從上游定位到入庫，含一次退件。
+' 地震資料庫 QC 現況（as-is）：一日事件從資料處理端定位到入庫，含一次退件。
 ' 取自 Sb-A-3 投影片（步驟 1 至 3）與使用者 2026-09-29 說明的退件背景；退件（5 至 8）不在投影片內。
 ' 具體案例：當日有一筆 header 出現 24 時、一筆定位後未跑 HYPO，被維護端退回。
 @startuml earthquake-qc-current
@@ -6,7 +6,7 @@
 !include <DomainStory/domainStory>
 skinparam defaultFontName "PingFang TC"
 
-Person(up, 上游承辦)
+Person(up, 資料處理承辦)
 System(eventpick, EventPick)
 Person(maint, 維護端承辦)
 System(rtd, RTD 網頁)
