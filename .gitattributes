@@ -1,0 +1,15 @@
+# 這個 repo 放在 OneDrive，Mac 與 Windows 共用同一份工作目錄。
+# 一律以 LF 存放與取出，覆蓋各機器的 core.autocrlf，避免整檔換行差異。
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+*.pptx binary
+*.docx binary
+*.xlsx binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
