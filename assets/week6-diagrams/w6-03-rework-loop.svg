@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" width="1600" height="560" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="560" fill="#FFFFFF"/>
+<rect x="120" y="190" width="300" height="150" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="270.0" y="265.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">資料處理承辦</text>
+<rect x="1180" y="190" width="300" height="150" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="1330.0" y="265.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">主管</text>
+<rect x="650" y="60" width="300" height="110" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="800.0" y="115.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位結果檔</text>
+<polyline points="420,230 640,130" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="960,130 1180,230" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<text x="800" y="205.0" font-size="26" fill="#6B6560" text-anchor="middle" dominant-baseline="central">交出</text>
+<polyline points="1180,320 960,420 640,420 420,320" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<text x="800" y="455.0" font-size="26" fill="#BE8979" text-anchor="middle" dominant-baseline="central">退回：雙方重新打開同一筆資料，說明同一個問題</text>
+<text x="270" y="380.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">修正後再交</text>
+</svg>

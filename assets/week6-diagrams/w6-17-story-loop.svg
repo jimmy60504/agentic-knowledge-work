@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="600" fill="#FFFFFF"/>
+<rect x="60" y="230" width="260" height="140" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="190.0" y="300.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">資料處理承辦</text>
+<rect x="500" y="60" width="300" height="110" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="650.0" y="115.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">項目清單</text>
+<rect x="500" y="430" width="300" height="110" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="650.0" y="485.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位結果檔</text>
+<rect x="980" y="230" width="260" height="140" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1110.0" y="300.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢查程式</text>
+<rect x="1340" y="230" width="220" height="140" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="1450.0" y="300.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">主管</text>
+<polyline points="320,270 500,130" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<text x="390" y="165.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">1 依清單檢查</text>
+<polyline points="980,260 800,130" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<text x="920" y="165.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">列出問題</text>
+<polyline points="320,330 500,470" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<text x="380" y="440.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">2 修正</text>
+<polyline points="800,485 980,340" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<text x="930" y="440.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">3 再檢查</text>
+<polyline points="1240,300 1340,300" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<text x="1290" y="371.4" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">沒有問題</text>
+<text x="1290" y="400.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">或轉為特殊案例</text>
+<text x="1290" y="428.6" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">才上交</text>
+<text x="650" y="283.1" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">重複 1 至 3</text>
+<text x="650" y="316.9" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">直到清單清空</text>
+</svg>

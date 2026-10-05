@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1000" height="1000" fill="#FFFFFF"/>
+<text x="500" y="50.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">整理之前：一條規則散在五處</text>
+<rect x="30" y="100" width="172" height="120" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="116.0" y="143.1" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">規格表</text>
+<text x="116.0" y="176.9" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">≤ 180</text>
+<rect x="222" y="100" width="172" height="120" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="308.0" y="143.1" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">門檻表</text>
+<text x="308.0" y="176.9" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">≤ 180</text>
+<rect x="414" y="100" width="172" height="120" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="500.0" y="143.1" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">設定檔</text>
+<text x="500.0" y="176.9" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">≤ 200</text>
+<rect x="606" y="100" width="172" height="120" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="692.0" y="143.1" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">說明文件</text>
+<text x="692.0" y="176.9" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">≤ 180</text>
+<rect x="798" y="100" width="172" height="120" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="884.0" y="143.1" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">程式</text>
+<text x="884.0" y="176.9" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">≤ 200</text>
+<text x="500" y="260.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">各處的門檻不一定相同，修改時容易漏改</text>
+<line x1="60" y1="320" x2="940" y2="320" stroke="#D8D2C9" stroke-width="2"/>
+<text x="500" y="370.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">整理之後：一條規則一個檔案</text>
+<rect x="330" y="420" width="340" height="150" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="500.0" y="475.5" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">規則檔</text>
+<text x="500.0" y="514.5" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">門檻與說明</text>
+<rect x="60" y="690" width="300" height="120" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="210.0" y="733.1" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢查程式</text>
+<text x="210.0" y="766.9" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">依規則檔執行</text>
+<rect x="640" y="690" width="300" height="120" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="790.0" y="733.1" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">網頁說明頁</text>
+<text x="790.0" y="766.9" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">由規則檔產生</text>
+<polyline points="420,570 250,690" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="580,570 750,690" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="200" y="870" width="600" height="100" rx="16" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="12 8"/>
+<text x="500.0" y="920.0" font-size="24" fill="#2A2623" text-anchor="middle" dominant-baseline="central">來源互相矛盾時：全部列出、標明出處，交由會議定案</text>
+</svg>

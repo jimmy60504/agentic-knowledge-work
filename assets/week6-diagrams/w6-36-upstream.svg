@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 560" width="1600" height="560" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="560" fill="#FFFFFF"/>
+<rect x="60" y="200" width="280" height="130" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="200.0" y="265.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位軟體</text>
+<rect x="480" y="200" width="280" height="130" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="620.0" y="265.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位結果檔</text>
+<rect x="880" y="200" width="280" height="130" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="1020.0" y="265.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">預檢</text>
+<rect x="1260" y="200" width="280" height="130" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1400.0" y="265.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">主管檢視</text>
+<polyline points="340,265 480,265" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="760,265 880,265" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="1160,265 1260,265" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<text x="200" y="140.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">長期：程式更新時寫入防呆</text>
+<text x="230" y="384.4" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">產出的當下就阻止錯誤</text>
+<text x="230" y="415.6" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">錯誤不再產生</text>
+<text x="1020" y="140.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">目前：上傳時攔截</text>
+<text x="1020" y="374.4" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">減少退回</text>
+<text x="1020" y="405.6" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">但錯誤仍會產生</text>
+<polyline points="1020,450 1020,500 90,500 90,340" fill="none" stroke="#6B6560" stroke-width="3" stroke-dasharray="12 8" marker-end="url(#ah)"/>
+<text x="610" y="530.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">整理好的規則檔，可以作為上游更新的規格</text>
+</svg>
