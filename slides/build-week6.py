@@ -96,7 +96,7 @@ def quote(slide, x, y, w, text, size=17):
     bw5.rect(slide, x, y, 0.08, h, fill=bw5.ACCENT)
     para(slide, x + 0.35, y + 0.12, w - 0.6, f"「{body}」", size, spacing=1.1)
     if src:
-        bw5.textbox(slide, x + 0.35, y + h - 0.36, w - 0.6, 0.3, [f"講師，{src}"], size=11,
+        bw5.textbox(slide, x + 0.35, y + h - 0.36, w - 0.6, 0.3, [f"開發者，{src}"], size=11,
                     color=bw5.MUTED, spacing=0)
     return h
 
