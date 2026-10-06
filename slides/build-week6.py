@@ -214,5 +214,19 @@ def content(prs, page, total, section=""):
 
 bw5.content = content
 
+_parse = bw4.parse
+
+
+def parse(md_path):
+    """逐頁稿結尾的「待準備」是製作備註，不進最後一頁的備註。"""
+    pages = _parse(md_path)
+    last = pages[-1]["notes"]
+    if "---" in last:
+        del last[last.index("---"):]
+    return pages
+
+
+bw4.parse = parse
+
 if __name__ == "__main__":
     bw5.main()
