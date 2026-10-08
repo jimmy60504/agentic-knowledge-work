@@ -5,14 +5,16 @@
 </defs>
 <rect width="1600" height="920" fill="#FFFFFF"/>
 <rect x="60" y="60" width="640" height="740" rx="16" fill="none" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="12 8"/>
-<text x="380" y="100.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">開發機</text>
+<text x="380" y="100.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Mac：開發機</text>
 <text x="380" y="140.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">所有修改、討論與 Agent 的對話</text>
 <rect x="740" y="60" width="240" height="740" rx="16" fill="none" stroke="#A6B7BA" stroke-width="3" stroke-dasharray="12 8"/>
-<text x="860" y="100.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">私人網路</text>
-<text x="860" y="140.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">只用金鑰登入</text>
+<text x="860" y="100.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">連線</text>
+<text x="860" y="140.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">Thunderbolt 直連</text>
+<text x="860" y="172.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">或 Tailscale 私人網路</text>
+<text x="860" y="204.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">SSH 金鑰登入</text>
 <rect x="1020" y="60" width="520" height="740" rx="16" fill="none" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="12 8"/>
-<text x="1280" y="100.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試機</text>
-<text x="1280" y="140.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">舊程式需要的作業系統，只負責執行</text>
+<text x="1280" y="100.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Windows：測試機</text>
+<text x="1280" y="140.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">舊程式只能在 Windows 執行，只負責執行</text>
 <rect x="100" y="180" width="560" height="110" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <text x="380.0" y="218.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">人</text>
 <text x="380.0" y="255.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">提出需求、檢查結果、作出決定</text>
@@ -22,7 +24,7 @@
 <text x="380.0" y="446.4" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">整理結果回報給人</text>
 <rect x="100" y="530" width="560" height="100" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <text x="380.0" y="563.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">專案資料夾</text>
-<text x="380.0" y="600.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">程式、規則、工作說明檔，保存於版本紀錄</text>
+<text x="380.0" y="600.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">程式、規則、工作說明檔，以 git 管理</text>
 <rect x="100" y="670" width="560" height="100" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <text x="380.0" y="703.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">瀏覽器</text>
 <text x="380.0" y="740.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">檢視測試機轉回的網頁</text>
@@ -33,21 +35,22 @@
 <polyline points="380,480 380,524" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <text x="410" y="502.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">修改、提交</text>
 <rect x="1060" y="340" width="440" height="120" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
-<text x="1280.0" y="383.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試用的副本</text>
+<text x="1280.0" y="383.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試用的 git 副本</text>
 <text x="1280.0" y="420.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">只接收已提交的版本</text>
 <rect x="1060" y="510" width="440" height="100" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
 <text x="1280.0" y="543.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">舊程式</text>
 <text x="1280.0" y="580.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">與新的規則逐筆比對</text>
 <rect x="1060" y="660" width="440" height="110" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
-<text x="1280.0" y="698.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">執行環境</text>
+<text x="1280.0" y="698.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Python 執行環境</text>
 <text x="1280.0" y="735.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">執行測試、啟動網頁</text>
 <polyline points="1280,660 1280,616" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
 <text x="1300" y="638.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">比對</text>
 <polyline points="660,400 1054,400" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
-<text x="860" y="380.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">送出程式</text>
+<text x="860" y="380.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">git push</text>
 <polyline points="660,450 760,450 760,690 1054,690" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
-<text x="870" y="560.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">遠端執行測試</text>
+<text x="870" y="545.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">SSH</text>
+<text x="870" y="577.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">遠端執行測試</text>
 <polyline points="1060,745 666,745" fill="none" stroke="#6B6560" stroke-width="3" stroke-dasharray="12 8" marker-end="url(#ah)"/>
-<text x="860" y="722.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">網頁轉回</text>
+<text x="860" y="722.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">SSH 轉接網頁</text>
 <text x="800" y="860.0" font-size="26" fill="#6B6560" text-anchor="middle" dominant-baseline="central">測試機不執行 Agent，也不在兩台共用的資料夾內修改檔案；討論與紀錄集中於開發機，下一次對話得以接續。</text>
 </svg>
