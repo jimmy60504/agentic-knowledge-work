@@ -66,7 +66,7 @@ def agent_remote_test():
     """Agent 操作測試機：以 Agent 為主角，人在 Mac 之外交辦與檢查，Agent 經私人網路操作 Windows 測試機。"""
     f = Fig(1600, 920)
     # 人：在兩台電腦之外
-    f.card(30, 330, 190, 200, "人", ["提出需求", "檢查結果", "作出決定"], tsize=34)
+    f.card(30, 350, 190, 200, "人", ["提出需求", "檢查結果", "作出決定"], tsize=34)
     # 三個區域
     f.rect(300, 60, 560, 740, fill="none", dash=True)
     f.text(580, 100, "Mac：開發機", size=32, bold=True)
@@ -80,34 +80,35 @@ def agent_remote_test():
     f.text(1350, 100, "Windows：測試機", size=32, bold=True)
     f.text(1350, 140, "舊程式只能在 Windows 執行", size=24, color=MUTED)
     f.text(1350, 172, "只負責執行，不執行 Agent", size=24, color=MUTED)
-    # Agent：主角
-    f.rect(330, 190, 500, 300, fill=PINK, stroke=ACCENT, sw=5)
-    f.text(580, 240, "Agent", size=42, bold=True)
-    for i, t in enumerate(["修改程式，提交到 git", "以 git push 送到測試機", "經 SSH 遠端執行測試、啟動網頁",
-                           "讀取結果，整理後回報給人"]):
-        f.text(580, 300 + i * 44, t, size=26)
-    f.card(330, 550, 500, 100, "專案資料夾", ["程式、規則、工作說明檔，以 git 管理"])
-    f.card(330, 690, 500, 100, "瀏覽器", ["人在 Mac 上檢視測試機的網頁"])
-    f.arrow([(220, 400), (324, 400)])
-    f.text(260, 380, "交辦", size=22, color=MUTED)
-    f.arrow([(330, 460), (226, 460)], color=ACCENT)
-    f.text(260, 440, "回報", size=22, color=ACCENT)
-    f.arrow([(580, 490), (580, 544)])
-    f.text(610, 517, "修改、提交", size=22, color=MUTED, anchor="start")
-    # Windows 測試機
-    f.card(1160, 210, 380, 110, "測試用的 git 副本", ["只接收已提交的版本"], fill=BLUEBG, stroke=BLUE)
-    f.card(1160, 440, 380, 100, "舊程式", ["與新的規則逐筆比對"], fill=BLUEBG, stroke=BLUE)
-    f.card(1160, 670, 380, 110, "Python 執行環境", ["執行測試、啟動網頁"], fill=BLUEBG, stroke=BLUE)
-    f.arrow([(1350, 670), (1350, 546)])
-    f.text(1370, 608, "比對", size=22, color=MUTED, anchor="start")
+    # Mac：專案資料夾在上，Agent 在中，瀏覽器在下
+    f.card(330, 180, 500, 90, "專案資料夾", ["程式、規則、工作說明檔，以 git 管理"])
+    f.rect(330, 340, 500, 220, fill=PINK, stroke=ACCENT, sw=5)
+    f.text(580, 400, "Agent", size=42, bold=True)
+    f.text(580, 462, "修改程式、送到測試機", size=26)
+    f.text(580, 506, "遠端執行測試、回報結果", size=26)
+    f.card(330, 660, 500, 100, "瀏覽器", ["測試機的網頁轉回此處"])
+    f.arrow([(580, 340), (580, 276)])
+    f.text(610, 305, "修改、提交", size=22, color=MUTED, anchor="start")
+    # 人與 Agent、瀏覽器
+    f.arrow([(220, 410), (324, 410)])
+    f.text(260, 390, "交辦", size=22, color=MUTED)
+    f.arrow([(330, 480), (226, 480)], color=ACCENT)
+    f.text(260, 460, "回報", size=22, color=ACCENT)
+    f.arrow([(330, 710), (125, 710), (125, 556)])
+    f.text(228, 690, "檢視", size=22, color=MUTED)
+    # Windows：git 副本在上，執行環境在中，舊程式在下
+    f.card(1160, 325, 380, 110, "測試用的 git 副本", ["只接收已提交的版本"], fill=BLUEBG, stroke=BLUE)
+    f.card(1160, 465, 380, 110, "Python 執行環境", ["執行測試、啟動網頁"], fill=BLUEBG, stroke=BLUE)
+    f.card(1160, 660, 380, 100, "舊程式", ["與新的規則逐筆比對"], fill=BLUEBG, stroke=BLUE)
+    f.arrow([(1350, 575), (1350, 654)])
+    f.text(1370, 615, "比對", size=22, color=MUTED, anchor="start")
     # Agent 發起的跨機器動作
-    f.arrow([(830, 265), (1154, 265)], color=ACCENT, sw=4)
-    f.text(1000, 243, "git push", size=24, color=ACCENT)
-    f.arrow([(830, 440), (910, 440), (910, 700), (1154, 700)], color=ACCENT, sw=4)
-    f.text(1010, 545, "SSH", size=24, color=ACCENT)
-    f.text(1010, 577, "遠端執行", size=24, color=ACCENT)
-    f.arrow([(1160, 760), (836, 760)], dash=True)
-    f.text(1000, 733, "SSH 轉接網頁", size=22, color=MUTED)
+    f.arrow([(830, 380), (1154, 380)], color=ACCENT, sw=4)
+    f.text(1000, 358, "git push", size=24, color=ACCENT)
+    f.arrow([(830, 520), (1154, 520)], color=ACCENT, sw=4)
+    f.text(1000, 498, "SSH 遠端執行", size=24, color=ACCENT)
+    f.arrow([(1160, 560), (1050, 560), (1050, 730), (836, 730)], dash=True)
+    f.text(968, 708, "SSH 轉接網頁", size=22, color=MUTED)
     f.text(800, 862, "人只在 Mac 上交辦與檢查；涉及 Windows 的每一個動作都由 Agent 經 SSH 執行，人不必親自操作測試機。",
            size=26, color=MUTED)
     f.save("w7-agent-remote-test")
