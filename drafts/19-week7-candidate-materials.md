@@ -57,6 +57,8 @@ vibe coding 通常不會管這些。缺什麼套件、版本不合，Agent 會�
 
 - 目的：展示 Agent 可以透過遠端登入操作另一台電腦。
 - 標題：Agent 可以自己 SSH 去控制其他電腦
-- 原話：「這邊可以把現在的硬體設定帶一下……算是展示一下說 agent 可以自己 ssh 去控制其他電腦」（10/05）；「我之後應該做成我都從 mac 做，然後叫 agent 自己 ssh 去 win 上面……跑 test……就不會有這種格式轉來轉去還有討論歷史不連貫的問題？」（10/05）；「這個遠端測試設定就比較像是我自己比較習慣用 mac 才會這樣做，那如果原本就在 win 上面不用這麼麻煩，但是換個角度就是 win 上面開發 linux 程式也可以透過這個方式直接控制 server，或是控制 wsl」（10/06）
-- 畫面：Mac、私人網路、Windows 測試機的連線圖：Agent 送出程式、執行測試、網頁轉回 Mac（已畫：`assets/week7-diagrams/w7-agent-remote-test`，保留 Mac、Windows、Thunderbolt、Tailscale、SSH 等公開技術名稱，內部主機與路徑不入圖，並標出人與 Agent 的分工）；修改前（兩台各有 Agent）與修改後（集中在 Mac）的對照。
+- 原話：「這邊可以把現在的硬體設定帶一下……算是展示一下說 agent 可以自己 ssh 去控制其他電腦」（10/05）；「我之後應該做成我都從 mac 做，然後叫 agent 自己 ssh 去 win 上面……跑 test……就不會有這種格式轉來轉去還有討論歷史不連貫的問題？」（10/05）；「這個遠端測試設定就比較像是我自己比較習慣用 mac 才會這樣做，那如果原本就在 win 上面不用這麼麻煩，但是換個角度就是 win 上面開發 linux 程式也可以透過這個方式直接控制 server，或是控制 wsl」（10/06）；「可能 agent 變成主要的重點，因為是凸顯 agent 可以做的事情，還有人可以拉出 mac」（10/08）
+- 畫面：`assets/week7-diagrams/w7-agent-remote-test.svg`，以 Agent 為主角的分工圖：人在 Mac 之外交辦、檢查，經瀏覽器檢視結果；Agent 修改程式、以 git push 送到 Windows、經 SSH 遠端執行測試；連線為 Thunderbolt 直連或 Tailscale；Windows 測試機只負責執行。保留公開技術名稱，內部主機與路徑不入圖。另一張修改前（兩台各有 Agent）與修改後（集中在 Mac）的對照【待畫】。
+
+  ![Agent 操作測試機的分工](../assets/week7-diagrams/w7-agent-remote-test.png)
 - 備註：這是講師習慣用 Mac 才有的安排，原本在 Windows 開發者不必如此；但同樣的方法可以讓 Agent 在 Windows 上開發 Linux 程式時，直接控制 Linux 伺服器或 WSL。權限要先劃清楚：只開放私人網路、只用金鑰登入、測試機只做測試，並寫進工作說明檔。
