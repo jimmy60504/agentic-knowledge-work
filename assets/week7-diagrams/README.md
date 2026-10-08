@@ -7,4 +7,4 @@
 
 | 檔案 | 投影片 | 內容 |
 |---|---|---|
-| `w7-agent-remote-test` | 候選素材「由 Agent 操作測試機」 | 以 Agent 為主角：人在 Mac 之外交辦與檢查，Agent 修改程式、以 git push 送出、經 SSH 遠端執行測試，網頁轉回 Mac 的瀏覽器；連線為 Thunderbolt 直連或 Tailscale；Windows 測試機只負責執行 |
+| `w7-agent-remote-test` | 候選素材「由 Agent 操作測試機」 | 以 Agent 為主角：使用者在 Mac 之外交辦與檢查，Agent 修改程式、以 git push 送出、經 SSH 遠端執行測試，網頁轉回 Mac 的瀏覽器；連線為 Thunderbolt 直連或 Tailscale；Windows 測試機只負責執行 |

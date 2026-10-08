@@ -5,7 +5,7 @@
 </defs>
 <rect width="1600" height="920" fill="#FFFFFF"/>
 <rect x="30" y="350" width="190" height="200" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
-<text x="125.0" y="401.4" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">人</text>
+<text x="125.0" y="401.4" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">使用者</text>
 <text x="125.0" y="440.6" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">提出需求</text>
 <text x="125.0" y="472.9" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">檢查結果</text>
 <text x="125.0" y="505.3" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">作出決定</text>
@@ -56,5 +56,5 @@
 <text x="1000" y="498.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">SSH 遠端執行</text>
 <polyline points="1160,560 1050,560 1050,730 836,730" fill="none" stroke="#6B6560" stroke-width="3" stroke-dasharray="12 8" marker-end="url(#ah)"/>
 <text x="968" y="708.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">SSH 轉接網頁</text>
-<text x="800" y="862.0" font-size="26" fill="#6B6560" text-anchor="middle" dominant-baseline="central">人只在 Mac 上交辦與檢查；涉及 Windows 的每一個動作都由 Agent 經 SSH 執行，人不必親自操作測試機。</text>
+<text x="800" y="862.0" font-size="26" fill="#6B6560" text-anchor="middle" dominant-baseline="central">使用者只在 Mac 上交辦與檢查；涉及 Windows 的每一個動作都由 Agent 經 SSH 執行，使用者不必親自操作測試機。</text>
 </svg>

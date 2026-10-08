@@ -63,10 +63,10 @@ class Fig:
 
 
 def agent_remote_test():
-    """Agent 操作測試機：以 Agent 為主角，人在 Mac 之外交辦與檢查，Agent 經私人網路操作 Windows 測試機。"""
+    """Agent 操作測試機：以 Agent 為主角，使用者在 Mac 之外交辦與檢查，Agent 經私人網路操作 Windows 測試機。"""
     f = Fig(1600, 920)
-    # 人：在兩台電腦之外
-    f.card(30, 350, 190, 200, "人", ["提出需求", "檢查結果", "作出決定"], tsize=34)
+    # 使用者：在兩台電腦之外
+    f.card(30, 350, 190, 200, "使用者", ["提出需求", "檢查結果", "作出決定"], tsize=34)
     # 三個區域
     f.rect(300, 60, 560, 740, fill="none", dash=True)
     f.text(580, 100, "Mac：開發機", size=32, bold=True)
@@ -89,7 +89,7 @@ def agent_remote_test():
     f.card(330, 660, 500, 100, "瀏覽器", ["測試機的網頁轉回此處"])
     f.arrow([(580, 340), (580, 276)])
     f.text(610, 305, "修改、提交", size=22, color=MUTED, anchor="start")
-    # 人與 Agent、瀏覽器
+    # 使用者與 Agent、瀏覽器
     f.arrow([(220, 410), (324, 410)])
     f.text(260, 390, "交辦", size=22, color=MUTED)
     f.arrow([(330, 480), (226, 480)], color=ACCENT)
@@ -109,7 +109,7 @@ def agent_remote_test():
     f.text(1000, 498, "SSH 遠端執行", size=24, color=ACCENT)
     f.arrow([(1160, 560), (1050, 560), (1050, 730), (836, 730)], dash=True)
     f.text(968, 708, "SSH 轉接網頁", size=22, color=MUTED)
-    f.text(800, 862, "人只在 Mac 上交辦與檢查；涉及 Windows 的每一個動作都由 Agent 經 SSH 執行，人不必親自操作測試機。",
+    f.text(800, 862, "使用者只在 Mac 上交辦與檢查；涉及 Windows 的每一個動作都由 Agent 經 SSH 執行，使用者不必親自操作測試機。",
            size=26, color=MUTED)
     f.save("w7-agent-remote-test")
 
