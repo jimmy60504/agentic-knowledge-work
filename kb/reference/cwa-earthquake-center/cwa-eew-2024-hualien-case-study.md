@@ -4,7 +4,7 @@
 
 ## 來源
 
-- 投影片檔：`氣象署網頁/Practical Applications of CWA Earthquake Early Warning Systems Case Study of the 2024 Hualien Earthquake.pdf`（OneDrive，不進 git）。
+- 投影片檔：`Practical Applications of CWA Earthquake Early Warning Systems Case Study of the 2024 Hualien Earthquake.pdf`（使用者提供，不進 git）。
 - 相關 KB：[[cwa-earthquake-center-work-types]]（工作動詞）、[[cwa-earthquake-center-systems]]、[[cwa-earthquake-center-monitoring]]。
 
 ## 重點
