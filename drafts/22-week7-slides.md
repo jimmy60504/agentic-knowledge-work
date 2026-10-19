@@ -175,6 +175,7 @@
 - 主訊息：只有執行檔時，也可以借助逆向工程的工具
 - 段落：開源專案 Reverse Engineer Anything（REA）把反組譯工具接上 Agent，流程大致是：提供工具、檢視程式、追蹤行為、驗證假設、重建行為。重建的是程式的行為，不是原始碼。
 - 段落：來源：InfoQ，2026-10-17；專案頁 github.com/morluto/rea（MIT 授權）。開發者尚未實際試用。
+- 圖：`assets/week7-shots/w7-10-rea-github.jpg`｜REA 的 GitHub 專案頁（擷取於 2026-10-20）
 
 **筆記**
 
