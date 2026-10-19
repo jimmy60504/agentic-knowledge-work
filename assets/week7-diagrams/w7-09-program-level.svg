@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" width="1600" height="640" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="640" fill="#FFFFFF"/>
+<rect x="60" y="40" width="420" height="130" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="270.0" y="90.2" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">文件</text>
+<text x="270.0" y="126.6" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">訓練投影片、說明文件</text>
+<rect x="60" y="210" width="420" height="130" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="270.0" y="260.2" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">原始碼</text>
+<text x="270.0" y="296.6" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">程式實際寫的判斷</text>
+<rect x="60" y="380" width="420" height="130" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="270.0" y="430.2" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">實際執行</text>
+<text x="270.0" y="466.6" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">舊程式跑出來的結果</text>
+<polyline points="520,60 520,470" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<text x="545" y="95.0" font-size="24" fill="#BE8979" text-anchor="start" dominant-baseline="central">越往下</text>
+<text x="545" y="130.0" font-size="24" fill="#BE8979" text-anchor="start" dominant-baseline="central">越接近實際</text>
+<rect x="760" y="180" width="380" height="130" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="950.0" y="228.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">有原始碼</text>
+<text x="950.0" y="265.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">Agent 讀原始碼，對照文件</text>
+<rect x="760" y="350" width="380" height="130" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="950.0" y="398.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">只有執行檔</text>
+<text x="950.0" y="435.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">Agent 在測試機執行、觀察</text>
+<polyline points="1146,245 1240,245 1240,330" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="1146,415 1240,415 1240,360" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="540,275 754,245" fill="none" stroke="#6B6560" stroke-width="3" stroke-dasharray="12 8" marker-end="url(#ah)"/>
+<polyline points="540,445 754,415" fill="none" stroke="#6B6560" stroke-width="3" stroke-dasharray="12 8" marker-end="url(#ah)"/>
+<rect x="1280" y="250" width="290" height="200" rx="16" fill="#F5F2EC" stroke="#BE8979" stroke-width="3"/>
+<text x="1425.0" y="317.6" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">保存行為</text>
+<text x="1425.0" y="354.1" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">作為之後比對的標準</text>
+<text x="1425.0" y="386.4" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">（特性測試）</text>
+<polyline points="1236,345 1274,345" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<text x="800" y="600.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">重構或重寫之前，先把舊程式實際的行為保存下來；文件與程式不一致時，以實際執行為準</text>
+</svg>

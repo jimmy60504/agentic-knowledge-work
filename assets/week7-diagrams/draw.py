@@ -257,6 +257,33 @@ def shared_folder():
     f.save("w7-05-shared-folder")
 
 
+def program_level():
+    """第 9 頁：查到程式的層次。文件、原始碼、實際執行三層，越往下越接近實際；
+    Agent 依程式有無原始碼選擇調查方式，查到的實際行為保存下來，作為重構或重寫後比對的標準。"""
+    f = Fig(1600, 640)
+    layers = [("文件", "訓練投影片、說明文件", IVORY, GREY),
+              ("原始碼", "程式實際寫的判斷", BLUEBG, BLUE),
+              ("實際執行", "舊程式跑出來的結果", PINK, ACCENT)]
+    for i, (t, sub, fill, stroke) in enumerate(layers):
+        y = 40 + i * 170
+        f.card(60, y, 420, 130, t, [sub], fill=fill, stroke=stroke, tsize=32, ssize=22)
+    f.arrow([(520, 60), (520, 470)], color=ACCENT, sw=4)
+    f.text(545, 95, "越往下", size=24, color=ACCENT, anchor="start")
+    f.text(545, 130, "越接近實際", size=24, color=ACCENT, anchor="start")
+    # Agent 的兩種調查方式
+    f.card(760, 180, 380, 130, "有原始碼", ["Agent 讀原始碼，對照文件"], fill=BLUEBG, stroke=BLUE)
+    f.card(760, 350, 380, 130, "只有執行檔", ["Agent 在測試機執行、觀察"], fill=PINK, stroke=ACCENT)
+    f.arrow([(1146, 245), (1240, 245), (1240, 330)])
+    f.arrow([(1146, 415), (1240, 415), (1240, 360)])
+    f.arrow([(540, 275), (754, 245)], dash=True)
+    f.arrow([(540, 445), (754, 415)], dash=True)
+    f.card(1280, 250, 290, 200, "保存行為", ["作為之後比對的標準", "（特性測試）"], fill=IVORY, stroke=ACCENT)
+    f.arrow([(1236, 345), (1274, 345)], color=ACCENT)
+    f.text(800, 600, "重構或重寫之前，先把舊程式實際的行為保存下來；文件與程式不一致時，以實際執行為準",
+           size=24, color=MUTED)
+    f.save("w7-09-program-level")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -266,3 +293,4 @@ if __name__ == "__main__":
     single_source()
     release()
     shared_folder()
+    program_level()
