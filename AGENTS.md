@@ -91,6 +91,14 @@
 - 投影片以 agent 產 `.pptx` 為主。材料存 `kb/`；採用的論點與故事線整理進主 draft 文章，棄案及理由另存 draft，不必另維護獨立論點檔。
 - 排投影片前先出 ghost deck，且以使用者原話當底，做法照 `skills/ghost-deck-from-own-words.md`；投影片原則見 `kb/tools/slide-design-principles-argument-to-slides.md`。
 
+### 新增或更新一週的文章時，同步課表與課程表 PDF
+
+每次新增或更新 `lessons/*.qmd`，連同以下三處一起改，再一併推送：
+
+1. **首頁課表**（`index.qmd` 的「課程表」）：該日期那一列填上文章連結與一句介紹；標題用精簡的書面語，與文章的 `title` 一致，介紹包在 `[…]{.desc}` 裡以小字顯示；投影片連結有了再補。
+2. **課程表的資料**（`schedule/schedule.tsv`）：在該日期的「課名」欄填上同一個標題；同一天有多個主題時只填第一個。
+3. **重新產生課程表**：執行 `bash schedule/build.sh`。它會重新產生教育訓練資料夾外層的 `上課課程表.docx` 與 `上課課程表.pdf`（版面依紙本課程表，附課程網站的連結與 QR code），並把 PDF 複製到 `assets/site/course-schedule.pdf`，首頁的下載連結指向這個檔。下載網址固定，不必重新產生連結；覆蓋同名檔後推送即可。需要 node 與 Microsoft Word，產出一頁 A4，頁數變成兩頁時調整 `schedule/build.js` 的行高。
+
 ## 課程核心
 
 - 課程不是教 agent，也不是教做簡報：每週先講一件知識工作本來怎麼做（要素、標準、常見失敗），再拆解流程，分辨哪些環節交給 agent、哪些必須人把關。簡報是第一個練習對象。
