@@ -6,3 +6,4 @@
 |---|---|
 | map-pin、broadcast、stack-2 | 共用資料夾：定位計算程式、測站表、速度模型 |
 | activity、wave-sine、map-2、folders | 共用資料夾：規模與強震、波形與格式轉換、地圖與繪圖、其他 |
+| user、terminal-2、presentation | 投影片為骨架：人工檢查、程式檢查、訓練投影片 |

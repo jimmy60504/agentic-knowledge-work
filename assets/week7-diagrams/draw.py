@@ -284,6 +284,52 @@ def program_level():
     f.save("w7-09-program-level")
 
 
+def slide_walkthrough():
+    """第 7 頁：以訓練投影片為線索，沿著原本的流程走一遍，標出每一步是人工還是程式檢查。"""
+    f = Fig(1600, 600)
+    HUMAN, PROG = (PINK, ACCENT), (BLUEBG, BLUE)
+    groups = [("第一步", [("檢視波形，刪除", "沒有地震的檔案", [HUMAN])]),
+              ("第二步", [("執行檢查程式", "產生錯誤清單", [PROG]),
+                          ("逐項判讀", "錯誤清單", [HUMAN]),
+                          ("依時間排序", "逐筆檢視", [PROG, HUMAN])]),
+              ("第三步", [("篩選範圍", "測站數、相位數", [PROG]),
+                          ("比對時間", "相近的事件", [PROG]),
+                          ("入庫、備份", "回報", [HUMAN])])]
+    # 上方：投影片是線索
+    f.rect(40, 30, 1520, 70, fill=IVORY, stroke=GREY, rx=12)
+    icon(f, "presentation", 70, 47, 36, MUTED)
+    f.text(125, 65, "訓練投影片：三大步驟是走一遍的線索", size=26, bold=True, anchor="start")
+    w, gap, x = 180, 20, 60
+    centers = []
+    for gname, steps in groups:
+        gw = len(steps) * w + (len(steps) - 1) * gap
+        f.rect(x - 10, 130, gw + 20, 330, fill="none", stroke=GREY, dash=True, rx=14)
+        f.text(x + gw / 2, 160, gname, size=26, bold=True, color=MUTED)
+        for i, (a, b, kinds) in enumerate(steps):
+            sx = x + i * (w + gap)
+            fill, stroke = kinds[0]
+            f.rect(sx, 190, w, 170, fill=fill, stroke=stroke)
+            for j, (kf, ks) in enumerate(kinds):
+                ic = "user" if (kf, ks) == HUMAN else "terminal-2"
+                icon(f, ic, sx + w / 2 - 22 * len(kinds) + 44 * j, 202, 36, ks)
+            f.text(sx + w / 2, 275, a, size=22, bold=True)
+            f.text(sx + w / 2, 310, b, size=20, color=MUTED)
+            centers.append(sx + w / 2)
+        x += gw + 50
+    for c1, c2 in zip(centers, centers[1:]):
+        f.arrow([(c1 + w / 2 + 2, 275), (c2 - w / 2 - 4, 275)])
+    # 第二步修正後重複
+    f.arrow([(centers[3], 366), (centers[3], 420), (centers[1], 420), (centers[1], 366)], color=ACCENT, dash=True)
+    f.text((centers[1] + centers[3]) / 2, 442, "修正後重複第二步", size=20, color=ACCENT)
+    # 圖例
+    f.rect(470, 505, 30, 30, fill=PINK, stroke=ACCENT, rx=6)
+    f.text(512, 520, "人工檢查", size=22, anchor="start")
+    f.rect(690, 505, 30, 30, fill=BLUEBG, stroke=BLUE, rx=6)
+    f.text(732, 520, "程式檢查", size=22, anchor="start")
+    f.text(890, 520, "逐一記下每一步讀了什麼、怎麼判斷、門檻多少", size=22, color=MUTED, anchor="start")
+    f.save("w7-07-slide-walkthrough")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -294,3 +340,4 @@ if __name__ == "__main__":
     release()
     shared_folder()
     program_level()
+    slide_walkthrough()

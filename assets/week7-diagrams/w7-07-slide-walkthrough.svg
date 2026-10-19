@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="600" fill="#FFFFFF"/>
+<rect x="40" y="30" width="1520" height="70" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<g transform="translate(70,47) scale(1.5)" fill="none" stroke="#6B6560" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4l18 0" /><path d="M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-10" /><path d="M12 16l0 4" /><path d="M9 20l6 0" /><path d="M8 12l3 -3l2 2l3 -3" /></g>
+<text x="125" y="65.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">訓練投影片：三大步驟是走一遍的線索</text>
+<rect x="50" y="130" width="200" height="330" rx="14" fill="none" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="12 8"/>
+<text x="150.0" y="160.0" font-size="26" fill="#6B6560" font-weight="600" text-anchor="middle" dominant-baseline="central">第一步</text>
+<rect x="60" y="190" width="180" height="170" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(128.0,202) scale(1.5)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></g>
+<text x="150.0" y="275.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢視波形，刪除</text>
+<text x="150.0" y="310.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">沒有地震的檔案</text>
+<rect x="280" y="130" width="600" height="330" rx="14" fill="none" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="12 8"/>
+<text x="580.0" y="160.0" font-size="26" fill="#6B6560" font-weight="600" text-anchor="middle" dominant-baseline="central">第二步</text>
+<rect x="290" y="190" width="180" height="170" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(358.0,202) scale(1.5)" fill="none" stroke="#A6B7BA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /><path d="M13 15l3 0" /><path d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -12" /></g>
+<text x="380.0" y="275.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">執行檢查程式</text>
+<text x="380.0" y="310.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">產生錯誤清單</text>
+<rect x="490" y="190" width="180" height="170" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(558.0,202) scale(1.5)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></g>
+<text x="580.0" y="275.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">逐項判讀</text>
+<text x="580.0" y="310.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">錯誤清單</text>
+<rect x="690" y="190" width="180" height="170" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(736.0,202) scale(1.5)" fill="none" stroke="#A6B7BA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /><path d="M13 15l3 0" /><path d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -12" /></g>
+<g transform="translate(780.0,202) scale(1.5)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></g>
+<text x="780.0" y="275.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">依時間排序</text>
+<text x="780.0" y="310.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">逐筆檢視</text>
+<rect x="910" y="130" width="600" height="330" rx="14" fill="none" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="12 8"/>
+<text x="1210.0" y="160.0" font-size="26" fill="#6B6560" font-weight="600" text-anchor="middle" dominant-baseline="central">第三步</text>
+<rect x="920" y="190" width="180" height="170" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(988.0,202) scale(1.5)" fill="none" stroke="#A6B7BA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /><path d="M13 15l3 0" /><path d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -12" /></g>
+<text x="1010.0" y="275.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">篩選範圍</text>
+<text x="1010.0" y="310.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">測站數、相位數</text>
+<rect x="1120" y="190" width="180" height="170" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(1188.0,202) scale(1.5)" fill="none" stroke="#A6B7BA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /><path d="M13 15l3 0" /><path d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -12" /></g>
+<text x="1210.0" y="275.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">比對時間</text>
+<text x="1210.0" y="310.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">相近的事件</text>
+<rect x="1320" y="190" width="180" height="170" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(1388.0,202) scale(1.5)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></g>
+<text x="1410.0" y="275.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">入庫、備份</text>
+<text x="1410.0" y="310.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">回報</text>
+<polyline points="242.0,275 286.0,275" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="472.0,275 486.0,275" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="672.0,275 686.0,275" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="872.0,275 916.0,275" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="1102.0,275 1116.0,275" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="1302.0,275 1316.0,275" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="780.0,366 780.0,420 380.0,420 380.0,366" fill="none" stroke="#BE8979" stroke-width="3" stroke-dasharray="12 8" marker-end="url(#ahr)"/>
+<text x="580.0" y="442.0" font-size="20" fill="#BE8979" text-anchor="middle" dominant-baseline="central">修正後重複第二步</text>
+<rect x="470" y="505" width="30" height="30" rx="6" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="512" y="520.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">人工檢查</text>
+<rect x="690" y="505" width="30" height="30" rx="6" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="732" y="520.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">程式檢查</text>
+<text x="890" y="520.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">逐一記下每一步讀了什麼、怎麼判斷、門檻多少</text>
+</svg>
