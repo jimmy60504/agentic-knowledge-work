@@ -330,6 +330,42 @@ def slide_walkthrough():
     f.save("w7-07-slide-walkthrough")
 
 
+def rea_workflow():
+    """第 10 頁（補充）：REA 的運作方式。依專案說明與 InfoQ 報導整理，開發者尚未實際試用。
+    Agent 經 MCP 使用反組譯工具檢視執行檔，反覆追蹤與驗證假設，最後重建行為相同的程式並以測試和原程式比對。"""
+    f = Fig(1200, 900)
+    f.card(40, 60, 300, 140, "執行檔", ["只有執行檔，沒有原始碼"], fill=IVORY, stroke=GREY)
+    f.card(450, 60, 300, 140, "反組譯工具", ["Ghidra、IDA 等"], fill=BLUEBG, stroke=BLUE)
+    f.card(860, 60, 300, 140, "Agent", ["Claude Code、Codex 等"], fill=PINK, stroke=ACCENT)
+    f.arrow([(346, 130), (444, 130)])
+    f.text(395, 108, "分析", size=22, color=MUTED)
+    f.arrow([(756, 115), (854, 115)], color=ACCENT)
+    f.arrow([(854, 150), (756, 150)], color=ACCENT)
+    f.text(805, 95, "MCP", size=22, bold=True, color=ACCENT)
+    steps = [("1", "檢視程式", "查詢函式與呼叫關係"), ("2", "追蹤行為", "從想了解的功能往下追"),
+             ("3", "驗證假設", "提出假設，回到執行檔確認"), ("4", "重建行為", "寫出行為相同的程式")]
+    for i, (n, t, sub) in enumerate(steps):
+        y = 260 + i * 120
+        f.rect(560, y, 600, 96, fill="#FFFFFF", stroke=ACCENT if n in "34" else GREY)
+        f.add(f'<circle cx="610" cy="{y + 48}" r="24" fill="{ACCENT}"/>')
+        f.text(610, y + 48, n, size=24, bold=True, color="#FFFFFF")
+        f.text(660, y + 33, t, size=26, bold=True, anchor="start")
+        f.text(660, y + 68, sub, size=21, color=MUTED, anchor="start")
+        if i < 3:
+            f.arrow([(860, y + 98), (860, y + 118)])
+    f.arrow([(1010, 214), (1010, 254)], color=ACCENT)
+    f.arrow([(1166, 548), (1185, 548), (1185, 428), (1166, 428)], color=ACCENT, dash=True)
+    f.text(1150, 488, "反覆", size=20, color=ACCENT, anchor="end")
+    # 比對
+    f.card(40, 720, 500, 130, "以測試與原程式比對", ["重建的程式與執行檔，結果逐一相同"], fill=IVORY, stroke=ACCENT)
+    f.arrow([(556, 680), (290, 680), (290, 714)], color=ACCENT)
+    f.arrow([(190, 714), (190, 206)], dash=True)
+    f.text(205, 460, "對照", size=22, color=MUTED, anchor="start")
+    f.text(850, 800, "重建的是行為，不是原始碼", size=24, bold=True, color=ACCENT)
+    f.text(850, 840, "依專案說明整理，開發者尚未實際試用", size=20, color=MUTED)
+    f.save("w7-10-rea-workflow")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -341,3 +377,4 @@ if __name__ == "__main__":
     shared_folder()
     program_level()
     slide_walkthrough()
+    rea_workflow()
