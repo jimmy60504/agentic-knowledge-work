@@ -221,6 +221,42 @@ def release():
     f.save("w7-28-release")
 
 
+def icon(f, name, x, y, size, color):
+    """嵌入 Tabler 圖示（assets/week7-icons/，MIT）：取 SVG 內的 path 等元素，縮放到 size。"""
+    import re
+    src = (HERE.parent / "week7-icons" / f"{name}.svg").read_text(encoding="utf-8")
+    body = "".join(m for m in re.findall(r"<(?:path|circle|rect|line|polyline)[^>]*/>", src)
+                   if 'stroke="none"' not in m)
+    k = size / 24
+    f.add(f'<g transform="translate({x},{y}) scale({k})" fill="none" stroke="{color}" stroke-width="1.8" '
+          f'stroke-linecap="round" stroke-linejoin="round">{body}</g>')
+
+
+def shared_folder():
+    """第 5 頁：共用資料夾的七類內容，各附圖示；決定定位結果的三類以強調色標出。"""
+    f = Fig(1600, 640)
+    cats = [("map-pin", "定位計算程式", "三代：互動版、命令列版、三維", True),
+            ("broadcast", "測站表", "兩代：舊表 2010 年停止維護", True),
+            ("stack-2", "速度模型", "一維與三維的速度模型", True),
+            ("activity", "規模與強震", "規模計算、場址係數、強震預測", False),
+            ("wave-sine", "波形與格式轉換", "波形解讀、格式轉換、訊號處理", False),
+            ("map-2", "地圖與繪圖", "行政區界、海岸、斷層、地形", False),
+            ("folders", "其他", "參考目錄、範例檔、資料庫、字型", False)]
+    w, h, gap = 360, 230, 40
+    for i, (ic, title, sub, key) in enumerate(cats):
+        row, col = divmod(i, 4)
+        n = 4 if row == 0 else 3
+        x0 = (1600 - (n * w + (n - 1) * gap)) / 2
+        x, y = x0 + col * (w + gap), 30 + row * (h + 50)
+        f.rect(x, y, w, h, fill=PINK if key else IVORY, stroke=ACCENT if key else GREY)
+        f.add(f'<circle cx="{x + w / 2}" cy="{y + 62}" r="40" fill="#FFFFFF" stroke="{ACCENT if key else GREY}" stroke-width="3"/>')
+        icon(f, ic, x + w / 2 - 24, y + 38, 48, ACCENT if key else MUTED)
+        f.text(x + w / 2, y + 140, title, size=30, bold=True)
+        f.text(x + w / 2, y + 185, sub, size=21, color=MUTED)
+    f.text(800, 612, "強調色的三類決定了定位的結果，也是檢查規則的依據", size=24, color=ACCENT)
+    f.save("w7-05-shared-folder")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -229,3 +265,4 @@ if __name__ == "__main__":
     counts()
     single_source()
     release()
+    shared_folder()

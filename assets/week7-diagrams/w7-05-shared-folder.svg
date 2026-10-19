@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" width="1600" height="640" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="640" fill="#FFFFFF"/>
+<rect x="20.0" y="30" width="360" height="230" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<circle cx="200.0" cy="92" r="40" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(176.0,68) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" /></g>
+<text x="200.0" y="170.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位計算程式</text>
+<text x="200.0" y="215.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">三代：互動版、命令列版、三維</text>
+<rect x="420.0" y="30" width="360" height="230" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<circle cx="600.0" cy="92" r="40" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(576.0,68) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18.364 19.364a9 9 0 1 0 -12.728 0" /><path d="M15.536 16.536a5 5 0 1 0 -7.072 0" /><path d="M11 13a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></g>
+<text x="600.0" y="170.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測站表</text>
+<text x="600.0" y="215.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">兩代：舊表 2010 年停止維護</text>
+<rect x="820.0" y="30" width="360" height="230" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<circle cx="1000.0" cy="92" r="40" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(976.0,68) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l-8 4l8 4l8 -4l-8 -4" /><path d="M4 12l8 4l8 -4" /><path d="M4 16l8 4l8 -4" /></g>
+<text x="1000.0" y="170.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">速度模型</text>
+<text x="1000.0" y="215.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">一維與三維的速度模型</text>
+<rect x="1220.0" y="30" width="360" height="230" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="1400.0" cy="92" r="40" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<g transform="translate(1376.0,68) scale(2.0)" fill="none" stroke="#6B6560" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8l4 -16l3 8h4" /></g>
+<text x="1400.0" y="170.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">規模與強震</text>
+<text x="1400.0" y="215.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">規模計算、場址係數、強震預測</text>
+<rect x="220.0" y="310" width="360" height="230" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="400.0" cy="372" r="40" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<g transform="translate(376.0,348) scale(2.0)" fill="none" stroke="#6B6560" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12h-2c-.894 0 -1.662 -.857 -1.761 -2c-.296 -3.45 -.749 -6 -2.749 -6s-2.5 3.582 -2.5 8s-.5 8 -2.5 8s-2.452 -2.547 -2.749 -6c-.1 -1.147 -.867 -2 -1.763 -2h-2" /></g>
+<text x="400.0" y="450.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">波形與格式轉換</text>
+<text x="400.0" y="495.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">波形解讀、格式轉換、訊號處理</text>
+<rect x="620.0" y="310" width="360" height="230" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="800.0" cy="372" r="40" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<g transform="translate(776.0,348) scale(2.0)" fill="none" stroke="#6B6560" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" /><path d="M9 4v13" /><path d="M15 7v5.5" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879" /><path d="M19 18v.01" /></g>
+<text x="800.0" y="450.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">地圖與繪圖</text>
+<text x="800.0" y="495.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">行政區界、海岸、斷層、地形</text>
+<rect x="1020.0" y="310" width="360" height="230" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="1200.0" cy="372" r="40" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<g transform="translate(1176.0,348) scale(2.0)" fill="none" stroke="#6B6560" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" /><path d="M17 16v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2" /></g>
+<text x="1200.0" y="450.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">其他</text>
+<text x="1200.0" y="495.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">參考目錄、範例檔、資料庫、字型</text>
+<text x="800" y="612.0" font-size="24" fill="#BE8979" text-anchor="middle" dominant-baseline="central">強調色的三類決定了定位的結果，也是檢查規則的依據</text>
+</svg>
