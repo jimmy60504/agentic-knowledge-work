@@ -40,7 +40,9 @@ const doc=new Document({styles:{default:{document:{run:{font:FONT}}}},
          children:[
            new Paragraph({spacing:{after:80},children:[new TextRun({text:'課程網站',font:FONT,size:22,bold:true,color:NAVY})]}),
            new Paragraph({spacing:{after:80},children:[new ExternalHyperlink({link:URL,children:[new TextRun({text:URL,font:'Calibri',size:20,color:'2F5597',underline:{}})]})]}),
-           new Paragraph({children:[new TextRun({text:'掃描 QR code 開啟各週的教材與投影片。',font:FONT,size:18,color:MUTED})]}),
+           new Paragraph({spacing:{after:80},children:[new TextRun({text:'掃描 QR code 開啟各週的教材與投影片。',font:FONT,size:18,color:MUTED})]}),
+           new Paragraph({children:[new TextRun({text:'講師：黃俊銘　',font:FONT,size:20,color:'333333'}),
+             new ExternalHyperlink({link:'mailto:jimmy60504@gmail.com',children:[new TextRun({text:'jimmy60504@gmail.com',font:'Calibri',size:20,color:'2F5597'})]})]}),
          ]})]})]}),
   ]}]});
 Packer.toBuffer(doc).then(b=>fs.writeFileSync(OUT,b));
