@@ -257,6 +257,18 @@ main.content blockquote {
   color: #6B6560;
 }
 
+.weekly-table td .desc {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-size: 0.82em;
+  line-height: 1.55;
+  color: #6B6560;
+}
+
+.weekly-table td:nth-child(2) > a {
+  font-weight: 600;
+}
+
 .weekly-table tr:has(.wip) {
   opacity: 0.42;
 }
