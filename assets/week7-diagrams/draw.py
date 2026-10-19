@@ -366,6 +366,51 @@ def rea_workflow():
     f.save("w7-10-rea-workflow")
 
 
+def agent_survey():
+    """第 13 頁：人讀不完這麼多來源，改由人指揮多個 Agent 平行調查；結果不夠時回去再調查一次，
+    條目回到原文核對，最後由人決定去留。"""
+    f = Fig(1600, 720)
+    # 左：來源
+    f.rect(30, 150, 300, 380, fill=IVORY, stroke=GREY)
+    for i in range(4):
+        icon(f, "file-text", 70 + i * 58, 190, 44, MUTED)
+    f.text(180, 300, "18 個來源", size=34, bold=True)
+    f.text(180, 350, "舊程式、投影片、", size=22, color=MUTED)
+    f.text(180, 385, "文件、紙本清單", size=22, color=MUTED)
+    f.text(180, 460, "人一個個讀不完", size=24, bold=True, color=ACCENT)
+    # 上：開發者指揮
+    f.rect(600, 20, 400, 110, fill=PINK, stroke=ACCENT)
+    icon(f, "user", 630, 48, 52, ACCENT)
+    f.text(700, 60, "開發者", size=30, bold=True, anchor="start")
+    f.text(700, 100, "訂定格式，分派來源", size=22, color=MUTED, anchor="start")
+    f.arrow([(800, 136), (800, 196)], color=ACCENT, sw=4)
+    f.text(815, 165, "指揮", size=22, color=ACCENT, anchor="start")
+    # 中：多個 Agent
+    for i in range(4):
+        y = 205 + i * 85
+        f.rect(560, y, 480, 70, fill=BLUEBG, stroke=BLUE, rx=12)
+        icon(f, "robot", 580, y + 15, 40, BLUE)
+        f.text(640, y + 35, f"Agent {i + 1}：逐條列出判斷條件", size=22, anchor="start")
+    f.arrow([(336, 340), (554, 340)])
+    f.text(445, 315, "平行閱讀", size=22, color=MUTED)
+    # 右：條目與人的決定
+    f.rect(1170, 205, 400, 120, fill=IVORY, stroke=GREY)
+    icon(f, "list-check", 1195, 237, 52, MUTED)
+    f.text(1265, 248, "672 個條目", size=30, bold=True, anchor="start")
+    f.text(1265, 290, "記錄原文位置與門檻", size=21, color=MUTED, anchor="start")
+    f.arrow([(1046, 340), (1100, 340), (1100, 265), (1164, 265)])
+    f.rect(1170, 400, 400, 200, fill=PINK, stroke=ACCENT)
+    icon(f, "user", 1195, 420, 44, ACCENT)
+    f.text(1255, 442, "人決定去留", size=28, bold=True, anchor="start")
+    for j, t in enumerate(["不納入的理由", "待決定的項目", "不一致的數值送會議"]):
+        f.text(1200, 495 + j * 34, "・" + t, size=21, color=DARK, anchor="start")
+    f.arrow([(1370, 331), (1370, 394)], color=ACCENT)
+    # 回去再調查
+    f.arrow([(1170, 300), (1120, 300), (1120, 640), (800, 640), (800, 551)], color=ACCENT, dash=True, sw=3)
+    f.text(960, 668, "漏掉或讀錯：回到原文核對，再調查一次（第二輪重掃）", size=22, color=ACCENT)
+    f.save("w7-13-agent-survey")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -378,3 +423,4 @@ if __name__ == "__main__":
     program_level()
     slide_walkthrough()
     rea_workflow()
+    agent_survey()
