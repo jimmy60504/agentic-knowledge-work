@@ -1,5 +1,5 @@
 ---
-title: "Agent 的用法"
+title: "Agent 的介入方式"
 subtitle: "第四週 4-1｜Agent 時代的知識工作"
 description: "從研究工作流程出發，說明模型、執行框架與工具如何配合，再比較對話、交辦、製作工具、結構化判斷、流程指派 Agent 與 Agent 管理流程六種介入方式。"
 author: "黃俊銘"

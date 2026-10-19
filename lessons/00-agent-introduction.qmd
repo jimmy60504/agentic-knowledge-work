@@ -1,5 +1,5 @@
 ---
-title: "Agent 是什麼，它為什麼能幫你做事？"
+title: "Agent 的運作原理"
 subtitle: "第一週｜Agent 時代的知識工作"
 description: "從 LLM 只會接龍談起：為什麼給它脈絡它就能做事、為什麼它會偏離，以及 agent 與聊天機器人的差異。"
 author: "黃俊銘"

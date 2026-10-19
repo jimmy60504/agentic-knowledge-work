@@ -1,5 +1,5 @@
 ---
-title: "回到業務"
+title: "繪製業務現況圖"
 subtitle: "第四週 4-2｜畫出現況、讀箭頭上的動詞、討論 Agent 介入"
 description: "以 Domain Storytelling 畫出一次實際完成的工作，從箭頭上的動詞理解 Agent 的具體活動，再找出流程缺口，討論 Agent 的介入位置、產物與人工核准點。"
 author: "黃俊銘"
