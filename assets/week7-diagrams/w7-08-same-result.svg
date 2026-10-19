@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="520" fill="#FFFFFF"/>
+<rect x="40" y="170" width="280" height="170" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="180.0" y="238.8" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">同一筆</text>
+<text x="180.0" y="276.6" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">定位結果檔</text>
+<rect x="480" y="60" width="380" height="140" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="670.0" y="113.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">原本的程式</text>
+<text x="670.0" y="150.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">舊的檢查程式</text>
+<rect x="480" y="310" width="380" height="140" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="670.0" y="363.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">新的程式</text>
+<text x="670.0" y="400.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">依規則庫執行</text>
+<polyline points="326,230 474,140" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="326,280 474,380" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1020" y="60" width="220" height="140" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1130.0" y="130.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">結果</text>
+<rect x="1020" y="310" width="220" height="140" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1130.0" y="380.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">結果</text>
+<polyline points="866,130 1014,130" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="866,380 1014,380" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="1300" y="120" width="260" height="270" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="1430" y="190.0" font-size="30" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">逐筆相同</text>
+<text x="1430" y="255.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">不同時</text>
+<text x="1430" y="295.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">必須找出原因</text>
+<text x="1430" y="335.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">並歸類</text>
+<polyline points="1246,130 1294,180" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<polyline points="1246,380 1294,330" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<text x="800" y="495.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">替換一支程式之前，先查清它對定位結果檔做的每一項改變</text>
+</svg>

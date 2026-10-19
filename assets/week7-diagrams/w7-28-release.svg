@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 470" width="1600" height="470" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="470" fill="#FFFFFF"/>
+<rect x="30" y="160" width="260" height="140" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="160.0" y="230.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">推上版本標籤</text>
+<rect x="370" y="160" width="300" height="140" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="520.0" y="213.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">雲端自動流程</text>
+<text x="520.0" y="250.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">測試、打包</text>
+<polyline points="296,230 364,230" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="760" y="30" width="380" height="150" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="950.0" y="88.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">版本資訊</text>
+<text x="950.0" y="125.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">發布到公開網站</text>
+<rect x="760" y="290" width="380" height="150" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="950.0" y="348.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">更新套件</text>
+<text x="950.0" y="385.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">不公開：含內部業務的整理</text>
+<polyline points="676,200 754,110" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="676,260 754,360" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="1230" y="30" width="340" height="150" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1400.0" y="88.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">程式線上檢查</text>
+<text x="1400.0" y="125.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">只通知有新版本</text>
+<rect x="1230" y="290" width="340" height="150" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="1400.0" y="348.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">另行交付</text>
+<text x="1400.0" y="385.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">使用者選擇檔案更新</text>
+<polyline points="1146,105 1224,105" fill="none" stroke="#6B6560" stroke-width="3" marker-end="url(#ah)"/>
+<polyline points="1146,365 1224,365" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+</svg>

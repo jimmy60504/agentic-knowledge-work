@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" width="1600" height="760" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="760" fill="#FFFFFF"/>
+<rect x="80" y="60" width="420" height="150" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="290.0" y="102.6" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位端</text>
+<text x="290.0" y="139.1" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">翻新後的定位軟體</text>
+<text x="290.0" y="171.4" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">挑波時攔截</text>
+<rect x="1100" y="60" width="420" height="150" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="1310.0" y="102.6" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢查端</text>
+<text x="1310.0" y="139.1" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">送出前的預檢關卡</text>
+<text x="1310.0" y="171.4" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">送出前把關</text>
+<polyline points="506,120 1094,120" fill="none" stroke="#6B6560" stroke-width="4" marker-end="url(#ah)"/>
+<text x="800" y="92.0" font-size="26" fill="#6B6560" text-anchor="middle" dominant-baseline="central">波形檔、定位結果檔</text>
+<text x="800" y="150.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">兩端只以既有的檔案格式相接</text>
+<rect x="560" y="330" width="480" height="170" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="800.0" y="382.6" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢查程式</text>
+<text x="800.0" y="421.7" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">規則庫：規則只有一份</text>
+<text x="800.0" y="454.1" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">加上依規則執行的程式</text>
+<polyline points="290,216 290,415 554,415" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<polyline points="1310,216 1310,415 1046,415" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<text x="310" y="300.0" font-size="24" fill="#BE8979" text-anchor="start" dominant-baseline="central">調用</text>
+<text x="1290" y="300.0" font-size="24" fill="#BE8979" text-anchor="end" dominant-baseline="central">調用</text>
+<text x="800" y="540.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">規則不依賴兩端，兩端依賴規則</text>
+<rect x="80" y="600" width="1440" height="120" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="12 8"/>
+<text x="800" y="640.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">共用資料夾</text>
+<text x="800" y="685.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">測站表、速度模型、定位計算程式：兩端都依賴，本身就是規格的一部分</text>
+</svg>

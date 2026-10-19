@@ -114,5 +114,118 @@ def agent_remote_test():
     f.save("w7-agent-remote-test")
 
 
+def route():
+    """第 3 頁：五段路線。"""
+    f = Fig(1600, 300)
+    steps = [("一", "兩個題目與", "整體架構"), ("二", "從投影片到", "每個步驟"), ("三", "規則與來源", "的大表"),
+             ("四", "證據鏈", "與測試"), ("五", "從原型到", "正式工具")]
+    w, gap, x0 = 260, 60, 30
+    for i, (n, a, b) in enumerate(steps):
+        x = x0 + i * (w + gap)
+        hl = i in (2, 3)
+        f.rect(x, 60, w, 180, fill=PINK if hl else IVORY, stroke=ACCENT if hl else GREY)
+        f.text(x + w / 2, 100, n, size=30, bold=True, color=ACCENT if hl else MUTED)
+        f.text(x + w / 2, 155, a, size=28, bold=True)
+        f.text(x + w / 2, 195, b, size=28, bold=True)
+        if i < 4:
+            f.arrow([(x + w + 6, 150), (x + w + gap - 6, 150)])
+    f.text(800, 275, "第三、四段是本週的重點", size=22, color=ACCENT)
+    f.save("w7-03-route")
+
+
+def dependency():
+    """第 6 頁：規則自成一塊，兩端依賴規則，以檔案相接。"""
+    f = Fig(1600, 760)
+    f.card(80, 60, 420, 150, "定位端", ["翻新後的定位軟體", "挑波時攔截"], fill=BLUEBG, stroke=BLUE)
+    f.card(1100, 60, 420, 150, "檢查端", ["送出前的預檢關卡", "送出前把關"], fill=BLUEBG, stroke=BLUE)
+    f.arrow([(506, 120), (1094, 120)], sw=4)
+    f.text(800, 92, "波形檔、定位結果檔", size=26, color=MUTED)
+    f.text(800, 150, "兩端只以既有的檔案格式相接", size=22, color=MUTED)
+    f.card(560, 330, 480, 170, "檢查程式", ["規則庫：規則只有一份", "加上依規則執行的程式"], fill=PINK, stroke=ACCENT, tsize=34)
+    f.arrow([(290, 216), (290, 415), (554, 415)], color=ACCENT, sw=4)
+    f.arrow([(1310, 216), (1310, 415), (1046, 415)], color=ACCENT, sw=4)
+    f.text(310, 300, "調用", size=24, color=ACCENT, anchor="start")
+    f.text(1290, 300, "調用", size=24, color=ACCENT, anchor="end")
+    f.text(800, 540, "規則不依賴兩端，兩端依賴規則", size=26, bold=True, color=ACCENT)
+    f.rect(80, 600, 1440, 120, fill=IVORY, stroke=GREY, dash=True)
+    f.text(800, 640, "共用資料夾", size=28, bold=True)
+    f.text(800, 685, "測站表、速度模型、定位計算程式：兩端都依賴，本身就是規格的一部分", size=22, color=MUTED)
+    f.save("w7-06-dependency")
+
+
+def same_result():
+    """第 8 頁：同一筆資料經過新舊流程，結果必須相同。"""
+    f = Fig(1600, 520)
+    f.card(40, 170, 280, 170, "同一筆", ["定位結果檔"], tsize=32)
+    f.card(480, 60, 380, 140, "原本的程式", ["舊的檢查程式"], fill=IVORY)
+    f.card(480, 310, 380, 140, "新的程式", ["依規則庫執行"], fill=BLUEBG, stroke=BLUE)
+    f.arrow([(326, 230), (474, 140)])
+    f.arrow([(326, 280), (474, 380)])
+    f.card(1020, 60, 220, 140, "結果", [], tsize=30)
+    f.card(1020, 310, 220, 140, "結果", [], tsize=30)
+    f.arrow([(866, 130), (1014, 130)])
+    f.arrow([(866, 380), (1014, 380)])
+    f.rect(1300, 120, 260, 270, fill=PINK, stroke=ACCENT)
+    f.text(1430, 190, "逐筆相同", size=30, bold=True, color=ACCENT)
+    f.text(1430, 255, "不同時", size=24, color=MUTED)
+    f.text(1430, 295, "必須找出原因", size=24, color=MUTED)
+    f.text(1430, 335, "並歸類", size=24, color=MUTED)
+    f.arrow([(1246, 130), (1294, 180)], color=ACCENT)
+    f.arrow([(1246, 380), (1294, 330)], color=ACCENT)
+    f.text(800, 495, "替換一支程式之前，先查清它對定位結果檔做的每一項改變", size=24, color=MUTED)
+    f.save("w7-08-same-result")
+
+
+def counts():
+    """第 20 頁：一個月資料不通過的事件數。"""
+    f = Fig(1600, 470)
+    rows = [(324, "關卡加入判定時", DARK), (315, "入庫的篩選改為提示", MUTED), (101, "物理上可能的情形改為提示", ACCENT)]
+    x0, maxw = 520, 900
+    for i, (n, label, c) in enumerate(rows):
+        y = 50 + i * 130
+        f.text(490, y + 45, label, size=28, anchor="end", color=DARK)
+        f.rect(x0, y, maxw * n / 324, 90, fill=PINK if c == ACCENT else IVORY, stroke=c, rx=8)
+        f.text(x0 + maxw * n / 324 + 20, y + 45, f"{n} 筆", size=32, bold=True, color=c, anchor="start")
+    f.text(800, 445, "一個月約一千筆資料；減少的部分改列為提示，仍交給承辦確認", size=24, color=MUTED)
+    f.save("w7-20-counts")
+
+
+def single_source():
+    """第 22 頁：同一份規則檔產生各處。"""
+    f = Fig(1600, 560)
+    f.card(60, 170, 400, 220, "規則檔", ["檢查什麼、門檻代號", "方向、等級、來源"], fill=PINK, stroke=ACCENT, tsize=36)
+    outs = [("檢查程式", "判斷函式讀取門檻，不寫死數字"), ("說明頁", "每條規則的作業標準"),
+            ("大表與門檻圖", "來源並排，可通過範圍"), ("測試", "門檻兩邊自動產生案例")]
+    for i, (t, sub) in enumerate(outs):
+        y = 20 + i * 132
+        f.card(820, y, 720, 110, t, [sub], fill=BLUEBG, stroke=BLUE, tsize=28, ssize=22)
+        f.arrow([(466, 280), (640, 280), (640, y + 55), (814, y + 55)], color=ACCENT)
+    f.text(260, 440, "修改一次，各處同時更新", size=26, bold=True, color=ACCENT)
+    f.save("w7-22-single-source")
+
+
+def release():
+    """第 28 頁：只公開版本資訊，更新套件另行交付。"""
+    f = Fig(1600, 470)
+    f.card(30, 160, 260, 140, "推上版本標籤", [], tsize=28)
+    f.card(370, 160, 300, 140, "雲端自動流程", ["測試、打包"], fill=BLUEBG, stroke=BLUE)
+    f.arrow([(296, 230), (364, 230)])
+    f.card(760, 30, 380, 150, "版本資訊", ["發布到公開網站"], fill=BLUEBG, stroke=BLUE)
+    f.card(760, 290, 380, 150, "更新套件", ["不公開：含內部業務的整理"], fill=PINK, stroke=ACCENT)
+    f.arrow([(676, 200), (754, 110)])
+    f.arrow([(676, 260), (754, 360)], color=ACCENT)
+    f.card(1230, 30, 340, 150, "程式線上檢查", ["只通知有新版本"])
+    f.card(1230, 290, 340, 150, "另行交付", ["使用者選擇檔案更新"])
+    f.arrow([(1146, 105), (1224, 105)])
+    f.arrow([(1146, 365), (1224, 365)], color=ACCENT)
+    f.save("w7-28-release")
+
+
 if __name__ == "__main__":
     agent_remote_test()
+    route()
+    dependency()
+    same_result()
+    counts()
+    single_source()
+    release()
