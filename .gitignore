@@ -51,3 +51,6 @@ __pycache__/
 # Codex 外掛的建置與審查暫存（含 pptx）
 .codex-build/
 .codex-review/
+
+# 首頁提供下載的課程表（由 ../上課課程表.pdf 複製）
+!assets/site/course-schedule.pdf
