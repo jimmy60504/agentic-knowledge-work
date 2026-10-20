@@ -8,3 +8,4 @@
 | activity、wave-sine、map-2、folders | 共用資料夾：規模與強震、波形與格式轉換、地圖與繪圖、其他 |
 | user、terminal-2、presentation | 投影片為骨架：人工檢查、程式檢查、訓練投影片 |
 | robot、file-text、list-check | 列舉與決定：Agent、來源、條目 |
+| file-code、clock、map-pin、arrow-bar-to-down、chart-bar、hand-click、broadcast、target、database、refresh、arrows-split | 依對象分類：九個檢查項目，以及重跑與入庫分流 |

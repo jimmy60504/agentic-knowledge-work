@@ -411,6 +411,38 @@ def agent_survey():
     f.save("w7-13-agent-survey")
 
 
+def classify_by_object():
+    """第 14 頁：依定位結果檔上被檢查的對象分成 9 個項目（左，3×3 圖示卡片）；
+    偵測與處理分開，重跑與入庫分流另列兩組規則（右）。"""
+    f = Fig(1600, 760)
+    items = [("file-code", "檔案格式"), ("clock", "發震時間"), ("map-pin", "震央位置"),
+             ("arrow-bar-to-down", "震源深度"), ("chart-bar", "規模"), ("hand-click", "挑波"),
+             ("broadcast", "測站與資料量"), ("target", "定位品質"), ("database", "事件與入庫")]
+    f.text(560, 30, "檢查規則：依被檢查的對象分成 9 個項目", size=26, bold=True)
+    w, h, gx, gy, x0, y0 = 320, 180, 30, 30, 60, 70
+    for i, (ic, t) in enumerate(items):
+        r, c = divmod(i, 3)
+        x, y = x0 + c * (w + gx), y0 + r * (h + gy)
+        f.rect(x, y, w, h, fill=IVORY, stroke=GREY)
+        f.add(f'<circle cx="{x + w / 2}" cy="{y + 65}" r="40" fill="#FFFFFF" stroke="{ACCENT}" stroke-width="3"/>')
+        icon(f, ic, x + w / 2 - 24, y + 41, 48, ACCENT)
+        f.text(x + w / 2, y + 140, t, size=28, bold=True)
+    # 右：處理另列
+    rx = 1150
+    f.text(rx + 200, 30, "處理另列兩組規則", size=26, bold=True, color=MUTED)
+    for j, (ic, t, sub) in enumerate([("refresh", "重跑", "觸發重新定位的條件"),
+                                      ("arrows-split", "入庫分流", "決定資料的去向")]):
+        y = 70 + j * 300
+        f.rect(rx, y, 400, 270, fill=BLUEBG, stroke=BLUE)
+        f.add(f'<circle cx="{rx + 200}" cy="{y + 80}" r="44" fill="#FFFFFF" stroke="{BLUE}" stroke-width="3"/>')
+        icon(f, ic, rx + 200 - 26, y + 54, 52, BLUE)
+        f.text(rx + 200, y + 165, t, size=30, bold=True)
+        f.text(rx + 200, y + 210, sub, size=22, color=MUTED)
+    f.add(f'<line x1="{rx - 50}" y1="70" x2="{rx - 50}" y2="670" stroke="{GREY}" stroke-width="3" stroke-dasharray="10 8"/>')
+    f.text(800, 725, "同一件事只占一列；一條規則只檢查一件事、只有一個等級；名稱不寫門檻", size=22, color=MUTED)
+    f.save("w7-14-classify")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -424,3 +456,4 @@ if __name__ == "__main__":
     slide_walkthrough()
     rea_workflow()
     agent_survey()
+    classify_by_object()
