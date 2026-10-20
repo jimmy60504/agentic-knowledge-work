@@ -16,22 +16,22 @@
 <text x="1140" y="40.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">一條規則一個意圖</text>
 <rect x="760" y="80" width="780" height="160" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
 <text x="790" y="118.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">深度為 0（擋下）</text>
-<text x="790" y="165.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">原因：沒有計算或經人工修改</text>
+<text x="790" y="165.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">原因：定位計算沒有完成，或深度經人工修改</text>
 <text x="790" y="205.0" font-size="22" fill="#BE8979" font-weight="600" text-anchor="start" dominant-baseline="central">處置：重新執行定位計算，不手動填深度</text>
 <rect x="760" y="260" width="780" height="160" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
 <text x="790" y="298.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">深度過淺（提示）</text>
-<text x="790" y="345.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">原因：計算過的結果</text>
-<text x="790" y="385.0" font-size="22" fill="#4E6E78" font-weight="600" text-anchor="start" dominant-baseline="central">處置：確認深度是否合理</text>
+<text x="790" y="345.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">原因：速度模型算出的深度可能偏淺</text>
+<text x="790" y="385.0" font-size="22" fill="#4E6E78" font-weight="600" text-anchor="start" dominant-baseline="central">處置：確認深度在所用模型下是否合理</text>
 <rect x="60" y="480" width="1480" height="150" rx="14" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
 <text x="800" y="520.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">一個意圖帶來的好處：與程式的單一職責原則相同</text>
 <circle cx="110" cy="585" r="8" fill="#BE8979"/>
-<text x="130" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">原因不會混在一起</text>
+<text x="130" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">原因連到地震學概念</text>
 <circle cx="402" cy="585" r="8" fill="#BE8979"/>
-<text x="422" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">處置只有一種</text>
+<text x="422" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">能引導怎麼改善</text>
 <circle cx="694" cy="585" r="8" fill="#BE8979"/>
-<text x="714" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">只有一個等級</text>
+<text x="714" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">處置只有一種</text>
 <circle cx="986" cy="585" r="8" fill="#BE8979"/>
-<text x="1006" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">門檻各自調整</text>
+<text x="1006" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">只有一個等級</text>
 <circle cx="1278" cy="585" r="8" fill="#BE8979"/>
 <text x="1298" y="585.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">可以單獨測試</text>
 </svg>

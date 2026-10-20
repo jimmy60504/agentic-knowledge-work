@@ -458,8 +458,8 @@ def single_intent():
     f.arrow([(560, 250), (720, 250)], color=ACCENT, sw=4)
     f.text(640, 220, "拆開", size=24, bold=True, color=ACCENT)
     f.text(1140, 40, "一條規則一個意圖", size=26, bold=True, color=ACCENT)
-    cards = [("深度為 0（擋下）", "原因：沒有計算或經人工修改", "處置：重新執行定位計算，不手動填深度", PINK, ACCENT),
-             ("深度過淺（提示）", "原因：計算過的結果", "處置：確認深度是否合理", BLUEBG, BLUE)]
+    cards = [("深度為 0（擋下）", "原因：定位計算沒有完成，或深度經人工修改", "處置：重新執行定位計算，不手動填深度", PINK, ACCENT),
+             ("深度過淺（提示）", "原因：速度模型算出的深度可能偏淺", "處置：確認深度在所用模型下是否合理", BLUEBG, BLUE)]
     for i, (t, why, act, fill, stroke) in enumerate(cards):
         y = 80 + i * 180
         f.rect(760, y, 780, 160, fill=fill, stroke=stroke)
@@ -468,7 +468,7 @@ def single_intent():
         f.text(790, y + 125, act, size=22, bold=True, color=ACCENT if stroke == ACCENT else "#4E6E78", anchor="start")
     f.rect(60, 480, 1480, 150, fill="#FFFFFF", stroke=GREY, rx=14)
     f.text(800, 520, "一個意圖帶來的好處：與程式的單一職責原則相同", size=26, bold=True)
-    goods = ["原因不會混在一起", "處置只有一種", "只有一個等級", "門檻各自調整", "可以單獨測試"]
+    goods = ["原因連到地震學概念", "能引導怎麼改善", "處置只有一種", "只有一個等級", "可以單獨測試"]
     for i, g in enumerate(goods):
         x = 110 + i * 292
         f.add(f'<circle cx="{x}" cy="585" r="8" fill="{ACCENT}"/>')
