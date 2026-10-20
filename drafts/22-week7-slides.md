@@ -47,7 +47,7 @@
 | 送出前的預檢 | 檢查用的舊程式 |
 | 翻新老舊的定位軟體 | 定位軟體的安裝包 |
 - 版面：圖為主
-- 圖：`assets/week7-shots/w7-03-eventpick.png`｜現行的定位軟體【待拍】
+- 圖：`assets/week7-shots/w7-03-locator.png`｜現行的定位軟體【待拍】
 - 圖：`assets/week7-shots/w7-03-precheck.png`｜目前的預檢網頁【待拍】
 
 **筆記**
