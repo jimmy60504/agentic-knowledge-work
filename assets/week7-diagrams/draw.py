@@ -205,19 +205,27 @@ def single_source():
 
 
 def release():
-    """第 28 頁：只公開版本資訊，更新套件另行交付。"""
-    f = Fig(1600, 470)
-    f.card(30, 160, 260, 140, "推上版本標籤", [], tsize=28)
-    f.card(370, 160, 300, 140, "雲端自動流程", ["測試、打包"], fill=BLUEBG, stroke=BLUE)
-    f.arrow([(296, 230), (364, 230)])
-    f.card(760, 30, 380, 150, "版本資訊", ["發布到公開網站"], fill=BLUEBG, stroke=BLUE)
-    f.card(760, 290, 380, 150, "更新套件", ["不公開：含內部業務的整理"], fill=PINK, stroke=ACCENT)
-    f.arrow([(676, 200), (754, 110)])
-    f.arrow([(676, 260), (754, 360)], color=ACCENT)
-    f.card(1230, 30, 340, 150, "程式線上檢查", ["只通知有新版本"])
-    f.card(1230, 290, 340, 150, "另行交付", ["使用者選擇檔案更新"])
-    f.arrow([(1146, 105), (1224, 105)])
-    f.arrow([(1146, 365), (1224, 365)], color=ACCENT)
+    """第 27 頁：更新的流程。更新套件以私下的檔案傳遞，有新版本的通知靠 GitHub Pages。"""
+    f = Fig(1600, 560)
+    f.card(30, 200, 250, 140, "推上版本標籤", ["開發端"], tsize=28)
+    f.card(350, 200, 280, 140, "雲端自動流程", ["測試、打包"], fill=BLUEBG, stroke=BLUE)
+    f.arrow([(286, 270), (344, 270)])
+    # 上：通知（公開）
+    f.text(1010, 40, "通知：公開", size=24, bold=True, color="#4E6E78")
+    f.card(720, 70, 360, 150, "版本資訊", ["發布到 GitHub Pages"], fill=BLUEBG, stroke=BLUE)
+    f.card(1160, 70, 400, 150, "程式線上檢查", ["提示「有新版本」"], fill=BLUEBG, stroke=BLUE)
+    f.arrow([(636, 240), (714, 150)])
+    f.arrow([(1086, 145), (1154, 145)])
+    # 下：套件（私下）
+    f.text(1010, 290, "套件：私下傳遞", size=24, bold=True, color=ACCENT)
+    f.card(720, 320, 360, 150, "更新套件", ["以檔案私下交付"], fill=PINK, stroke=ACCENT)
+    f.card(1160, 320, 400, 150, "使用者選擇檔案", ["在設定頁更新，可切回舊版"], fill=PINK, stroke=ACCENT)
+    f.arrow([(636, 300), (714, 390)], color=ACCENT)
+    f.arrow([(1086, 395), (1154, 395)], color=ACCENT)
+    f.arrow([(1360, 226), (1360, 314)], dash=True)
+    f.text(1345, 262, "看到通知後，", size=20, color=MUTED, anchor="end")
+    f.text(1345, 288, "向維護者取得套件", size=20, color=MUTED, anchor="end")
+    f.text(800, 525, "套件內含內部業務的整理，不放上公開網站；工作站無法連外時，仍可手動選擇檔案更新", size=22, color=MUTED)
     f.save("w7-28-release")
 
 
