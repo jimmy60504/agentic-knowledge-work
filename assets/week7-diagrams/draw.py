@@ -443,6 +443,34 @@ def classify_by_object():
     f.save("w7-14-classify")
 
 
+def single_intent():
+    """第 15 頁：一條規則只有一個意圖（類比程式的單一職責原則）。
+    以「深度為 0 或過淺」為例：兩件意義不同的事分兩級放在同一條，拆成兩條之後各自只有一個等級。"""
+    f = Fig(1600, 640)
+    # 拆分前
+    f.text(300, 40, "拆分前：一條規則兩個意圖", size=26, bold=True, color=MUTED)
+    f.rect(60, 80, 480, 300, fill=IVORY, stroke=GREY)
+    f.text(300, 140, "深度為 0 或過淺", size=32, bold=True)
+    f.text(300, 200, "等於 0：擋下", size=24, color=DARK)
+    f.text(300, 240, "大於 0 而很淺：提示", size=24, color=DARK)
+    f.text(300, 310, "同一條規則，分兩級處理", size=22, color=ACCENT)
+    f.arrow([(560, 230), (720, 230)], color=ACCENT, sw=4)
+    f.text(640, 200, "拆開", size=24, bold=True, color=ACCENT)
+    # 拆分後
+    f.text(1140, 40, "拆分後：一條規則一個意圖", size=26, bold=True, color=ACCENT)
+    f.card(760, 80, 760, 130, "深度為 0（擋下）", ["沒有計算或經人工修改：流程錯誤"], fill=PINK, stroke=ACCENT, tsize=30)
+    f.card(760, 250, 760, 130, "深度過淺（提示）", ["計算過的結果：確認是否合理"], fill=BLUEBG, stroke=BLUE, tsize=30)
+    # 好處
+    f.rect(60, 440, 1460, 150, fill="#FFFFFF", stroke=GREY, rx=14)
+    f.text(790, 480, "一個意圖帶來的好處：與程式的單一職責原則相同", size=26, bold=True)
+    goods = ["名稱說得清楚", "只有一個等級", "門檻各自調整", "來源各自對應", "可以單獨測試"]
+    for i, g in enumerate(goods):
+        x = 150 + i * 282
+        f.add(f'<circle cx="{x}" cy="545" r="8" fill="{ACCENT}"/>')
+        f.text(x + 20, 545, g, size=24, anchor="start")
+    f.save("w7-15-single-intent")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -457,3 +485,4 @@ if __name__ == "__main__":
     rea_workflow()
     agent_survey()
     classify_by_object()
+    single_intent()

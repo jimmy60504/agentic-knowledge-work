@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" width="1600" height="640" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="640" fill="#FFFFFF"/>
+<text x="300" y="40.0" font-size="26" fill="#6B6560" font-weight="600" text-anchor="middle" dominant-baseline="central">拆分前：一條規則兩個意圖</text>
+<rect x="60" y="80" width="480" height="300" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="300" y="140.0" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">深度為 0 或過淺</text>
+<text x="300" y="200.0" font-size="24" fill="#2A2623" text-anchor="middle" dominant-baseline="central">等於 0：擋下</text>
+<text x="300" y="240.0" font-size="24" fill="#2A2623" text-anchor="middle" dominant-baseline="central">大於 0 而很淺：提示</text>
+<text x="300" y="310.0" font-size="22" fill="#BE8979" text-anchor="middle" dominant-baseline="central">同一條規則，分兩級處理</text>
+<polyline points="560,230 720,230" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<text x="640" y="200.0" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">拆開</text>
+<text x="1140" y="40.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">拆分後：一條規則一個意圖</text>
+<rect x="760" y="80" width="760" height="130" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="1140.0" y="128.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">深度為 0（擋下）</text>
+<text x="1140.0" y="165.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">沒有計算或經人工修改：流程錯誤</text>
+<rect x="760" y="250" width="760" height="130" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<text x="1140.0" y="298.8" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">深度過淺（提示）</text>
+<text x="1140.0" y="335.2" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">計算過的結果：確認是否合理</text>
+<rect x="60" y="440" width="1460" height="150" rx="14" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<text x="790" y="480.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">一個意圖帶來的好處：與程式的單一職責原則相同</text>
+<circle cx="150" cy="545" r="8" fill="#BE8979"/>
+<text x="170" y="545.0" font-size="24" fill="#2A2623" text-anchor="start" dominant-baseline="central">名稱說得清楚</text>
+<circle cx="432" cy="545" r="8" fill="#BE8979"/>
+<text x="452" y="545.0" font-size="24" fill="#2A2623" text-anchor="start" dominant-baseline="central">只有一個等級</text>
+<circle cx="714" cy="545" r="8" fill="#BE8979"/>
+<text x="734" y="545.0" font-size="24" fill="#2A2623" text-anchor="start" dominant-baseline="central">門檻各自調整</text>
+<circle cx="996" cy="545" r="8" fill="#BE8979"/>
+<text x="1016" y="545.0" font-size="24" fill="#2A2623" text-anchor="start" dominant-baseline="central">來源各自對應</text>
+<circle cx="1278" cy="545" r="8" fill="#BE8979"/>
+<text x="1298" y="545.0" font-size="24" fill="#2A2623" text-anchor="start" dominant-baseline="central">可以單獨測試</text>
+</svg>
