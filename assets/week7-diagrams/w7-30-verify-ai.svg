@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 740" width="1600" height="740" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="740" fill="#FFFFFF"/>
+<text x="350" y="50.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">AI 出過的錯</text>
+<text x="1180" y="50.0" font-size="26" fill="#4E6E78" font-weight="600" text-anchor="middle" dominant-baseline="central">由哪個環節抓出</text>
+<rect x="40" y="90" width="620" height="140" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(70,136) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></g>
+<text x="140" y="142.0" font-size="27" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">第一輪整理有讀錯的條目</text>
+<text x="140" y="186.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">多個 Agent 平行閱讀來源時讀錯</text>
+<polyline points="670,160 794,160" fill="none" stroke="#6B6560" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="800" y="90" width="760" height="140" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<circle cx="866" cy="160" r="38" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(843,137) scale(1.9166666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g>
+<text x="930" y="142.0" font-size="27" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">重讀原文</text>
+<text x="930" y="186.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">每個來源由一個 Agent 重讀，回到原文核對</text>
+<rect x="40" y="260" width="620" height="140" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(70,306) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></g>
+<text x="140" y="312.0" font-size="27" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">讀錯原始碼，一條規則少算一行</text>
+<text x="140" y="356.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">重建的規則與舊程式的行為不同</text>
+<polyline points="670,330 794,330" fill="none" stroke="#6B6560" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="800" y="260" width="760" height="140" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<circle cx="866" cy="330" r="38" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(843,307) scale(1.9166666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M11 6h5a2 2 0 0 1 2 2v8" /><path d="M14 9l-3 -3l3 -3" /><path d="M13 18h-5a2 2 0 0 1 -2 -2v-8" /><path d="M10 15l3 3l-3 3" /></g>
+<text x="930" y="312.0" font-size="27" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">與舊程式逐筆比對</text>
+<text x="930" y="356.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">在測試機以舊程式執行，逐筆比對結果</text>
+<rect x="40" y="430" width="620" height="140" rx="16" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(70,476) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></g>
+<text x="140" y="482.0" font-size="27" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">沒有來源的規則</text>
+<text x="140" y="526.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">構想階段由 Agent 提出，從未經過確認</text>
+<polyline points="670,500 794,500" fill="none" stroke="#6B6560" stroke-width="4" marker-end="url(#ah)"/>
+<rect x="800" y="430" width="760" height="140" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<circle cx="866" cy="500" r="38" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(843,477) scale(1.9166666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></g>
+<text x="930" y="482.0" font-size="27" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">雙向溯源</text>
+<text x="930" y="526.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">每條規則都要有來源，程式自動檢查</text>
+<rect x="40" y="610" width="1520" height="100" rx="14" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<g transform="translate(80,636) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.65 6.394" /><path d="M15 19l2 2l4 -4" /></g>
+<text x="150" y="645.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">交給 AI 之前，先想好做完之後怎麼確認它是對的</text>
+<text x="150" y="683.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">本週的證據鏈，就是讓 AI 的產出可以被檢查的方式</text>
+</svg>

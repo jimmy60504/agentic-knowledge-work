@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" width="1600" height="760" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="760" fill="#FFFFFF"/>
+<rect x="30" y="40" width="1100" height="590" rx="16" fill="none" stroke="#BE8979" stroke-width="3" stroke-dasharray="12 8"/>
+<g transform="translate(60,62) scale(1.6666666666666667)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2l0 -4" /><path d="M12 2v2" /><path d="M9 12v9" /><path d="M15 12v9" /><path d="M5 16l4 -2" /><path d="M15 14l4 2" /><path d="M9 18h6" /><path d="M10 8v.01" /><path d="M14 8v.01" /></g>
+<text x="112" y="82.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">開發端：大量使用 Agent</text>
+<rect x="60" y="130" width="510" height="220" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="120" cy="188" r="36" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(98,166) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5.5l1.5 1.5l2.5 -2.5" /><path d="M3.5 11.5l1.5 1.5l2.5 -2.5" /><path d="M3.5 17.5l1.5 1.5l2.5 -2.5" /><path d="M11 6l9 0" /><path d="M11 12l9 0" /><path d="M11 18l9 0" /></g>
+<text x="175" y="188.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">盤查來源</text>
+<rect x="90" y="243" width="56" height="34" rx="17" fill="#BE8979" stroke="#BE8979" stroke-width="1"/>
+<text x="118" y="260.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">AI</text>
+<text x="160" y="260.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">平行閱讀原始碼與文件，逐條列出</text>
+<rect x="90" y="293" width="56" height="34" rx="17" fill="#7F969B" stroke="#7F969B" stroke-width="1"/>
+<text x="118" y="310.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">人</text>
+<text x="160" y="310.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">訂定格式，決定去留</text>
+<rect x="600" y="130" width="510" height="220" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="660" cy="188" r="36" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(638,166) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></g>
+<text x="715" y="188.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">查證</text>
+<rect x="630" y="243" width="56" height="34" rx="17" fill="#BE8979" stroke="#BE8979" stroke-width="1"/>
+<text x="658" y="260.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">AI</text>
+<text x="700" y="260.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">開發大表與原文檢視的介面</text>
+<rect x="630" y="293" width="56" height="34" rx="17" fill="#7F969B" stroke="#7F969B" stroke-width="1"/>
+<text x="658" y="310.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">人</text>
+<text x="700" y="310.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">點開原文核對，開會定案</text>
+<rect x="60" y="375" width="510" height="220" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="120" cy="433" r="36" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(98,411) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M11 6h5a2 2 0 0 1 2 2v8" /><path d="M14 9l-3 -3l3 -3" /><path d="M13 18h-5a2 2 0 0 1 -2 -2v-8" /><path d="M10 15l3 3l-3 3" /></g>
+<text x="175" y="433.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">驗證</text>
+<rect x="90" y="488" width="56" height="34" rx="17" fill="#BE8979" stroke="#BE8979" stroke-width="1"/>
+<text x="118" y="505.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">AI</text>
+<text x="160" y="505.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">製作錯誤檔，與舊程式逐筆比對</text>
+<rect x="90" y="538" width="56" height="34" rx="17" fill="#7F969B" stroke="#7F969B" stroke-width="1"/>
+<text x="118" y="555.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">人</text>
+<text x="160" y="555.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">判斷差異的歸類</text>
+<rect x="600" y="375" width="510" height="220" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="660" cy="433" r="36" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(638,411) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" /><path d="M12 12l8 -4.5" /><path d="M12 12l0 9" /><path d="M12 12l-8 -4.5" /><path d="M16 5.25l-8 4.5" /></g>
+<text x="715" y="433.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">打包與發布</text>
+<rect x="630" y="488" width="56" height="34" rx="17" fill="#BE8979" stroke="#BE8979" stroke-width="1"/>
+<text x="658" y="505.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">AI</text>
+<text x="700" y="505.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">打包與發布流程，實測安裝與更新</text>
+<rect x="630" y="538" width="56" height="34" rx="17" fill="#7F969B" stroke="#7F969B" stroke-width="1"/>
+<text x="658" y="555.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">人</text>
+<text x="700" y="555.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">決定公開範圍與交付管道</text>
+<rect x="1160" y="40" width="410" height="590" rx="16" fill="none" stroke="#A6B7BA" stroke-width="3" stroke-dasharray="12 8"/>
+<g transform="translate(1188,62) scale(1.6666666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /><path d="M13 15l3 0" /><path d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -12" /></g>
+<text x="1240" y="82.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">執行端：每天的檢查</text>
+<rect x="1185" y="130" width="360" height="220" rx="16" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<circle cx="1245" cy="188" r="36" fill="#FFFFFF" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(1223,166) scale(1.8333333333333333)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" /><path d="M9 12l.01 0" /><path d="M13 12l2 0" /><path d="M9 16l.01 0" /><path d="M13 16l2 0" /></g>
+<text x="1300" y="188.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">執行檢查</text>
+<rect x="1215" y="243" width="56" height="34" rx="17" fill="#D8D2C9" stroke="#D8D2C9" stroke-width="1"/>
+<text x="1243" y="260.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">AI</text>
+<text x="1281" y="260.0" font-size="20" fill="#6B6560" text-anchor="start" dominant-baseline="central">不參與，程式依規則執行</text>
+<rect x="1215" y="293" width="56" height="34" rx="17" fill="#7F969B" stroke="#7F969B" stroke-width="1"/>
+<text x="1243" y="310.0" font-size="20" fill="#FFFFFF" font-weight="600" text-anchor="middle" dominant-baseline="central">人</text>
+<text x="1285" y="310.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">維護規則</text>
+<text x="1365" y="410.0" font-size="24" fill="#6B6560" font-weight="600" text-anchor="middle" dominant-baseline="central">為什麼用程式</text>
+<circle cx="1205" cy="460" r="7" fill="#A6B7BA"/>
+<text x="1225" y="460.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">輸入輸出是結構化的資料</text>
+<circle cx="1205" cy="500" r="7" fill="#A6B7BA"/>
+<text x="1225" y="500.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">結果穩定，可以追溯</text>
+<circle cx="1205" cy="540" r="7" fill="#A6B7BA"/>
+<text x="1225" y="540.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">一個月約一千筆，數秒完成</text>
+<circle cx="1205" cy="580" r="7" fill="#A6B7BA"/>
+<text x="1225" y="580.0" font-size="22" fill="#2A2623" text-anchor="start" dominant-baseline="central">成本低</text>
+<rect x="30" y="660" width="1540" height="80" rx="14" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="800" y="700.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">AI 的投入集中在開發端，產出的是規則與程式；每天執行的檢查交給穩定而便宜的程式</text>
+</svg>

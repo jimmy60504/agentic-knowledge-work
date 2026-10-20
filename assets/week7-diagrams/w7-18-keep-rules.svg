@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" width="1600" height="640" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="640" fill="#FFFFFF"/>
+<text x="800" y="36.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">先訂原則，每一條規則的去留都對應到其中一項</text>
+<rect x="40" y="80" width="360" height="470" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="220.0" cy="150" r="42" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(195.0,125) scale(2.0833333333333335)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" /><path d="M4 6v6a8 3 0 0 0 16 0v-6" /><path d="M4 12v6a8 3 0 0 0 16 0v-6" /></g>
+<text x="220.0" y="232.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">入庫的篩選</text>
+<text x="220.0" y="270.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">屬於入庫管理</text>
+<polyline points="220.0,300 220.0,346" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="100.0" y="356" width="240" height="60" rx="30" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="220.0" y="386.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">移到入庫管理</text>
+<text x="220.0" y="465.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">沒有入庫的資料仍保存在別處，</text>
+<text x="220.0" y="500.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">不屬於定位的處理</text>
+<rect x="430" y="80" width="360" height="470" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="610.0" cy="150" r="42" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(585.0,125) scale(2.0833333333333335)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8l4 -16l3 8h4" /></g>
+<text x="610.0" y="232.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">物理上可能</text>
+<text x="610.0" y="270.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">發生的情形</text>
+<polyline points="610.0,300 610.0,346" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="490.0" y="356" width="240" height="60" rx="30" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="610.0" y="386.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">改為提示</text>
+<text x="610.0" y="465.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">擋下等於認定挑波沒做完，</text>
+<text x="610.0" y="500.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">資料卻可能本來就是那樣</text>
+<rect x="820" y="80" width="360" height="470" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="1000.0" cy="150" r="42" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(975.0,125) scale(2.0833333333333335)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></g>
+<text x="1000.0" y="232.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">沒有來源的</text>
+<text x="1000.0" y="270.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">候選規則</text>
+<polyline points="1000.0,300 1000.0,346" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="880.0" y="356" width="240" height="60" rx="30" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="1000.0" y="386.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">刪除</text>
+<text x="1000.0" y="465.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">由 Agent 在構想階段提出，</text>
+<text x="1000.0" y="500.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">從未經過確認</text>
+<rect x="1210" y="80" width="360" height="470" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="1390.0" cy="150" r="42" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(1365.0,125) scale(2.0833333333333335)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></g>
+<text x="1390.0" y="232.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">不一致的</text>
+<text x="1390.0" y="270.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">數值</text>
+<polyline points="1390.0,300 1390.0,346" fill="none" stroke="#BE8979" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="1270.0" y="356" width="240" height="60" rx="30" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="1390.0" y="386.0" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">交由會議決定</text>
+<text x="1390.0" y="465.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">開發端不自行裁定，</text>
+<text x="1390.0" y="500.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">整理成議題交給檢查端</text>
+<text x="800" y="600.0" font-size="23" fill="#6B6560" text-anchor="middle" dominant-baseline="central">去留若逐條憑感覺決定，前後就會不一致，也說不出理由</text>
+</svg>

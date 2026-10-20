@@ -615,6 +615,112 @@ def history_git():
     f.save("w7-26-history-git")
 
 
+def pill(f, x, y, label, color):
+    """小標籤：實心圓角框加白字，例如「AI」「人」。"""
+    f.rect(x, y, 56, 34, fill=color, stroke=color, rx=17, sw=1)
+    f.text(x + 28, y + 17, label, size=20, bold=True, color="#FFFFFF")
+
+
+def keep_rules():
+    """第 18 頁：去留的原則。四項原則各對應一種去處，每一條規則的去留都歸到其中一項。"""
+    f = Fig(1600, 640)
+    f.text(800, 36, "先訂原則，每一條規則的去留都對應到其中一項", size=26, bold=True)
+    items = [("database", ["入庫的篩選", "屬於入庫管理"], "移到入庫管理", ["沒有入庫的資料仍保存在別處，", "不屬於定位的處理"]),
+             ("activity", ["物理上可能", "發生的情形"], "改為提示", ["擋下等於認定挑波沒做完，", "資料卻可能本來就是那樣"]),
+             ("link", ["沒有來源的", "候選規則"], "刪除", ["由 Agent 在構想階段提出，", "從未經過確認"]),
+             ("user", ["不一致的", "數值"], "交由會議決定", ["開發端不自行裁定，", "整理成議題交給檢查端"])]
+    w, gap, x0 = 360, 30, 40
+    for i, (ic, title, out, why) in enumerate(items):
+        x = x0 + i * (w + gap)
+        cx = x + w / 2
+        f.rect(x, 80, w, 470, fill=IVORY, stroke=GREY)
+        f.add(f'<circle cx="{cx}" cy="150" r="42" fill="#FFFFFF" stroke="{ACCENT}" stroke-width="3"/>')
+        icon(f, ic, cx - 25, 125, 50, ACCENT)
+        f.text(cx, 232, title[0], size=28, bold=True)
+        f.text(cx, 270, title[1], size=28, bold=True)
+        f.arrow([(cx, 300), (cx, 346)], color=ACCENT)
+        f.rect(cx - 120, 356, 240, 60, fill=PINK, stroke=ACCENT, rx=30)
+        f.text(cx, 386, out, size=26, bold=True, color=ACCENT)
+        f.text(cx, 465, why[0], size=21, color=MUTED)
+        f.text(cx, 500, why[1], size=21, color=MUTED)
+    f.text(800, 600, "去留若逐條憑感覺決定，前後就會不一致，也說不出理由", size=23, color=MUTED)
+    f.save("w7-18-keep-rules")
+
+
+def ai_position():
+    """第 29 頁：AI 的位置。開發端的四個環節大量使用 Agent，人訂定格式與決定；
+    每天執行的檢查由程式依規則執行，AI 不參與。"""
+    f = Fig(1600, 760)
+    f.rect(30, 40, 1100, 590, fill="none", stroke=ACCENT, dash=True)
+    icon(f, "robot", 60, 62, 40, ACCENT)
+    f.text(112, 82, "開發端：大量使用 Agent", size=28, bold=True, anchor="start")
+    cards = [("list-check", "盤查來源", "平行閱讀原始碼與文件，逐條列出", "訂定格式，決定去留"),
+             ("search", "查證", "開發大表與原文檢視的介面", "點開原文核對，開會定案"),
+             ("git-compare", "驗證", "製作錯誤檔，與舊程式逐筆比對", "判斷差異的歸類"),
+             ("package", "打包與發布", "打包與發布流程，實測安裝與更新", "決定公開範圍與交付管道")]
+    for i, (ic, t, ai, man) in enumerate(cards):
+        r, c = divmod(i, 2)
+        x, y = 60 + c * 540, 130 + r * 245
+        f.rect(x, y, 510, 220, fill=IVORY, stroke=GREY)
+        f.add(f'<circle cx="{x + 60}" cy="{y + 58}" r="36" fill="#FFFFFF" stroke="{ACCENT}" stroke-width="3"/>')
+        icon(f, ic, x + 38, y + 36, 44, ACCENT)
+        f.text(x + 115, y + 58, t, size=30, bold=True, anchor="start")
+        pill(f, x + 30, y + 113, "AI", ACCENT)
+        f.text(x + 100, y + 130, ai, size=22, anchor="start")
+        pill(f, x + 30, y + 163, "人", "#7F969B")
+        f.text(x + 100, y + 180, man, size=22, anchor="start")
+    f.rect(1160, 40, 410, 590, fill="none", stroke=BLUE, dash=True)
+    icon(f, "terminal-2", 1188, 62, 40, "#4E6E78")
+    f.text(1240, 82, "執行端：每天的檢查", size=28, bold=True, anchor="start")
+    x, y = 1185, 130
+    f.rect(x, y, 360, 220, fill=BLUEBG, stroke=BLUE)
+    f.add(f'<circle cx="{x + 60}" cy="{y + 58}" r="36" fill="#FFFFFF" stroke="{BLUE}" stroke-width="3"/>')
+    icon(f, "clipboard-list", x + 38, y + 36, 44, "#4E6E78")
+    f.text(x + 115, y + 58, "執行檢查", size=30, bold=True, anchor="start")
+    pill(f, x + 30, y + 113, "AI", GREY)
+    f.text(x + 96, y + 130, "不參與，程式依規則執行", size=20, color=MUTED, anchor="start")
+    pill(f, x + 30, y + 163, "人", "#7F969B")
+    f.text(x + 100, y + 180, "維護規則", size=22, anchor="start")
+    f.text(1365, 410, "為什麼用程式", size=24, bold=True, color=MUTED)
+    for j, s in enumerate(["輸入輸出是結構化的資料", "結果穩定，可以追溯", "一個月約一千筆，數秒完成", "成本低"]):
+        yy = 460 + j * 40
+        f.add(f'<circle cx="1205" cy="{yy}" r="7" fill="{BLUE}"/>')
+        f.text(1225, yy, s, size=22, anchor="start")
+    f.rect(30, 660, 1540, 80, fill=IVORY, stroke=GREY, rx=14)
+    f.text(800, 700, "AI 的投入集中在開發端，產出的是規則與程式；每天執行的檢查交給穩定而便宜的程式", size=24, bold=True)
+    f.save("w7-29-ai-position")
+
+
+def verify_ai():
+    """第 30 頁：查證的方式。三個 AI 出過的錯，各由證據鏈的哪個環節抓出。"""
+    f = Fig(1600, 740)
+    f.text(350, 50, "AI 出過的錯", size=26, bold=True, color=ACCENT)
+    f.text(1180, 50, "由哪個環節抓出", size=26, bold=True, color="#4E6E78")
+    rows = [("第一輪整理有讀錯的條目", "多個 Agent 平行閱讀來源時讀錯",
+             "file-text", "重讀原文", "每個來源由一個 Agent 重讀，回到原文核對"),
+            ("讀錯原始碼，一條規則少算一行", "重建的規則與舊程式的行為不同",
+             "git-compare", "與舊程式逐筆比對", "在測試機以舊程式執行，逐筆比對結果"),
+            ("沒有來源的規則", "構想階段由 Agent 提出，從未經過確認",
+             "link", "雙向溯源", "每條規則都要有來源，程式自動檢查")]
+    for i, (err, esub, ic, link, lsub) in enumerate(rows):
+        y = 90 + i * 170
+        f.rect(40, y, 620, 140, fill=PINK, stroke=ACCENT)
+        icon(f, "alert-triangle", 70, y + 46, 48, ACCENT)
+        f.text(140, y + 52, err, size=27, bold=True, anchor="start")
+        f.text(140, y + 96, esub, size=21, color=MUTED, anchor="start")
+        f.arrow([(670, y + 70), (794, y + 70)], color=MUTED, sw=4)
+        f.rect(800, y, 760, 140, fill=BLUEBG, stroke=BLUE)
+        f.add(f'<circle cx="{866}" cy="{y + 70}" r="38" fill="#FFFFFF" stroke="{BLUE}" stroke-width="3"/>')
+        icon(f, ic, 843, y + 47, 46, "#4E6E78")
+        f.text(930, y + 52, link, size=27, bold=True, anchor="start")
+        f.text(930, y + 96, lsub, size=21, color=MUTED, anchor="start")
+    f.rect(40, 610, 1520, 100, fill=IVORY, stroke=GREY, rx=14)
+    icon(f, "shield-check", 80, 636, 48, ACCENT)
+    f.text(150, 645, "交給 AI 之前，先想好做完之後怎麼確認它是對的", size=26, bold=True, anchor="start")
+    f.text(150, 683, "本週的證據鏈，就是讓 AI 的產出可以被檢查的方式", size=22, color=MUTED, anchor="start")
+    f.save("w7-30-verify-ai")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -633,3 +739,6 @@ if __name__ == "__main__":
     evidence_chain()
     handling_record()
     history_git()
+    keep_rules()
+    ai_position()
+    verify_ai()

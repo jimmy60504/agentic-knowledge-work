@@ -12,3 +12,6 @@
 | clipboard-list、circle-check、link | 證據鏈：規則、結果、環節 |
 | clipboard-list | 處理的紀錄：留下紀錄的動作 |
 | git-compare、search、chart-bar、copy | 修改歷史：差異、以內容查詢、統計、備份 |
+| robot、list-check、search、git-compare、package、terminal-2、clipboard-list | AI 的位置：開發端的四個環節與執行端 |
+| alert-triangle、file-text、git-compare、link、shield-check | 查證的方式：AI 出過的錯與抓出的環節 |
+| database、activity、link、user | 去留的原則：四項原則 |
