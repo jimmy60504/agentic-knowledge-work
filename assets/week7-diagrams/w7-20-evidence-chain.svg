@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" width="1600" height="620" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="620" fill="#FFFFFF"/>
+<rect x="50" y="70" width="230" height="190" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="165.0" cy="128" r="38" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(143.0,106) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M9 9l1 0" /><path d="M9 13l6 0" /><path d="M9 17l6 0" /></g>
+<text x="165.0" y="195.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">原文</text>
+<text x="165.0" y="232.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">程式、投影片、文件</text>
+<rect x="370" y="70" width="230" height="190" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="485.0" cy="128" r="38" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(463.0,106) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 5.5l1.5 1.5l2.5 -2.5" /><path d="M3.5 11.5l1.5 1.5l2.5 -2.5" /><path d="M3.5 17.5l1.5 1.5l2.5 -2.5" /><path d="M11 6l9 0" /><path d="M11 12l9 0" /><path d="M11 18l9 0" /></g>
+<text x="485.0" y="195.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">來源條目</text>
+<text x="485.0" y="232.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">672 個條目</text>
+<rect x="690" y="70" width="230" height="190" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="805.0" cy="128" r="38" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(783.0,106) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /><path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" /><path d="M9 12l.01 0" /><path d="M13 12l2 0" /><path d="M9 16l.01 0" /><path d="M13 16l2 0" /></g>
+<text x="805.0" y="195.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">規則</text>
+<text x="805.0" y="232.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">43 條規則</text>
+<rect x="1010" y="70" width="230" height="190" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="1125.0" cy="128" r="38" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(1103.0,106) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l3 3l-3 3" /><path d="M13 15l3 0" /><path d="M3 6a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -12" /></g>
+<text x="1125.0" y="195.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">程式</text>
+<text x="1125.0" y="232.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">依規則執行</text>
+<rect x="1330" y="70" width="230" height="190" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<circle cx="1445.0" cy="128" r="38" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<g transform="translate(1423.0,106) scale(1.8333333333333333)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></g>
+<text x="1445.0" y="195.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">結果</text>
+<text x="1445.0" y="232.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">逐筆的檢查結果</text>
+<polyline points="286,165 364,165" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<rect x="175.0" y="300" width="300" height="100" rx="12" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="325.0" y="335.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">點開原文對照</text>
+<text x="325.0" y="372.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">整份來源由 Agent 重讀</text>
+<line x1="325.0" y1="175" x2="325.0" y2="300" stroke="#BE8979" stroke-width="2" stroke-dasharray="6 6"/>
+<polyline points="606,165 684,165" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<rect x="495.0" y="300" width="300" height="100" rx="12" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="645.0" y="335.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">雙向溯源</text>
+<text x="645.0" y="372.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">程式自動檢查</text>
+<line x1="645.0" y1="175" x2="645.0" y2="300" stroke="#BE8979" stroke-width="2" stroke-dasharray="6 6"/>
+<polyline points="926,165 1004,165" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<rect x="815.0" y="300" width="300" height="100" rx="12" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="965.0" y="335.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">規則與判斷分離</text>
+<text x="965.0" y="372.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">說明由規則檔產生</text>
+<line x1="965.0" y1="175" x2="965.0" y2="300" stroke="#BE8979" stroke-width="2" stroke-dasharray="6 6"/>
+<polyline points="1246,165 1324,165" fill="none" stroke="#BE8979" stroke-width="4" marker-end="url(#ahr)"/>
+<rect x="1135.0" y="300" width="300" height="100" rx="12" fill="#F6EAE5" stroke="#BE8979" stroke-width="3"/>
+<text x="1285.0" y="335.0" font-size="22" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">在測試機以舊程式</text>
+<text x="1285.0" y="372.0" font-size="20" fill="#6B6560" text-anchor="middle" dominant-baseline="central">執行，逐筆比對</text>
+<line x1="1285.0" y1="175" x2="1285.0" y2="300" stroke="#BE8979" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="800" y="32.0" font-size="22" fill="#BE8979" text-anchor="middle" dominant-baseline="central">每一個環節都要有檢查的方式（下方粉色框）</text>
+<polyline points="1445.0,430 1445.0,480 165.0,480 165.0,430" fill="none" stroke="#6B6560" stroke-width="3" stroke-dasharray="12 8" marker-end="url(#ah)"/>
+<text x="800" y="515.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">任何一條規則被質疑時：出自哪一行或哪一頁、為什麼要檢查、與舊程式是否一致，都能一路追回</text>
+<text x="800" y="575.0" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">只要有一個環節無法檢查，整條鏈就不可信</text>
+</svg>

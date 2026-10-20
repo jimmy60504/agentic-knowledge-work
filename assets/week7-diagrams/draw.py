@@ -475,6 +475,39 @@ def single_intent():
         f.text(x + 20, 585, g, size=23, anchor="start")
     f.save("w7-15-single-intent")
 
+def evidence_chain():
+    """第 20 頁：證據鏈。原文 → 來源條目 → 規則 → 程式 → 結果，每一個環節都有檢查方式；
+    任何一條規則被質疑時，都能從結果一路追回原文。"""
+    f = Fig(1600, 620)
+    nodes = [("file-text", "原文", "程式、投影片、文件"), ("list-check", "來源條目", "672 個條目"),
+             ("clipboard-list", "規則", "43 條規則"), ("terminal-2", "程式", "依規則執行"),
+             ("circle-check", "結果", "逐筆的檢查結果")]
+    checks = [("點開原文對照", "整份來源由 Agent 重讀"), ("雙向溯源", "程式自動檢查"),
+              ("規則與判斷分離", "說明由規則檔產生"), ("在測試機以舊程式", "執行，逐筆比對")]
+    w, gap, x0, y = 230, 90, 50, 70
+    xs = [x0 + i * (w + gap) for i in range(5)]
+    for x, (ic, t, sub) in zip(xs, nodes):
+        f.rect(x, y, w, 190, fill=IVORY, stroke=GREY)
+        f.add(f'<circle cx="{x + w / 2}" cy="{y + 58}" r="38" fill="#FFFFFF" stroke="{ACCENT}" stroke-width="3"/>')
+        icon(f, ic, x + w / 2 - 22, y + 36, 44, ACCENT)
+        f.text(x + w / 2, y + 125, t, size=30, bold=True)
+        f.text(x + w / 2, y + 162, sub, size=20, color=MUTED)
+    for i, (a, b) in enumerate(checks):
+        x1, x2 = xs[i] + w, xs[i + 1]
+        f.arrow([(x1 + 6, y + 95), (x2 - 6, y + 95)], color=ACCENT, sw=4)
+        cx = (x1 + x2) / 2
+        f.rect(cx - 150, 300, 300, 100, fill=PINK, stroke=ACCENT, rx=12)
+        f.text(cx, 335, a, size=22, bold=True)
+        f.text(cx, 372, b, size=20, color=MUTED)
+        f.add(f'<line x1="{cx}" y1="{y + 105}" x2="{cx}" y2="300" stroke="{ACCENT}" stroke-width="2" stroke-dasharray="6 6"/>')
+    f.text(800, 32, "每一個環節都要有檢查的方式（下方粉色框）", size=22, color=ACCENT)
+    # 追回原文
+    f.arrow([(xs[4] + w / 2, 430), (xs[4] + w / 2, 480), (xs[0] + w / 2, 480), (xs[0] + w / 2, 430)], color=MUTED, dash=True, sw=3)
+    f.text(800, 515, "任何一條規則被質疑時：出自哪一行或哪一頁、為什麼要檢查、與舊程式是否一致，都能一路追回", size=22, color=MUTED)
+    f.text(800, 575, "只要有一個環節無法檢查，整條鏈就不可信", size=24, bold=True, color=ACCENT)
+    f.save("w7-20-evidence-chain")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -490,3 +523,4 @@ if __name__ == "__main__":
     agent_survey()
     classify_by_object()
     single_intent()
+    evidence_chain()
