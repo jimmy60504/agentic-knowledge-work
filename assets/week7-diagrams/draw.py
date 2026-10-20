@@ -445,31 +445,35 @@ def classify_by_object():
 
 def single_intent():
     """第 15 頁：一條規則只有一個意圖（類比程式的單一職責原則）。
-    以「深度為 0 或過淺」為例：兩件意義不同的事分兩級放在同一條，拆成兩條之後各自只有一個等級。"""
-    f = Fig(1600, 640)
-    # 拆分前
-    f.text(300, 40, "拆分前：一條規則兩個意圖", size=26, bold=True, color=MUTED)
-    f.rect(60, 80, 480, 300, fill=IVORY, stroke=GREY)
-    f.text(300, 140, "深度為 0 或過淺", size=32, bold=True)
-    f.text(300, 200, "等於 0：擋下", size=24, color=DARK)
-    f.text(300, 240, "大於 0 而很淺：提示", size=24, color=DARK)
-    f.text(300, 310, "同一條規則，分兩級處理", size=22, color=ACCENT)
-    f.arrow([(560, 230), (720, 230)], color=ACCENT, sw=4)
-    f.text(640, 200, "拆開", size=24, bold=True, color=ACCENT)
-    # 拆分後
-    f.text(1140, 40, "拆分後：一條規則一個意圖", size=26, bold=True, color=ACCENT)
-    f.card(760, 80, 760, 130, "深度為 0（擋下）", ["沒有計算或經人工修改：流程錯誤"], fill=PINK, stroke=ACCENT, tsize=30)
-    f.card(760, 250, 760, 130, "深度過淺（提示）", ["計算過的結果：確認是否合理"], fill=BLUEBG, stroke=BLUE, tsize=30)
-    # 好處
-    f.rect(60, 440, 1460, 150, fill="#FFFFFF", stroke=GREY, rx=14)
-    f.text(790, 480, "一個意圖帶來的好處：與程式的單一職責原則相同", size=26, bold=True)
-    goods = ["名稱說得清楚", "只有一個等級", "門檻各自調整", "來源各自對應", "可以單獨測試"]
+    只把門檻做上去，不同的錯誤原因會混在同一條規則，後面的處置也就不同；
+    以「深度為 0 或過淺」為例，拆成兩條之後各自只有一個原因、一個等級、一種處置。"""
+    f = Fig(1600, 680)
+    f.text(300, 40, "只把門檻做上去", size=26, bold=True, color=MUTED)
+    f.rect(60, 80, 480, 340, fill=IVORY, stroke=GREY)
+    f.text(300, 135, "深度小於門檻", size=32, bold=True)
+    f.text(300, 195, "原因一：等於 0，沒有計算", size=22, color=DARK)
+    f.text(300, 232, "或經人工修改", size=22, color=DARK)
+    f.text(300, 280, "原因二：大於 0 但很淺", size=22, color=DARK)
+    f.text(300, 360, "不同原因混在一起，處置無從決定", size=22, color=ACCENT)
+    f.arrow([(560, 250), (720, 250)], color=ACCENT, sw=4)
+    f.text(640, 220, "拆開", size=24, bold=True, color=ACCENT)
+    f.text(1140, 40, "一條規則一個意圖", size=26, bold=True, color=ACCENT)
+    cards = [("深度為 0（擋下）", "原因：沒有計算或經人工修改", "處置：重新執行定位計算，不手動填深度", PINK, ACCENT),
+             ("深度過淺（提示）", "原因：計算過的結果", "處置：確認深度是否合理", BLUEBG, BLUE)]
+    for i, (t, why, act, fill, stroke) in enumerate(cards):
+        y = 80 + i * 180
+        f.rect(760, y, 780, 160, fill=fill, stroke=stroke)
+        f.text(790, y + 38, t, size=30, bold=True, anchor="start")
+        f.text(790, y + 85, why, size=22, color=MUTED, anchor="start")
+        f.text(790, y + 125, act, size=22, bold=True, color=ACCENT if stroke == ACCENT else "#4E6E78", anchor="start")
+    f.rect(60, 480, 1480, 150, fill="#FFFFFF", stroke=GREY, rx=14)
+    f.text(800, 520, "一個意圖帶來的好處：與程式的單一職責原則相同", size=26, bold=True)
+    goods = ["原因不會混在一起", "處置只有一種", "只有一個等級", "門檻各自調整", "可以單獨測試"]
     for i, g in enumerate(goods):
-        x = 150 + i * 282
-        f.add(f'<circle cx="{x}" cy="545" r="8" fill="{ACCENT}"/>')
-        f.text(x + 20, 545, g, size=24, anchor="start")
+        x = 110 + i * 292
+        f.add(f'<circle cx="{x}" cy="585" r="8" fill="{ACCENT}"/>')
+        f.text(x + 20, 585, g, size=23, anchor="start")
     f.save("w7-15-single-intent")
-
 
 if __name__ == "__main__":
     agent_remote_test()
