@@ -418,7 +418,7 @@ def classify_by_object():
     items = [("file-code", "檔案格式"), ("clock", "發震時間"), ("map-pin", "震央位置"),
              ("arrow-bar-to-down", "震源深度"), ("chart-bar", "規模"), ("hand-click", "挑波"),
              ("broadcast", "測站與資料量"), ("target", "定位品質"), ("database", "事件與入庫")]
-    f.text(560, 30, "檢查規則：依被檢查的對象分成 9 個項目", size=26, bold=True)
+    f.text(560, 30, "依業務邏輯分類：每個項目檢查一個地震學上的概念", size=26, bold=True)
     w, h, gx, gy, x0, y0 = 320, 180, 30, 30, 60, 70
     for i, (ic, t) in enumerate(items):
         r, c = divmod(i, 3)
@@ -439,7 +439,7 @@ def classify_by_object():
         f.text(rx + 200, y + 165, t, size=30, bold=True)
         f.text(rx + 200, y + 210, sub, size=22, color=MUTED)
     f.add(f'<line x1="{rx - 50}" y1="70" x2="{rx - 50}" y2="670" stroke="{GREY}" stroke-width="3" stroke-dasharray="10 8"/>')
-    f.text(800, 725, "同一件事只占一列；一條規則只檢查一件事、只有一個等級；名稱不寫門檻", size=22, color=MUTED)
+    f.text(800, 725, "不依來源、舊程式或投影片的步驟分類；同一個概念散在各處的檢查，歸到同一個項目", size=22, color=MUTED)
     f.save("w7-14-classify")
 
 

@@ -4,7 +4,7 @@
 <marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
 </defs>
 <rect width="1600" height="760" fill="#FFFFFF"/>
-<text x="560" y="30.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢查規則：依被檢查的對象分成 9 個項目</text>
+<text x="560" y="30.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">依業務邏輯分類：每個項目檢查一個地震學上的概念</text>
 <rect x="60" y="70" width="320" height="180" rx="16" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
 <circle cx="220.0" cy="135" r="40" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
 <g transform="translate(196.0,111) scale(2.0)" fill="none" stroke="#BE8979" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2" /><path d="M10 13l-1 2l1 2" /><path d="M14 13l1 2l-1 2" /></g>
@@ -53,5 +53,5 @@
 <text x="1350" y="535.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">入庫分流</text>
 <text x="1350" y="580.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">決定資料的去向</text>
 <line x1="1100" y1="70" x2="1100" y2="670" stroke="#D8D2C9" stroke-width="3" stroke-dasharray="10 8"/>
-<text x="800" y="725.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">同一件事只占一列；一條規則只檢查一件事、只有一個等級；名稱不寫門檻</text>
+<text x="800" y="725.0" font-size="22" fill="#6B6560" text-anchor="middle" dominant-baseline="central">不依來源、舊程式或投影片的步驟分類；同一個概念散在各處的檢查，歸到同一個項目</text>
 </svg>
