@@ -516,6 +516,53 @@ def evidence_chain():
     f.save("w7-20-evidence-chain")
 
 
+def handling_record():
+    """第 25 頁：處理的紀錄。挑波端預覽後套用修正、逐項確認或回報提示，送出後由檢查端確認、退回或標記異常；
+    每一個由人按下的動作都留下紀錄（右上角的圖示）。"""
+    f = Fig(1600, 730)
+    f.rect(30, 30, 1540, 270, fill="none", dash=True)
+    f.text(56, 64, "挑波端", size=26, bold=True, color=MUTED, anchor="start")
+    f.rect(30, 320, 1540, 260, fill="none", stroke=BLUE, dash=True)
+    f.text(56, 354, "檢查端", size=26, bold=True, color=MUTED, anchor="start")
+
+    def rec(x, y, w):
+        icon(f, "clipboard-list", x + w - 38, y + 10, 26, ACCENT)
+
+    f.card(90, 110, 260, 130, "預檢標出問題", ["送出前執行"])
+    f.card(460, 70, 420, 105, "修正", ["程式提出，承辦預覽後套用"], fill=PINK, stroke=ACCENT, ssize=22)
+    rec(460, 70, 420)
+    f.card(460, 190, 420, 105, "提示", ["確認無誤，或問題回報（說明必填）"], fill=PINK, stroke=ACCENT, ssize=22)
+    rec(460, 190, 420)
+    f.card(990, 110, 240, 130, "送出", ["交給檢查端"])
+    f.arrow([(350, 160), (454, 124)])
+    f.arrow([(350, 190), (454, 240)])
+    f.arrow([(880, 124), (984, 160)])
+    f.arrow([(880, 240), (984, 190)])
+    f.text(1260, 110, "自動修正改為由人按下：", size=22, color=MUTED, anchor="start")
+    f.text(1260, 145, "程式不自行修改，", size=22, color=MUTED, anchor="start")
+    f.text(1260, 180, "避免誤以為已經處理", size=22, color=MUTED, anchor="start")
+
+    f.card(990, 400, 240, 130, "檢查端檢查", ["逐筆檢視"])
+    f.arrow([(1110, 240), (1110, 394)])
+    f.card(460, 410, 420, 110, "退回", ["寫明理由，回到挑波端重新處理"], fill=PINK, stroke=ACCENT, ssize=22)
+    rec(460, 410, 420)
+    f.arrow([(990, 465), (886, 465)])
+    f.arrow([(460, 465), (220, 465), (220, 246)], color=ACCENT, dash=True)
+    f.text(240, 420, "重新處理", size=22, color=ACCENT, anchor="start")
+    f.card(1285, 345, 265, 100, "確認", ["進入入庫整理"], fill=PINK, stroke=ACCENT, ssize=22)
+    rec(1285, 345, 265)
+    f.card(1285, 460, 265, 100, "標記異常事件", ["收到回報後標記"], fill=PINK, stroke=ACCENT, tsize=26, ssize=22)
+    rec(1285, 460, 265)
+    f.arrow([(1230, 440), (1279, 395)])
+    f.arrow([(1230, 490), (1279, 510)])
+
+    f.rect(30, 610, 1540, 95, fill=IVORY, stroke=GREY, rx=14)
+    icon(f, "clipboard-list", 70, 638, 40, ACCENT)
+    f.text(130, 645, "每一個由人按下的動作都記下：誰、何時、做了什麼、為什麼", size=26, bold=True, anchor="start")
+    f.text(130, 682, "從送出到檢查，每一筆資料都有人負責、有紀錄可查（粉色框右上角的圖示代表留下紀錄）", size=22, color=MUTED, anchor="start")
+    f.save("w7-25-handling-record")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -532,3 +579,4 @@ if __name__ == "__main__":
     classify_by_object()
     single_intent()
     evidence_chain()
+    handling_record()
