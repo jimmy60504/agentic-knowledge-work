@@ -721,6 +721,41 @@ def verify_ai():
     f.save("w7-30-verify-ai")
 
 
+def test_layers():
+    """第 23 頁：以測試守住。左：依失敗的意思分層，失敗時看得出原因；
+    右：依需要的資源分級，決定什麼時候執行。"""
+    f = Fig(1600, 720)
+    f.text(410, 36, "依失敗的意思分層：失敗時看得出原因", size=26, bold=True, color=ACCENT)
+    layers = [("terminal-2", "程式本身", "程式錯誤"), ("clipboard-list", "規格", "程式與規則檔不一致"),
+              ("stack-2", "快照", "結果改變，確認後更新並寫明原因"), ("git-compare", "新舊比對", "差異沒有歸類")]
+    for i, (ic, t, mean) in enumerate(layers):
+        y = 80 + i * 125
+        f.rect(30, y, 760, 105, fill=PINK, stroke=ACCENT)
+        f.add(f'<circle cx="88" cy="{y + 52}" r="34" fill="#FFFFFF" stroke="{ACCENT}" stroke-width="3"/>')
+        icon(f, ic, 67, y + 31, 42, ACCENT)
+        f.text(140, y + 52, t, size=28, bold=True, anchor="start")
+        f.text(320, y + 34, "失敗代表", size=19, color=MUTED, anchor="start")
+        f.text(320, y + 70, mean, size=23, anchor="start")
+    f.text(1190, 36, "依需要的資源分級：決定什麼時候執行", size=26, bold=True, color="#4E6E78")
+    tiers = [("folders", "只需要專案", "每次修改、每次推送"), ("database", "需要真實資料", "推送之前"),
+             ("file-code", "需要舊程式", "在測試機上")]
+    for i, (ic, t, when) in enumerate(tiers):
+        y = 80 + i * 167
+        f.rect(830, y, 640, 145, fill=BLUEBG, stroke=BLUE)
+        f.add(f'<circle cx="{895}" cy="{y + 72}" r="38" fill="#FFFFFF" stroke="{BLUE}" stroke-width="3"/>')
+        icon(f, ic, 871, y + 48, 48, "#4E6E78")
+        f.text(960, y + 50, t, size=28, bold=True, anchor="start")
+        f.text(960, y + 98, when, size=23, color=MUTED, anchor="start")
+    f.arrow([(1520, 90), (1520, 560)], color=BLUE, sw=4)
+    for j, ch in enumerate("資源越多執行越少"):
+        f.text(1552, 160 + j * 40, ch, size=22, color="#4E6E78")
+    f.rect(30, 600, 1540, 100, fill=IVORY, stroke=GREY, rx=14)
+    icon(f, "refresh", 66, 626, 46, ACCENT)
+    f.text(135, 633, "每次修改都重新執行，確認原本的行為沒有被破壞：這就是回歸測試", size=25, bold=True, anchor="start")
+    f.text(135, 672, "缺少資源時測試失敗，而不是略過，避免以為通過、其實沒有執行", size=22, color=MUTED, anchor="start")
+    f.save("w7-23-test-layers")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -742,3 +777,4 @@ if __name__ == "__main__":
     keep_rules()
     ai_position()
     verify_ai()
+    test_layers()
