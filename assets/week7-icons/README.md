@@ -10,3 +10,5 @@
 | robot、file-text、list-check | 列舉與決定：Agent、來源、條目 |
 | file-code、clock、map-pin、arrow-bar-to-down、chart-bar、hand-click、broadcast、target、database、refresh、arrows-split | 依對象分類：九個檢查項目，以及重跑與入庫分流 |
 | clipboard-list、circle-check、link | 證據鏈：規則、結果、環節 |
+| clipboard-list | 處理的紀錄：留下紀錄的動作 |
+| git-compare、search、chart-bar、copy | 修改歷史：差異、以內容查詢、統計、備份 |

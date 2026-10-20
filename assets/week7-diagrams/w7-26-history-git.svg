@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker>
+</defs>
+<rect width="1600" height="800" fill="#FFFFFF"/>
+<text x="40" y="40.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">一個事件的修改歷史：每一次操作是一個 commit</text>
+<line x1="110" y1="120" x2="1478" y2="120" stroke="#D8D2C9" stroke-width="4"/>
+<circle cx="110" cy="120" r="18" fill="#BE8979" stroke="#BE8979" stroke-width="4"/>
+<text x="110" y="165.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">送檢</text>
+<circle cx="338" cy="120" r="18" fill="#BE8979" stroke="#BE8979" stroke-width="4"/>
+<text x="338" y="165.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">自動修正</text>
+<circle cx="566" cy="120" r="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="566" y="165.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">確認提示</text>
+<circle cx="794" cy="120" r="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="794" y="165.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">QC 退回</text>
+<circle cx="1022" cy="120" r="18" fill="#BE8979" stroke="#BE8979" stroke-width="4"/>
+<text x="1022" y="165.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">承辦修改</text>
+<circle cx="1250" cy="120" r="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="1250" y="165.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">送檢</text>
+<circle cx="1478" cy="120" r="18" fill="#FFFFFF" stroke="#BE8979" stroke-width="4"/>
+<text x="1478" y="165.0" font-size="24" fill="#6B6560" text-anchor="middle" dominant-baseline="central">QC 通過</text>
+<circle cx="1090" cy="40" r="11" fill="#BE8979" stroke="#BE8979" stroke-width="3"/>
+<text x="1112" y="40.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">內容改變：新的版本</text>
+<circle cx="1390" cy="40" r="11" fill="#FFFFFF" stroke="#BE8979" stroke-width="3"/>
+<text x="1412" y="40.0" font-size="22" fill="#6B6560" text-anchor="start" dominant-baseline="central">只記操作</text>
+<rect x="40" y="230" width="700" height="400" rx="14" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="3"/>
+<text x="70" y="268.0" font-size="24" fill="#6B6560" font-weight="600" text-anchor="start" dominant-baseline="central">commit 訊息的固定欄位</text>
+<text x="76" y="318" font-size="23" fill="#2A2623" font-weight="600" font-family="Menlo, monospace" dominant-baseline="central">Event-ID</text>
+<text x="330" y="318.0" font-size="23" fill="#6B6560" text-anchor="start" dominant-baseline="central">事件（P file 的檔名）</text>
+<text x="76" y="362" font-size="23" fill="#2A2623" font-weight="600" font-family="Menlo, monospace" dominant-baseline="central">Action</text>
+<text x="330" y="362.0" font-size="23" fill="#6B6560" text-anchor="start" dominant-baseline="central">這次做了什麼</text>
+<text x="76" y="406" font-size="23" fill="#2A2623" font-weight="600" font-family="Menlo, monospace" dominant-baseline="central">Source</text>
+<text x="330" y="406.0" font-size="23" fill="#6B6560" text-anchor="start" dominant-baseline="central">內容改變的來源</text>
+<text x="76" y="450" font-size="23" fill="#2A2623" font-weight="600" font-family="Menlo, monospace" dominant-baseline="central">Verdict、Rules</text>
+<text x="330" y="450.0" font-size="23" fill="#6B6560" text-anchor="start" dominant-baseline="central">判定與觸發的規則</text>
+<rect x="56" y="474" width="668" height="40" rx="6" fill="#F6EAE5" stroke="#F6EAE5" stroke-width="1"/>
+<text x="76" y="494" font-size="23" fill="#BE8979" font-weight="600" font-family="Menlo, monospace" dominant-baseline="central">Ruleset</text>
+<text x="330" y="494.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">當時的規則集版本</text>
+<rect x="56" y="518" width="668" height="40" rx="6" fill="#F6EAE5" stroke="#F6EAE5" stroke-width="1"/>
+<text x="76" y="538" font-size="23" fill="#BE8979" font-weight="600" font-family="Menlo, monospace" dominant-baseline="central">Program</text>
+<text x="330" y="538.0" font-size="23" fill="#2A2623" text-anchor="start" dominant-baseline="central">當時的程式版本</text>
+<text x="76" y="582" font-size="23" fill="#2A2623" font-weight="600" font-family="Menlo, monospace" dominant-baseline="central">Actor</text>
+<text x="330" y="582.0" font-size="23" fill="#6B6560" text-anchor="start" dominant-baseline="central">由誰執行</text>
+<text x="390" y="650.0" font-size="22" fill="#BE8979" text-anchor="middle" dominant-baseline="central">每一筆紀錄都能回答：這是哪一版規則、哪一版程式的判定</text>
+<text x="800" y="268.0" font-size="24" fill="#6B6560" font-weight="600" text-anchor="start" dominant-baseline="central">交給 git 處理，不另外撰寫</text>
+<rect x="800" y="300" width="760" height="72" rx="12" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(822,316) scale(1.6666666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M11 6h5a2 2 0 0 1 2 2v8" /><path d="M14 9l-3 -3l3 -3" /><path d="M13 18h-5a2 2 0 0 1 -2 -2v-8" /><path d="M10 15l3 3l-3 3" /></g>
+<text x="884" y="336.0" font-size="25" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">快照與逐欄差異</text>
+<text x="1160" y="336.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">任何兩個版本都能比對</text>
+<rect x="800" y="384" width="760" height="72" rx="12" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(822,400) scale(1.6666666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></g>
+<text x="884" y="420.0" font-size="25" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">以內容查出是哪一版</text>
+<text x="1160" y="420.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">找不到，表示在紀錄之外被改過</text>
+<rect x="800" y="468" width="760" height="72" rx="12" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(822,484) scale(1.6666666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -6" /><path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -10" /><path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -14" /><path d="M4 20h14" /></g>
+<text x="884" y="504.0" font-size="25" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">統計與備查</text>
+<text x="1160" y="504.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">都從同一份 commit 紀錄產生</text>
+<rect x="800" y="552" width="760" height="72" rx="12" fill="#EAF0F1" stroke="#A6B7BA" stroke-width="3"/>
+<g transform="translate(822,568) scale(1.6666666666666667)" fill="none" stroke="#4E6E78" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></g>
+<text x="884" y="588.0" font-size="25" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">備份只要複製</text>
+<text x="1160" y="588.0" font-size="21" fill="#6B6560" text-anchor="start" dominant-baseline="central">不靠預檢程式，任何 git 工具都能讀</text>
+<rect x="40" y="690" width="1520" height="90" rx="14" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="3"/>
+<text x="800" y="720.0" font-size="23" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">P file 維持原格式：固定欄位沒有放紀錄的位置，附加的紀錄檔在複製、上傳時會遺失</text>
+<text x="800" y="755.0" font-size="21" fill="#6B6560" text-anchor="middle" dominant-baseline="central">因此歷史集中存放在另一個 git repo，只有預檢程式寫入，使用者從網頁查看，不需要操作 git</text>
+</svg>

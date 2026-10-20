@@ -205,7 +205,7 @@ def single_source():
 
 
 def release():
-    """第 27 頁：更新的流程。更新套件以私下的檔案傳遞，有新版本的通知靠 GitHub Pages。"""
+    """第 28 頁：更新的流程。更新套件以私下的檔案傳遞，有新版本的通知靠 GitHub Pages。"""
     f = Fig(1600, 560)
     f.card(30, 200, 250, 140, "推上版本標籤", ["開發端"], tsize=28)
     f.card(350, 200, 280, 140, "雲端自動流程", ["測試、打包"], fill=BLUEBG, stroke=BLUE)
@@ -563,6 +563,58 @@ def handling_record():
     f.save("w7-25-handling-record")
 
 
+def history_git():
+    """第 26 頁：修改歷史以 git 保存。一個事件的每一次操作是一個 commit，內容改變的是一個新版本；
+    commit 訊息的固定欄位記下誰、做了什麼、判定與觸發的規則，以及當時規則集與程式的版本。"""
+    f = Fig(1600, 800)
+    # 上：一個事件的時間線
+    f.text(40, 40, "一個事件的修改歷史：每一次操作是一個 commit", size=26, bold=True, anchor="start")
+    steps = [("送檢", True), ("自動修正", True), ("確認提示", False), ("QC 退回", False),
+             ("承辦修改", True), ("送檢", False), ("QC 通過", False)]
+    x0, gap, y = 110, 228, 120
+    f.add(f'<line x1="{x0}" y1="{y}" x2="{x0 + gap * (len(steps) - 1)}" y2="{y}" stroke="{GREY}" stroke-width="4"/>')
+    for i, (t, changed) in enumerate(steps):
+        x = x0 + i * gap
+        fill = ACCENT if changed else "#FFFFFF"
+        f.add(f'<circle cx="{x}" cy="{y}" r="18" fill="{fill}" stroke="{ACCENT}" stroke-width="4"/>')
+        f.text(x, y + 45, t, size=24, bold=changed, color=DARK if changed else MUTED)
+    f.add(f'<circle cx="1090" cy="40" r="11" fill="{ACCENT}" stroke="{ACCENT}" stroke-width="3"/>')
+    f.text(1112, 40, "內容改變：新的版本", size=22, color=MUTED, anchor="start")
+    f.add(f'<circle cx="1390" cy="40" r="11" fill="#FFFFFF" stroke="{ACCENT}" stroke-width="3"/>')
+    f.text(1412, 40, "只記操作", size=22, color=MUTED, anchor="start")
+    # 中左：commit 訊息的固定欄位
+    f.rect(40, 230, 700, 400, fill="#FFFFFF", stroke=GREY, rx=14)
+    f.text(70, 268, "commit 訊息的固定欄位", size=24, bold=True, color=MUTED, anchor="start")
+    rows = [("Event-ID", "事件（P file 的檔名）", False), ("Action", "這次做了什麼", False),
+            ("Source", "內容改變的來源", False), ("Verdict、Rules", "判定與觸發的規則", False),
+            ("Ruleset", "當時的規則集版本", True), ("Program", "當時的程式版本", True), ("Actor", "由誰執行", False)]
+    for i, (k, v, hl) in enumerate(rows):
+        yy = 318 + i * 44
+        if hl:
+            f.rect(56, yy - 20, 668, 40, fill=PINK, stroke=PINK, rx=6, sw=1)
+        f.add(f'<text x="76" y="{yy}" font-size="23" fill="{ACCENT if hl else DARK}" font-weight="600" '
+              f'font-family="Menlo, monospace" dominant-baseline="central">{k}</text>')
+        f.text(330, yy, v, size=23, color=DARK if hl else MUTED, anchor="start")
+    f.text(390, 650, "每一筆紀錄都能回答：這是哪一版規則、哪一版程式的判定", size=22, color=ACCENT)
+    # 中右：git 帶來的
+    f.text(800, 268, "交給 git 處理，不另外撰寫", size=24, bold=True, color=MUTED, anchor="start")
+    goods = [("git-compare", "快照與逐欄差異", "任何兩個版本都能比對"),
+             ("search", "以內容查出是哪一版", "找不到，表示在紀錄之外被改過"),
+             ("chart-bar", "統計與備查", "都從同一份 commit 紀錄產生"),
+             ("copy", "備份只要複製", "不靠預檢程式，任何 git 工具都能讀")]
+    for i, (ic, t, sub) in enumerate(goods):
+        yy = 300 + i * 84
+        f.rect(800, yy, 760, 72, fill=BLUEBG, stroke=BLUE, rx=12)
+        icon(f, ic, 822, yy + 16, 40, "#4E6E78")
+        f.text(884, yy + 36, t, size=25, bold=True, anchor="start")
+        f.text(1160, yy + 36, sub, size=21, color=MUTED, anchor="start")
+    # 下：為什麼不寫進 P file
+    f.rect(40, 690, 1520, 90, fill=IVORY, stroke=GREY, rx=14)
+    f.text(800, 720, "P file 維持原格式：固定欄位沒有放紀錄的位置，附加的紀錄檔在複製、上傳時會遺失", size=23, bold=True)
+    f.text(800, 755, "因此歷史集中存放在另一個 git repo，只有預檢程式寫入，使用者從網頁查看，不需要操作 git", size=21, color=MUTED)
+    f.save("w7-26-history-git")
+
+
 if __name__ == "__main__":
     agent_remote_test()
     route()
@@ -580,3 +632,4 @@ if __name__ == "__main__":
     single_intent()
     evidence_chain()
     handling_record()
+    history_git()
