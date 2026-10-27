@@ -57,6 +57,7 @@
 | 引用、選圖與可讀性 | 原圖、引文、示意與實證；對比、閱讀順序、圖片替代文字、試講 | 部分採用：基本引用在第二週；完整視覺練習候選。[圖文標準](../skills/teaching-visuals-and-citations.md)、[逐段素材](reference/week2-paragraph-evidence-and-visuals.md) |
 | 跨場景選材 | 公文、報告、研究、資料圖表等如何組合文案、結構、視覺、資料與格式技巧 | 講師參考；[場景與技巧矩陣](../drafts/05-scenario-skill-matrix.md)。格式仍須驗收 |
 | 課程需求與參與設計 | JTBD、SPIN、AIDA、手冊檢查面向；改善開場與現場提問 | 講師參考；[課程參與設計](arguments/sales-frameworks-for-course-engagement.md)、[學員需求](arguments/what-makes-civil-servants-want-to-learn-ai.md) |
+| 地震定位工作翻新前後的架構 | 翻新前各程式以檔案交接（每個程式只讀寫自己的格式、定位程式直接改寫相位檔、追查修改只能比對檔案）；翻新後模組共用一個資料庫，資料依 QuakeML 的概念保存，外部的檔案與定位程式只在轉接層出現，接新的格式或程式只要多寫一個轉接；可作 Agent 協助重構舊系統的案例 | 候選：2026-10-28 加入兩張 16:9 示意圖（含目前的進度與規劃中的轉接），尚未排入週次。[架構示意圖](../assets/architecture-diagrams/README.md) |
 
 ## 暫不採用與歷史材料
 
