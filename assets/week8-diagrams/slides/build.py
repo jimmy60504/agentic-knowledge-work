@@ -191,24 +191,6 @@ def s9():
             f'<div class="abs note row" style="left:0;bottom:0;gap:8px">{ic("bulb", 24, MUTED)}想法來自反射震測處理系統與其他地震分析軟體，資料拆分依 QuakeML 的概念</div></div>')
 
 
-# ---------------- 第 12 頁
-@slide(12, "page-map", "三、畫面", "測站分頁", "測站依類型與品質分成三頁，切換分頁時像是比較三個圖層")
-def s12():
-    m = json.loads((HERE / "w8-12-map.json").read_text())
-    pages = [("1", "第 1 頁", "短週期為主", 31, 2), ("2", "第 2 頁", "全部為寬頻", 0, 33), ("3", "第 3 頁", "兩種並列", 19, 13)]
-    cards = ""
-    for k, t, d, sp, bb in pages:
-        counts = (f'<span class="row" style="gap:6px"><svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="{ACCENT_D}"/></svg>{sp}</span>' if sp else "") + f'<span class="row" style="gap:6px"><svg width="16" height="16"><rect x="1.5" y="1.5" width="13" height="13" rx="2" fill="{BLUE_D}"/></svg>{bb}</span>'
-        cards += (f'<div class="card col" style="flex:1;align-items:center;padding:12px 8px 10px"><div class="row" style="gap:10px"><b style="font-size:27px">{t}</b><span style="font-size:23px;color:{MUTED}">{d}</span></div>'
-                  f'<svg width="325" height="473" viewBox="0 0 {m["w"]} {m["h"]}" style="margin:6px 0 10px;overflow:visible">{m["layers"][k]}</svg><div class="row" style="gap:22px;font-size:23px;font-weight:600">{counts}</div></div>')
-    steps = [("users", "全部排在一頁太擠", "約一百站無法同時看清楚"), ("box", "依類型與品質分頁", "每頁約 33 站，都由北而南分布全臺"), ("refresh", "切換比較", "眼睛停在相同的位置，看到的仍是同一區域")]
-    st = "".join(f'<div class="row" style="gap:14px">{badge(i, "a", 34)}<div><div style="font-size:25px;font-weight:700;line-height:1.3">{a}</div><div style="font-size:22px;color:{MUTED};line-height:1.35">{b}</div></div></div>' for i, a, b in steps)
-    side = (f'<div class="col" style="width:380px;gap:20px;height:100%">{st}'
-            f'<div class="row" style="gap:16px;font-size:22px"><span class="row" style="gap:6px"><svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="{ACCENT_D}"/></svg>短週期</span><span class="row" style="gap:6px"><svg width="16" height="16"><rect x="1.5" y="1.5" width="13" height="13" rx="2" fill="{BLUE_D}"/></svg>寬頻</span></div>'
-            f'<div class="card b" style="margin-top:auto;padding:12px 16px;font-size:22px;line-height:1.4">不同分頁同一列的兩站，距離中位數為 39 至 84 公里，隨機打亂時為 134 至 151 公里</div></div>')
-    return f'<div class="row" style="gap:20px;height:100%;align-items:stretch"><div class="row" style="flex:1;gap:12px;align-items:stretch">{cards}</div>{side}</div>'
-
-
 # ---------------- 第 14 頁
 @slide(14, "feedback", "三、畫面", "即時回饋", "所有資訊都即時更新，是介面現代化最大的理由")
 def s14():
@@ -704,15 +686,21 @@ def s10():
 # ---------------- 第 11 頁
 @slide(11, "habit", "三、畫面", "沿用習慣", "原有的功能多半有其目的，重寫之前先向使用者請教，尚未確認的先沿用")
 def s11():
-    src = (f'<div class="card col" style="width:360px;align-items:center;text-align:center;gap:10px;padding:26px 18px">{badge("search", "", 44)}<div class="t">原有的功能</div>'
-           f'<div class="s">目的不一定寫在程式碼或文件中</div></div>')
-    ask = (f'<div class="card a col" style="width:330px;align-items:center;text-align:center;gap:10px;padding:26px 18px">{badge("users", "", 44).replace(BG, "#fff")}<div class="t">請教使用者</div>'
-           f'<div class="s" style="color:{INK}">這個功能在什麼情況下使用，依賴哪些資訊</div></div>')
-    res = [("ok", GOOD, "已確認目的", "保留目的，可以改善做法"), ("history", BLUE_D, "尚未確認", "先沿用，保留原本的行為")]
-    rc = "".join(f'<div class="card row" style="gap:16px;flex:1">{ic(i, 44, c)}<div><div class="t" style="font-size:27px">{a}</div><div class="s">{b}</div></div></div>' for i, c, a, b in res)
-    warn = (f'<div class="card b row" style="gap:18px;margin-top:30px;padding:26px">{badge("warn", "b", 36)}<div style="font-size:26px">若未沿用，使用者可能找不到原本依賴的資訊。'
-            f'<span style="color:{MUTED}">下一頁是其中一個例子。</span></div></div>')
-    return (f'<div class="row" style="gap:16px;align-items:stretch;height:420px">{src}<div style="align-self:center">{arrow(50)}</div>{ask}<div style="align-self:center">{arrow(50)}</div><div class="col" style="flex:1;gap:16px">{rc}</div></div>{warn}')
+    def box(icon, t, d, k=""):
+        return (f'<div class="card {k} row" style="flex:1;gap:14px;padding:14px 18px">{ic(icon, 38, ACCENT_D if k else INK)}<div><div style="font-size:26px;font-weight:700;line-height:1.25">{t}</div><div style="font-size:22px;color:{INK if k else MUTED};line-height:1.35">{d}</div></div></div>')
+    flow = (f'<div class="row" style="gap:10px;align-items:stretch">{box("search", "原有的功能", "目的不一定寫在程式碼或文件中")}<div style="align-self:center">{arrow(40)}</div>'
+            f'{box("users", "請教使用者", "在什麼情況下使用，依賴哪些資訊", "a")}<div style="align-self:center">{arrow(40)}</div>'
+            f'{box("history", "沿用原本的做法", "尚未確認的先沿用，使用者才不會找不到需要的資訊")}</div>')
+    m = json.loads((HERE / "w8-12-map.json").read_text())
+    legend = (f'<span class="row" style="gap:6px"><svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="{ACCENT_D}"/></svg>短週期</span>'
+              f'<span class="row" style="gap:6px"><svg width="16" height="16"><rect x="1.5" y="1.5" width="13" height="13" rx="2" fill="{BLUE_D}"/></svg>寬頻</span>')
+    pages = [("1", "第 1 頁"), ("2", "第 2 頁"), ("3", "第 3 頁")]
+    maps = "".join(f'<div class="col" style="align-items:center;gap:2px"><b style="font-size:23px">{t}</b><svg width="235" height="342" viewBox="0 0 {m["w"]} {m["h"]}" style="overflow:visible">{m["layers"][k]}</svg></div>' for k, t in pages)
+    text = (f'<div class="col" style="flex:1;gap:14px;justify-content:center"><div class="t">例：原程式的測站分頁</div>'
+            f'<div style="font-size:25px;line-height:1.5">測站全部排在一頁會太擠，因此依類型與品質分成三頁，每頁都涵蓋全臺。切換分頁時，眼睛停在相同的位置，看到的仍是同一區域的測站，三頁就像可以切換比較的圖層。</div>'
+            f'<div class="row" style="gap:16px;font-size:22px">{legend}</div>'
+            f'<div style="font-size:22px;color:{MUTED};line-height:1.4">這項設計從程式碼看不出來，是請教使用者才得知的，因此沿用。</div></div>')
+    return f'<div class="col" style="gap:18px;height:100%">{flow}<div class="card row" style="flex:1;gap:18px;padding:14px 24px">{text}<div class="row" style="gap:6px">{maps}</div></div></div>'
 
 
 # ---------------- 第 13 頁
@@ -924,7 +912,7 @@ def main():
         name, sec, title, msg, fn = SLIDES[no]
         head = f'<div class="sec">{sec}</div><h1>{title}</h1><div class="msg">{msg}</div>' if title else ""
         html = (f'<!doctype html><meta charset="utf-8"><style>{CSS}</style><body>{head}'
-                f'<div class="body">{fn()}</div><div class="foot"><span>第八週｜Agent 時代的知識工作</span><span>{no}</span></div>')
+                f'<div class="body">{fn()}</div><div class="foot"><span>第八週｜Agent 時代的知識工作</span><span>{sorted(SLIDES).index(no) + 1}</span></div>')
         src = TMP / f"w8-{no:02d}.html"
         src.write_text(html, encoding="utf-8")
         out = HERE / f"w8-{no:02d}-{name}.png"

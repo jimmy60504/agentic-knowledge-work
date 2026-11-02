@@ -24,8 +24,8 @@ def parse():
             sec += 1
             pages.append((HERE / f"w8-sec{sec}.png", ""))
             continue
-        no = int(head.split("｜")[0])
-        img = next(HERE.glob(f"w8-{no:02d}-*.png"))
+        # 圖片檔名的編號沿用初版，頁碼可能有跳號，依順序對應
+        img = sorted(HERE.glob("w8-[0-9][0-9]-*.png"))[int(head.split("｜")[0]) - 1]
         note = body.split("**筆記**", 1)[1] if "**筆記**" in body else ""
         lines = [l[2:].strip() for l in note.splitlines() if l.startswith("- ")]
         pages.append((img, "\n".join(lines)))
