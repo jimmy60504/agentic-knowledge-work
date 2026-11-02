@@ -496,6 +496,75 @@ def trace(label, w, seed, pick=None, tagtxt="", hot=False, h=58, **kw):
 NOTE_MOCK = "畫面為示意，波形與站名皆為虛構"
 
 
+# ---------------- 實際畫面（僅投影片使用，文稿的圖仍用示意畫面）
+USE_SHOTS = True
+SHOTS = HERE.parents[1] / "week8-shots"
+MASKED = "開發中的系統畫面，測站代碼與名稱已替換"
+
+
+def shot_img(name, w, h=None, pos="top"):
+    st = f"width:{w}px;" + (f"height:{h}px;object-fit:cover;object-position:{pos};" if h else "")
+    return f'<img src="{(SHOTS / name).as_uri()}" style="{st}display:block;border-radius:10px;border:1.5px solid {LINE}">'
+
+
+def marker(n, x, y):
+    return (f'<span class="abs row" style="left:{x}%;top:{y}%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:{ACCENT_D};color:#fff;'
+            f'font-size:25px;font-weight:700;justify-content:center;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35)">{n}</span>')
+
+
+def shot_page(name, marks, notes, foot=""):
+    """左邊大張截圖加編號，右邊說明。"""
+    W = 1040
+    ms = "".join(marker(i + 1, x, y) for i, (x, y) in enumerate(marks))
+    ns = "".join(f'<div class="row" style="gap:12px;align-items:flex-start"><span class="row" style="width:38px;height:38px;border-radius:50%;background:{ACCENT_D};color:#fff;font-size:22px;font-weight:700;justify-content:center;flex:none">{i + 1}</span>'
+                 f'<div><div style="font-size:25px;font-weight:700;line-height:1.3">{t}</div><div style="font-size:22px;color:{MUTED};line-height:1.4">{d}</div></div></div>' for i, (t, d) in enumerate(notes))
+    f = f'<div class="card b" style="margin-top:auto;padding:12px 16px;font-size:22px;line-height:1.4">{foot}</div>' if foot else ""
+    return (f'<div class="row" style="gap:22px;height:100%;align-items:flex-start"><div class="col" style="gap:6px"><div style="position:relative;width:{W}px">{shot_img(name, W)}{ms}</div><div class="note">{MASKED}</div></div>'
+            f'<div class="col" style="flex:1;gap:18px;height:100%">{ns}{f}</div></div>')
+
+
+def real5():
+    return shot_page("pick-task.png", [(96, 65.5), (12, 28), (82, 6)],
+                     [("任務列表", "放在挑波畫面旁邊，挑波當下就看得到還差哪件事"), ("依距離排列", "尚未挑選的測站直接標出"), ("定位品質的指示條", "顯示站數、相位、GAP 等與標準的距離")],
+                     "現行流程要挑完、定完、執行檢查程式之後才知道問題，再回到挑波程式修改")
+
+
+def real6():
+    return shot_page("pick-near-jump.png", [(14, 19), (45, 78)],
+                     [("最近的站沒有挑選", "距離最近的測站標為未挑選"), ("從波形判斷原因", "這一站看不出明顯的起跳，在挑波時就看得出來")],
+                     "這項資訊可以記錄下來，QC 因此能區分遺漏與資料本來如此。測站品質篩選依平直、缺漏、雜訊判斷，標準無法達到時至少有個根據")
+
+
+def real10():
+    items = [("home.png", "首頁", "以專案為中心"), ("cut.png", "切地震", "對應切事件程式"), ("pick-task.png", "定地震", "對應挑波與定位程式"), ("overview.png", "事件總覽與 QC", "對應檢查程式")]
+    g = "".join(f'<div class="col" style="gap:4px">{shot_img(n, 472)}<div class="row" style="gap:10px"><b style="font-size:24px">{t}</b><span style="font-size:21px;color:{MUTED}">{d}</span></div></div>' for n, t, d in items)
+    side = (f'<div class="col" style="flex:1;gap:14px;height:100%"><div class="card row" style="gap:14px">{badge("db", "a", 34)}<div><div style="font-size:25px;font-weight:700">以資料庫串接</div><div style="font-size:22px;color:{MUTED}">新增模組時接上同一個資料庫</div></div></div>'
+            f'<div class="card row" style="gap:14px">{badge("wave", "b", 34)}<div><div style="font-size:25px;font-weight:700">獨立的頁面</div><div style="font-size:22px;color:{MUTED}">單螢幕時為分頁，多螢幕時各放一個螢幕</div></div></div>'
+            f'<div class="card b row" style="gap:14px">{ic("flask", 34, BLUE_D)}<div><div style="font-size:25px;font-weight:700">試做比討論更快</div><div style="font-size:22px">原本以為需要獨立的波形目錄，試做之後改為切地震的時間軸</div></div></div><div class="note">{MASKED}</div></div>')
+    return f'<div class="row" style="gap:20px;height:100%;align-items:flex-start"><div style="display:grid;grid-template-columns:472px 472px;gap:12px 14px">{g}</div>{side}</div>'
+
+
+def real13():
+    def col(n, t, d):
+        return f'<div class="col" style="gap:6px"><div class="row" style="gap:10px"><b style="font-size:26px">{t}</b><span style="font-size:22px;color:{MUTED}">{d}</span></div>{shot_img(n, 720, 480)}</div>'
+    stage = [("flask", "實驗性功能"), ("user", "使用者逐項打開"), ("ok", "併入一般功能")]
+    st = arrow(40, ACCENT_D).join(f'<div class="row" style="gap:10px;font-size:25px;font-weight:600">{ic(i, 32, ACCENT_D)}{t}</div>' for i, t in stage)
+    return (f'<div class="col" style="gap:14px;height:100%"><div class="row" style="gap:20px;align-items:flex-start">{col("settings-exp-c.png", "實驗性功能", "共 14 項，各設開關，預設關閉")}{col("settings-op-c.png", "自訂操作", "新想法作為選項，工作趕時間時不受阻礙")}</div>'
+            f'<div class="card a row" style="justify-content:center;gap:22px;padding:12px">{st}</div></div>')
+
+
+def real15():
+    return shot_page("pick-hover.png", [(87, 21), (92, 92), (24, 25)],
+                     [("懸停", "滑鼠移到測站的格子，地圖的資訊欄即顯示這一站的殘差"), ("點選", "在地圖或格子上點選測站，波形跟著切換"), ("修改挑選", "新增、刪除或修改到時與權重，隨即重新定位")],
+                     "拖曳波形上的到時線時，地圖上由 S−P 換算的距離圓即時更新")
+
+
+def real19():
+    return shot_page("pick-near-jump.png", [(96, 65.5), (45, 78), (14, 19)],
+                     [("任務列出近站", "標明距離，並可以直接前往"), ("自動跳到目標測站", "單站顯示這一站的波形，直接判斷要挑選或記錄為沒有訊號"), ("依距離排列同步", "目標測站在列表中標出")],
+                     "過去看到近站沒有挑選的提示之後，要自行尋找近站是哪幾站")
+
+
 # ---------------- 第 1 頁
 @slide(1, "cover", "", "", "")
 def s1():
@@ -558,6 +627,8 @@ def s3():
 # ---------------- 第 5 頁
 @slide(5, "assist", "一、合併的理由", "挑波時的輔助", "任務列表在挑波當下提示，不必在兩支程式之間往返")
 def s5():
+    if USE_SHOTS:
+        return real5()
     w = 610
     tr = (trace("測站 A", w, 3, .22, h=80, onset=.22) + trace("測站 B", w, 4, .32, h=80, onset=.32, amp=.8) + trace("測站 C", w, 5, None, h=80, onset=.4, amp=.7, tagtxt="尚未挑選", hot=True)
           + trace("測站 D", w, 6, .5, h=80, onset=.5, amp=.6) + trace("測站 E", w, 7, .6, h=80, onset=.6, amp=.5))
@@ -575,6 +646,8 @@ def s5():
 # ---------------- 第 6 頁
 @slide(6, "qc-basis", "一、合併的理由", "QC 的依據", "挑波時看到的資訊可以記錄下來，成為 QC 判斷的依據")
 def s6():
+    if USE_SHOTS:
+        return real6()
     w = 560
     tr = (trace("最近的站", w, 2, None, h=112, flat=True, hot=True, tagtxt="沒有訊號") + trace("第 2 近", w, 3, .3, h=112, onset=.3) + trace("第 3 近", w, 4, .38, h=112, onset=.38, amp=.8) + trace("第 4 近", w, 5, .46, h=112, onset=.46, amp=.6))
     flow = [("eye", "挑波時從波形看得出"), ("pencil", "標記為沒有訊號並記錄"), ("shield", "QC 可以區分遺漏與資料本來如此")]
@@ -610,6 +683,8 @@ def s8():
 # ---------------- 第 10 頁
 @slide(10, "modules", "三、畫面", "模組化", "每個模組對應原本的一個步驟，以資料庫串接，日後容易增加新功能")
 def s10():
+    if USE_SHOTS:
+        return real10()
     rows = [("切事件程式", "切地震", "scissors"), ("挑波與定位程式", "定地震", "cross"), ("檢查程式", "QC", "shield")]
     r = "".join(f'<div class="row" style="gap:14px;margin-bottom:14px"><div class="card b" style="width:250px;text-align:center;padding:28px 14px;font-size:24px;font-weight:600">{a}</div>{arrow(46)}<div class="card a row" style="flex:1;gap:12px;justify-content:center;padding:28px 14px;font-size:28px;font-weight:700">{ic(i, 36, ACCENT_D)}{b}</div></div>' for a, b, i in rows)
     add = f'<div class="row" style="gap:14px;margin-bottom:14px"><div style="width:250px;text-align:center;font-size:24px;color:{MUTED}">新的需求</div>{arrow(46, MUTED, True)}<div class="card row" style="flex:1;gap:12px;justify-content:center;padding:28px 14px;font-size:26px;border-style:dashed;color:{MUTED}">{ic("plus", 32, MUTED)}新的模組</div></div>'
@@ -644,6 +719,8 @@ def s11():
 # ---------------- 第 13 頁
 @slide(13, "gradual", "三、畫面", "逐步導入", "新功能與新操作由使用者自行選擇，逐步吸收")
 def s13():
+    if USE_SHOTS:
+        return real13()
     def tog(on):
         c = ACCENT_D if on else LINE
         x = 26 if on else 2
@@ -666,6 +743,8 @@ def s13():
 # ---------------- 第 15 頁
 @slide(15, "linked", "三、畫面", "示範：面板連動", "滑鼠懸停、拖曳或點選時，相關的面板都立即更新")
 def s15():
+    if USE_SHOTS:
+        return real15()
     w = 470
     tr = trace("測站 A", w, 3, .25, h=92, onset=.25) + trace("測站 B", w, 4, .35, h=92, onset=.35, amp=.8, hot=True) + trace("測站 C", w, 5, .47, h=92, onset=.47, amp=.6) + trace("測站 D", w, 6, .58, h=92, onset=.58, amp=.5)
     # 地圖上的距離圓
@@ -700,7 +779,9 @@ def s16():
     side = ["是否為遠震", "是否為西部深震", "檢查深度", "檢查規模"]
     sc = "".join(f'<div class="card row" style="flex:1;gap:10px;justify-content:center;border-style:dashed;padding:14px 8px;font-size:24px">{ic("search", 28, BLUE_D)}{t}</div>' for t in side)
     origin = (f'<div class="card a row" style="gap:18px;margin-top:auto">{badge("bot", "", 38).replace(BG, "#fff")}<div style="font-size:25px">在旁邊協助，只呈現這個地震還差哪幾件事。<span style="color:{MUTED}">兩個設計方向都尚待同仁實際試用確認。</span></div></div>')
-    return (f'<div class="col" style="gap:24px;height:100%">{line}<div><div class="t" style="margin-bottom:12px"><span class="tag b" style="margin-right:10px">支線</span>遇到特殊情況才出現</div><div class="row" style="gap:14px">{sc}</div></div>{origin}</div>')
+    if USE_SHOTS:
+        origin = f'<div class="row" style="gap:18px;margin-top:auto;align-items:flex-end">{shot_img("task-panel.png", 330)}{origin}</div>'
+    return (f'<div class="col" style="gap:18px;height:100%">{line}<div><div class="t" style="margin-bottom:12px"><span class="tag b" style="margin-right:10px">支線</span>遇到特殊情況才出現</div><div class="row" style="gap:14px">{sc}</div></div>{origin}</div>')
 
 
 # ---------------- 第 18 頁
@@ -721,6 +802,8 @@ def s18():
 # ---------------- 第 19 頁
 @slide(19, "near", "三、畫面", "示範：近站任務", "規則提示近站沒有挑選時，任務列出這些近站，點選後自動跳到目標測站")
 def s19():
+    if USE_SHOTS:
+        return real19()
     w1 = (f'<div style="padding:12px 16px"><div class="row" style="gap:10px;font-size:25px;font-weight:700">{ic("cross", 30, ACCENT_D)}確保震央穩定</div><div class="s" style="margin-top:8px;font-size:22px">近站尚未挑選</div></div>')
     li = "".join(f'<div class="row" style="justify-content:space-between;padding:20px 16px;font-size:26px;border-top:1px solid {LINE};{"background:" + ACCENT_BG + ";font-weight:700" if i == 0 else ""}"><span>測站 {s}</span><span class="row" style="gap:6px;color:{ACCENT_D}">{d} 公里{ic("cursor", 24, ACCENT_D) if i == 0 else ""}</span></div>' for i, (s, d) in enumerate([("A", 6), ("B", 11), ("C", 18)]))
     w2 = f'<div style="padding:10px 12px">{wave(600, 270, 3, onset=.35, amp=.95)}<div class="row" style="justify-content:space-between;margin-top:10px;font-size:23px"><span class="tag a">挑選到時</span><span class="tag">標為沒有訊號</span></div></div>'
@@ -813,6 +896,8 @@ def shot(src, out):
 
 def figures():
     """網頁文稿用的圖：只留各頁的主體，不含標題與頁碼，輸出到 assets/week8-figs/。"""
+    global USE_SHOTS
+    USE_SHOTS = False
     out = HERE.parents[1] / "week8-figs"
     out.mkdir(exist_ok=True)
     for no in [n for n in sorted(SLIDES) if n not in (1, 24, 26, 28, 32)]:
