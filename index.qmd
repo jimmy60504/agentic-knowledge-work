@@ -72,7 +72,7 @@ toc: false
 | 09/29<br>11:00–14:00<br>一樓會議室 | [導入前的需求釐清](lessons/05-find-the-right-needs.html)<br>[從導入的期待與失敗案例說明外部驗證的重要，再談導入標準、不同同仁的需求與主管作為；工作坊逐一交談，找出要解決的問題]{.desc} | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQAtmTT02G5wTabo5TH5oLu9ARR8dYAOEKEd7UhnAwA27A0?e=4PJSyg) |
 | 10/06<br>11:00–14:00<br>一樓會議室 | [預檢工具的原型開發](lessons/06-from-rework-to-precheck-tool.html)<br>[以地震資料的品質檢查為例，以 vibe coding 製作有實際用途的網頁原型：分析現況、釐清需求、製作原型，並說明原型之後的方向；之後開放討論]{.desc} | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQAij2P60yOXQ4lqZcDStWt-AY_TYU8_DCmEYQ508njy0V4?e=nYiGmU) |
 | 10/20<br>09:00–16:30<br>B207 會議室 | [檢查規則的整理與驗證](lessons/07-rules-with-evidence.html)<br>[接續預檢工具的案例：從訓練投影片查清每個步驟實際做了什麼，整理成規則與來源的大表，以證據鏈與測試確認可信，再做成可以安裝與更新的正式工具；之後討論與交換意見]{.desc} | [開啟投影片](https://1drv.ms/p/c/02708679a802899d/IQC210qtA3sET78SqVxSpna8AWnB8vqkobEpx_fp5ckA-dQ?e=83m6PK) |
-| 11/03<br>09:00–16:30<br>B207 會議室 | 依需求安排 | — |
+| 11/03<br>09:00–16:30<br>B207 會議室 | [定位工作的翻新設計](lessons/08-relocation-redesign.html)<br>[接續檢查規則的案例：切事件、挑波與檢查如何合併成一個系統，包括資料與介面、畫面的設計、接上現行流程的方式，以及使用 Agent 開發時時間成本的轉移]{.desc} | — |
 | 11/10<br>11:00–14:00<br>一樓會議室 | 依需求安排 | — |
 | 11/17<br>09:00–16:30<br>B207 會議室 | 依需求安排 | — |
 | 11/24<br>11:00–14:00<br>一樓會議室 | 依需求安排 | — |

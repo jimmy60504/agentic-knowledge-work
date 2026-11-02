@@ -811,8 +811,25 @@ def shot(src, out):
                    check=True, capture_output=True, timeout=90)
 
 
+def figures():
+    """網頁文稿用的圖：只留各頁的主體，不含標題與頁碼，輸出到 assets/week8-figs/。"""
+    out = HERE.parents[1] / "week8-figs"
+    out.mkdir(exist_ok=True)
+    for no in [n for n in sorted(SLIDES) if n not in (1, 24, 26, 28, 32)]:
+        body = SLIDES[no][4]().replace("，課堂上實際操作", "").replace("下一頁是其中一個例子。", "")
+        html = (f'<!doctype html><meta charset="utf-8"><style>{CSS}html,body{{width:1500px;height:665px;background:#fff}}.body{{left:20px;right:20px;top:20px;bottom:20px}}</style>'
+                f'<body><div class="body">{body}</div>')
+        src = TMP / f"fig-{no:02d}.html"
+        src.write_text(html, encoding="utf-8")
+        subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1.5",
+                        "--window-size=1500,665", f"--screenshot={out / f'w8-{no:02d}.png'}", src.as_uri()],
+                       check=True, capture_output=True, timeout=90)
+
+
 def main():
     TMP.mkdir(exist_ok=True)
+    if sys.argv[1:] == ["figs"]:
+        return figures()
     want = [int(a) for a in sys.argv[1:]] or sorted(SLIDES)
     if not sys.argv[1:]:
         for k, sec in enumerate(SECTIONS, 1):
