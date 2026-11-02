@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">一個小功能的反覆修改</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">波形的標準差截斷：21 分鐘內修改 7 次（依修改紀錄）</text>
+<line x1="60" y1="300" x2="1540" y2="300" stroke="#D8D2C9" stroke-width="4"/>
+<circle cx="156.0" cy="300" r="10" fill="#6B6560"/>
+<text x="156.0" y="255" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">08:01</text>
+<rect x="60" y="340" width="192" height="170" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="156.0" y="406.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">加上</text>
+<text x="156.0" y="445.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">截離群</text>
+<circle cx="368.0" cy="300" r="10" fill="#6B6560"/>
+<text x="368.0" y="255" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">08:02</text>
+<rect x="272" y="340" width="192" height="170" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="368.0" y="406.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">預設</text>
+<text x="368.0" y="445.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">改為關閉</text>
+<circle cx="580.0" cy="300" r="10" fill="#6B6560"/>
+<text x="580.0" y="255" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">08:04</text>
+<rect x="484" y="340" width="192" height="170" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="580.0" y="406.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">加上</text>
+<text x="580.0" y="445.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">滑桿</text>
+<circle cx="792.0" cy="300" r="10" fill="#6B6560"/>
+<text x="792.0" y="255" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">08:05</text>
+<rect x="696" y="340" width="192" height="170" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="792.0" y="406.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">上限</text>
+<text x="792.0" y="445.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">改為 5</text>
+<circle cx="1004.0" cy="300" r="10" fill="#6B6560"/>
+<text x="1004.0" y="255" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">08:08</text>
+<rect x="908" y="340" width="192" height="170" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1004.0" y="406.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">改名</text>
+<text x="1004.0" y="445.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">標準差</text>
+<circle cx="1216.0" cy="300" r="10" fill="#6B6560"/>
+<text x="1216.0" y="255" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">08:10</text>
+<rect x="1120" y="340" width="192" height="170" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1216.0" y="406.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">調整</text>
+<text x="1216.0" y="445.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">位置</text>
+<circle cx="1428.0" cy="300" r="10" fill="#BE8979"/>
+<text x="1428.0" y="255" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">08:22</text>
+<rect x="1332" y="340" width="192" height="170" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="1428.0" y="406.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">改為</text>
+<text x="1428.0" y="445.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">三個按鈕</text>
+<text x="800" y="640" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">需求要看到畫面才能確定，這些修改只能由人實際操作之後提出。</text>
+</svg>

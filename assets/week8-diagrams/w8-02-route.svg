@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">本週的路線</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">系統仍在開發，本週說明設計方向，細節用來佐證方向可行</text>
+<rect x="60" y="280" width="225" height="300" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="172.5" y="330" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">一</text>
+<text x="172.5" y="395" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">合併的理由</text>
+<text x="172.5" y="460" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">以流程解決</text>
+<text x="172.5" y="496" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">QC 的問題</text>
+<line x1="287" y1="430" x2="309" y2="430" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="311" y="280" width="225" height="300" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="423.5" y="330" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">二</text>
+<text x="423.5" y="395" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">資料與介面</text>
+<text x="423.5" y="460" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">資料存在資料庫</text>
+<text x="423.5" y="496" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">只在邊界轉換</text>
+<line x1="538" y1="430" x2="560" y2="430" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="562" y="280" width="225" height="300" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="674.5" y="330" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">三</text>
+<text x="674.5" y="395" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">畫面</text>
+<text x="674.5" y="460" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">即時回饋</text>
+<text x="674.5" y="496" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">任務列表</text>
+<line x1="789" y1="430" x2="811" y2="430" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="813" y="280" width="225" height="300" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="925.5" y="330" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">四</text>
+<text x="925.5" y="395" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">接上現行流程</text>
+<text x="925.5" y="460" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">分階段替換</text>
+<line x1="1040" y1="430" x2="1062" y2="430" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="1064" y="280" width="225" height="300" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1176.5" y="330" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">五</text>
+<text x="1176.5" y="395" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">新的處理想法</text>
+<text x="1176.5" y="460" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">更標準</text>
+<text x="1176.5" y="496" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">步驟更少</text>
+<line x1="1291" y1="430" x2="1313" y2="430" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="1315" y="280" width="225" height="300" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1427.5" y="330" font-size="40" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">六</text>
+<text x="1427.5" y="395" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">開發的時間成本</text>
+<text x="1427.5" y="460" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">設計的迭代</text>
+<text x="1427.5" y="496" font-size="21" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">仍需要時間</text>
+<text x="800" y="690" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">下一步與結語：實際試用、互動式教學、自動挑波、新的交付模式</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">事件順序的處理方式</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">以虛構的時間為例：重新定位到很遠的地震，發震時間變早</text>
+<text x="60" y="240" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">現行</text>
+<rect x="200" y="180" width="310" height="120" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="355.0" y="221.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">第一個檔 02:50</text>
+<text x="355.0" y="259.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">第二個檔 03:20</text>
+<line x1="512" y1="240" x2="628" y2="240" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="630" y="180" width="380" height="120" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="820.0" y="222.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">第二個檔重新定位</text>
+<text x="820.0" y="259.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">發震時間變為 01:40</text>
+<line x1="1012" y1="240" x2="1128" y2="240" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="1130" y="180" width="410" height="120" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="1335.0" y="222.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檔名與時間順序顛倒</text>
+<text x="1335.0" y="259.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">QC 攔下，回頭修改</text>
+<text x="60" y="500" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">翻新後</text>
+<rect x="200" y="440" width="310" height="120" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="355.0" y="482.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">事件存在資料庫</text>
+<text x="355.0" y="519.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">以事件本身識別</text>
+<line x1="512" y1="500" x2="628" y2="500" stroke="#5F7F95" stroke-width="3" marker-end="url(#ab)"/>
+<rect x="630" y="440" width="380" height="120" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="820.0" y="482.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">重新定位</text>
+<text x="820.0" y="519.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">只更新這個事件的定位解</text>
+<line x1="1012" y1="500" x2="1128" y2="500" stroke="#5F7F95" stroke-width="3" marker-end="url(#ab)"/>
+<rect x="1130" y="440" width="410" height="120" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="1335.0" y="482.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">輸出時才排序</text>
+<text x="1335.0" y="519.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">依發震時間產生檔名</text>
+<text x="800" y="680" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">順序與檔名在輸出時決定，挑波過程不會產生這類錯誤。</text>
+</svg>

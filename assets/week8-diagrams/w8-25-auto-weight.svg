@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">自動權重的判斷規則</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">教材沒有「多清楚算清楚」的數值，改以訊噪比算出建議的權重，讓處理標準化</text>
+<rect x="70" y="340" width="300" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="220.0" y="397.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">挑選的到時</text>
+<text x="220.0" y="436.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">計算訊噪比</text>
+<rect x="520" y="230" width="460" height="120" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="750.0" y="290.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">不濾波就清楚</text>
+<rect x="1130" y="230" width="340" height="120" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="1300.0" y="290.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">權重 0、1</text>
+<line x1="372" y1="415" x2="518" y2="290" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="982" y1="290" x2="1128" y2="290" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="520" y="390" width="460" height="120" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="750.0" y="450.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">要濾波才清楚</text>
+<rect x="1130" y="390" width="340" height="120" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1300.0" y="450.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">權重 2</text>
+<line x1="372" y1="415" x2="518" y2="450" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="982" y1="450" x2="1128" y2="450" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<rect x="520" y="550" width="460" height="120" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="750.0" y="610.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">濾波後仍不清楚</text>
+<rect x="1130" y="550" width="340" height="120" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1300.0" y="610.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">權重 3</text>
+<line x1="372" y1="415" x2="518" y2="610" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="982" y1="610" x2="1128" y2="610" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<text x="800" y="780" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">門檻來自同仁實際給的權重，與同仁確認之前不視為定案。</text>
+</svg>

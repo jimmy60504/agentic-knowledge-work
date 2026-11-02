@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">挑波順序的對照</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">距離很遠看到一個地震時，常不確定是不是同一個地震</text>
+<text x="60" y="265" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">現行</text>
+<rect x="190" y="210" width="280" height="110" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="330.0" y="265.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">先開一個事件</text>
+<rect x="540" y="210" width="280" height="110" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="680.0" y="265.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">在事件裡挑波</text>
+<rect x="890" y="210" width="310" height="110" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="1045.0" y="265.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">不是同一個地震</text>
+<rect x="1270" y="210" width="270" height="110" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="1405.0" y="265.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">刪掉重來</text>
+<line x1="472" y1="265" x2="538" y2="265" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="822" y1="265" x2="888" y2="265" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="1202" y1="265" x2="1268" y2="265" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<text x="60" y="540" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">先挑</text>
+<text x="60" y="582" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">再關聯</text>
+<rect x="190" y="505" width="280" height="110" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="330.0" y="560.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">看到起跳就先挑</text>
+<rect x="540" y="505" width="280" height="110" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="680.0" y="560.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">挑選都先留著</text>
+<rect x="890" y="505" width="310" height="110" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="1045.0" y="560.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">關聯成候選事件</text>
+<rect x="1270" y="505" width="270" height="110" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="1405.0" y="560.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">由人確認</text>
+<line x1="472" y1="560" x2="538" y2="560" stroke="#5F7F95" stroke-width="3" marker-end="url(#ab)"/>
+<line x1="822" y1="560" x2="888" y2="560" stroke="#5F7F95" stroke-width="3" marker-end="url(#ab)"/>
+<line x1="1202" y1="560" x2="1268" y2="560" stroke="#5F7F95" stroke-width="3" marker-end="url(#ab)"/>
+<text x="800" y="740" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">產出仍是同格式的相位檔，改變的只有挑波的順序，可能少掉很多步驟。</text>
+</svg>

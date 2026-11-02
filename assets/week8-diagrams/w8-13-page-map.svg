@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">測站分頁與地圖的對應</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">示意圖：站名為虛構。不同分頁中位置相近的列，對應的測站在地圖上也相近</text>
+<text x="240" y="215" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">第 1 頁</text>
+<rect x="150" y="245" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="240.0" y="281.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">A1</text>
+<rect x="150" y="333" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="240.0" y="369.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">A2</text>
+<rect x="150" y="421" width="180" height="72" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="240.0" y="457.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">A3</text>
+<rect x="150" y="509" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="240.0" y="545.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">A4</text>
+<rect x="150" y="597" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="240.0" y="633.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">A5</text>
+<text x="450" y="215" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">第 2 頁</text>
+<rect x="360" y="245" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="450.0" y="281.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">B1</text>
+<rect x="360" y="333" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="450.0" y="369.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">B2</text>
+<rect x="360" y="421" width="180" height="72" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="450.0" y="457.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">B3</text>
+<rect x="360" y="509" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="450.0" y="545.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">B4</text>
+<rect x="360" y="597" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="450.0" y="633.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">B5</text>
+<text x="660" y="215" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">第 3 頁</text>
+<rect x="570" y="245" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="660.0" y="281.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">C1</text>
+<rect x="570" y="333" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="660.0" y="369.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">C2</text>
+<rect x="570" y="421" width="180" height="72" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="660.0" y="457.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">C3</text>
+<rect x="570" y="509" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="660.0" y="545.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">C4</text>
+<rect x="570" y="597" width="180" height="72" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="660.0" y="633.0" font-size="24" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">C5</text>
+<text x="95" y="400" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">由北</text>
+<text x="95" y="435" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">而南</text>
+<path d="M1120,200 C1230,210 1290,300 1270,410 C1255,520 1200,650 1130,700 C1050,650 1010,520 1020,400 C1030,290 1060,215 1120,200 z" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<circle cx="1110" cy="250" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1170" cy="300" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1070" cy="330" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1130" cy="360" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1230" cy="340" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1115" cy="590" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1160" cy="620" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1095" cy="640" r="9" fill="#FFFFFF" stroke="#6B6560" stroke-width="2"/>
+<circle cx="1110" cy="450" r="12" fill="#BE8979"/>
+<circle cx="1165" cy="475" r="12" fill="#BE8979"/>
+<circle cx="1085" cy="500" r="12" fill="#BE8979"/>
+<text x="900" y="445" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">同一列</text>
+<line x1="795" y1="476" x2="1065" y2="476" stroke="#BE8979" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#aa)"/>
+<text x="800" y="770" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">前三頁同一列的測站，距離中位數 39 至 84 公里，隨機打亂時為 135 至 150 公里（實際測站）。</text>
+</svg>

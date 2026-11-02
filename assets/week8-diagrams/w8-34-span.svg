@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">一個人能跨越的範圍</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">過去的程式邊界與分工有關（推測）</text>
+<text x="60" y="275" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">過去</text>
+<rect x="200" y="210" width="300" height="130" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="350.0" y="257.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">切事件</text>
+<text x="350.0" y="296.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">各自的程式</text>
+<rect x="540" y="210" width="300" height="130" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="690.0" y="257.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">挑波</text>
+<text x="690.0" y="296.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">各自的程式</text>
+<rect x="880" y="210" width="300" height="130" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1030.0" y="257.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位</text>
+<text x="1030.0" y="296.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">各自的程式</text>
+<rect x="1220" y="210" width="300" height="130" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1370.0" y="257.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢查</text>
+<text x="1370.0" y="296.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">各自的程式</text>
+<line x1="502" y1="275" x2="538" y2="275" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="842" y1="275" x2="878" y2="275" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="1182" y1="275" x2="1218" y2="275" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<text x="860" y="380" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">彼此以檔案交接</text>
+<text x="60" y="565" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">現在</text>
+<rect x="200" y="470" width="1320" height="190" rx="14" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<rect x="220" y="490" width="305" height="90" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="372.5" y="535.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">切事件</text>
+<rect x="545" y="490" width="305" height="90" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="697.5" y="535.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">挑波</text>
+<rect x="870" y="490" width="305" height="90" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1022.5" y="535.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">定位</text>
+<rect x="1195" y="490" width="305" height="90" rx="12" fill="#FFFFFF" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1347.5" y="535.0" font-size="26" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">檢查</text>
+<text x="860" y="622" font-size="25" fill="#5F7F95" font-weight="600" text-anchor="middle" dominant-baseline="central">一個懂領域的人配上 Agent，可以同時處理，合併成一個系統才變得可行</text>
+<text x="800" y="760" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">代價是系統集中依賴少數人，接手與交接值得一起討論。</text>
+</svg>

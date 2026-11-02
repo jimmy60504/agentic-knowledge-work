@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">新的交付模式（構想）</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">多一個選擇：緊急又不大的問題，不必等開發者安排時間</text>
+<rect x="90" y="210" width="620" height="240" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="400.0" y="275.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">業務單位</text>
+<text x="400.0" y="318.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">透過設計好的 Agent 流程</text>
+<text x="400.0" y="354.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">自行完成小幅的修改</text>
+<text x="400.0" y="390.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">概念接近駐點工程師</text>
+<rect x="890" y="210" width="620" height="240" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="1200.0" y="275.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">開發者</text>
+<text x="1200.0" y="318.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">建立整個流程</text>
+<text x="1200.0" y="354.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">處理大的功能與重新設計</text>
+<text x="1200.0" y="390.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">仍然可以直接請開發者修改</text>
+<line x1="715" y1="300" x2="885" y2="300" stroke="#5F7F95" stroke-width="3" marker-end="url(#ab)"/>
+<text x="800" y="268" font-size="22" fill="#5F7F95" font-weight="600" text-anchor="middle" dominant-baseline="central">回報大的需求</text>
+<line x1="885" y1="380" x2="715" y2="380" stroke="#BE8979" stroke-width="3" marker-end="url(#aa)"/>
+<text x="800" y="412" font-size="22" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">交付流程與基準</text>
+<rect x="90" y="520" width="1420" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="800.0" y="575.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">讓修改可以安全進行的條件</text>
+<text x="800.0" y="617.0" font-size="26" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">明確的修改範圍、測試基準、設計紀錄</text>
+</svg>

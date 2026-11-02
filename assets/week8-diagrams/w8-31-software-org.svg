@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">軟體與組織一起演化</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">軟體反映組織的流程與溝通方式（康威定律，Conway 1968）</text>
+<rect x="70" y="230" width="470" height="330" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="305.0" y="340.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">現行系統</text>
+<text x="305.0" y="383.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">組織與當初設計時不同</text>
+<text x="305.0" y="419.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">陸續補上許多模組</text>
+<text x="305.0" y="455.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">修補反映實際的運作</text>
+<rect x="565" y="230" width="470" height="330" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="800.0" y="340.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">新系統</text>
+<text x="800.0" y="383.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">一開始的設計</text>
+<text x="800.0" y="419.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">實際使用時產生摩擦</text>
+<text x="800.0" y="455.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">經由迭代符合實際情況</text>
+<rect x="1060" y="230" width="470" height="330" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1295.0" y="340.0" font-size="34" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">周邊的調整</text>
+<text x="1295.0" y="383.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">組織的分工可能轉變</text>
+<text x="1295.0" y="419.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">基礎設施可能重新調整</text>
+<text x="1295.0" y="455.0" font-size="24" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">（例如波形的存放與讀取）</text>
+<text x="800" y="680" font-size="32" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">新系統的迭代，就是花時間的地方。</text>
+</svg>

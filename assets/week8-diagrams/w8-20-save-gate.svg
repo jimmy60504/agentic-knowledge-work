@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
+<rect width="1600" height="900" fill="#FFFFFF"/>
+<text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">挑波時不阻擋，攔截在後面</text>
+<text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">所有狀態都在專案資料庫內</text>
+<rect x="70" y="300" width="330" height="180" rx="12" fill="#E8EFF3" stroke="#5F7F95" stroke-width="3"/>
+<text x="235.0" y="372.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">挑波</text>
+<text x="235.0" y="412.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">任務列表即時提示</text>
+<rect x="470" y="300" width="330" height="180" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="635.0" y="355.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">存檔</text>
+<text x="635.0" y="395.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">只寫入資料庫</text>
+<text x="635.0" y="429.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">接近工作階段的暫存</text>
+<rect x="870" y="300" width="310" height="180" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
+<text x="1025.0" y="372.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">事件總覽的 QC</text>
+<text x="1025.0" y="411.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">實際的攔截</text>
+<rect x="1250" y="300" width="290" height="180" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
+<text x="1395.0" y="372.0" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">匯出</text>
+<text x="1395.0" y="412.0" font-size="22" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">相位檔、入庫包</text>
+<line x1="402" y1="390" x2="468" y2="390" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="802" y1="390" x2="868" y2="390" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<line x1="1182" y1="390" x2="1248" y2="390" stroke="#6B6560" stroke-width="3" marker-end="url(#am)"/>
+<text x="1215" y="360" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">通過</text>
+<path d="M1025,482 C1025,640 235,640 235,484" fill="none" stroke="#BE8979" stroke-width="4" stroke-dasharray="12 8" marker-end="url(#aa)"/>
+<text x="630" y="650" font-size="26" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">未通過時回來修改</text>
+</svg>

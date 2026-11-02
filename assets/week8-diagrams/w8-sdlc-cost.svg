@@ -1,40 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="PingFang TC, Hiragino Sans GB, sans-serif">
-<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker></defs>
+<defs><marker id="am" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6B6560"/></marker><marker id="aa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE8979"/></marker><marker id="ab" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5F7F95"/></marker></defs>
 <rect width="1600" height="900" fill="#FFFFFF"/>
 <text x="60" y="80" font-size="44" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">軟體開發生命週期的時間成本</text>
 <text x="60" y="132" font-size="24" fill="#6B6560" font-weight="400" text-anchor="start" dominant-baseline="central">示意圖：寬度表示相對的時間，不是實際工時</text>
 <text x="60" y="285" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">過去</text>
 <rect x="250" y="210" width="120" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
-<text x="310.0" y="262" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">需求</text>
+<text x="310.0" y="285.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">需求</text>
 <rect x="378" y="210" width="280" height="150" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
-<text x="518.0" y="262" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">設計</text>
-<text x="518.0" y="302" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">規劃資料庫</text>
-<text x="518.0" y="330" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">與資料格式</text>
+<text x="518.0" y="252.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">設計</text>
+<text x="518.0" y="290.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">規劃資料庫</text>
+<text x="518.0" y="322.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">與資料格式</text>
 <rect x="666" y="210" width="460" height="150" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
-<text x="896.0" y="262" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">實作</text>
-<text x="896.0" y="302" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">撰寫功能與重構</text>
+<text x="896.0" y="268.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">實作</text>
+<text x="896.0" y="306.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">撰寫功能與重構</text>
 <rect x="1134" y="210" width="200" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
-<text x="1234.0" y="262" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試</text>
-<text x="1234.0" y="302" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">功能完成後進行</text>
+<text x="1234.0" y="268.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試</text>
+<text x="1234.0" y="306.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">功能完成後進行</text>
 <rect x="1342" y="210" width="120" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
-<text x="1402.0" y="262" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">部署</text>
+<text x="1402.0" y="285.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">部署</text>
 <text x="60" y="615" font-size="30" fill="#2A2623" font-weight="600" text-anchor="start" dominant-baseline="central">使用 Agent</text>
 <rect x="250" y="540" width="120" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
-<text x="310.0" y="592" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">需求</text>
+<text x="310.0" y="615.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">需求</text>
 <rect x="378" y="540" width="340" height="150" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
-<text x="548.0" y="592" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">設計</text>
-<text x="548.0" y="632" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">畫面與操作</text>
-<text x="548.0" y="660" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">要看到才能確定</text>
+<text x="548.0" y="582.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">設計</text>
+<text x="548.0" y="620.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">畫面與操作</text>
+<text x="548.0" y="652.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">要看到才能確定</text>
 <rect x="726" y="540" width="150" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
-<text x="801.0" y="592" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">實作</text>
-<text x="801.0" y="632" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">Agent</text>
-<text x="801.0" y="660" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">很快完成</text>
+<text x="801.0" y="582.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">實作</text>
+<text x="801.0" y="620.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">Agent</text>
+<text x="801.0" y="652.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">很快完成</text>
 <rect x="884" y="540" width="340" height="150" rx="12" fill="#F6E9E4" stroke="#BE8979" stroke-width="3"/>
-<text x="1054.0" y="592" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試與驗證</text>
-<text x="1054.0" y="632" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">人實際操作，提出修改</text>
+<text x="1054.0" y="598.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">測試與驗證</text>
+<text x="1054.0" y="636.0" font-size="20" fill="#6B6560" font-weight="400" text-anchor="middle" dominant-baseline="central">人實際操作，提出修改</text>
 <rect x="1232" y="540" width="120" height="150" rx="12" fill="#F5F2EC" stroke="#D8D2C9" stroke-width="2"/>
-<text x="1292.0" y="592" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">部署</text>
-<path d="M1054.0,534 C1054.0,460 548.0,460 548.0,534" fill="none" stroke="#BE8979" stroke-width="4" stroke-dasharray="12 8" marker-end="url(#ah)"/>
+<text x="1292.0" y="615.0" font-size="28" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">部署</text>
+<path d="M1054.0,534 C1054.0,460 548.0,460 548.0,534" fill="none" stroke="#BE8979" stroke-width="4" stroke-dasharray="12 8" marker-end="url(#aa)"/>
 <text x="801.0" y="452" font-size="24" fill="#BE8979" font-weight="600" text-anchor="middle" dominant-baseline="central">反覆多次，直到符合需要</text>
 <text x="800" y="790" font-size="30" fill="#2A2623" font-weight="600" text-anchor="middle" dominant-baseline="central">Agent 縮短了實作的時間，設計的迭代與驗證仍然需要人投入時間。</text>
 </svg>
