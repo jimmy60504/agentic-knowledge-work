@@ -192,22 +192,21 @@ def s9():
 
 
 # ---------------- 第 12 頁
-@slide(12, "page-map", "三、畫面", "測站分頁", "不同分頁中位置相近的列，對應的測站在地圖上也相近")
+@slide(12, "page-map", "三、畫面", "測站分頁", "測站依類型與品質分成三頁，切換分頁時像是比較三個圖層")
 def s12():
     m = json.loads((HERE / "w8-12-map.json").read_text())
-    def panel(key, title, c, med):
-        return (f'<div class="col" style="align-items:center"><div class="t" style="color:{c}">{title}</div>'
-                f'<svg width="{m["w"]}" height="{m["h"]}" viewBox="0 0 {m["w"]} {m["h"]}" style="margin-top:6px">{m[key]}</svg>'
-                f'<div class="row" style="gap:8px;margin-top:0;font-size:22px;color:{MUTED}">距離中位數 <b style="font-size:32px;color:{c}">{med}</b> 公里</div></div>')
-    rows = [("第 1 頁", "第 2 頁", "84", "140"), ("第 1 頁", "第 3 頁", "39", "151"), ("第 2 頁", "第 3 頁", "73", "134")]
-    tr = "".join(f'<tr><td style="padding:9px 8px;border-top:1px solid {LINE}">{a} 與 {b}</td><td style="text-align:right;padding:9px 8px;border-top:1px solid {LINE};font-weight:700;color:{ACCENT_D}">{c}</td><td style="text-align:right;padding:9px 8px;border-top:1px solid {LINE};color:{BLUE_D}">{d}</td></tr>' for a, b, c, d in rows)
-    side = (f'<div class="col" style="flex:1;gap:18px">'
-            f'<div class="card row" style="gap:18px">{badge("users", "a", 36)}<div><div class="t">請教使用者才得知的設計</div><div class="s">分頁切換之後，眼睛停在相同的位置，看到的仍是同一區域的測站</div></div></div>'
-            f'<div class="card"><div class="row" style="gap:10px;margin-bottom:4px">{ic("search", 28, BLUE_D)}<span class="t">以排序表查證</span></div>'
-            f'<table style="width:100%;border-collapse:collapse;font-size:22px"><tr style="color:{MUTED};font-size:19px"><td style="padding:4px 8px">同一列的兩站</td><td style="text-align:right;padding:4px 8px">實際（公里）</td><td style="text-align:right;padding:4px 8px">隨機（公里）</td></tr>{tr}</table></div>'
-            f'<div class="note">地圖連接第 1 頁與第 3 頁同一列的兩站，圖面只顯示本島範圍內的測站</div></div>')
-    return (f'<div class="row" style="gap:30px;height:100%;align-items:flex-start;margin-top:-12px">'
-            + panel("same", "實際的排列", ACCENT_D, m["median_same"]) + panel("shuf", "隨機打亂", BLUE_D, m["median_shuf"]) + side + '</div>')
+    pages = [("1", "第 1 頁", "短週期為主", 31, 2), ("2", "第 2 頁", "全部為寬頻", 0, 33), ("3", "第 3 頁", "兩種並列", 19, 13)]
+    cards = ""
+    for k, t, d, sp, bb in pages:
+        counts = (f'<span class="row" style="gap:6px"><svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="{ACCENT_D}"/></svg>{sp}</span>' if sp else "") + f'<span class="row" style="gap:6px"><svg width="16" height="16"><rect x="1.5" y="1.5" width="13" height="13" rx="2" fill="{BLUE_D}"/></svg>{bb}</span>'
+        cards += (f'<div class="card col" style="flex:1;align-items:center;padding:12px 8px 10px"><div class="row" style="gap:10px"><b style="font-size:27px">{t}</b><span style="font-size:23px;color:{MUTED}">{d}</span></div>'
+                  f'<svg width="325" height="473" viewBox="0 0 {m["w"]} {m["h"]}" style="margin:6px 0 10px;overflow:visible">{m["layers"][k]}</svg><div class="row" style="gap:22px;font-size:23px;font-weight:600">{counts}</div></div>')
+    steps = [("users", "全部排在一頁太擠", "約一百站無法同時看清楚"), ("box", "依類型與品質分頁", "每頁約 33 站，都由北而南分布全臺"), ("refresh", "切換比較", "眼睛停在相同的位置，看到的仍是同一區域")]
+    st = "".join(f'<div class="row" style="gap:14px">{badge(i, "a", 34)}<div><div style="font-size:25px;font-weight:700;line-height:1.3">{a}</div><div style="font-size:22px;color:{MUTED};line-height:1.35">{b}</div></div></div>' for i, a, b in steps)
+    side = (f'<div class="col" style="width:380px;gap:20px;height:100%">{st}'
+            f'<div class="row" style="gap:16px;font-size:22px"><span class="row" style="gap:6px"><svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="{ACCENT_D}"/></svg>短週期</span><span class="row" style="gap:6px"><svg width="16" height="16"><rect x="1.5" y="1.5" width="13" height="13" rx="2" fill="{BLUE_D}"/></svg>寬頻</span></div>'
+            f'<div class="card b" style="margin-top:auto;padding:12px 16px;font-size:22px;line-height:1.4">不同分頁同一列的兩站，距離中位數為 39 至 84 公里，隨機打亂時為 134 至 151 公里</div></div>')
+    return f'<div class="row" style="gap:20px;height:100%;align-items:stretch"><div class="row" style="flex:1;gap:12px;align-items:stretch">{cards}</div>{side}</div>'
 
 
 # ---------------- 第 14 頁
