@@ -158,9 +158,62 @@ def s6():
             f'<div class="row" style="gap:6px;border-bottom:2px solid {MUTED}">{bars}</div><div class="note">{NOTE}</div></div></div>')
 
 
+# ---------------- 截圖
+SHOTS = HERE.parents[1] / "week9-shots"
+MASKED = "開發中的系統畫面，測站代碼、檔名與件數已模糊"
+
+
+def has_shot(name):
+    return (SHOTS / name).exists()
+
+
+def blurs(regions):
+    """以百分比座標 (x, y, w, h) 模糊截圖中的識別資訊。"""
+    return "".join(f'<div class="abs" style="left:{x}%;top:{y}%;width:{w}%;height:{h}%;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);background:rgba(255,255,255,.15)"></div>' for x, y, w, h in regions)
+
+
+def mark(n, x, y):
+    return (f'<span class="abs row" style="left:{x}%;top:{y}%;transform:translate(-50%,-50%);width:44px;height:44px;border-radius:50%;background:{ACCENT_D};color:#fff;'
+            f'font-size:25px;font-weight:700;justify-content:center;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.35)">{n}</span>')
+
+
+def numbered(notes, start=1):
+    return "".join(f'<div class="row" style="gap:12px;align-items:flex-start"><span class="row" style="width:38px;height:38px;border-radius:50%;background:{ACCENT_D};color:#fff;font-size:22px;font-weight:700;justify-content:center;flex:none">{i + start}</span>'
+                   f'<div><div style="font-size:25px;font-weight:700;line-height:1.3">{a}</div><div style="font-size:22px;color:{MUTED};line-height:1.4">{d}</div></div></div>' for i, (a, d) in enumerate(notes))
+
+
+def shot_box(name, W, marks, regions):
+    img = f'<img src="{(SHOTS / name).as_uri()}" style="width:{W}px;display:block;border-radius:10px;border:1.5px solid {LINE}">'
+    ms = "".join(mark(i + 1, x, y) for i, (x, y) in enumerate(marks))
+    return f'<div class="col" style="gap:6px"><div style="position:relative;width:{W}px;border-radius:10px;overflow:hidden">{img}{blurs(regions)}{ms}</div><div class="note">{MASKED}</div></div>'
+
+
+def real7():
+    regions = [(0, 15.5, 4.2, 45), (3.5, 9, 36, 2.6), (0, 61.3, 2.6, 2.4), (6.3, 14.3, 3.4, 1.8),
+               (75.6, 60.5, 5.2, 39.5), (92.8, 60.5, 7.2, 39.5), (79.4, 45.6, 15.8, 2.6), (0.5, 9, 3, 2.6)]
+    marks = [(9, 26), (17, 17), (8, 75), (25, 62.7), (90, 47)]
+    notes = [("波形牆", "涵蓋整天，看得到模型沒有標出事件的時段"), ("走時曲線", "依緯度排列時畫成雙曲線，與挑選的短線容易區分"),
+             ("單站預覽", "三個分量放大顯示，最下面一列是模型的機率曲線"), ("參數面板", "前處理與門檻先作用在預覽上，確認後才重掃"),
+             ("評估視窗", "依規模、位置分項列出偵測率，例如外海明顯偏低")]
+    return (f'<div class="row" style="gap:22px;height:100%;align-items:flex-start">{shot_box("w9-07-tools.png", 1040, marks, regions)}'
+            f'<div class="col" style="flex:1;gap:16px">{numbered(notes)}</div></div>')
+
+
+def real8():
+    regions = [(1.8, 16, 4.4, 56), (4.6, 7.6, 6.2, 2.4), (26.6, 78.4, 6.4, 2.2), (78, 64.5, 20.5, 11.5), (87, 79.5, 6.6, 18.5), (79, 82, 3.2, 3), (93.3, 85, 4.8, 9), (20.5, 38.9, 9.8, 2.6)]
+    marks = [(96, 58.5), (8, 92)]
+    notes = [("每日的時間窗清單", "看過的連續波形檔各寫一份瀏覽紀錄檔，一天累積成一份清單"), ("時間軸", "新的檔案出現時自動接上，跨日接到隔天的資料夾")]
+    side = (f'<div class="col" style="flex:1;gap:16px;height:100%">{numbered(notes)}'
+            f'<div class="card b row" style="gap:14px;align-items:flex-start">{ic("lock", 30, BLUE_D)}<div><div style="font-size:24px;font-weight:700">不寫回正式的資料</div><div style="font-size:21px;line-height:1.4">輸出寫在專案資料夾，禁止指向原始資料的網路磁碟</div></div></div>'
+            f'<div class="card a row" style="gap:14px;align-items:flex-start">{ic("wrench", 30, ACCENT_D)}<div><div style="font-size:24px;font-weight:700">交付後依回饋修正</div><div style="font-size:21px;line-height:1.4">重新安裝後，一天內發布數個修正版本</div></div></div></div>')
+    return f'<div class="row" style="gap:22px;height:100%;align-items:flex-start">{shot_box("w9-09-windows.png", 1040, marks, regions)}{side}</div>'
+
+
 # ---------------- 第 7 頁
 @slide(7, "scan", S1, "AI 掃描", "同仁可以檢查模型的判斷，不必直接相信結果")
 def s8():
+    if has_shot("w9-07-tools.png"):
+        return real7()
     Wd, Hd = 980, 600
     tr = ""
     for k in range(10):
@@ -190,6 +243,8 @@ def s8():
 # ---------------- 第 8 頁
 @slide(8, "integration", S1, "與原有流程的銜接", "新工具產出原有流程需要的檔案，環境不如預期時仍可工作")
 def s9():
+    if has_shot("w9-09-windows.png"):
+        return real8()
     files = [("file", "瀏覽紀錄檔", "看過的檔各寫一份"), ("list", "每日的時間窗清單", "一天累積成一份")]
     fc = "".join(f'<div class="card row" style="gap:14px;padding:14px 18px">{ic(i, 32, ACCENT_D)}<div><div style="font-size:24px;font-weight:700">{t}</div><div class="s" style="font-size:20px">{d}</div></div></div>' for i, t, d in files)
     flow = (f'<div class="row" style="gap:14px;align-items:center">{node("scissors", "切事件", "新工具", "a", 200)}{arrow(40)}<div class="col" style="gap:12px">{fc}</div>{arrow(40)}{node("refresh", "原有流程", "照常交接", "b", 200)}</div>')
