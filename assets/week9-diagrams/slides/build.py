@@ -158,36 +158,8 @@ def s6():
             f'<div class="row" style="gap:6px;border-bottom:2px solid {MUTED}">{bars}</div><div class="note">{NOTE}</div></div></div>')
 
 
-def mini(kind, w=380, h=250, hot=False):
-    """三種版面的線框。"""
-    bd = f"border:2.5px solid {ACCENT}" if hot else f"border:1.5px solid {LINE}"
-    if kind == "list":
-        rows = "".join(f'<div style="height:22px;margin:8px 14px;background:{BG};border-radius:5px"></div>' for _ in range(7))
-        inner = f'<div style="padding-top:8px">{rows}</div>'
-    elif kind == "dash":
-        inner = (f'<div class="row" style="height:100%;gap:10px;padding:12px"><div class="col" style="width:40%;gap:8px">' + "".join(f'<div style="height:24px;background:{BG};border-radius:5px"></div>' for _ in range(6))
-                 + f'</div><div style="flex:1;height:100%;background:{BLUE_BG};border-radius:8px;position:relative">{wave(int(w * .5), 90, 3, onset=.4, color=BLUE_D, sw=1.2)}</div></div>')
-    else:
-        tr = "".join(f'<div style="height:{(h - 30) / 9:.0f}px;overflow:hidden">{wave(int(w * .66), int((h - 30) / 9), 20 + k, onset=.3 + k * .025, amp=.9, noise=.08, color=INK, sw=1)}</div>' for k in range(9))
-        inner = (f'<div class="row" style="height:100%;gap:8px;padding:10px"><div style="width:68%;position:relative">{tr}'
-                 f'<svg class="abs" style="left:0;top:0" width="{w * .66:.0f}" height="{h - 20}"><path d="M{w * .22:.0f} 0 Q {w * .17:.0f} {(h - 20) / 2:.0f} {w * .22:.0f} {h - 20}" fill="none" stroke="{ACCENT_D}" stroke-width="3" stroke-dasharray="6 5"/></svg></div>'
-                 f'<div class="col" style="flex:1;gap:6px">' + "".join(f'<div style="height:18px;background:{BG};border-radius:4px"></div>' for _ in range(8)) + '</div></div>')
-    return f'<div style="width:{w}px;height:{h}px;background:#fff;{bd};border-radius:12px;overflow:hidden">{inner}</div>'
-
-
 # ---------------- 第 7 頁
-@slide(7, "layout", S1, "AI 掃描的版面", "要檢查模型，必須看得到模型沒有標出事件的時段")
-def s7():
-    vs = [("list", "第一版：清單", "只看得到結果"), ("dash", "第二版：儀表板", "只看得到模型找到的事件"), ("wall", "第三版：整天的波形牆", "看得到模型漏掉的時段")]
-    cols = "".join((f'<div style="align-self:center;margin-top:-60px">{arrow(46, ACCENT_D if n == 2 else MUTED)}</div>' if n else "") +
-                   f'<div class="col" style="gap:12px;align-items:flex-start">{mini(k, 430, 320, n == 2)}<div class="t">{t}</div>'
-                   f'<div class="row" style="gap:8px;font-size:23px;color:{ACCENT_D if n == 2 else MUTED}">{ic("ok" if n == 2 else "x", 26, ACCENT_D if n == 2 else MUTED)}{d}</div></div>' for n, (k, t, d) in enumerate(vs))
-    return (f'<div class="col" style="gap:26px;height:100%"><div class="row" style="gap:16px;align-items:flex-start">{cols}</div>'
-            f'<div class="card b row" style="gap:14px;margin-top:auto">{ic("bulb", 30, BLUE_D)}<span style="font-size:24px">測站依緯度排列時，一個地震的到時連成一條曲線，是否為地震可以直接由形狀判斷。版面在一天之內改了三次。</span></div></div>')
-
-
-# ---------------- 第 8 頁
-@slide(8, "tools", S1, "AI 掃描的檢查工具", "同仁可以檢查模型的判斷，不必直接相信結果")
+@slide(7, "scan", S1, "AI 掃描", "同仁可以檢查模型的判斷，不必直接相信結果")
 def s8():
     Wd, Hd = 980, 600
     tr = ""
@@ -206,8 +178,8 @@ def s8():
     def mk(n, x, y):
         return (f'<span class="abs row" style="left:{x}px;top:{y}px;width:42px;height:42px;border-radius:50%;background:{ACCENT_D};color:#fff;font-size:24px;font-weight:700;justify-content:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3)">{n}</span>')
     mock = (f'<div style="position:relative;width:{Wd}px;height:{Hd}px;background:#fff;border:1.5px solid {LINE};border-radius:14px">{tr}{curve}{prev}{side}'
-            + mk(1, 300, 6) + mk(2, 40, 380) + mk(3, 560, 520) + mk(4, 900, 540) + '</div>')
-    notes = [("走時曲線", "依緯度排列時畫成雙曲線，與挑選的短線容易區分"), ("單站預覽", "三個分量放大顯示，最下面一列是模型的機率曲線"),
+            + mk(1, 6, 6) + mk(2, 300, 6) + mk(3, 40, 380) + mk(4, 560, 520) + mk(5, 900, 540) + '</div>')
+    notes = [("波形牆", "涵蓋整天，看得到模型沒有標出事件的時段"), ("走時曲線", "依緯度排列時畫成雙曲線，與挑選的短線容易區分"), ("單站預覽", "三個分量放大顯示，最下面一列是模型的機率曲線"),
              ("參數面板", "前處理與門檻先作用在預覽上，確認後才重掃"), ("評估視窗", "依規模、位置分項列出偵測率，例如外海明顯偏低")]
     ns = "".join(f'<div class="row" style="gap:12px;align-items:flex-start"><span class="row" style="width:38px;height:38px;border-radius:50%;background:{ACCENT_D};color:#fff;font-size:22px;font-weight:700;justify-content:center;flex:none">{i + 1}</span>'
                  f'<div><div style="font-size:25px;font-weight:700">{t}</div><div style="font-size:22px;color:{MUTED};line-height:1.4">{d}</div></div></div>' for i, (t, d) in enumerate(notes))
@@ -215,8 +187,8 @@ def s8():
             f'<div class="col" style="flex:1;gap:20px">{ns}</div></div>')
 
 
-# ---------------- 第 9 頁
-@slide(9, "integration", S1, "與原有流程的銜接", "新工具產出原有流程需要的檔案，環境不如預期時仍可工作")
+# ---------------- 第 8 頁
+@slide(8, "integration", S1, "與原有流程的銜接", "新工具產出原有流程需要的檔案，環境不如預期時仍可工作")
 def s9():
     files = [("file", "瀏覽紀錄檔", "看過的檔各寫一份"), ("list", "每日的時間窗清單", "一天累積成一份")]
     fc = "".join(f'<div class="card row" style="gap:14px;padding:14px 18px">{ic(i, 32, ACCENT_D)}<div><div style="font-size:24px;font-weight:700">{t}</div><div class="s" style="font-size:20px">{d}</div></div></div>' for i, t, d in files)
@@ -230,8 +202,8 @@ def s9():
     return f'<div class="col" style="gap:22px;height:100%">{flow}{guard}{deliver}</div>'
 
 
-# ---------------- 第 10 頁
-@slide(10, "governance", S2, "治理流程", "先把更新的流程做出來，再追求模型的表現")
+# ---------------- 第 9 頁
+@slide(9, "governance", S2, "治理流程", "先把更新的流程做出來，再追求模型的表現")
 def s10():
     st = [("box", "匯出", "雜湊值與說明書", "來源不明的權重"), ("book", "入倉", "先看說明書與檢查結果", "未經檢視就使用"), ("search", "掃描", "結果記下權重版本", "事後無法追溯"),
           ("scale", "比較", "只計兩版都掃過的檔", "以不同資料比較"), ("repeat", "換版與退版", "都要填寫理由", "換版沒有依據")]
@@ -245,8 +217,8 @@ def s10():
             f'<div class="note">以一組已訓練好的權重走完全程，不要求它的表現。入倉、比較與換版都由人觸發，不做自動排程。</div></div>')
 
 
-# ---------------- 第 11 頁
-@slide(11, "continual", S2, "持續訓練", "離線測試通過關卡，不代表在實際資料上比較好")
+# ---------------- 第 10 頁
+@slide(10, "continual", S2, "持續訓練", "離線測試通過關卡，不代表在實際資料上比較好")
 def s11():
     W, H = 600, 380
     pts = []
@@ -271,8 +243,8 @@ def s11():
     return f'<div class="row" style="gap:24px;height:100%;align-items:stretch">{left}<div class="col" style="flex:1;gap:18px">{res}{cause}</div></div>'
 
 
-# ---------------- 第 12 頁
-@slide(12, "packages", S2, "交付到署內的電腦", "主程式、執行環境與模型分開交付，各自可以單獨更新")
+# ---------------- 第 11 頁
+@slide(11, "packages", S2, "交付到署內的電腦", "主程式、執行環境與模型分開交付，各自可以單獨更新")
 def s12():
     pk = [("cube", "主程式", "所有電腦都安裝", ""), ("cpu" if "cpu" in w8.ICONS else "box", "執行環境", "ONNX 推論，不帶深度學習框架，只裝在需要的電腦", "b"), ("box", "模型包", "附說明書，在設定頁選擇後入倉", "a")]
     cards = "".join(f'<div class="card {k} col" style="flex:1;gap:12px;padding:24px;align-items:flex-start">{badge(i, k, 44)}<div class="t" style="font-size:30px">{t}</div><div style="font-size:24px;line-height:1.5">{d}</div></div>' for i, t, d, k in pk)
@@ -284,8 +256,8 @@ def s12():
             f'<div class="note">中文資料夾的路徑、預設的文字編碼等問題，都在 Windows 測試機上實際執行才發現</div></div>')
 
 
-# ---------------- 第 13 頁
-@slide(13, "basis", S2, "制度的依據", "以公部門既有的手冊與法規檢查導入的規劃")
+# ---------------- 第 12 頁
+@slide(12, "basis", S2, "制度的依據", "以公部門既有的手冊與法規檢查導入的規劃")
 def s13():
     refs = ["數位發展部《公部門人工智慧應用參考手冊》", "iPAS AI 應用規劃師中級學習指引", "人工智慧基本法", "資通安全的相關規定", "ISO/IEC 42001 人工智慧管理系統"]
     rl = "".join(f'<div class="row" style="gap:12px;padding:12px 0;border-top:{"none" if n == 0 else "1px solid " + LINE};font-size:24px">{ic("book", 28, BLUE_D)}{t}</div>' for n, t in enumerate(refs))
@@ -298,8 +270,8 @@ def s13():
     return f'<div class="row" style="gap:24px;height:100%;align-items:stretch">{left}<div class="col" style="flex:1;gap:16px">{right}</div></div>'
 
 
-# ---------------- 第 14 頁
-@slide(14, "baseline", S2, "比較的基準", "比較的基準要在看到結果之前決定並固定")
+# ---------------- 第 13 頁
+@slide(13, "baseline", S2, "比較的基準", "比較的基準要在看到結果之前決定並固定")
 def s14():
     cs = [("target", "a", "比較的對象", "開源權重、即時系統的自動結果、上一個正式版本、同仁之間的差異"),
           ("layers", "b", "測試資料", "與訓練資料分開，固定的測試集加上版本，涵蓋困難情境並分項計分"),
@@ -311,8 +283,8 @@ def s14():
     return f'<div class="col" style="gap:18px;height:100%"><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1;grid-auto-rows:1fr">{g}</div>{fifth}</div>'
 
 
-# ---------------- 第 15 頁
-@slide(15, "filled", S3, "件數壓力下的補齊", "參考理論到時補上的測站，可能混入實際上沒有相位的雜訊")
+# ---------------- 第 14 頁
+@slide(14, "filled", S3, "件數壓力下的補齊", "參考理論到時補上的測站，可能混入實際上沒有相位的雜訊")
 def s15():
     W = 760
     def tr(seed, onset, flat, label, mark=None, theo=None):
@@ -330,8 +302,8 @@ def s15():
             f'<div class="col" style="flex:1;gap:14px">{ec}</div></div>')
 
 
-# ---------------- 第 16 頁
-@slide(16, "solved", S3, "導入 AI 是否解決了問題", "只把 AI 放進現有的流程，解決的是速度，沒有解決品質與落後")
+# ---------------- 第 15 頁
+@slide(15, "solved", S3, "導入 AI 是否解決了問題", "只把 AI 放進現有的流程，解決的是速度，沒有解決品質與落後")
 def s16():
     W, H = 640, 420
     months = 10
@@ -350,8 +322,8 @@ def s16():
             f'<div class="card b" style="font-size:23px;margin-top:auto">需要重新思考人的角色、效益的衡量方式與交付的成果</div></div></div>')
 
 
-# ---------------- 第 17 頁
-@slide(17, "triage", S3, "品質先於數量", "品質放在數量之前，人力集中在困難或不確定的事件")
+# ---------------- 第 16 頁
+@slide(16, "triage", S3, "品質先於數量", "品質放在數量之前，人力集中在困難或不確定的事件")
 def s17():
     qs = [("radio", "是不是地震", "多站是否一致"), ("repeat", "附近有沒有已確認的地震", "相似的波形可以當樣板"), ("pin", "定位的約束夠不夠", "測站不足時不補站")]
     qc = "".join((f'<div style="align-self:center">{arrow(28)}</div>' if n else "") + f'<div class="card b col" style="flex:1;gap:6px;padding:14px 16px"><div class="row" style="gap:10px">{ic(i, 28, BLUE_D)}<b style="font-size:23px">{t}</b></div><div class="s" style="font-size:20px;color:{INK}">{d}</div></div>' for n, (i, t, d) in enumerate(qs))
@@ -362,8 +334,8 @@ def s17():
     return f'<div class="col" style="gap:18px;height:100%">{head}<div class="row" style="gap:8px">{qc}</div><div class="row" style="gap:16px;flex:1;align-items:stretch">{cc}</div></div>'
 
 
-# ---------------- 第 18 頁
-@slide(18, "benefit", S3, "效益的呈現", "在固定的品質關卡下，有多少事件不需要人處理")
+# ---------------- 第 17 頁
+@slide(17, "benefit", S3, "效益的呈現", "在固定的品質關卡下，有多少事件不需要人處理")
 def s18():
     cs = [("gauge", "a", "自動接受的比例", "先固定抽查錯誤率的上限，再報告通過關卡的事件占多少"), ("chart", "b", "落後量的方向", "每月的處理量是否超過每月的新增量"),
           ("eye", "", "品質由未知變為已知", "改為抽查之後，每一批資料都有錯誤率的估計"), ("layers", "", "自動化的等級", "依地震的類別列出目前的等級，見下一頁")]
@@ -372,8 +344,8 @@ def s18():
     return f'<div class="col" style="gap:16px;height:100%"><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1;grid-auto-rows:1fr">{g}</div>{note}</div>'
 
 
-# ---------------- 第 19 頁
-@slide(19, "levels", S3, "自動化的等級", "工作的結構在人力與事件數脫鉤之後才改變")
+# ---------------- 第 18 頁
+@slide(18, "levels", S3, "自動化的等級", "工作的結構在人力與事件數脫鉤之後才改變")
 def s19():
     lv = [("0", "逐站挑波"), ("1", "帶入自動挑選，逐筆修改"), ("2", "逐筆審核"), ("3", "只處理存疑的事件，其餘抽查"), ("4", "訂定標準、抽查、整批重跑")]
     steps = ""
@@ -394,8 +366,8 @@ def s19():
             f'<div class="card a row" style="gap:30px;padding:12px 22px;justify-content:space-around">{wy}</div></div>')
 
 
-# ---------------- 第 20 頁
-@slide(20, "supervisor", S3, "監督角色的條件", "人由逐筆審核改為監督，模型需要的條件與整體準確率無關")
+# ---------------- 第 19 頁
+@slide(19, "supervisor", S3, "監督角色的條件", "人由逐筆審核改為監督，模型需要的條件與整體準確率無關")
 def s20():
     cs = [("target", "信心能區分對錯", "錯誤集中在信心低的部分"), ("radio", "事件的偵測率要高", "沒有候選的地震無從補救，需要獨立來源互補"),
           ("gauge", "自動接受的比例有下限", "1 − 人力產能 ÷ 每月需要處理的量"), ("warn", "失效可以察覺", "抽查不通過時整批降級重審")]
@@ -414,8 +386,8 @@ def s20():
     return f'<div class="row" style="gap:22px;height:100%;align-items:stretch"><div class="col" style="width:640px;gap:12px">{cc}</div>{right}</div>'
 
 
-# ---------------- 第 21 頁
-@slide(21, "truth", S3, "正確答案的選擇", "到時是唯一直接的觀測，正確答案應以到時為準，並先確認到時的品質")
+# ---------------- 第 20 頁
+@slide(20, "truth", S3, "正確答案的選擇", "到時是唯一直接的觀測，正確答案應以到時為準，並先確認到時的品質")
 def s21():
     d = (f'<div class="row" style="gap:14px;align-items:center">'
          f'<div class="card a col" style="width:220px;align-items:center;gap:6px;padding:18px">{ic("wave", 40, ACCENT_D)}<div class="t">到時</div><span class="tag a" style="background:#fff">直接觀測</span></div>'
@@ -429,8 +401,8 @@ def s21():
             f'<div class="row" style="gap:16px;flex:1;align-items:stretch">{oc}</div></div>')
 
 
-# ---------------- 第 22 頁
-@slide(22, "beyond", S3, "跳脫框架的方向", "交付的成果與工作的分配，也可以重新設計")
+# ---------------- 第 21 頁
+@slide(21, "beyond", S3, "跳脫框架的方向", "交付的成果與工作的分配，也可以重新設計")
 def s22():
     loop = (f'<div class="row" style="gap:12px;align-items:center;margin-top:8px">{node("layers", "落後與過去的資料", "", "", 190)}{arrow(34, ACCENT_D)}{node("bot", "固定的自動流程", "整批處理", "a", 190)}{arrow(34, ACCENT_D)}'
             f'<div class="col" style="gap:8px">' + "".join(f'<div class="card row" style="gap:10px;padding:8px 14px;font-size:22px;font-weight:600">{ic("book", 24, ACCENT_D)}研究用目錄 v{v}</div>' for v in (1, 2, 3)) + '</div></div>')
@@ -443,8 +415,8 @@ def s22():
             f'<div class="note" style="margin-top:auto">都還沒有評估可行性，需要署內決定</div></div></div>')
 
 
-# ---------------- 第 23 頁
-@slide(23, "closing", "結語", "結語", "意圖與判斷由人提出，agent 負責把意圖做成可以檢驗的結果")
+# ---------------- 第 22 頁
+@slide(22, "closing", "結語", "結語", "意圖與判斷由人提出，agent 負責把意圖做成可以檢驗的結果")
 def s23():
     ag = ["撰寫與修改程式，量測延遲", "依回饋連續修正並發布", "以實驗比較關聯的範圍，試跑持續訓練", "讀取手冊與法規，整理成可以對照的形式", "試算信心與錯誤的關係"]
     hu = ["以 16 分鐘為一段", "換版要經過核准", "把品質放在數量之前"]
